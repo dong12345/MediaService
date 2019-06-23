@@ -181,7 +181,7 @@ message FormPublicStruct{
 	string fax=8;
 	string email=9;
 	string website=10;
-	string pavilionCode=11;//展馆号
+	string pavilionCode=11;//展馆号code
 	string boothNumber=12;//展位号
 	string option=13;
 	string description=14;
@@ -190,8 +190,11 @@ message FormPublicStruct{
 	string logo=17;
 	string updated_at=18;
 	string created_at=19;
-	bool isPay=20;
-	string memberId=21;
+	string ownerId=20;//客户经理Id
+	string ownerName=21;//客户经理名字
+	bool isPay=22;//是否付款
+	bool isHaveLogo=23;//是否有logo
+
 }
 
 message FormPublicList {
@@ -217,9 +220,9 @@ message ExpressStruct{
   string sentDate=4;//寄件日期
   string senderId=5;//寄件人Id	
   string sender=6;//寄件人
-  string writeUnit=7;//收件单位
+  string recipientUnit=7;//收件单位
   string address=8;//收件地址
-  string addressEn=9;
+  string recipient=9;//收件人
   string tel=10;
   string expressContent=11;//快递内容
   string price=12;
@@ -295,8 +298,9 @@ message HighlightsInfoStruct{
   string Tel=18;
   string Mobile=19;
   string Email=20;
-  string memberId=21;
-  string memberName=22;
+  string memberId=21;//会员Id
+  string ownerId=22;//客户经理Id
+  string ownerName=23;//客户经理名字
 }
 
 message HighlightsInfoList {
@@ -377,43 +381,44 @@ message HighlightsInfoList {
    string MemberId=2;//会员Id
    string MemberCompany=3;//会员公司中文名
    string MemberCompanyEn=4;
-   string HotelRoomTypeId=5;//酒店房间类型Id
-   string BookTime=6;//预订时间
-   string CheckInTime=7;//入住时间
-   string CheckOutTime=8;//	离开时间
-   int32 IsCanceled=9;//是否取消预约 0=>未取消；1=>取消
-   int32 IsChecked=10;//是否确认 0=>未确认；1=>待确认；2=>最终确认
-   string PriceCount=11;//预订酒店价格
-   string Remark=12;//入住人要求
-   int32 Days=13;//入住天数
-   string ArriveFlight=14;//到达航班
-   string LeaveFlight=15;//	离开航班
-   string IsSmoke=16;//是否吸烟 0=>不吸烟；1=>吸烟
-   string LinkManFirstName=17;//入住人FirstName
-   string LinkManLastName=18;//入住人LastName
-   string LinkManTel=19;//入住人电话
-   string LinkManEmail=20;//入住人邮箱
-   string LinkManTitle=21;//入住人称谓
-   int32 LinkManCountryId=22;//入住人国家Id
-   string LinkManCity=23;//入住人城市
-   string LinkManFax=24;//入住人传真
-   string LinkManIdCardType=25;//入住人证件类型
-   string LinkManIdCardNumber=26;//入住人证件号码
-   string LinkManCompany=27;//入住人公司
-   string LinkManMobile=28;//入住人手机
-   string LinkManBirth=29;//入住人出生日期
-   string OtherName=30;//同住人姓名
-   string OtherTitle=31;//同住人称谓
-   string OtherEmail=32;//同住人邮箱
-   string OtherMobile=33;//同住人手机
-   string OtherCompany=34;//同住人公司
-   string CardPerson=35;//持卡人姓名
-   string CardType=36;//卡类型
-   string CardNumber=37;//卡号码
-   string CardDate=38;//卡有效期
-   string Payer=39;//付款方：自己支付还是主办方支付
-   string PayType=40;//	付款方式
-   string LinkManEmail2=41;
+   string HotelId=5;//酒店Id
+   string HotelRoomTypeId=6;//酒店房间类型Id
+   string BookTime=7;//预订时间
+   string CheckInTime=8;//入住时间
+   string CheckOutTime=9;//	离开时间
+   int32 IsCanceled=10;//是否取消预约 0=>未取消；1=>取消
+   int32 IsChecked=11;//是否确认 0=>未确认；1=>待确认；2=>最终确认
+   string PriceCount=12;//预订酒店价格
+   string Remark=13;//入住人要求
+   int32 Days=14;//入住天数
+   string ArriveFlight=15;//到达航班
+   string LeaveFlight=16;//	离开航班
+   string IsSmoke=17;//是否吸烟 0=>不吸烟；1=>吸烟
+   string LinkManFirstName=18;//入住人FirstName
+   string LinkManLastName=19;//入住人LastName
+   string LinkManTel=20;//入住人电话
+   string LinkManEmail=21;//入住人邮箱
+   string LinkManTitle=22;//入住人称谓
+   int32 LinkManCountryId=23;//入住人国家Id
+   string LinkManCity=24;//入住人城市
+   string LinkManFax=25;//入住人传真
+   string LinkManIdCardType=26;//入住人证件类型
+   string LinkManIdCardNumber=27;//入住人证件号码
+   string LinkManCompany=28;//入住人公司
+   string LinkManMobile=29;//入住人手机
+   string LinkManBirth=30;//入住人出生日期
+   string OtherName=31;//同住人姓名
+   string OtherTitle=32;//同住人称谓
+   string OtherEmail=33;//同住人邮箱
+   string OtherMobile=34;//同住人手机
+   string OtherCompany=35;//同住人公司
+   string CardPerson=36;//持卡人姓名
+   string CardType=37;//卡类型
+   string CardNumber=38;//卡号码
+   string CardDate=39;//卡有效期
+   string Payer=40;//付款方：自己支付还是主办方支付
+   string PayType=41;//	付款方式
+   string LinkManEmail2=42;
  }
 
  message HotelBookRecordList{
@@ -437,14 +442,24 @@ message ModifyReply {
 }
 
 message SearchStruct{
-  string companyName=1;
-  string companyNameEn=2;
-  string contractNumber=3;
-  string zg=4;
-  string booth=5;
-  string memberId=6;
-  bool isPay=7;
-
+  string companyName=1;//公司名
+  string companyNameEn=2;//公司英文名
+  string contractNumber=3;//合同号
+  string pavilionCode=4;//展馆号code
+  string boothNumber=5;//展位号
+  string ownerId=6;//客户经理Id
+  bool isPay=7;//是否付款
+  bool isHaveLogo=8;//是否有logo
+  string created_at=9;//创建时间
+  string expressNum=10;//快递单号
+  string sender=11;//寄件人
+  string recipient=12;//收件人
+  string recipientUnit=13;//收件单位
+  string hotelId=14;//酒店Id
+  string hotelRoomTypeId=15;//酒店房间类型Id
+  int32 isCanceled=16;//是否取消预约 0=>未取消；1=>取消
+  int32 isChecked=17;//是否确认 0=>未确认；1=>待确认；2=>最终确认
+  string bookTime=18;//预订时间
 }
 //=======================通用==========================
 
