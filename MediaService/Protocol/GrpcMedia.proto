@@ -174,7 +174,7 @@ message FormPublicStruct{
 	string id=1;
 	string companyId=2;
 	string companyNameCn=3;
-	string compnayNameEn=4;
+	string companyNameEn=4;
 	string address=5;
 	string addressEn=6;
 	string telephone=7;

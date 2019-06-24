@@ -26,7 +26,7 @@ namespace GrpcMediaService {
           string.Concat(
             "Cg9HcnBjTWVkaWEucHJvdG8SEEdycGNNZWRpYVNlcnZpY2UiwAMKEEZvcm1Q",
             "dWJsaWNTdHJ1Y3QSCgoCaWQYASABKAkSEQoJY29tcGFueUlkGAIgASgJEhUK",
-            "DWNvbXBhbnlOYW1lQ24YAyABKAkSFQoNY29tcG5heU5hbWVFbhgEIAEoCRIP",
+            "DWNvbXBhbnlOYW1lQ24YAyABKAkSFQoNY29tcGFueU5hbWVFbhgEIAEoCRIP",
             "CgdhZGRyZXNzGAUgASgJEhEKCWFkZHJlc3NFbhgGIAEoCRIRCgl0ZWxlcGhv",
             "bmUYByABKAkSCwoDZmF4GAggASgJEg0KBWVtYWlsGAkgASgJEg8KB3dlYnNp",
             "dGUYCiABKAkSFAoMcGF2aWxpb25Db2RlGAsgASgJEhMKC2Jvb3RoTnVtYmVy",
@@ -213,7 +213,7 @@ namespace GrpcMediaService {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.FormPublicStruct), global::GrpcMediaService.FormPublicStruct.Parser, new[]{ "Id", "CompanyId", "CompanyNameCn", "CompnayNameEn", "Address", "AddressEn", "Telephone", "Fax", "Email", "Website", "PavilionCode", "BoothNumber", "Option", "Description", "DescriptionEn", "SnecLogoWebsite", "Logo", "UpdatedAt", "CreatedAt", "OwnerId", "OwnerName", "IsPay", "IsHaveLogo" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.FormPublicStruct), global::GrpcMediaService.FormPublicStruct.Parser, new[]{ "Id", "CompanyId", "CompanyNameCn", "CompanyNameEn", "Address", "AddressEn", "Telephone", "Fax", "Email", "Website", "PavilionCode", "BoothNumber", "Option", "Description", "DescriptionEn", "SnecLogoWebsite", "Logo", "UpdatedAt", "CreatedAt", "OwnerId", "OwnerName", "IsPay", "IsHaveLogo" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.FormPublicList), global::GrpcMediaService.FormPublicList.Parser, new[]{ "Listdata", "Total" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.PaginationRequestSearch), global::GrpcMediaService.PaginationRequestSearch.Parser, new[]{ "Id", "Offset", "Limit", "Search" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.ExpressStruct), global::GrpcMediaService.ExpressStruct.Parser, new[]{ "Id", "CompanyId", "ExpressNum", "SentDate", "SenderId", "Sender", "RecipientUnit", "Address", "Recipient", "Tel", "ExpressContent", "Price", "ExpressCompany", "IsExamine", "IsSend", "IsDelete" }, null, null, null),
@@ -273,7 +273,7 @@ namespace GrpcMediaService {
       id_ = other.id_;
       companyId_ = other.companyId_;
       companyNameCn_ = other.companyNameCn_;
-      compnayNameEn_ = other.compnayNameEn_;
+      companyNameEn_ = other.companyNameEn_;
       address_ = other.address_;
       addressEn_ = other.addressEn_;
       telephone_ = other.telephone_;
@@ -334,14 +334,14 @@ namespace GrpcMediaService {
       }
     }
 
-    /// <summary>Field number for the "compnayNameEn" field.</summary>
-    public const int CompnayNameEnFieldNumber = 4;
-    private string compnayNameEn_ = "";
+    /// <summary>Field number for the "companyNameEn" field.</summary>
+    public const int CompanyNameEnFieldNumber = 4;
+    private string companyNameEn_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CompnayNameEn {
-      get { return compnayNameEn_; }
+    public string CompanyNameEn {
+      get { return companyNameEn_; }
       set {
-        compnayNameEn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        companyNameEn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -588,7 +588,7 @@ namespace GrpcMediaService {
       if (Id != other.Id) return false;
       if (CompanyId != other.CompanyId) return false;
       if (CompanyNameCn != other.CompanyNameCn) return false;
-      if (CompnayNameEn != other.CompnayNameEn) return false;
+      if (CompanyNameEn != other.CompanyNameEn) return false;
       if (Address != other.Address) return false;
       if (AddressEn != other.AddressEn) return false;
       if (Telephone != other.Telephone) return false;
@@ -617,7 +617,7 @@ namespace GrpcMediaService {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (CompanyId.Length != 0) hash ^= CompanyId.GetHashCode();
       if (CompanyNameCn.Length != 0) hash ^= CompanyNameCn.GetHashCode();
-      if (CompnayNameEn.Length != 0) hash ^= CompnayNameEn.GetHashCode();
+      if (CompanyNameEn.Length != 0) hash ^= CompanyNameEn.GetHashCode();
       if (Address.Length != 0) hash ^= Address.GetHashCode();
       if (AddressEn.Length != 0) hash ^= AddressEn.GetHashCode();
       if (Telephone.Length != 0) hash ^= Telephone.GetHashCode();
@@ -662,9 +662,9 @@ namespace GrpcMediaService {
         output.WriteRawTag(26);
         output.WriteString(CompanyNameCn);
       }
-      if (CompnayNameEn.Length != 0) {
+      if (CompanyNameEn.Length != 0) {
         output.WriteRawTag(34);
-        output.WriteString(CompnayNameEn);
+        output.WriteString(CompanyNameEn);
       }
       if (Address.Length != 0) {
         output.WriteRawTag(42);
@@ -759,8 +759,8 @@ namespace GrpcMediaService {
       if (CompanyNameCn.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CompanyNameCn);
       }
-      if (CompnayNameEn.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CompnayNameEn);
+      if (CompanyNameEn.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CompanyNameEn);
       }
       if (Address.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
@@ -839,8 +839,8 @@ namespace GrpcMediaService {
       if (other.CompanyNameCn.Length != 0) {
         CompanyNameCn = other.CompanyNameCn;
       }
-      if (other.CompnayNameEn.Length != 0) {
-        CompnayNameEn = other.CompnayNameEn;
+      if (other.CompanyNameEn.Length != 0) {
+        CompanyNameEn = other.CompanyNameEn;
       }
       if (other.Address.Length != 0) {
         Address = other.Address;
@@ -923,7 +923,7 @@ namespace GrpcMediaService {
             break;
           }
           case 34: {
-            CompnayNameEn = input.ReadString();
+            CompanyNameEn = input.ReadString();
             break;
           }
           case 42: {
