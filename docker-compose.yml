@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+  media.data:
+    image: postgres
+    environment:
+      POSTGRES_DB: media
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+    ports:
+     - "3445:5432"
+    volumes:
+      - media-data-volume:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - network2
+
+  mediaservice:
+    image: ${DOCKER_REGISTRY-}mediaservice
+    build:
+      context: .
+      dockerfile: MediaService/Dockerfile
+    depends_on:
+      - meida.data
+    links:
+      - meida.data
+    networks:
+      - network2
+
+volumes:
+    meida-data-volume:
+       external: true
+
+networks:
+  network2:
+    external: true
