@@ -50,5 +50,8 @@ namespace MediaService.DBModel
         /// 客户经理名字
         /// </summary>
         public string OwnerName { get; set; }
+
+        public DateTime Created_at { get; set; }
+        public DateTime Updated_at { get; set; }
     }
 }

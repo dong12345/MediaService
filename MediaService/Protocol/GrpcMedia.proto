@@ -12,22 +12,23 @@ service MediaServiceToGrpc{
   //======================会刊===========================
 
   //创建会刊信息
-  rpc CreateFormPublicInfo(FormPublicStruct) returns (ModifyReply){}
+  rpc createFormPublicInfo(FormPublicStruct) returns (ModifyReply){}
 
   //修改会刊信息
-  rpc UpdateFormPublicInfo(FormPublicStruct) returns(ModifyReply){}
+  rpc updateFormPublicInfo(FormPublicStruct) returns(ModifyReply){}
 
   //根据Id删除会刊信息
-  rpc DeleteFormPublicInfoById(IdRequest) returns (ModifyReply){}
+  rpc deleteFormPublicInfoById(IdRequest) returns (ModifyReply){}
 
   //获得会刊信息列表
-  rpc GetFormPublicInfoList(Empty) returns (FormPublicList){}
+  rpc getFormPublicInfoList(Empty) returns (FormPublicList){}
 
   //根据Id获得会刊信息
-  rpc GetFormPublicInfoById(IdRequest) returns (FormPublicStruct){}
+  rpc getFormPublicInfoById(IdRequest) returns (FormPublicStruct){}
 
   //根据条件查询会刊信息列表(带分页)
-  rpc GetFormPublicListBySearch (PaginationRequestSearch) returns (FormPublicList) {}
+  rpc getFormPublicList(PaginationRequestSearch) returns (FormPublicList) {}
+
 
   //======================会刊===========================
 
@@ -35,19 +36,19 @@ service MediaServiceToGrpc{
   //=======================快递单========================
 
   //创建快递单记录
-  rpc CreateExpressInfo(ExpressStruct) returns (ModifyReply){}
+  rpc createExpressInfo(ExpressStruct) returns (ModifyReply){}
 
   //修改快递单记录
-  rpc UpdateExpressInfo(ExpressStruct) returns (ModifyReply){}
+  rpc updateExpressInfo(ExpressStruct) returns (ModifyReply){}
 
   //根据Id删除快递单记录
-  rpc DeleteExpressInfoById(IdRequest) returns (ModifyReply){}
+  rpc deleteExpressInfoById(IdRequest) returns (ModifyReply){}
 
   //根据Id获得快递单信息
-  rpc GetExpressInfoById(IdRequest) returns (ExpressStruct){}
+  rpc getExpressInfoById(IdRequest) returns (ExpressStruct){}
 
   //根据条件查询快递单信息列表(带分页)
-  rpc GetExpressListBySearch (PaginationRequestSearch) returns (ExpressList) {}
+  rpc getExpressList (PaginationRequestSearch) returns (ExpressList) {}
 
   //=======================快递单========================
 
@@ -181,7 +182,7 @@ message FormPublicStruct{
 	string fax=8;
 	string email=9;
 	string website=10;
-	string pavilionCode=11;//展馆号code
+	string pavilionNumber=11;//展馆号
 	string boothNumber=12;//展位号
 	string option=13;
 	string description=14;
@@ -194,6 +195,7 @@ message FormPublicStruct{
 	string ownerName=21;//客户经理名字
 	bool isPay=22;//是否付款
 	bool isHaveLogo=23;//是否有logo
+	string contractNumber=24;
 
 }
 
@@ -230,6 +232,8 @@ message ExpressStruct{
   bool isExamine=14;//是否审核
   bool isSend=15;//是否发送
   bool isDelete=16;
+  string created_at=17;
+  string updated_at=18;
 }
 
 message ExpressList{
@@ -268,6 +272,8 @@ message InterviewStruct{
   string interviewTime=8;//可接受采访时间段
   string mediaName=9;
   string memberId=10;
+  string created_at=11;
+  string updated_at=12;
 }
 
 message InterviewList{
@@ -278,7 +284,7 @@ message InterviewList{
 
 //================十大亮点申请=========================
 message HighlightsInfoStruct{
-  string id=1;
+  string Id=1;
   string LDnameCn=2;//亮点中文名
   string LDnameEn=3;
   string LDdescribeCn=4;
@@ -298,9 +304,11 @@ message HighlightsInfoStruct{
   string Tel=18;
   string Mobile=19;
   string Email=20;
-  string memberId=21;//会员Id
-  string ownerId=22;//客户经理Id
-  string ownerName=23;//客户经理名字
+  string MemberId=21;//会员Id
+  string OwnerId=22;//客户经理Id
+  string OwnerName=23;//客户经理名字
+  string Created_at=24;
+  string Updated_at=25;
 }
 
 message HighlightsInfoList {
@@ -419,6 +427,8 @@ message HighlightsInfoList {
    string Payer=40;//付款方：自己支付还是主办方支付
    string PayType=41;//	付款方式
    string LinkManEmail2=42;
+   string Created_at=43;
+   string Updated_at=44;
  }
 
  message HotelBookRecordList{
@@ -443,14 +453,14 @@ message ModifyReply {
 
 message SearchStruct{
   string companyName=1;//公司名
-  string companyNameEn=2;//公司英文名
-  string contractNumber=3;//合同号
-  string pavilionCode=4;//展馆号code
-  string boothNumber=5;//展位号
-  string ownerId=6;//客户经理Id
-  bool isPay=7;//是否付款
-  bool isHaveLogo=8;//是否有logo
-  string created_at=9;//创建时间
+  string contractNumber=2;//合同号
+  string pavilionNumber=3;//展馆号code
+  string boothNumber=4;//展位号
+  string ownerId=5;//客户经理Id
+  bool isPay=6;//是否付款
+  bool isHaveLogo=7;//是否有logo
+  string begin_date=8;//开始日期
+  string end_date=9;//结束日期
   string expressNum=10;//快递单号
   string sender=11;//寄件人
   string recipient=12;//收件人

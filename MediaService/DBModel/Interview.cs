@@ -25,5 +25,8 @@ namespace MediaService.DBModel
         public string InterviewTime { get; set; }
         public string MediaName { get; set; }
         public string MemberId { get; set; }
+
+        public DateTime Created_at { get; set; }
+        public DateTime Updated_at { get; set; }
     }
 }

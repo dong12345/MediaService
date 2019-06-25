@@ -6,7 +6,7 @@ namespace MediaService.DBModel
     /// <summary>
     /// 快递单记录
     /// </summary>
-    public class ExpressStruct
+    public class Express
     {
         [Key]
         public Guid Id { get; set; }
@@ -18,7 +18,7 @@ namespace MediaService.DBModel
         /// <summary>
         /// 寄件日期
         /// </summary>
-        public string SentDate { get; set; }
+        public DateTime SentDate { get; set; }
         /// <summary>
         /// 寄件人Id	
         /// </summary>
@@ -59,5 +59,9 @@ namespace MediaService.DBModel
         /// </summary>
         public bool IsSend { get; set; }
         public bool IsDelete { get; set; }
+
+        public DateTime Created_at { get; set; }
+
+        public DateTime Updated_at { get; set; }
     }
 }

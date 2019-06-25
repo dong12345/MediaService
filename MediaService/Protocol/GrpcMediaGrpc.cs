@@ -35,80 +35,80 @@ namespace GrpcMediaService {
     static readonly grpc::Marshaller<global::GrpcMediaService.MemberId> __Marshaller_MemberId = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.MemberId.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.HotelBookRecordList> __Marshaller_HotelBookRecordList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.HotelBookRecordList.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply> __Method_CreateFormPublicInfo = new grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply>(
+    static readonly grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply> __Method_createFormPublicInfo = new grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "CreateFormPublicInfo",
+        "createFormPublicInfo",
         __Marshaller_FormPublicStruct,
         __Marshaller_ModifyReply);
 
-    static readonly grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply> __Method_UpdateFormPublicInfo = new grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply>(
+    static readonly grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply> __Method_updateFormPublicInfo = new grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "UpdateFormPublicInfo",
+        "updateFormPublicInfo",
         __Marshaller_FormPublicStruct,
         __Marshaller_ModifyReply);
 
-    static readonly grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.ModifyReply> __Method_DeleteFormPublicInfoById = new grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.ModifyReply>(
+    static readonly grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.ModifyReply> __Method_deleteFormPublicInfoById = new grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.ModifyReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "DeleteFormPublicInfoById",
+        "deleteFormPublicInfoById",
         __Marshaller_IdRequest,
         __Marshaller_ModifyReply);
 
-    static readonly grpc::Method<global::GrpcMediaService.Empty, global::GrpcMediaService.FormPublicList> __Method_GetFormPublicInfoList = new grpc::Method<global::GrpcMediaService.Empty, global::GrpcMediaService.FormPublicList>(
+    static readonly grpc::Method<global::GrpcMediaService.Empty, global::GrpcMediaService.FormPublicList> __Method_getFormPublicInfoList = new grpc::Method<global::GrpcMediaService.Empty, global::GrpcMediaService.FormPublicList>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetFormPublicInfoList",
+        "getFormPublicInfoList",
         __Marshaller_Empty,
         __Marshaller_FormPublicList);
 
-    static readonly grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.FormPublicStruct> __Method_GetFormPublicInfoById = new grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.FormPublicStruct>(
+    static readonly grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.FormPublicStruct> __Method_getFormPublicInfoById = new grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.FormPublicStruct>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetFormPublicInfoById",
+        "getFormPublicInfoById",
         __Marshaller_IdRequest,
         __Marshaller_FormPublicStruct);
 
-    static readonly grpc::Method<global::GrpcMediaService.PaginationRequestSearch, global::GrpcMediaService.FormPublicList> __Method_GetFormPublicListBySearch = new grpc::Method<global::GrpcMediaService.PaginationRequestSearch, global::GrpcMediaService.FormPublicList>(
+    static readonly grpc::Method<global::GrpcMediaService.PaginationRequestSearch, global::GrpcMediaService.FormPublicList> __Method_getFormPublicList = new grpc::Method<global::GrpcMediaService.PaginationRequestSearch, global::GrpcMediaService.FormPublicList>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetFormPublicListBySearch",
+        "getFormPublicList",
         __Marshaller_PaginationRequestSearch,
         __Marshaller_FormPublicList);
 
-    static readonly grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply> __Method_CreateExpressInfo = new grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply>(
+    static readonly grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply> __Method_createExpressInfo = new grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "CreateExpressInfo",
+        "createExpressInfo",
         __Marshaller_ExpressStruct,
         __Marshaller_ModifyReply);
 
-    static readonly grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply> __Method_UpdateExpressInfo = new grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply>(
+    static readonly grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply> __Method_updateExpressInfo = new grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "UpdateExpressInfo",
+        "updateExpressInfo",
         __Marshaller_ExpressStruct,
         __Marshaller_ModifyReply);
 
-    static readonly grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.ModifyReply> __Method_DeleteExpressInfoById = new grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.ModifyReply>(
+    static readonly grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.ModifyReply> __Method_deleteExpressInfoById = new grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.ModifyReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "DeleteExpressInfoById",
+        "deleteExpressInfoById",
         __Marshaller_IdRequest,
         __Marshaller_ModifyReply);
 
-    static readonly grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.ExpressStruct> __Method_GetExpressInfoById = new grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.ExpressStruct>(
+    static readonly grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.ExpressStruct> __Method_getExpressInfoById = new grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.ExpressStruct>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetExpressInfoById",
+        "getExpressInfoById",
         __Marshaller_IdRequest,
         __Marshaller_ExpressStruct);
 
-    static readonly grpc::Method<global::GrpcMediaService.PaginationRequestSearch, global::GrpcMediaService.ExpressList> __Method_GetExpressListBySearch = new grpc::Method<global::GrpcMediaService.PaginationRequestSearch, global::GrpcMediaService.ExpressList>(
+    static readonly grpc::Method<global::GrpcMediaService.PaginationRequestSearch, global::GrpcMediaService.ExpressList> __Method_getExpressList = new grpc::Method<global::GrpcMediaService.PaginationRequestSearch, global::GrpcMediaService.ExpressList>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetExpressListBySearch",
+        "getExpressList",
         __Marshaller_PaginationRequestSearch,
         __Marshaller_ExpressList);
 
@@ -337,7 +337,7 @@ namespace GrpcMediaService {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> CreateFormPublicInfo(global::GrpcMediaService.FormPublicStruct request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> createFormPublicInfo(global::GrpcMediaService.FormPublicStruct request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -348,7 +348,7 @@ namespace GrpcMediaService {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> UpdateFormPublicInfo(global::GrpcMediaService.FormPublicStruct request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> updateFormPublicInfo(global::GrpcMediaService.FormPublicStruct request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -359,7 +359,7 @@ namespace GrpcMediaService {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> DeleteFormPublicInfoById(global::GrpcMediaService.IdRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> deleteFormPublicInfoById(global::GrpcMediaService.IdRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -370,7 +370,7 @@ namespace GrpcMediaService {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.FormPublicList> GetFormPublicInfoList(global::GrpcMediaService.Empty request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.FormPublicList> getFormPublicInfoList(global::GrpcMediaService.Empty request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -381,7 +381,7 @@ namespace GrpcMediaService {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.FormPublicStruct> GetFormPublicInfoById(global::GrpcMediaService.IdRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.FormPublicStruct> getFormPublicInfoById(global::GrpcMediaService.IdRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -392,7 +392,7 @@ namespace GrpcMediaService {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.FormPublicList> GetFormPublicListBySearch(global::GrpcMediaService.PaginationRequestSearch request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.FormPublicList> getFormPublicList(global::GrpcMediaService.PaginationRequestSearch request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -403,7 +403,7 @@ namespace GrpcMediaService {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> CreateExpressInfo(global::GrpcMediaService.ExpressStruct request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> createExpressInfo(global::GrpcMediaService.ExpressStruct request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -414,7 +414,7 @@ namespace GrpcMediaService {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> UpdateExpressInfo(global::GrpcMediaService.ExpressStruct request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> updateExpressInfo(global::GrpcMediaService.ExpressStruct request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -425,7 +425,7 @@ namespace GrpcMediaService {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> DeleteExpressInfoById(global::GrpcMediaService.IdRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> deleteExpressInfoById(global::GrpcMediaService.IdRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -436,7 +436,7 @@ namespace GrpcMediaService {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ExpressStruct> GetExpressInfoById(global::GrpcMediaService.IdRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ExpressStruct> getExpressInfoById(global::GrpcMediaService.IdRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -447,7 +447,7 @@ namespace GrpcMediaService {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ExpressList> GetExpressListBySearch(global::GrpcMediaService.PaginationRequestSearch request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ExpressList> getExpressList(global::GrpcMediaService.PaginationRequestSearch request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -817,9 +817,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ModifyReply CreateFormPublicInfo(global::GrpcMediaService.FormPublicStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.ModifyReply createFormPublicInfo(global::GrpcMediaService.FormPublicStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return CreateFormPublicInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return createFormPublicInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///创建会刊信息
@@ -827,9 +827,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ModifyReply CreateFormPublicInfo(global::GrpcMediaService.FormPublicStruct request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.ModifyReply createFormPublicInfo(global::GrpcMediaService.FormPublicStruct request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_CreateFormPublicInfo, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_createFormPublicInfo, null, options, request);
       }
       /// <summary>
       ///创建会刊信息
@@ -839,9 +839,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> CreateFormPublicInfoAsync(global::GrpcMediaService.FormPublicStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> createFormPublicInfoAsync(global::GrpcMediaService.FormPublicStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return CreateFormPublicInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return createFormPublicInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///创建会刊信息
@@ -849,9 +849,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> CreateFormPublicInfoAsync(global::GrpcMediaService.FormPublicStruct request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> createFormPublicInfoAsync(global::GrpcMediaService.FormPublicStruct request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_CreateFormPublicInfo, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_createFormPublicInfo, null, options, request);
       }
       /// <summary>
       ///修改会刊信息
@@ -861,9 +861,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ModifyReply UpdateFormPublicInfo(global::GrpcMediaService.FormPublicStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.ModifyReply updateFormPublicInfo(global::GrpcMediaService.FormPublicStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return UpdateFormPublicInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return updateFormPublicInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///修改会刊信息
@@ -871,9 +871,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ModifyReply UpdateFormPublicInfo(global::GrpcMediaService.FormPublicStruct request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.ModifyReply updateFormPublicInfo(global::GrpcMediaService.FormPublicStruct request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_UpdateFormPublicInfo, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_updateFormPublicInfo, null, options, request);
       }
       /// <summary>
       ///修改会刊信息
@@ -883,9 +883,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> UpdateFormPublicInfoAsync(global::GrpcMediaService.FormPublicStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> updateFormPublicInfoAsync(global::GrpcMediaService.FormPublicStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return UpdateFormPublicInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return updateFormPublicInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///修改会刊信息
@@ -893,9 +893,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> UpdateFormPublicInfoAsync(global::GrpcMediaService.FormPublicStruct request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> updateFormPublicInfoAsync(global::GrpcMediaService.FormPublicStruct request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_UpdateFormPublicInfo, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_updateFormPublicInfo, null, options, request);
       }
       /// <summary>
       ///根据Id删除会刊信息
@@ -905,9 +905,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ModifyReply DeleteFormPublicInfoById(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.ModifyReply deleteFormPublicInfoById(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return DeleteFormPublicInfoById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return deleteFormPublicInfoById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据Id删除会刊信息
@@ -915,9 +915,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ModifyReply DeleteFormPublicInfoById(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.ModifyReply deleteFormPublicInfoById(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_DeleteFormPublicInfoById, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_deleteFormPublicInfoById, null, options, request);
       }
       /// <summary>
       ///根据Id删除会刊信息
@@ -927,9 +927,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> DeleteFormPublicInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> deleteFormPublicInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return DeleteFormPublicInfoByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return deleteFormPublicInfoByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据Id删除会刊信息
@@ -937,9 +937,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> DeleteFormPublicInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> deleteFormPublicInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_DeleteFormPublicInfoById, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_deleteFormPublicInfoById, null, options, request);
       }
       /// <summary>
       ///获得会刊信息列表
@@ -949,9 +949,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.FormPublicList GetFormPublicInfoList(global::GrpcMediaService.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.FormPublicList getFormPublicInfoList(global::GrpcMediaService.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetFormPublicInfoList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getFormPublicInfoList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///获得会刊信息列表
@@ -959,9 +959,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.FormPublicList GetFormPublicInfoList(global::GrpcMediaService.Empty request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.FormPublicList getFormPublicInfoList(global::GrpcMediaService.Empty request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_GetFormPublicInfoList, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_getFormPublicInfoList, null, options, request);
       }
       /// <summary>
       ///获得会刊信息列表
@@ -971,9 +971,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicList> GetFormPublicInfoListAsync(global::GrpcMediaService.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicList> getFormPublicInfoListAsync(global::GrpcMediaService.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetFormPublicInfoListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getFormPublicInfoListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///获得会刊信息列表
@@ -981,9 +981,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicList> GetFormPublicInfoListAsync(global::GrpcMediaService.Empty request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicList> getFormPublicInfoListAsync(global::GrpcMediaService.Empty request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_GetFormPublicInfoList, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_getFormPublicInfoList, null, options, request);
       }
       /// <summary>
       ///根据Id获得会刊信息
@@ -993,9 +993,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.FormPublicStruct GetFormPublicInfoById(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.FormPublicStruct getFormPublicInfoById(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetFormPublicInfoById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getFormPublicInfoById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据Id获得会刊信息
@@ -1003,9 +1003,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.FormPublicStruct GetFormPublicInfoById(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.FormPublicStruct getFormPublicInfoById(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_GetFormPublicInfoById, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_getFormPublicInfoById, null, options, request);
       }
       /// <summary>
       ///根据Id获得会刊信息
@@ -1015,9 +1015,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicStruct> GetFormPublicInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicStruct> getFormPublicInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetFormPublicInfoByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getFormPublicInfoByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据Id获得会刊信息
@@ -1025,9 +1025,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicStruct> GetFormPublicInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicStruct> getFormPublicInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_GetFormPublicInfoById, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_getFormPublicInfoById, null, options, request);
       }
       /// <summary>
       ///根据条件查询会刊信息列表(带分页)
@@ -1037,9 +1037,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.FormPublicList GetFormPublicListBySearch(global::GrpcMediaService.PaginationRequestSearch request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.FormPublicList getFormPublicList(global::GrpcMediaService.PaginationRequestSearch request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetFormPublicListBySearch(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getFormPublicList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据条件查询会刊信息列表(带分页)
@@ -1047,9 +1047,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.FormPublicList GetFormPublicListBySearch(global::GrpcMediaService.PaginationRequestSearch request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.FormPublicList getFormPublicList(global::GrpcMediaService.PaginationRequestSearch request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_GetFormPublicListBySearch, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_getFormPublicList, null, options, request);
       }
       /// <summary>
       ///根据条件查询会刊信息列表(带分页)
@@ -1059,9 +1059,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicList> GetFormPublicListBySearchAsync(global::GrpcMediaService.PaginationRequestSearch request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicList> getFormPublicListAsync(global::GrpcMediaService.PaginationRequestSearch request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetFormPublicListBySearchAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getFormPublicListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据条件查询会刊信息列表(带分页)
@@ -1069,9 +1069,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicList> GetFormPublicListBySearchAsync(global::GrpcMediaService.PaginationRequestSearch request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicList> getFormPublicListAsync(global::GrpcMediaService.PaginationRequestSearch request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_GetFormPublicListBySearch, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_getFormPublicList, null, options, request);
       }
       /// <summary>
       ///创建快递单记录
@@ -1081,9 +1081,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ModifyReply CreateExpressInfo(global::GrpcMediaService.ExpressStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.ModifyReply createExpressInfo(global::GrpcMediaService.ExpressStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return CreateExpressInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return createExpressInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///创建快递单记录
@@ -1091,9 +1091,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ModifyReply CreateExpressInfo(global::GrpcMediaService.ExpressStruct request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.ModifyReply createExpressInfo(global::GrpcMediaService.ExpressStruct request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_CreateExpressInfo, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_createExpressInfo, null, options, request);
       }
       /// <summary>
       ///创建快递单记录
@@ -1103,9 +1103,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> CreateExpressInfoAsync(global::GrpcMediaService.ExpressStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> createExpressInfoAsync(global::GrpcMediaService.ExpressStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return CreateExpressInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return createExpressInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///创建快递单记录
@@ -1113,9 +1113,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> CreateExpressInfoAsync(global::GrpcMediaService.ExpressStruct request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> createExpressInfoAsync(global::GrpcMediaService.ExpressStruct request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_CreateExpressInfo, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_createExpressInfo, null, options, request);
       }
       /// <summary>
       ///修改快递单记录
@@ -1125,9 +1125,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ModifyReply UpdateExpressInfo(global::GrpcMediaService.ExpressStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.ModifyReply updateExpressInfo(global::GrpcMediaService.ExpressStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return UpdateExpressInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return updateExpressInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///修改快递单记录
@@ -1135,9 +1135,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ModifyReply UpdateExpressInfo(global::GrpcMediaService.ExpressStruct request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.ModifyReply updateExpressInfo(global::GrpcMediaService.ExpressStruct request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_UpdateExpressInfo, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_updateExpressInfo, null, options, request);
       }
       /// <summary>
       ///修改快递单记录
@@ -1147,9 +1147,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> UpdateExpressInfoAsync(global::GrpcMediaService.ExpressStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> updateExpressInfoAsync(global::GrpcMediaService.ExpressStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return UpdateExpressInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return updateExpressInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///修改快递单记录
@@ -1157,9 +1157,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> UpdateExpressInfoAsync(global::GrpcMediaService.ExpressStruct request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> updateExpressInfoAsync(global::GrpcMediaService.ExpressStruct request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_UpdateExpressInfo, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_updateExpressInfo, null, options, request);
       }
       /// <summary>
       ///根据Id删除快递单记录
@@ -1169,9 +1169,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ModifyReply DeleteExpressInfoById(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.ModifyReply deleteExpressInfoById(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return DeleteExpressInfoById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return deleteExpressInfoById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据Id删除快递单记录
@@ -1179,9 +1179,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ModifyReply DeleteExpressInfoById(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.ModifyReply deleteExpressInfoById(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_DeleteExpressInfoById, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_deleteExpressInfoById, null, options, request);
       }
       /// <summary>
       ///根据Id删除快递单记录
@@ -1191,9 +1191,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> DeleteExpressInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> deleteExpressInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return DeleteExpressInfoByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return deleteExpressInfoByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据Id删除快递单记录
@@ -1201,9 +1201,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> DeleteExpressInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> deleteExpressInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_DeleteExpressInfoById, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_deleteExpressInfoById, null, options, request);
       }
       /// <summary>
       ///根据Id获得快递单信息
@@ -1213,9 +1213,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ExpressStruct GetExpressInfoById(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.ExpressStruct getExpressInfoById(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetExpressInfoById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getExpressInfoById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据Id获得快递单信息
@@ -1223,9 +1223,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ExpressStruct GetExpressInfoById(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.ExpressStruct getExpressInfoById(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_GetExpressInfoById, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_getExpressInfoById, null, options, request);
       }
       /// <summary>
       ///根据Id获得快递单信息
@@ -1235,9 +1235,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ExpressStruct> GetExpressInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ExpressStruct> getExpressInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetExpressInfoByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getExpressInfoByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据Id获得快递单信息
@@ -1245,9 +1245,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ExpressStruct> GetExpressInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ExpressStruct> getExpressInfoByIdAsync(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_GetExpressInfoById, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_getExpressInfoById, null, options, request);
       }
       /// <summary>
       ///根据条件查询快递单信息列表(带分页)
@@ -1257,9 +1257,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ExpressList GetExpressListBySearch(global::GrpcMediaService.PaginationRequestSearch request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.ExpressList getExpressList(global::GrpcMediaService.PaginationRequestSearch request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetExpressListBySearch(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getExpressList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据条件查询快递单信息列表(带分页)
@@ -1267,9 +1267,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.ExpressList GetExpressListBySearch(global::GrpcMediaService.PaginationRequestSearch request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.ExpressList getExpressList(global::GrpcMediaService.PaginationRequestSearch request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_GetExpressListBySearch, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_getExpressList, null, options, request);
       }
       /// <summary>
       ///根据条件查询快递单信息列表(带分页)
@@ -1279,9 +1279,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ExpressList> GetExpressListBySearchAsync(global::GrpcMediaService.PaginationRequestSearch request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ExpressList> getExpressListAsync(global::GrpcMediaService.PaginationRequestSearch request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetExpressListBySearchAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getExpressListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据条件查询快递单信息列表(带分页)
@@ -1289,9 +1289,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ExpressList> GetExpressListBySearchAsync(global::GrpcMediaService.PaginationRequestSearch request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ExpressList> getExpressListAsync(global::GrpcMediaService.PaginationRequestSearch request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_GetExpressListBySearch, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_getExpressList, null, options, request);
       }
       /// <summary>
       ///创建会刊订购信息
@@ -2633,17 +2633,17 @@ namespace GrpcMediaService {
     public static grpc::ServerServiceDefinition BindService(MediaServiceToGrpcBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_CreateFormPublicInfo, serviceImpl.CreateFormPublicInfo)
-          .AddMethod(__Method_UpdateFormPublicInfo, serviceImpl.UpdateFormPublicInfo)
-          .AddMethod(__Method_DeleteFormPublicInfoById, serviceImpl.DeleteFormPublicInfoById)
-          .AddMethod(__Method_GetFormPublicInfoList, serviceImpl.GetFormPublicInfoList)
-          .AddMethod(__Method_GetFormPublicInfoById, serviceImpl.GetFormPublicInfoById)
-          .AddMethod(__Method_GetFormPublicListBySearch, serviceImpl.GetFormPublicListBySearch)
-          .AddMethod(__Method_CreateExpressInfo, serviceImpl.CreateExpressInfo)
-          .AddMethod(__Method_UpdateExpressInfo, serviceImpl.UpdateExpressInfo)
-          .AddMethod(__Method_DeleteExpressInfoById, serviceImpl.DeleteExpressInfoById)
-          .AddMethod(__Method_GetExpressInfoById, serviceImpl.GetExpressInfoById)
-          .AddMethod(__Method_GetExpressListBySearch, serviceImpl.GetExpressListBySearch)
+          .AddMethod(__Method_createFormPublicInfo, serviceImpl.createFormPublicInfo)
+          .AddMethod(__Method_updateFormPublicInfo, serviceImpl.updateFormPublicInfo)
+          .AddMethod(__Method_deleteFormPublicInfoById, serviceImpl.deleteFormPublicInfoById)
+          .AddMethod(__Method_getFormPublicInfoList, serviceImpl.getFormPublicInfoList)
+          .AddMethod(__Method_getFormPublicInfoById, serviceImpl.getFormPublicInfoById)
+          .AddMethod(__Method_getFormPublicList, serviceImpl.getFormPublicList)
+          .AddMethod(__Method_createExpressInfo, serviceImpl.createExpressInfo)
+          .AddMethod(__Method_updateExpressInfo, serviceImpl.updateExpressInfo)
+          .AddMethod(__Method_deleteExpressInfoById, serviceImpl.deleteExpressInfoById)
+          .AddMethod(__Method_getExpressInfoById, serviceImpl.getExpressInfoById)
+          .AddMethod(__Method_getExpressList, serviceImpl.getExpressList)
           .AddMethod(__Method_CreateCatalogueBooksInfo, serviceImpl.CreateCatalogueBooksInfo)
           .AddMethod(__Method_UpdateCatalogueBooksInfo, serviceImpl.UpdateCatalogueBooksInfo)
           .AddMethod(__Method_DeleteCatalogueBooksById, serviceImpl.DeleteCatalogueBooksById)

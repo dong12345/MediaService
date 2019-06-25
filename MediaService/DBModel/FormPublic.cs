@@ -20,9 +20,9 @@ namespace MediaService.DBModel
         public string Email { get; set; }
         public string Website { get; set; }
         /// <summary>
-        /// 展馆号code
+        /// 展馆号
         /// </summary>
-        public string PavilionCode { get; set; }
+        public string PavilionNumber { get; set; }
         /// <summary>
         /// 展位号
         /// </summary>
@@ -32,8 +32,8 @@ namespace MediaService.DBModel
         public string DescriptionEn { get; set; }
         public string SnecLogoWebsite { get; set; }
         public string Logo { get; set; }
-        public string Updated_at { get; set; }
-        public string Created_at { get; set; }
+        public DateTime Updated_at { get; set; }
+        public DateTime Created_at { get; set; }
         /// <summary>
         /// 客户经理Id
         /// </summary>
@@ -50,5 +50,7 @@ namespace MediaService.DBModel
         /// 是否有logo
         /// </summary>
         public bool IsHaveLogo { get; set; }
+
+        public string ContractNumber { get; set; }
     }
 }
