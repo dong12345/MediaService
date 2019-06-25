@@ -532,25 +532,41 @@ namespace MediaService.Service
             {
                 using (var _context = new MyContext(_options.Options))
                 {
-                    var list = await _context.Express.ToListAsync();
+                    //var list = await _context.Express.ToListAsync();
+                    //if (searchModel != null)
+                    //{
+                    //    total = list
+                    //      .Where(x => (string.IsNullOrEmpty(searchModel.ExpressNum) || x.ExpressNum.Contains(searchModel.ExpressNum))
+                    //    && (string.IsNullOrEmpty(searchModel.Sender) || x.Sender.Contains(searchModel.Sender))
+                    //    && (string.IsNullOrEmpty(searchModel.Begin_date) || x.SentDate >= Convert.ToDateTime(searchModel.Begin_date))
+                    //    && (string.IsNullOrEmpty(searchModel.End_date) || x.SentDate <= Convert.ToDateTime(searchModel.End_date))
+                    //    && (string.IsNullOrEmpty(searchModel.Recipient) || x.Recipient.Contains(searchModel.Recipient))
+                    //    && (string.IsNullOrEmpty(searchModel.RecipientUnit) || x.RecipientUnit.Contains(searchModel.RecipientUnit)))
+                    //        .Count();
+                    //}
+                    //else
+                    //{
+                    //    total = list.Count();
+                    //}
+
                     if (searchModel != null)
                     {
-                        total = list
-                          .Where(x => (string.IsNullOrEmpty(searchModel.ExpressNum) || x.ExpressNum.Contains(searchModel.ExpressNum))
+                        var list = await _context.Express
+                            .Where(x => (string.IsNullOrEmpty(searchModel.ExpressNum) || x.ExpressNum.Contains(searchModel.ExpressNum))
                         && (string.IsNullOrEmpty(searchModel.Sender) || x.Sender.Contains(searchModel.Sender))
                         && (string.IsNullOrEmpty(searchModel.Begin_date) || x.SentDate >= Convert.ToDateTime(searchModel.Begin_date))
                         && (string.IsNullOrEmpty(searchModel.End_date) || x.SentDate <= Convert.ToDateTime(searchModel.End_date))
                         && (string.IsNullOrEmpty(searchModel.Recipient) || x.Recipient.Contains(searchModel.Recipient))
                         && (string.IsNullOrEmpty(searchModel.RecipientUnit) || x.RecipientUnit.Contains(searchModel.RecipientUnit)))
-                            .Count();
+                        .ToListAsync();
+                        total = list.Count();
                     }
                     else
                     {
-                        total = list.Count();
+                        var  list = await _context.Express.ToListAsync();
+                        total = list.Count;
                     }
                 }
-
-
             }
             catch (Exception ex)
             {
