@@ -79,9 +79,10 @@ namespace MediaService.Common
         ///是否确认 0=>未确认；1=>待确认；2=>最终确认
         /// </summary>
         public int IsChecked { get; set; }
+
         /// <summary>
-        ///预订时间
+        /// 是否从网站页面订购
         /// </summary>
-        public string BookTime { get; set; }
+        public bool IsWebsite { get; set; }
     }
 }

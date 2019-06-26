@@ -53,167 +53,169 @@ namespace GrpcMediaService {
             "Y3QSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdjb3VudHJ5GAMgASgF",
             "Eg8KB2FkZHJlc3MYBCABKAkSCwoDdGVsGAUgASgJEg0KBWVtYWlsGAYgASgJ",
             "Eg0KBWNvdW50GAcgASgFEgsKA2RlcxgIIAEoCRIMCgR0eXBlGAkgASgJEhIK",
-            "CmNyZWF0ZWRfYXQYCiABKAkSEgoKdXBkYXRlZF9hdBgLIAEoCSLqAQoPSW50",
+            "CmNyZWF0ZWRfYXQYCiABKAkSEgoKdXBkYXRlZF9hdBgLIAEoCSK6AgoPSW50",
             "ZXJ2aWV3U3RydWN0EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDgoGbmFt",
             "ZUVuGAMgASgJEhAKCGpvYlRpdGxlGAQgASgJEhIKCmpvYlRpdGxlRW4YBSAB",
             "KAkSDQoFcGhvdG8YBiABKAkSFAoMaW50cm9kdWN0aW9uGAcgASgJEhUKDWlu",
             "dGVydmlld1RpbWUYCCABKAkSEQoJbWVkaWFOYW1lGAkgASgJEhAKCG1lbWJl",
-            "cklkGAogASgJEhIKCmNyZWF0ZWRfYXQYCyABKAkSEgoKdXBkYXRlZF9hdBgM",
-            "IAEoCSJTCg1JbnRlcnZpZXdMaXN0EjMKCGxpc3RkYXRhGAEgAygLMiEuR3Jw",
-            "Y01lZGlhU2VydmljZS5JbnRlcnZpZXdTdHJ1Y3QSDQoFdG90YWwYAiABKAUi",
-            "3QMKFEhpZ2hsaWdodHNJbmZvU3RydWN0EgoKAklkGAEgASgJEhAKCExEbmFt",
-            "ZUNuGAIgASgJEhAKCExEbmFtZUVuGAMgASgJEhQKDExEZGVzY3JpYmVDbhgE",
-            "IAEoCRIUCgxMRGRlc2NyaWJlRW4YBSABKAkSDwoHTERpbWFnZRgGIAEoCRIO",
-            "CgZMRGxvZ28YByABKAkSDgoGWUpuYW1lGAggASgJEhAKCFlKbmFtZUVuGAkg",
-            "ASgJEhEKCVlKQ29tcGFueRgKIAEoCRITCgtZSkNvbXBhbnlFbhgLIAEoCRIS",
-            "CgpZSlBvc2l0aW9uGAwgASgJEhQKDFlKUG9zaXRpb25FbhgNIAEoCRIWCg5Z",
-            "SkludHJvZHVjdGlvbhgOIAEoCRIPCgdZSlBob3RvGA8gASgJEg8KB1Nob3dX",
-            "YXkYECABKAkSEAoIQ29udHJhY3QYESABKAkSCwoDVGVsGBIgASgJEg4KBk1v",
-            "YmlsZRgTIAEoCRINCgVFbWFpbBgUIAEoCRIQCghNZW1iZXJJZBgVIAEoCRIP",
-            "CgdPd25lcklkGBYgASgJEhEKCU93bmVyTmFtZRgXIAEoCRISCgpDcmVhdGVk",
-            "X2F0GBggASgJEhIKClVwZGF0ZWRfYXQYGSABKAkiXQoSSGlnaGxpZ2h0c0lu",
-            "Zm9MaXN0EjgKCGxpc3RkYXRhGAEgAygLMiYuR3JwY01lZGlhU2VydmljZS5I",
-            "aWdobGlnaHRzSW5mb1N0cnVjdBINCgV0b3RhbBgCIAEoBSIaCgdIb3RlbElk",
-            "Eg8KB0hvdGVsSWQYASABKAki8QIKC0hvdGVsU3RydWN0Eg8KB0hvdGVsSWQY",
-            "ASABKAkSEQoJSG90ZWxDb2RlGAIgASgJEhEKCUhvdGVsTmFtZRgDIAEoCRIT",
-            "CgtIb3RlbE5hbWVFbhgEIAEoCRIUCgxIb3RlbEFkZHJlc3MYBSABKAkSFgoO",
-            "SG90ZWxBZGRyZXNzRW4YBiABKAkSDwoHQ291bnRyeRgHIAEoBRIPCgdLZXlX",
-            "b3JkGAggASgJEhIKCkhvdGVsRW1haWwYCSABKAkSEAoISG90ZWxUZWwYCiAB",
-            "KAkSEgoKSG90ZWxMZXZlbBgLIAEoBRIZChFIb3RlbEludHJvZHVjdGlvbhgM",
-            "IAEoCRIbChNIb3RlbEludHJvZHVjdGlvbkVuGA0gASgJEhAKCEJhbmtJbmZv",
-            "GA4gASgJEhIKCkJhbmtJbmZvRW4YDyABKAkSDgoGUmVtYXJrGBAgASgJEhAK",
-            "CFJlbWFya0VuGBEgASgJEgwKBFNvcnQYEiABKAUiSwoJSG90ZWxMaXN0Ei8K",
-            "CGxpc3RkYXRhGAEgAygLMh0uR3JwY01lZGlhU2VydmljZS5Ib3RlbFN0cnVj",
-            "dBINCgV0b3RhbBgCIAEoBSIqCg9Ib3RlbFJvb21UeXBlSWQSFwoPSG90ZWxS",
-            "b29tVHlwZUlkGAEgASgJIusBChNIb3RlbFJvb21UeXBlU3RydWN0EhcKD0hw",
-            "dGVsUm9vbVR5cGVJZBgBIAEoCRIPCgdIb3RlbElkGAIgASgJEhAKCFR5cGVO",
-            "YW1lGAMgASgJEhIKClR5cGVOYW1lRW4YBCABKAkSDwoHQmVkVHlwZRgFIAEo",
-            "CRIRCglCZWRUeXBlRW4YBiABKAkSEAoITWF4Q291bnQYByABKAUSDQoFUHJp",
-            "Y2UYCCABKAkSCwoDVGF4GAkgASgJEhMKC0lzQnJlYWtmYXN0GAogASgIEg0K",
-            "BUlzTmV0GAsgASgIEg4KBklzVXNlZBgMIAEoCCJbChFIb3RlbFJvb21UeXBl",
-            "TGlzdBI3CghsaXN0ZGF0YRgBIAMoCzIlLkdycGNNZWRpYVNlcnZpY2UuSG90",
-            "ZWxSb29tVHlwZVN0cnVjdBINCgV0b3RhbBgCIAEoBSIcCghNZW1iZXJJZBIQ",
-            "CghNZW1iZXJJZBgBIAEoCSKlBwoVSG90ZWxCb29rUmVjb3JkU3RydWN0EgoK",
-            "AklkGAEgASgJEhAKCE1lbWJlcklkGAIgASgJEhUKDU1lbWJlckNvbXBhbnkY",
-            "AyABKAkSFwoPTWVtYmVyQ29tcGFueUVuGAQgASgJEg8KB0hvdGVsSWQYBSAB",
-            "KAkSFwoPSG90ZWxSb29tVHlwZUlkGAYgASgJEhAKCEJvb2tUaW1lGAcgASgJ",
-            "EhMKC0NoZWNrSW5UaW1lGAggASgJEhQKDENoZWNrT3V0VGltZRgJIAEoCRIS",
-            "CgpJc0NhbmNlbGVkGAogASgFEhEKCUlzQ2hlY2tlZBgLIAEoBRISCgpQcmlj",
-            "ZUNvdW50GAwgASgJEg4KBlJlbWFyaxgNIAEoCRIMCgREYXlzGA4gASgFEhQK",
-            "DEFycml2ZUZsaWdodBgPIAEoCRITCgtMZWF2ZUZsaWdodBgQIAEoCRIPCgdJ",
-            "c1Ntb2tlGBEgASgJEhgKEExpbmtNYW5GaXJzdE5hbWUYEiABKAkSFwoPTGlu",
-            "a01hbkxhc3ROYW1lGBMgASgJEhIKCkxpbmtNYW5UZWwYFCABKAkSFAoMTGlu",
-            "a01hbkVtYWlsGBUgASgJEhQKDExpbmtNYW5UaXRsZRgWIAEoCRIYChBMaW5r",
-            "TWFuQ291bnRyeUlkGBcgASgFEhMKC0xpbmtNYW5DaXR5GBggASgJEhIKCkxp",
-            "bmtNYW5GYXgYGSABKAkSGQoRTGlua01hbklkQ2FyZFR5cGUYGiABKAkSGwoT",
-            "TGlua01hbklkQ2FyZE51bWJlchgbIAEoCRIWCg5MaW5rTWFuQ29tcGFueRgc",
-            "IAEoCRIVCg1MaW5rTWFuTW9iaWxlGB0gASgJEhQKDExpbmtNYW5CaXJ0aBge",
-            "IAEoCRIRCglPdGhlck5hbWUYHyABKAkSEgoKT3RoZXJUaXRsZRggIAEoCRIS",
-            "CgpPdGhlckVtYWlsGCEgASgJEhMKC090aGVyTW9iaWxlGCIgASgJEhQKDE90",
-            "aGVyQ29tcGFueRgjIAEoCRISCgpDYXJkUGVyc29uGCQgASgJEhAKCENhcmRU",
-            "eXBlGCUgASgJEhIKCkNhcmROdW1iZXIYJiABKAkSEAoIQ2FyZERhdGUYJyAB",
-            "KAkSDQoFUGF5ZXIYKCABKAkSDwoHUGF5VHlwZRgpIAEoCRIVCg1MaW5rTWFu",
-            "RW1haWwyGCogASgJEhIKCkNyZWF0ZWRfYXQYKyABKAkSEgoKVXBkYXRlZF9h",
-            "dBgsIAEoCSJfChNIb3RlbEJvb2tSZWNvcmRMaXN0EjkKCGxpc3RkYXRhGAEg",
-            "AygLMicuR3JwY01lZGlhU2VydmljZS5Ib3RlbEJvb2tSZWNvcmRTdHJ1Y3QS",
-            "DQoFdG90YWwYAiABKAUiBwoFRW1wdHkiFwoJSWRSZXF1ZXN0EgoKAmlkGAEg",
-            "ASgJIkMKC01vZGlmeVJlcGx5Eg8KB3N1Y2Nlc3MYASABKAgSFgoObW9kaWZp",
-            "ZWRfY291bnQYAiABKAUSCwoDbXNnGAMgASgJIvMCCgxTZWFyY2hTdHJ1Y3QS",
-            "EwoLY29tcGFueU5hbWUYASABKAkSFgoOY29udHJhY3ROdW1iZXIYAiABKAkS",
-            "FgoOcGF2aWxpb25OdW1iZXIYAyABKAkSEwoLYm9vdGhOdW1iZXIYBCABKAkS",
-            "DwoHb3duZXJJZBgFIAEoCRINCgVpc1BheRgGIAEoCBISCgppc0hhdmVMb2dv",
-            "GAcgASgIEhIKCmJlZ2luX2RhdGUYCCABKAkSEAoIZW5kX2RhdGUYCSABKAkS",
-            "EgoKZXhwcmVzc051bRgKIAEoCRIOCgZzZW5kZXIYCyABKAkSEQoJcmVjaXBp",
-            "ZW50GAwgASgJEhUKDXJlY2lwaWVudFVuaXQYDSABKAkSDwoHaG90ZWxJZBgO",
-            "IAEoCRIXCg9ob3RlbFJvb21UeXBlSWQYDyABKAkSEgoKaXNDYW5jZWxlZBgQ",
-            "IAEoBRIRCglpc0NoZWNrZWQYESABKAUSEAoIYm9va1RpbWUYEiABKAkynh4K",
-            "Ek1lZGlhU2VydmljZVRvR3JwYxJbChRjcmVhdGVGb3JtUHVibGljSW5mbxIi",
-            "LkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1YmxpY1N0cnVjdBodLkdycGNNZWRp",
-            "YVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJbChR1cGRhdGVGb3JtUHVibGljSW5m",
-            "bxIiLkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1YmxpY1N0cnVjdBodLkdycGNN",
-            "ZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJYChhkZWxldGVGb3JtUHVibGlj",
-            "SW5mb0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBodLkdycGNN",
-            "ZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJUChVnZXRGb3JtUHVibGljSW5m",
-            "b0xpc3QSFy5HcnBjTWVkaWFTZXJ2aWNlLkVtcHR5GiAuR3JwY01lZGlhU2Vy",
-            "dmljZS5Gb3JtUHVibGljTGlzdCIAEloKFWdldEZvcm1QdWJsaWNJbmZvQnlJ",
-            "ZBIbLkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1ZXN0GiIuR3JwY01lZGlhU2Vy",
-            "dmljZS5Gb3JtUHVibGljU3RydWN0IgASYgoRZ2V0Rm9ybVB1YmxpY0xpc3QS",
-            "KS5HcnBjTWVkaWFTZXJ2aWNlLlBhZ2luYXRpb25SZXF1ZXN0U2VhcmNoGiAu",
-            "R3JwY01lZGlhU2VydmljZS5Gb3JtUHVibGljTGlzdCIAElUKEWNyZWF0ZUV4",
-            "cHJlc3NJbmZvEh8uR3JwY01lZGlhU2VydmljZS5FeHByZXNzU3RydWN0Gh0u",
-            "R3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElUKEXVwZGF0ZUV4cHJl",
-            "c3NJbmZvEh8uR3JwY01lZGlhU2VydmljZS5FeHByZXNzU3RydWN0Gh0uR3Jw",
-            "Y01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElUKFWRlbGV0ZUV4cHJlc3NJ",
-            "bmZvQnlJZBIbLkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1ZXN0Gh0uR3JwY01l",
-            "ZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElQKEmdldEV4cHJlc3NJbmZvQnlJ",
-            "ZBIbLkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1ZXN0Gh8uR3JwY01lZGlhU2Vy",
-            "dmljZS5FeHByZXNzU3RydWN0IgASXAoOZ2V0RXhwcmVzc0xpc3QSKS5HcnBj",
-            "TWVkaWFTZXJ2aWNlLlBhZ2luYXRpb25SZXF1ZXN0U2VhcmNoGh0uR3JwY01l",
-            "ZGlhU2VydmljZS5FeHByZXNzTGlzdCIAEmMKGENyZWF0ZUNhdGFsb2d1ZUJv",
-            "b2tzSW5mbxImLkdycGNNZWRpYVNlcnZpY2UuQ2F0YWxvZ3VlQm9va3NTdHJ1",
-            "Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASYwoYVXBkYXRl",
-            "Q2F0YWxvZ3VlQm9va3NJbmZvEiYuR3JwY01lZGlhU2VydmljZS5DYXRhbG9n",
-            "dWVCb29rc1N0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHki",
-            "ABJYChhEZWxldGVDYXRhbG9ndWVCb29rc0J5SWQSGy5HcnBjTWVkaWFTZXJ2",
+            "cklkGAogASgJEhMKC2NvbXBhbnlOYW1lGAsgASgJEhUKDWNvbXBhbnlOYW1l",
+            "RW4YDCABKAkSDwoHb3duZXJJZBgNIAEoCRIRCglvd25lck5hbWUYDiABKAkS",
+            "EgoKY3JlYXRlZF9hdBgPIAEoCRISCgp1cGRhdGVkX2F0GBAgASgJIlMKDUlu",
+            "dGVydmlld0xpc3QSMwoIbGlzdGRhdGEYASADKAsyIS5HcnBjTWVkaWFTZXJ2",
+            "aWNlLkludGVydmlld1N0cnVjdBINCgV0b3RhbBgCIAEoBSLpAwoUSGlnaGxp",
+            "Z2h0c0luZm9TdHJ1Y3QSCgoCSWQYASABKAkSEAoITERuYW1lQ24YAiABKAkS",
+            "EAoITERuYW1lRW4YAyABKAkSFAoMTERkZXNjcmliZUNuGAQgASgJEhQKDExE",
+            "ZGVzY3JpYmVFbhgFIAEoCRIPCgdMRGltYWdlGAYgASgJEg4KBkxEbG9nbxgH",
+            "IAEoCRIOCgZZSm5hbWUYCCABKAkSEAoIWUpuYW1lRW4YCSABKAkSEgoKWUpQ",
+            "b3NpdGlvbhgKIAEoCRIUCgxZSlBvc2l0aW9uRW4YCyABKAkSFgoOWUpJbnRy",
+            "b2R1Y3Rpb24YDCABKAkSDwoHWUpQaG90bxgNIAEoCRIPCgdTaG93V2F5GA4g",
+            "ASgJEhAKCENvbnRyYWN0GA8gASgJEhcKD0NvbnRyYWN0Q29tcGFueRgQIAEo",
+            "CRIZChFDb250cmFjdENvbXBhbnlFbhgRIAEoCRILCgNUZWwYEiABKAkSDgoG",
+            "TW9iaWxlGBMgASgJEg0KBUVtYWlsGBQgASgJEhAKCE1lbWJlcklkGBUgASgJ",
+            "Eg8KB093bmVySWQYFiABKAkSEQoJT3duZXJOYW1lGBcgASgJEhIKCkNyZWF0",
+            "ZWRfYXQYGCABKAkSEgoKVXBkYXRlZF9hdBgZIAEoCSJdChJIaWdobGlnaHRz",
+            "SW5mb0xpc3QSOAoIbGlzdGRhdGEYASADKAsyJi5HcnBjTWVkaWFTZXJ2aWNl",
+            "LkhpZ2hsaWdodHNJbmZvU3RydWN0Eg0KBXRvdGFsGAIgASgFIhoKB0hvdGVs",
+            "SWQSDwoHSG90ZWxJZBgBIAEoCSLxAgoLSG90ZWxTdHJ1Y3QSDwoHSG90ZWxJ",
+            "ZBgBIAEoCRIRCglIb3RlbENvZGUYAiABKAkSEQoJSG90ZWxOYW1lGAMgASgJ",
+            "EhMKC0hvdGVsTmFtZUVuGAQgASgJEhQKDEhvdGVsQWRkcmVzcxgFIAEoCRIW",
+            "Cg5Ib3RlbEFkZHJlc3NFbhgGIAEoCRIPCgdDb3VudHJ5GAcgASgFEg8KB0tl",
+            "eVdvcmQYCCABKAkSEgoKSG90ZWxFbWFpbBgJIAEoCRIQCghIb3RlbFRlbBgK",
+            "IAEoCRISCgpIb3RlbExldmVsGAsgASgFEhkKEUhvdGVsSW50cm9kdWN0aW9u",
+            "GAwgASgJEhsKE0hvdGVsSW50cm9kdWN0aW9uRW4YDSABKAkSEAoIQmFua0lu",
+            "Zm8YDiABKAkSEgoKQmFua0luZm9FbhgPIAEoCRIOCgZSZW1hcmsYECABKAkS",
+            "EAoIUmVtYXJrRW4YESABKAkSDAoEU29ydBgSIAEoBSJLCglIb3RlbExpc3QS",
+            "LwoIbGlzdGRhdGEYASADKAsyHS5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsU3Ry",
+            "dWN0Eg0KBXRvdGFsGAIgASgFIioKD0hvdGVsUm9vbVR5cGVJZBIXCg9Ib3Rl",
+            "bFJvb21UeXBlSWQYASABKAki6wEKE0hvdGVsUm9vbVR5cGVTdHJ1Y3QSFwoP",
+            "SHB0ZWxSb29tVHlwZUlkGAEgASgJEg8KB0hvdGVsSWQYAiABKAkSEAoIVHlw",
+            "ZU5hbWUYAyABKAkSEgoKVHlwZU5hbWVFbhgEIAEoCRIPCgdCZWRUeXBlGAUg",
+            "ASgJEhEKCUJlZFR5cGVFbhgGIAEoCRIQCghNYXhDb3VudBgHIAEoBRINCgVQ",
+            "cmljZRgIIAEoCRILCgNUYXgYCSABKAkSEwoLSXNCcmVha2Zhc3QYCiABKAgS",
+            "DQoFSXNOZXQYCyABKAgSDgoGSXNVc2VkGAwgASgIIlsKEUhvdGVsUm9vbVR5",
+            "cGVMaXN0EjcKCGxpc3RkYXRhGAEgAygLMiUuR3JwY01lZGlhU2VydmljZS5I",
+            "b3RlbFJvb21UeXBlU3RydWN0Eg0KBXRvdGFsGAIgASgFIhwKCE1lbWJlcklk",
+            "EhAKCE1lbWJlcklkGAEgASgJIrgHChVIb3RlbEJvb2tSZWNvcmRTdHJ1Y3QS",
+            "CgoCSWQYASABKAkSEAoITWVtYmVySWQYAiABKAkSFQoNTWVtYmVyQ29tcGFu",
+            "eRgDIAEoCRIXCg9NZW1iZXJDb21wYW55RW4YBCABKAkSDwoHSG90ZWxJZBgF",
+            "IAEoCRIXCg9Ib3RlbFJvb21UeXBlSWQYBiABKAkSEAoIQm9va1RpbWUYByAB",
+            "KAkSEwoLQ2hlY2tJblRpbWUYCCABKAkSFAoMQ2hlY2tPdXRUaW1lGAkgASgJ",
+            "EhIKCklzQ2FuY2VsZWQYCiABKAUSEQoJSXNDaGVja2VkGAsgASgFEhIKClBy",
+            "aWNlQ291bnQYDCABKAkSDgoGUmVtYXJrGA0gASgJEgwKBERheXMYDiABKAUS",
+            "FAoMQXJyaXZlRmxpZ2h0GA8gASgJEhMKC0xlYXZlRmxpZ2h0GBAgASgJEg8K",
+            "B0lzU21va2UYESABKAkSGAoQTGlua01hbkZpcnN0TmFtZRgSIAEoCRIXCg9M",
+            "aW5rTWFuTGFzdE5hbWUYEyABKAkSEgoKTGlua01hblRlbBgUIAEoCRIUCgxM",
+            "aW5rTWFuRW1haWwYFSABKAkSFAoMTGlua01hblRpdGxlGBYgASgJEhgKEExp",
+            "bmtNYW5Db3VudHJ5SWQYFyABKAUSEwoLTGlua01hbkNpdHkYGCABKAkSEgoK",
+            "TGlua01hbkZheBgZIAEoCRIZChFMaW5rTWFuSWRDYXJkVHlwZRgaIAEoCRIb",
+            "ChNMaW5rTWFuSWRDYXJkTnVtYmVyGBsgASgJEhYKDkxpbmtNYW5Db21wYW55",
+            "GBwgASgJEhUKDUxpbmtNYW5Nb2JpbGUYHSABKAkSFAoMTGlua01hbkJpcnRo",
+            "GB4gASgJEhEKCU90aGVyTmFtZRgfIAEoCRISCgpPdGhlclRpdGxlGCAgASgJ",
+            "EhIKCk90aGVyRW1haWwYISABKAkSEwoLT3RoZXJNb2JpbGUYIiABKAkSFAoM",
+            "T3RoZXJDb21wYW55GCMgASgJEhIKCkNhcmRQZXJzb24YJCABKAkSEAoIQ2Fy",
+            "ZFR5cGUYJSABKAkSEgoKQ2FyZE51bWJlchgmIAEoCRIQCghDYXJkRGF0ZRgn",
+            "IAEoCRINCgVQYXllchgoIAEoCRIPCgdQYXlUeXBlGCkgASgJEhUKDUxpbmtN",
+            "YW5FbWFpbDIYKiABKAkSEgoKQ3JlYXRlZF9hdBgrIAEoCRISCgpVcGRhdGVk",
+            "X2F0GCwgASgJEhEKCUlzV2Vic2l0ZRgtIAEoCCJfChNIb3RlbEJvb2tSZWNv",
+            "cmRMaXN0EjkKCGxpc3RkYXRhGAEgAygLMicuR3JwY01lZGlhU2VydmljZS5I",
+            "b3RlbEJvb2tSZWNvcmRTdHJ1Y3QSDQoFdG90YWwYAiABKAUiBwoFRW1wdHki",
+            "FwoJSWRSZXF1ZXN0EgoKAmlkGAEgASgJIkMKC01vZGlmeVJlcGx5Eg8KB3N1",
+            "Y2Nlc3MYASABKAgSFgoObW9kaWZpZWRfY291bnQYAiABKAUSCwoDbXNnGAMg",
+            "ASgJIvQCCgxTZWFyY2hTdHJ1Y3QSEwoLY29tcGFueU5hbWUYASABKAkSFgoO",
+            "Y29udHJhY3ROdW1iZXIYAiABKAkSFgoOcGF2aWxpb25OdW1iZXIYAyABKAkS",
+            "EwoLYm9vdGhOdW1iZXIYBCABKAkSDwoHb3duZXJJZBgFIAEoCRINCgVpc1Bh",
+            "eRgGIAEoCBISCgppc0hhdmVMb2dvGAcgASgIEhIKCmJlZ2luX2RhdGUYCCAB",
+            "KAkSEAoIZW5kX2RhdGUYCSABKAkSEgoKZXhwcmVzc051bRgKIAEoCRIOCgZz",
+            "ZW5kZXIYCyABKAkSEQoJcmVjaXBpZW50GAwgASgJEhUKDXJlY2lwaWVudFVu",
+            "aXQYDSABKAkSDwoHaG90ZWxJZBgOIAEoCRIXCg9ob3RlbFJvb21UeXBlSWQY",
+            "DyABKAkSEgoKaXNDYW5jZWxlZBgQIAEoBRIRCglpc0NoZWNrZWQYESABKAUS",
+            "EQoJaXNXZWJzaXRlGBIgASgIMoQeChJNZWRpYVNlcnZpY2VUb0dycGMSWwoU",
+            "Y3JlYXRlRm9ybVB1YmxpY0luZm8SIi5HcnBjTWVkaWFTZXJ2aWNlLkZvcm1Q",
+            "dWJsaWNTdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgAS",
+            "WwoUdXBkYXRlRm9ybVB1YmxpY0luZm8SIi5HcnBjTWVkaWFTZXJ2aWNlLkZv",
+            "cm1QdWJsaWNTdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5",
+            "IgASWAoYZGVsZXRlRm9ybVB1YmxpY0luZm9CeUlkEhsuR3JwY01lZGlhU2Vy",
+            "dmljZS5JZFJlcXVlc3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5",
+            "IgASVAoVZ2V0Rm9ybVB1YmxpY0luZm9MaXN0EhcuR3JwY01lZGlhU2Vydmlj",
+            "ZS5FbXB0eRogLkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1YmxpY0xpc3QiABJa",
+            "ChVnZXRGb3JtUHVibGljSW5mb0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklk",
+            "UmVxdWVzdBoiLkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1YmxpY1N0cnVjdCIA",
+            "EmIKEWdldEZvcm1QdWJsaWNMaXN0EikuR3JwY01lZGlhU2VydmljZS5QYWdp",
+            "bmF0aW9uUmVxdWVzdFNlYXJjaBogLkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1",
+            "YmxpY0xpc3QiABJVChFjcmVhdGVFeHByZXNzSW5mbxIfLkdycGNNZWRpYVNl",
+            "cnZpY2UuRXhwcmVzc1N0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5",
+            "UmVwbHkiABJVChF1cGRhdGVFeHByZXNzSW5mbxIfLkdycGNNZWRpYVNlcnZp",
+            "Y2UuRXhwcmVzc1N0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVw",
+            "bHkiABJVChVkZWxldGVFeHByZXNzSW5mb0J5SWQSGy5HcnBjTWVkaWFTZXJ2",
             "aWNlLklkUmVxdWVzdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHki",
-            "ABJZChNDcmVhdGVJbnRlcnZpZXdJbmZvEiEuR3JwY01lZGlhU2VydmljZS5J",
-            "bnRlcnZpZXdTdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5",
-            "IgASWQoTVXBkYXRlSW50ZXJ2aWV3SW5mbxIhLkdycGNNZWRpYVNlcnZpY2Uu",
-            "SW50ZXJ2aWV3U3RydWN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBs",
-            "eSIAElMKE0RlbGV0ZUludGVydmlld0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNl",
-            "LklkUmVxdWVzdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJY",
-            "ChRHZXRJbnRlcnZpZXdJbmZvQnlJZBIbLkdycGNNZWRpYVNlcnZpY2UuSWRS",
-            "ZXF1ZXN0GiEuR3JwY01lZGlhU2VydmljZS5JbnRlcnZpZXdTdHJ1Y3QiABJo",
-            "ChhHZXRJbnRlcnZpZXdMaXN0QnlTZWFyY2gSKS5HcnBjTWVkaWFTZXJ2aWNl",
-            "LlBhZ2luYXRpb25SZXF1ZXN0U2VhcmNoGh8uR3JwY01lZGlhU2VydmljZS5J",
-            "bnRlcnZpZXdMaXN0IgASXwoUQ3JlYXRlSGlnaGxpZ2h0c0luZm8SJi5HcnBj",
-            "TWVkaWFTZXJ2aWNlLkhpZ2hsaWdodHNJbmZvU3RydWN0Gh0uR3JwY01lZGlh",
-            "U2VydmljZS5Nb2RpZnlSZXBseSIAEl8KFFVwZGF0ZUhpZ2hsaWdodHNJbmZv",
-            "EiYuR3JwY01lZGlhU2VydmljZS5IaWdobGlnaHRzSW5mb1N0cnVjdBodLkdy",
-            "cGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJYChhEZWxldGVIaWdobGln",
-            "aHRzSW5mb0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBodLkdy",
-            "cGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJeChVHZXRIaWdobGlnaHRz",
-            "SW5mb0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBomLkdycGNN",
-            "ZWRpYVNlcnZpY2UuSGlnaGxpZ2h0c0luZm9TdHJ1Y3QiABJyCh1HZXRIaWdo",
-            "bGlnaHRzSW5mb0xpc3RCeVNlYXJjaBIpLkdycGNNZWRpYVNlcnZpY2UuUGFn",
-            "aW5hdGlvblJlcXVlc3RTZWFyY2gaJC5HcnBjTWVkaWFTZXJ2aWNlLkhpZ2hs",
-            "aWdodHNJbmZvTGlzdCIAElEKD0NyZWF0ZUhvdGVsSW5mbxIdLkdycGNNZWRp",
-            "YVNlcnZpY2UuSG90ZWxTdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlm",
-            "eVJlcGx5IgASUQoPVXBkYXRlSG90ZWxJbmZvEh0uR3JwY01lZGlhU2Vydmlj",
-            "ZS5Ib3RlbFN0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHki",
-            "ABJRChNEZWxldGVIb3RlbEluZm9CeUlkEhkuR3JwY01lZGlhU2VydmljZS5I",
-            "b3RlbElkGh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAEkoKDEdl",
-            "dEhvdGVsQnlJZBIZLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxJZBodLkdycGNN",
-            "ZWRpYVNlcnZpY2UuSG90ZWxTdHJ1Y3QiABJGCgxHZXRIb3RlbExpc3QSFy5H",
-            "cnBjTWVkaWFTZXJ2aWNlLkVtcHR5GhsuR3JwY01lZGlhU2VydmljZS5Ib3Rl",
-            "bExpc3QiABJhChdDcmVhdGVIb3RlbFJvb21UeXBlSW5mbxIlLkdycGNNZWRp",
-            "YVNlcnZpY2UuSG90ZWxSb29tVHlwZVN0cnVjdBodLkdycGNNZWRpYVNlcnZp",
-            "Y2UuTW9kaWZ5UmVwbHkiABJhChdVcGRhdGVIb3RlbFJvb21UeXBlSW5mbxIl",
-            "LkdycGNNZWRpYVNlcnZpY2UuSG90ZWxSb29tVHlwZVN0cnVjdBodLkdycGNN",
-            "ZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJdChdEZWxldGVIb3RlbFJvb21U",
-            "eXBlQnlJZBIhLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxSb29tVHlwZUlkGh0u",
-            "R3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAEmYKGEdldEhvdGVsUm9v",
-            "bVR5cGVJbmZvQnlJZBIhLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxSb29tVHlw",
-            "ZUlkGiUuR3JwY01lZGlhU2VydmljZS5Ib3RlbFJvb21UeXBlU3RydWN0IgAS",
-            "YQodR2V0SG9sdGVSb29tVHlwZUxpc3RCeUhvdGVsSWQSGS5HcnBjTWVkaWFT",
-            "ZXJ2aWNlLkhvdGVsSWQaIy5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsUm9vbVR5",
-            "cGVMaXN0IgASZQoZQ3JlYXRlSG90ZWxCb29rUmVjb3JkSW5mbxInLkdycGNN",
-            "ZWRpYVNlcnZpY2UuSG90ZWxCb29rUmVjb3JkU3RydWN0Gh0uR3JwY01lZGlh",
-            "U2VydmljZS5Nb2RpZnlSZXBseSIAEmUKGVVwZGF0ZUhvdGVsQm9va1JlY29y",
-            "ZEluZm8SJy5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsQm9va1JlY29yZFN0cnVj",
-            "dBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJdCh1EZWxldGVI",
-            "b3RlbEJvb2tSZWNvcmRJbmZvQnlJZBIbLkdycGNNZWRpYVNlcnZpY2UuSWRS",
-            "ZXF1ZXN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAEmUKHEdl",
-            "dEhvdGVsQm9va1JlY29yZEJ5TWVtYmVySWQSGi5HcnBjTWVkaWFTZXJ2aWNl",
-            "Lk1lbWJlcklkGicuR3JwY01lZGlhU2VydmljZS5Ib3RlbEJvb2tSZWNvcmRT",
-            "dHJ1Y3QiABJZChlDYW5jZWxIb3RlbEJvb2tSZWNvcmRCeUlkEhsuR3JwY01l",
-            "ZGlhU2VydmljZS5JZFJlcXVlc3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlm",
-            "eVJlcGx5IgASYAoWR2V0SG90ZWxCb29rUmVjb3JkQnlJZBIbLkdycGNNZWRp",
-            "YVNlcnZpY2UuSWRSZXF1ZXN0GicuR3JwY01lZGlhU2VydmljZS5Ib3RlbEJv",
-            "b2tSZWNvcmRTdHJ1Y3QiABJ0Ch5HZXRIb3RlbEJvb2tSZWNvcmRMaXN0QnlT",
-            "ZWFyY2gSKS5HcnBjTWVkaWFTZXJ2aWNlLlBhZ2luYXRpb25SZXF1ZXN0U2Vh",
-            "cmNoGiUuR3JwY01lZGlhU2VydmljZS5Ib3RlbEJvb2tSZWNvcmRMaXN0IgBi",
-            "BnByb3RvMw=="));
+            "ABJUChJnZXRFeHByZXNzSW5mb0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklk",
+            "UmVxdWVzdBofLkdycGNNZWRpYVNlcnZpY2UuRXhwcmVzc1N0cnVjdCIAElwK",
+            "DmdldEV4cHJlc3NMaXN0EikuR3JwY01lZGlhU2VydmljZS5QYWdpbmF0aW9u",
+            "UmVxdWVzdFNlYXJjaBodLkdycGNNZWRpYVNlcnZpY2UuRXhwcmVzc0xpc3Qi",
+            "ABJjChhjcmVhdGVDYXRhbG9ndWVCb29rc0luZm8SJi5HcnBjTWVkaWFTZXJ2",
+            "aWNlLkNhdGFsb2d1ZUJvb2tzU3RydWN0Gh0uR3JwY01lZGlhU2VydmljZS5N",
+            "b2RpZnlSZXBseSIAEmMKGHVwZGF0ZUNhdGFsb2d1ZUJvb2tzSW5mbxImLkdy",
+            "cGNNZWRpYVNlcnZpY2UuQ2F0YWxvZ3VlQm9va3NTdHJ1Y3QaHS5HcnBjTWVk",
+            "aWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASWAoYZGVsZXRlQ2F0YWxvZ3VlQm9v",
+            "a3NCeUlkEhsuR3JwY01lZGlhU2VydmljZS5JZFJlcXVlc3QaHS5HcnBjTWVk",
+            "aWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASWQoTY3JlYXRlSW50ZXJ2aWV3SW5m",
+            "bxIhLkdycGNNZWRpYVNlcnZpY2UuSW50ZXJ2aWV3U3RydWN0Gh0uR3JwY01l",
+            "ZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElkKE3VwZGF0ZUludGVydmlld0lu",
+            "Zm8SIS5HcnBjTWVkaWFTZXJ2aWNlLkludGVydmlld1N0cnVjdBodLkdycGNN",
+            "ZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJTChNkZWxldGVJbnRlcnZpZXdC",
+            "eUlkEhsuR3JwY01lZGlhU2VydmljZS5JZFJlcXVlc3QaHS5HcnBjTWVkaWFT",
+            "ZXJ2aWNlLk1vZGlmeVJlcGx5IgASWAoUZ2V0SW50ZXJ2aWV3SW5mb0J5SWQS",
+            "Gy5HcnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBohLkdycGNNZWRpYVNlcnZp",
+            "Y2UuSW50ZXJ2aWV3U3RydWN0IgASYAoQZ2V0SW50ZXJ2aWV3TGlzdBIpLkdy",
+            "cGNNZWRpYVNlcnZpY2UuUGFnaW5hdGlvblJlcXVlc3RTZWFyY2gaHy5HcnBj",
+            "TWVkaWFTZXJ2aWNlLkludGVydmlld0xpc3QiABJfChRjcmVhdGVIaWdobGln",
+            "aHRzSW5mbxImLkdycGNNZWRpYVNlcnZpY2UuSGlnaGxpZ2h0c0luZm9TdHJ1",
+            "Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASXwoUdXBkYXRl",
+            "SGlnaGxpZ2h0c0luZm8SJi5HcnBjTWVkaWFTZXJ2aWNlLkhpZ2hsaWdodHNJ",
+            "bmZvU3RydWN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElgK",
+            "GGRlbGV0ZUhpZ2hsaWdodHNJbmZvQnlJZBIbLkdycGNNZWRpYVNlcnZpY2Uu",
+            "SWRSZXF1ZXN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAEl4K",
+            "FWdldEhpZ2hsaWdodHNJbmZvQnlJZBIbLkdycGNNZWRpYVNlcnZpY2UuSWRS",
+            "ZXF1ZXN0GiYuR3JwY01lZGlhU2VydmljZS5IaWdobGlnaHRzSW5mb1N0cnVj",
+            "dCIAEmoKFWdldEhpZ2hsaWdodHNJbmZvTGlzdBIpLkdycGNNZWRpYVNlcnZp",
+            "Y2UuUGFnaW5hdGlvblJlcXVlc3RTZWFyY2gaJC5HcnBjTWVkaWFTZXJ2aWNl",
+            "LkhpZ2hsaWdodHNJbmZvTGlzdCIAElEKD2NyZWF0ZUhvdGVsSW5mbxIdLkdy",
+            "cGNNZWRpYVNlcnZpY2UuSG90ZWxTdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNl",
+            "Lk1vZGlmeVJlcGx5IgASUQoPdXBkYXRlSG90ZWxJbmZvEh0uR3JwY01lZGlh",
+            "U2VydmljZS5Ib3RlbFN0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5",
+            "UmVwbHkiABJRChNkZWxldGVIb3RlbEluZm9CeUlkEhkuR3JwY01lZGlhU2Vy",
+            "dmljZS5Ib3RlbElkGh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIA",
+            "EkoKDGdldEhvdGVsQnlJZBIZLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxJZBod",
+            "LkdycGNNZWRpYVNlcnZpY2UuSG90ZWxTdHJ1Y3QiABJGCgxHZXRIb3RlbExp",
+            "c3QSFy5HcnBjTWVkaWFTZXJ2aWNlLkVtcHR5GhsuR3JwY01lZGlhU2Vydmlj",
+            "ZS5Ib3RlbExpc3QiABJhChdjcmVhdGVIb3RlbFJvb21UeXBlSW5mbxIlLkdy",
+            "cGNNZWRpYVNlcnZpY2UuSG90ZWxSb29tVHlwZVN0cnVjdBodLkdycGNNZWRp",
+            "YVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJhChd1cGRhdGVIb3RlbFJvb21UeXBl",
+            "SW5mbxIlLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxSb29tVHlwZVN0cnVjdBod",
+            "LkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJdChdkZWxldGVIb3Rl",
+            "bFJvb21UeXBlQnlJZBIhLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxSb29tVHlw",
+            "ZUlkGh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAEmYKGGdldEhv",
+            "dGVsUm9vbVR5cGVJbmZvQnlJZBIhLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxS",
+            "b29tVHlwZUlkGiUuR3JwY01lZGlhU2VydmljZS5Ib3RlbFJvb21UeXBlU3Ry",
+            "dWN0IgASYQodZ2V0SG9sdGVSb29tVHlwZUxpc3RCeUhvdGVsSWQSGS5HcnBj",
+            "TWVkaWFTZXJ2aWNlLkhvdGVsSWQaIy5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVs",
+            "Um9vbVR5cGVMaXN0IgASZQoZY3JlYXRlSG90ZWxCb29rUmVjb3JkSW5mbxIn",
+            "LkdycGNNZWRpYVNlcnZpY2UuSG90ZWxCb29rUmVjb3JkU3RydWN0Gh0uR3Jw",
+            "Y01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAEmUKGXVwZGF0ZUhvdGVsQm9v",
+            "a1JlY29yZEluZm8SJy5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsQm9va1JlY29y",
+            "ZFN0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJdCh1k",
+            "ZWxldGVIb3RlbEJvb2tSZWNvcmRJbmZvQnlJZBIbLkdycGNNZWRpYVNlcnZp",
+            "Y2UuSWRSZXF1ZXN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIA",
+            "EmMKHGdldEhvdGVsQm9va1JlY29yZEJ5TWVtYmVySWQSGi5HcnBjTWVkaWFT",
+            "ZXJ2aWNlLk1lbWJlcklkGiUuR3JwY01lZGlhU2VydmljZS5Ib3RlbEJvb2tS",
+            "ZWNvcmRMaXN0IgASWQoZY2FuY2VsSG90ZWxCb29rUmVjb3JkQnlJZBIbLkdy",
+            "cGNNZWRpYVNlcnZpY2UuSWRSZXF1ZXN0Gh0uR3JwY01lZGlhU2VydmljZS5N",
+            "b2RpZnlSZXBseSIAEmAKFmdldEhvdGVsQm9va1JlY29yZEJ5SWQSGy5HcnBj",
+            "TWVkaWFTZXJ2aWNlLklkUmVxdWVzdBonLkdycGNNZWRpYVNlcnZpY2UuSG90",
+            "ZWxCb29rUmVjb3JkU3RydWN0IgASbAoWZ2V0SG90ZWxCb29rUmVjb3JkTGlz",
+            "dBIpLkdycGNNZWRpYVNlcnZpY2UuUGFnaW5hdGlvblJlcXVlc3RTZWFyY2ga",
+            "JS5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsQm9va1JlY29yZExpc3QiAGIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -223,9 +225,9 @@ namespace GrpcMediaService {
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.ExpressStruct), global::GrpcMediaService.ExpressStruct.Parser, new[]{ "Id", "CompanyId", "ExpressNum", "SentDate", "SenderId", "Sender", "RecipientUnit", "Address", "Recipient", "Tel", "ExpressContent", "Price", "ExpressCompany", "IsExamine", "IsSend", "IsDelete", "CreatedAt", "UpdatedAt" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.ExpressList), global::GrpcMediaService.ExpressList.Parser, new[]{ "Listdata", "Total" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.CatalogueBooksStruct), global::GrpcMediaService.CatalogueBooksStruct.Parser, new[]{ "Id", "Name", "Country", "Address", "Tel", "Email", "Count", "Des", "Type", "CreatedAt", "UpdatedAt" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.InterviewStruct), global::GrpcMediaService.InterviewStruct.Parser, new[]{ "Id", "Name", "NameEn", "JobTitle", "JobTitleEn", "Photo", "Introduction", "InterviewTime", "MediaName", "MemberId", "CreatedAt", "UpdatedAt" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.InterviewStruct), global::GrpcMediaService.InterviewStruct.Parser, new[]{ "Id", "Name", "NameEn", "JobTitle", "JobTitleEn", "Photo", "Introduction", "InterviewTime", "MediaName", "MemberId", "CompanyName", "CompanyNameEn", "OwnerId", "OwnerName", "CreatedAt", "UpdatedAt" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.InterviewList), global::GrpcMediaService.InterviewList.Parser, new[]{ "Listdata", "Total" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HighlightsInfoStruct), global::GrpcMediaService.HighlightsInfoStruct.Parser, new[]{ "Id", "LDnameCn", "LDnameEn", "LDdescribeCn", "LDdescribeEn", "LDimage", "LDlogo", "YJname", "YJnameEn", "YJCompany", "YJCompanyEn", "YJPosition", "YJPositionEn", "YJIntroduction", "YJPhoto", "ShowWay", "Contract", "Tel", "Mobile", "Email", "MemberId", "OwnerId", "OwnerName", "CreatedAt", "UpdatedAt" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HighlightsInfoStruct), global::GrpcMediaService.HighlightsInfoStruct.Parser, new[]{ "Id", "LDnameCn", "LDnameEn", "LDdescribeCn", "LDdescribeEn", "LDimage", "LDlogo", "YJname", "YJnameEn", "YJPosition", "YJPositionEn", "YJIntroduction", "YJPhoto", "ShowWay", "Contract", "ContractCompany", "ContractCompanyEn", "Tel", "Mobile", "Email", "MemberId", "OwnerId", "OwnerName", "CreatedAt", "UpdatedAt" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HighlightsInfoList), global::GrpcMediaService.HighlightsInfoList.Parser, new[]{ "Listdata", "Total" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelId), global::GrpcMediaService.HotelId.Parser, new[]{ "HotelId_" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelStruct), global::GrpcMediaService.HotelStruct.Parser, new[]{ "HotelId", "HotelCode", "HotelName", "HotelNameEn", "HotelAddress", "HotelAddressEn", "Country", "KeyWord", "HotelEmail", "HotelTel", "HotelLevel", "HotelIntroduction", "HotelIntroductionEn", "BankInfo", "BankInfoEn", "Remark", "RemarkEn", "Sort" }, null, null, null),
@@ -234,12 +236,12 @@ namespace GrpcMediaService {
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelRoomTypeStruct), global::GrpcMediaService.HotelRoomTypeStruct.Parser, new[]{ "HptelRoomTypeId", "HotelId", "TypeName", "TypeNameEn", "BedType", "BedTypeEn", "MaxCount", "Price", "Tax", "IsBreakfast", "IsNet", "IsUsed" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelRoomTypeList), global::GrpcMediaService.HotelRoomTypeList.Parser, new[]{ "Listdata", "Total" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.MemberId), global::GrpcMediaService.MemberId.Parser, new[]{ "MemberId_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelBookRecordStruct), global::GrpcMediaService.HotelBookRecordStruct.Parser, new[]{ "Id", "MemberId", "MemberCompany", "MemberCompanyEn", "HotelId", "HotelRoomTypeId", "BookTime", "CheckInTime", "CheckOutTime", "IsCanceled", "IsChecked", "PriceCount", "Remark", "Days", "ArriveFlight", "LeaveFlight", "IsSmoke", "LinkManFirstName", "LinkManLastName", "LinkManTel", "LinkManEmail", "LinkManTitle", "LinkManCountryId", "LinkManCity", "LinkManFax", "LinkManIdCardType", "LinkManIdCardNumber", "LinkManCompany", "LinkManMobile", "LinkManBirth", "OtherName", "OtherTitle", "OtherEmail", "OtherMobile", "OtherCompany", "CardPerson", "CardType", "CardNumber", "CardDate", "Payer", "PayType", "LinkManEmail2", "CreatedAt", "UpdatedAt" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelBookRecordStruct), global::GrpcMediaService.HotelBookRecordStruct.Parser, new[]{ "Id", "MemberId", "MemberCompany", "MemberCompanyEn", "HotelId", "HotelRoomTypeId", "BookTime", "CheckInTime", "CheckOutTime", "IsCanceled", "IsChecked", "PriceCount", "Remark", "Days", "ArriveFlight", "LeaveFlight", "IsSmoke", "LinkManFirstName", "LinkManLastName", "LinkManTel", "LinkManEmail", "LinkManTitle", "LinkManCountryId", "LinkManCity", "LinkManFax", "LinkManIdCardType", "LinkManIdCardNumber", "LinkManCompany", "LinkManMobile", "LinkManBirth", "OtherName", "OtherTitle", "OtherEmail", "OtherMobile", "OtherCompany", "CardPerson", "CardType", "CardNumber", "CardDate", "Payer", "PayType", "LinkManEmail2", "CreatedAt", "UpdatedAt", "IsWebsite" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelBookRecordList), global::GrpcMediaService.HotelBookRecordList.Parser, new[]{ "Listdata", "Total" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.Empty), global::GrpcMediaService.Empty.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.IdRequest), global::GrpcMediaService.IdRequest.Parser, new[]{ "Id" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.ModifyReply), global::GrpcMediaService.ModifyReply.Parser, new[]{ "Success", "ModifiedCount", "Msg" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.SearchStruct), global::GrpcMediaService.SearchStruct.Parser, new[]{ "CompanyName", "ContractNumber", "PavilionNumber", "BoothNumber", "OwnerId", "IsPay", "IsHaveLogo", "BeginDate", "EndDate", "ExpressNum", "Sender", "Recipient", "RecipientUnit", "HotelId", "HotelRoomTypeId", "IsCanceled", "IsChecked", "BookTime" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.SearchStruct), global::GrpcMediaService.SearchStruct.Parser, new[]{ "CompanyName", "ContractNumber", "PavilionNumber", "BoothNumber", "OwnerId", "IsPay", "IsHaveLogo", "BeginDate", "EndDate", "ExpressNum", "Sender", "Recipient", "RecipientUnit", "HotelId", "HotelRoomTypeId", "IsCanceled", "IsChecked", "IsWebsite" }, null, null, null)
           }));
     }
     #endregion
@@ -2657,6 +2659,10 @@ namespace GrpcMediaService {
       interviewTime_ = other.interviewTime_;
       mediaName_ = other.mediaName_;
       memberId_ = other.memberId_;
+      companyName_ = other.companyName_;
+      companyNameEn_ = other.companyNameEn_;
+      ownerId_ = other.ownerId_;
+      ownerName_ = other.ownerName_;
       createdAt_ = other.createdAt_;
       updatedAt_ = other.updatedAt_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2780,8 +2786,52 @@ namespace GrpcMediaService {
       }
     }
 
+    /// <summary>Field number for the "companyName" field.</summary>
+    public const int CompanyNameFieldNumber = 11;
+    private string companyName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CompanyName {
+      get { return companyName_; }
+      set {
+        companyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "companyNameEn" field.</summary>
+    public const int CompanyNameEnFieldNumber = 12;
+    private string companyNameEn_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CompanyNameEn {
+      get { return companyNameEn_; }
+      set {
+        companyNameEn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ownerId" field.</summary>
+    public const int OwnerIdFieldNumber = 13;
+    private string ownerId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ownerName" field.</summary>
+    public const int OwnerNameFieldNumber = 14;
+    private string ownerName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string OwnerName {
+      get { return ownerName_; }
+      set {
+        ownerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "created_at" field.</summary>
-    public const int CreatedAtFieldNumber = 11;
+    public const int CreatedAtFieldNumber = 15;
     private string createdAt_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CreatedAt {
@@ -2792,7 +2842,7 @@ namespace GrpcMediaService {
     }
 
     /// <summary>Field number for the "updated_at" field.</summary>
-    public const int UpdatedAtFieldNumber = 12;
+    public const int UpdatedAtFieldNumber = 16;
     private string updatedAt_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string UpdatedAt {
@@ -2825,6 +2875,10 @@ namespace GrpcMediaService {
       if (InterviewTime != other.InterviewTime) return false;
       if (MediaName != other.MediaName) return false;
       if (MemberId != other.MemberId) return false;
+      if (CompanyName != other.CompanyName) return false;
+      if (CompanyNameEn != other.CompanyNameEn) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (OwnerName != other.OwnerName) return false;
       if (CreatedAt != other.CreatedAt) return false;
       if (UpdatedAt != other.UpdatedAt) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2843,6 +2897,10 @@ namespace GrpcMediaService {
       if (InterviewTime.Length != 0) hash ^= InterviewTime.GetHashCode();
       if (MediaName.Length != 0) hash ^= MediaName.GetHashCode();
       if (MemberId.Length != 0) hash ^= MemberId.GetHashCode();
+      if (CompanyName.Length != 0) hash ^= CompanyName.GetHashCode();
+      if (CompanyNameEn.Length != 0) hash ^= CompanyNameEn.GetHashCode();
+      if (OwnerId.Length != 0) hash ^= OwnerId.GetHashCode();
+      if (OwnerName.Length != 0) hash ^= OwnerName.GetHashCode();
       if (CreatedAt.Length != 0) hash ^= CreatedAt.GetHashCode();
       if (UpdatedAt.Length != 0) hash ^= UpdatedAt.GetHashCode();
       if (_unknownFields != null) {
@@ -2898,12 +2956,28 @@ namespace GrpcMediaService {
         output.WriteRawTag(82);
         output.WriteString(MemberId);
       }
-      if (CreatedAt.Length != 0) {
+      if (CompanyName.Length != 0) {
         output.WriteRawTag(90);
+        output.WriteString(CompanyName);
+      }
+      if (CompanyNameEn.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CompanyNameEn);
+      }
+      if (OwnerId.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(OwnerId);
+      }
+      if (OwnerName.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(OwnerName);
+      }
+      if (CreatedAt.Length != 0) {
+        output.WriteRawTag(122);
         output.WriteString(CreatedAt);
       }
       if (UpdatedAt.Length != 0) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(130, 1);
         output.WriteString(UpdatedAt);
       }
       if (_unknownFields != null) {
@@ -2944,11 +3018,23 @@ namespace GrpcMediaService {
       if (MemberId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MemberId);
       }
+      if (CompanyName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CompanyName);
+      }
+      if (CompanyNameEn.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CompanyNameEn);
+      }
+      if (OwnerId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OwnerId);
+      }
+      if (OwnerName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OwnerName);
+      }
       if (CreatedAt.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CreatedAt);
       }
       if (UpdatedAt.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(UpdatedAt);
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(UpdatedAt);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2990,6 +3076,18 @@ namespace GrpcMediaService {
       }
       if (other.MemberId.Length != 0) {
         MemberId = other.MemberId;
+      }
+      if (other.CompanyName.Length != 0) {
+        CompanyName = other.CompanyName;
+      }
+      if (other.CompanyNameEn.Length != 0) {
+        CompanyNameEn = other.CompanyNameEn;
+      }
+      if (other.OwnerId.Length != 0) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.OwnerName.Length != 0) {
+        OwnerName = other.OwnerName;
       }
       if (other.CreatedAt.Length != 0) {
         CreatedAt = other.CreatedAt;
@@ -3049,10 +3147,26 @@ namespace GrpcMediaService {
             break;
           }
           case 90: {
-            CreatedAt = input.ReadString();
+            CompanyName = input.ReadString();
             break;
           }
           case 98: {
+            CompanyNameEn = input.ReadString();
+            break;
+          }
+          case 106: {
+            OwnerId = input.ReadString();
+            break;
+          }
+          case 114: {
+            OwnerName = input.ReadString();
+            break;
+          }
+          case 122: {
+            CreatedAt = input.ReadString();
+            break;
+          }
+          case 130: {
             UpdatedAt = input.ReadString();
             break;
           }
@@ -3248,14 +3362,14 @@ namespace GrpcMediaService {
       lDlogo_ = other.lDlogo_;
       yJname_ = other.yJname_;
       yJnameEn_ = other.yJnameEn_;
-      yJCompany_ = other.yJCompany_;
-      yJCompanyEn_ = other.yJCompanyEn_;
       yJPosition_ = other.yJPosition_;
       yJPositionEn_ = other.yJPositionEn_;
       yJIntroduction_ = other.yJIntroduction_;
       yJPhoto_ = other.yJPhoto_;
       showWay_ = other.showWay_;
       contract_ = other.contract_;
+      contractCompany_ = other.contractCompany_;
+      contractCompanyEn_ = other.contractCompanyEn_;
       tel_ = other.tel_;
       mobile_ = other.mobile_;
       email_ = other.email_;
@@ -3377,30 +3491,8 @@ namespace GrpcMediaService {
       }
     }
 
-    /// <summary>Field number for the "YJCompany" field.</summary>
-    public const int YJCompanyFieldNumber = 10;
-    private string yJCompany_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string YJCompany {
-      get { return yJCompany_; }
-      set {
-        yJCompany_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "YJCompanyEn" field.</summary>
-    public const int YJCompanyEnFieldNumber = 11;
-    private string yJCompanyEn_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string YJCompanyEn {
-      get { return yJCompanyEn_; }
-      set {
-        yJCompanyEn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "YJPosition" field.</summary>
-    public const int YJPositionFieldNumber = 12;
+    public const int YJPositionFieldNumber = 10;
     private string yJPosition_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string YJPosition {
@@ -3411,7 +3503,7 @@ namespace GrpcMediaService {
     }
 
     /// <summary>Field number for the "YJPositionEn" field.</summary>
-    public const int YJPositionEnFieldNumber = 13;
+    public const int YJPositionEnFieldNumber = 11;
     private string yJPositionEn_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string YJPositionEn {
@@ -3422,7 +3514,7 @@ namespace GrpcMediaService {
     }
 
     /// <summary>Field number for the "YJIntroduction" field.</summary>
-    public const int YJIntroductionFieldNumber = 14;
+    public const int YJIntroductionFieldNumber = 12;
     private string yJIntroduction_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string YJIntroduction {
@@ -3433,7 +3525,7 @@ namespace GrpcMediaService {
     }
 
     /// <summary>Field number for the "YJPhoto" field.</summary>
-    public const int YJPhotoFieldNumber = 15;
+    public const int YJPhotoFieldNumber = 13;
     private string yJPhoto_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string YJPhoto {
@@ -3444,7 +3536,7 @@ namespace GrpcMediaService {
     }
 
     /// <summary>Field number for the "ShowWay" field.</summary>
-    public const int ShowWayFieldNumber = 16;
+    public const int ShowWayFieldNumber = 14;
     private string showWay_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ShowWay {
@@ -3455,13 +3547,38 @@ namespace GrpcMediaService {
     }
 
     /// <summary>Field number for the "Contract" field.</summary>
-    public const int ContractFieldNumber = 17;
+    public const int ContractFieldNumber = 15;
     private string contract_ = "";
+    /// <summary>
+    ///联系人
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Contract {
       get { return contract_; }
       set {
         contract_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ContractCompany" field.</summary>
+    public const int ContractCompanyFieldNumber = 16;
+    private string contractCompany_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ContractCompany {
+      get { return contractCompany_; }
+      set {
+        contractCompany_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ContractCompanyEn" field.</summary>
+    public const int ContractCompanyEnFieldNumber = 17;
+    private string contractCompanyEn_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ContractCompanyEn {
+      get { return contractCompanyEn_; }
+      set {
+        contractCompanyEn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -3584,14 +3701,14 @@ namespace GrpcMediaService {
       if (LDlogo != other.LDlogo) return false;
       if (YJname != other.YJname) return false;
       if (YJnameEn != other.YJnameEn) return false;
-      if (YJCompany != other.YJCompany) return false;
-      if (YJCompanyEn != other.YJCompanyEn) return false;
       if (YJPosition != other.YJPosition) return false;
       if (YJPositionEn != other.YJPositionEn) return false;
       if (YJIntroduction != other.YJIntroduction) return false;
       if (YJPhoto != other.YJPhoto) return false;
       if (ShowWay != other.ShowWay) return false;
       if (Contract != other.Contract) return false;
+      if (ContractCompany != other.ContractCompany) return false;
+      if (ContractCompanyEn != other.ContractCompanyEn) return false;
       if (Tel != other.Tel) return false;
       if (Mobile != other.Mobile) return false;
       if (Email != other.Email) return false;
@@ -3615,14 +3732,14 @@ namespace GrpcMediaService {
       if (LDlogo.Length != 0) hash ^= LDlogo.GetHashCode();
       if (YJname.Length != 0) hash ^= YJname.GetHashCode();
       if (YJnameEn.Length != 0) hash ^= YJnameEn.GetHashCode();
-      if (YJCompany.Length != 0) hash ^= YJCompany.GetHashCode();
-      if (YJCompanyEn.Length != 0) hash ^= YJCompanyEn.GetHashCode();
       if (YJPosition.Length != 0) hash ^= YJPosition.GetHashCode();
       if (YJPositionEn.Length != 0) hash ^= YJPositionEn.GetHashCode();
       if (YJIntroduction.Length != 0) hash ^= YJIntroduction.GetHashCode();
       if (YJPhoto.Length != 0) hash ^= YJPhoto.GetHashCode();
       if (ShowWay.Length != 0) hash ^= ShowWay.GetHashCode();
       if (Contract.Length != 0) hash ^= Contract.GetHashCode();
+      if (ContractCompany.Length != 0) hash ^= ContractCompany.GetHashCode();
+      if (ContractCompanyEn.Length != 0) hash ^= ContractCompanyEn.GetHashCode();
       if (Tel.Length != 0) hash ^= Tel.GetHashCode();
       if (Mobile.Length != 0) hash ^= Mobile.GetHashCode();
       if (Email.Length != 0) hash ^= Email.GetHashCode();
@@ -3680,37 +3797,37 @@ namespace GrpcMediaService {
         output.WriteRawTag(74);
         output.WriteString(YJnameEn);
       }
-      if (YJCompany.Length != 0) {
-        output.WriteRawTag(82);
-        output.WriteString(YJCompany);
-      }
-      if (YJCompanyEn.Length != 0) {
-        output.WriteRawTag(90);
-        output.WriteString(YJCompanyEn);
-      }
       if (YJPosition.Length != 0) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(82);
         output.WriteString(YJPosition);
       }
       if (YJPositionEn.Length != 0) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(90);
         output.WriteString(YJPositionEn);
       }
       if (YJIntroduction.Length != 0) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(98);
         output.WriteString(YJIntroduction);
       }
       if (YJPhoto.Length != 0) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(106);
         output.WriteString(YJPhoto);
       }
       if (ShowWay.Length != 0) {
-        output.WriteRawTag(130, 1);
+        output.WriteRawTag(114);
         output.WriteString(ShowWay);
       }
       if (Contract.Length != 0) {
-        output.WriteRawTag(138, 1);
+        output.WriteRawTag(122);
         output.WriteString(Contract);
+      }
+      if (ContractCompany.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(ContractCompany);
+      }
+      if (ContractCompanyEn.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(ContractCompanyEn);
       }
       if (Tel.Length != 0) {
         output.WriteRawTag(146, 1);
@@ -3779,12 +3896,6 @@ namespace GrpcMediaService {
       if (YJnameEn.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(YJnameEn);
       }
-      if (YJCompany.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(YJCompany);
-      }
-      if (YJCompanyEn.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(YJCompanyEn);
-      }
       if (YJPosition.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(YJPosition);
       }
@@ -3798,10 +3909,16 @@ namespace GrpcMediaService {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(YJPhoto);
       }
       if (ShowWay.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(ShowWay);
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ShowWay);
       }
       if (Contract.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(Contract);
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Contract);
+      }
+      if (ContractCompany.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ContractCompany);
+      }
+      if (ContractCompanyEn.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ContractCompanyEn);
       }
       if (Tel.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Tel);
@@ -3865,12 +3982,6 @@ namespace GrpcMediaService {
       if (other.YJnameEn.Length != 0) {
         YJnameEn = other.YJnameEn;
       }
-      if (other.YJCompany.Length != 0) {
-        YJCompany = other.YJCompany;
-      }
-      if (other.YJCompanyEn.Length != 0) {
-        YJCompanyEn = other.YJCompanyEn;
-      }
       if (other.YJPosition.Length != 0) {
         YJPosition = other.YJPosition;
       }
@@ -3888,6 +3999,12 @@ namespace GrpcMediaService {
       }
       if (other.Contract.Length != 0) {
         Contract = other.Contract;
+      }
+      if (other.ContractCompany.Length != 0) {
+        ContractCompany = other.ContractCompany;
+      }
+      if (other.ContractCompanyEn.Length != 0) {
+        ContractCompanyEn = other.ContractCompanyEn;
       }
       if (other.Tel.Length != 0) {
         Tel = other.Tel;
@@ -3961,35 +4078,35 @@ namespace GrpcMediaService {
             break;
           }
           case 82: {
-            YJCompany = input.ReadString();
-            break;
-          }
-          case 90: {
-            YJCompanyEn = input.ReadString();
-            break;
-          }
-          case 98: {
             YJPosition = input.ReadString();
             break;
           }
-          case 106: {
+          case 90: {
             YJPositionEn = input.ReadString();
             break;
           }
-          case 114: {
+          case 98: {
             YJIntroduction = input.ReadString();
             break;
           }
-          case 122: {
+          case 106: {
             YJPhoto = input.ReadString();
             break;
           }
-          case 130: {
+          case 114: {
             ShowWay = input.ReadString();
             break;
           }
-          case 138: {
+          case 122: {
             Contract = input.ReadString();
+            break;
+          }
+          case 130: {
+            ContractCompany = input.ReadString();
+            break;
+          }
+          case 138: {
+            ContractCompanyEn = input.ReadString();
             break;
           }
           case 146: {
@@ -5984,6 +6101,7 @@ namespace GrpcMediaService {
       linkManEmail2_ = other.linkManEmail2_;
       createdAt_ = other.createdAt_;
       updatedAt_ = other.updatedAt_;
+      isWebsite_ = other.isWebsite_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6593,6 +6711,20 @@ namespace GrpcMediaService {
       }
     }
 
+    /// <summary>Field number for the "IsWebsite" field.</summary>
+    public const int IsWebsiteFieldNumber = 45;
+    private bool isWebsite_;
+    /// <summary>
+    ///是否从网站页面订购
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsWebsite {
+      get { return isWebsite_; }
+      set {
+        isWebsite_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as HotelBookRecordStruct);
@@ -6650,6 +6782,7 @@ namespace GrpcMediaService {
       if (LinkManEmail2 != other.LinkManEmail2) return false;
       if (CreatedAt != other.CreatedAt) return false;
       if (UpdatedAt != other.UpdatedAt) return false;
+      if (IsWebsite != other.IsWebsite) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6700,6 +6833,7 @@ namespace GrpcMediaService {
       if (LinkManEmail2.Length != 0) hash ^= LinkManEmail2.GetHashCode();
       if (CreatedAt.Length != 0) hash ^= CreatedAt.GetHashCode();
       if (UpdatedAt.Length != 0) hash ^= UpdatedAt.GetHashCode();
+      if (IsWebsite != false) hash ^= IsWebsite.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6889,6 +7023,10 @@ namespace GrpcMediaService {
         output.WriteRawTag(226, 2);
         output.WriteString(UpdatedAt);
       }
+      if (IsWebsite != false) {
+        output.WriteRawTag(232, 2);
+        output.WriteBool(IsWebsite);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7028,6 +7166,9 @@ namespace GrpcMediaService {
       }
       if (UpdatedAt.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(UpdatedAt);
+      }
+      if (IsWebsite != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7171,6 +7312,9 @@ namespace GrpcMediaService {
       }
       if (other.UpdatedAt.Length != 0) {
         UpdatedAt = other.UpdatedAt;
+      }
+      if (other.IsWebsite != false) {
+        IsWebsite = other.IsWebsite;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7357,6 +7501,10 @@ namespace GrpcMediaService {
           }
           case 354: {
             UpdatedAt = input.ReadString();
+            break;
+          }
+          case 360: {
+            IsWebsite = input.ReadBool();
             break;
           }
         }
@@ -7974,7 +8122,7 @@ namespace GrpcMediaService {
       hotelRoomTypeId_ = other.hotelRoomTypeId_;
       isCanceled_ = other.isCanceled_;
       isChecked_ = other.isChecked_;
-      bookTime_ = other.bookTime_;
+      isWebsite_ = other.isWebsite_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8221,17 +8369,17 @@ namespace GrpcMediaService {
       }
     }
 
-    /// <summary>Field number for the "bookTime" field.</summary>
-    public const int BookTimeFieldNumber = 18;
-    private string bookTime_ = "";
+    /// <summary>Field number for the "isWebsite" field.</summary>
+    public const int IsWebsiteFieldNumber = 18;
+    private bool isWebsite_;
     /// <summary>
-    ///预订时间
+    /////是否从网站页面订购
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BookTime {
-      get { return bookTime_; }
+    public bool IsWebsite {
+      get { return isWebsite_; }
       set {
-        bookTime_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        isWebsite_ = value;
       }
     }
 
@@ -8265,7 +8413,7 @@ namespace GrpcMediaService {
       if (HotelRoomTypeId != other.HotelRoomTypeId) return false;
       if (IsCanceled != other.IsCanceled) return false;
       if (IsChecked != other.IsChecked) return false;
-      if (BookTime != other.BookTime) return false;
+      if (IsWebsite != other.IsWebsite) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8289,7 +8437,7 @@ namespace GrpcMediaService {
       if (HotelRoomTypeId.Length != 0) hash ^= HotelRoomTypeId.GetHashCode();
       if (IsCanceled != 0) hash ^= IsCanceled.GetHashCode();
       if (IsChecked != 0) hash ^= IsChecked.GetHashCode();
-      if (BookTime.Length != 0) hash ^= BookTime.GetHashCode();
+      if (IsWebsite != false) hash ^= IsWebsite.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8371,9 +8519,9 @@ namespace GrpcMediaService {
         output.WriteRawTag(136, 1);
         output.WriteInt32(IsChecked);
       }
-      if (BookTime.Length != 0) {
-        output.WriteRawTag(146, 1);
-        output.WriteString(BookTime);
+      if (IsWebsite != false) {
+        output.WriteRawTag(144, 1);
+        output.WriteBool(IsWebsite);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -8434,8 +8582,8 @@ namespace GrpcMediaService {
       if (IsChecked != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(IsChecked);
       }
-      if (BookTime.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(BookTime);
+      if (IsWebsite != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8499,8 +8647,8 @@ namespace GrpcMediaService {
       if (other.IsChecked != 0) {
         IsChecked = other.IsChecked;
       }
-      if (other.BookTime.Length != 0) {
-        BookTime = other.BookTime;
+      if (other.IsWebsite != false) {
+        IsWebsite = other.IsWebsite;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -8581,8 +8729,8 @@ namespace GrpcMediaService {
             IsChecked = input.ReadInt32();
             break;
           }
-          case 146: {
-            BookTime = input.ReadString();
+          case 144: {
+            IsWebsite = input.ReadBool();
             break;
           }
         }

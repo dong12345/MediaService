@@ -27,14 +27,15 @@ namespace MediaService.DBModel
         /// </summary>
         public string YJname { get; set; }
         public string YJnameEn { get; set; }
-        public string YJCompany { get; set; }
-        public string YJCompanyEn { get; set; }
+       
         public string YJPosition { get; set; }
         public string YJPositionEn { get; set; }
         public string YJIntroduction { get; set; }
         public string YJPhoto { get; set; }
         public string ShowWay { get; set; }
         public string Contract { get; set; }
+        public string ContractCompany { get; set; }
+        public string ContractCompanyEn { get; set; }
         public string Tel { get; set; }
         public string Mobile { get; set; }
         public string Email { get; set; }

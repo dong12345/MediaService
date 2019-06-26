@@ -26,6 +26,13 @@ namespace MediaService.DBModel
         public string MediaName { get; set; }
         public string MemberId { get; set; }
 
+        public string CompanyName { get; set; }
+
+        public string CompanyNameEn { get; set; }
+
+        public string OwnerId { get; set; }
+
+        public string OwnerName { get; set; }
         public DateTime Created_at { get; set; }
         public DateTime Updated_at { get; set; }
     }

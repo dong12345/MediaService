@@ -33,7 +33,7 @@ namespace MediaService.DBModel
         /// <summary>
         ///预订时间
         /// </summary>
-        public string BookTime { get; set; }
+        public DateTime BookTime { get; set; }
         /// <summary>
         ///入住时间
         /// </summary>
@@ -174,5 +174,10 @@ namespace MediaService.DBModel
 
         public DateTime Created_at { get; set; }
         public DateTime Updated_at { get; set; }
+
+        /// <summary>
+        /// 是否从网站页面订购
+        /// </summary>
+        public bool IsWebsite { get; set; }
     }
 }

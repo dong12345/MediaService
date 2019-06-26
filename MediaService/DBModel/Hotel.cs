@@ -12,7 +12,7 @@ namespace MediaService.DBModel
     public class Hotel
     {
         [Key]
-        public string HotelId { get; set; }
+        public Guid HotelId { get; set; }
         /// <summary>
         /// 酒店编号
         /// </summary>

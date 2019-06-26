@@ -56,13 +56,13 @@ service MediaServiceToGrpc{
   //====================web页面会刊订购信息表============
 
   //创建会刊订购信息
-  rpc CreateCatalogueBooksInfo(CatalogueBooksStruct) returns (ModifyReply){}
+  rpc createCatalogueBooksInfo(CatalogueBooksStruct) returns (ModifyReply){}
 
   //修改会刊订购信息
-  rpc UpdateCatalogueBooksInfo(CatalogueBooksStruct) returns (ModifyReply){}
+  rpc updateCatalogueBooksInfo(CatalogueBooksStruct) returns (ModifyReply){}
 
   //根据Id删除会刊订购信息
-  rpc DeleteCatalogueBooksById(IdRequest) returns (ModifyReply){}
+  rpc deleteCatalogueBooksById(IdRequest) returns (ModifyReply){}
 
   //====================web页面会刊订购信息表============
 
@@ -70,19 +70,19 @@ service MediaServiceToGrpc{
   //====================专题采访=========================
 
   //创建专题采访信息
-  rpc CreateInterviewInfo(InterviewStruct) returns (ModifyReply){}
+  rpc createInterviewInfo(InterviewStruct) returns (ModifyReply){}
 
   //修改专题采访信息
-  rpc UpdateInterviewInfo(InterviewStruct) returns (ModifyReply){}
+  rpc updateInterviewInfo(InterviewStruct) returns (ModifyReply){}
 
   //根据Id删除专题采访信息
-  rpc DeleteInterviewById(IdRequest) returns (ModifyReply){}
+  rpc deleteInterviewById(IdRequest) returns (ModifyReply){}
 
   //根据Id获得专题采访信息
-  rpc GetInterviewInfoById(IdRequest) returns(InterviewStruct){}
+  rpc getInterviewInfoById(IdRequest) returns(InterviewStruct){}
 
   //根据条件查询专题采访信息列表(带分页)
-  rpc GetInterviewListBySearch (PaginationRequestSearch) returns (InterviewList) {}
+  rpc getInterviewList (PaginationRequestSearch) returns (InterviewList) {}
 
   //====================专题采访=========================
 
@@ -90,35 +90,35 @@ service MediaServiceToGrpc{
   //================十大亮点申请=========================
 
   //创建十大亮点信息
-  rpc CreateHighlightsInfo(HighlightsInfoStruct) returns (ModifyReply){}
+  rpc createHighlightsInfo(HighlightsInfoStruct) returns (ModifyReply){}
 
   //修改十大亮点信息
-  rpc UpdateHighlightsInfo(HighlightsInfoStruct) returns (ModifyReply){}
+  rpc updateHighlightsInfo(HighlightsInfoStruct) returns (ModifyReply){}
 
   //根据Id删除十大亮点信息
-  rpc DeleteHighlightsInfoById(IdRequest) returns (ModifyReply){}
+  rpc deleteHighlightsInfoById(IdRequest) returns (ModifyReply){}
 
   //根据Id获得十大亮点信息
-  rpc GetHighlightsInfoById(IdRequest) returns (HighlightsInfoStruct){}
+  rpc getHighlightsInfoById(IdRequest) returns (HighlightsInfoStruct){}
 
   //根据条件查询十大亮点信息列表(带分页)
-  rpc GetHighlightsInfoListBySearch (PaginationRequestSearch) returns (HighlightsInfoList) {}
+  rpc getHighlightsInfoList(PaginationRequestSearch) returns (HighlightsInfoList) {}
 
   //================十大亮点申请=========================
 
 
   //========================酒店=========================
   //创建酒店信息
-  rpc CreateHotelInfo(HotelStruct) returns(ModifyReply){}
+  rpc createHotelInfo(HotelStruct) returns(ModifyReply){}
 
   //修改酒店信息
-  rpc UpdateHotelInfo(HotelStruct) returns(ModifyReply){}
+  rpc updateHotelInfo(HotelStruct) returns(ModifyReply){}
 
   //根据HotelId删除酒店信息
-  rpc DeleteHotelInfoById(HotelId) returns(ModifyReply){}
+  rpc deleteHotelInfoById(HotelId) returns(ModifyReply){}
 
   //根据HotelId获得酒店信息
-  rpc GetHotelById(HotelId) returns(HotelStruct){}
+  rpc getHotelById(HotelId) returns(HotelStruct){}
 
   //获得酒店信息列表
   rpc GetHotelList(Empty) returns (HotelList){}
@@ -129,44 +129,44 @@ service MediaServiceToGrpc{
 
   //================酒店房间类型=========================
   //创建酒店房间类型
-  rpc CreateHotelRoomTypeInfo(HotelRoomTypeStruct) returns(ModifyReply){}
+  rpc createHotelRoomTypeInfo(HotelRoomTypeStruct) returns(ModifyReply){}
 
   //修改酒店房间类型信息
-  rpc UpdateHotelRoomTypeInfo(HotelRoomTypeStruct) returns(ModifyReply){}
+  rpc updateHotelRoomTypeInfo(HotelRoomTypeStruct) returns(ModifyReply){}
 
   //根据HptelRoomTypeId删除酒店房间类型
-  rpc DeleteHotelRoomTypeById(HotelRoomTypeId) returns(ModifyReply){}
+  rpc deleteHotelRoomTypeById(HotelRoomTypeId) returns(ModifyReply){}
 
   //根据HotelRoomTypeId获得酒店房间类型信息
-  rpc GetHotelRoomTypeInfoById(HotelRoomTypeId) returns(HotelRoomTypeStruct){}
+  rpc getHotelRoomTypeInfoById(HotelRoomTypeId) returns(HotelRoomTypeStruct){}
 
   //根据HotelId获得酒店房间集合
-  rpc GetHolteRoomTypeListByHotelId(HotelId) returns(HotelRoomTypeList){}
+  rpc getHolteRoomTypeListByHotelId(HotelId) returns(HotelRoomTypeList){}
 
   //================酒店房间类型=========================
 
   //================酒店预定记录=========================
 
   //创建酒店预订信息
-  rpc CreateHotelBookRecordInfo(HotelBookRecordStruct) returns(ModifyReply){}
+  rpc createHotelBookRecordInfo(HotelBookRecordStruct) returns(ModifyReply){}
 
   //修改酒店预订信息
-  rpc UpdateHotelBookRecordInfo(HotelBookRecordStruct) returns(ModifyReply){}
+  rpc updateHotelBookRecordInfo(HotelBookRecordStruct) returns(ModifyReply){}
 
   //根据Id删除酒店预订记录
-  rpc DeleteHotelBookRecordInfoById(IdRequest) returns(ModifyReply){}
+  rpc deleteHotelBookRecordInfoById(IdRequest) returns(ModifyReply){}
 
   //根据MemberId获得酒店预订记录
-  rpc GetHotelBookRecordByMemberId(MemberId) returns(HotelBookRecordStruct){}
+  rpc getHotelBookRecordByMemberId(MemberId) returns(HotelBookRecordList){}
 
   //根据Id取消酒店预订
-  rpc CancelHotelBookRecordById(IdRequest) returns(ModifyReply){}
+  rpc cancelHotelBookRecordById(IdRequest) returns(ModifyReply){}
 
   //根据Id获得酒店预订记录
-  rpc GetHotelBookRecordById(IdRequest) returns(HotelBookRecordStruct){}
+  rpc getHotelBookRecordById(IdRequest) returns(HotelBookRecordStruct){}
 
   //根据条件查询酒店预订记录列表(带分页)
-  rpc GetHotelBookRecordListBySearch (PaginationRequestSearch) returns (HotelBookRecordList) {}
+  rpc getHotelBookRecordList (PaginationRequestSearch) returns (HotelBookRecordList) {}
   //================酒店预定记录=========================
 }
 
@@ -272,8 +272,12 @@ message InterviewStruct{
   string interviewTime=8;//可接受采访时间段
   string mediaName=9;
   string memberId=10;
-  string created_at=11;
-  string updated_at=12;
+  string companyName=11;
+  string companyNameEn=12;
+  string ownerId=13;
+  string ownerName=14;
+  string created_at=15;
+  string updated_at=16;
 }
 
 message InterviewList{
@@ -293,14 +297,14 @@ message HighlightsInfoStruct{
   string LDlogo=7;
   string YJname=8;//演讲人名称
   string YJnameEn=9;
-  string YJCompany=10;
-  string YJCompanyEn=11;
-  string YJPosition=12;
-  string YJPositionEn=13;
-  string YJIntroduction=14;
-  string YJPhoto=15;
-  string ShowWay=16;
-  string Contract=17;
+  string YJPosition=10;
+  string YJPositionEn=11;
+  string YJIntroduction=12;
+  string YJPhoto=13;
+  string ShowWay=14;
+  string Contract=15;//联系人
+  string ContractCompany=16;
+  string ContractCompanyEn=17;
   string Tel=18;
   string Mobile=19;
   string Email=20;
@@ -429,6 +433,7 @@ message HighlightsInfoList {
    string LinkManEmail2=42;
    string Created_at=43;
    string Updated_at=44;
+   bool IsWebsite=45;//是否从网站页面订购
  }
 
  message HotelBookRecordList{
@@ -469,7 +474,7 @@ message SearchStruct{
   string hotelRoomTypeId=15;//酒店房间类型Id
   int32 isCanceled=16;//是否取消预约 0=>未取消；1=>取消
   int32 isChecked=17;//是否确认 0=>未确认；1=>待确认；2=>最终确认
-  string bookTime=18;//预订时间
+  bool isWebsite=18;////是否从网站页面订购
 }
 //=======================通用==========================
 
