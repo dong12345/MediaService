@@ -58,7 +58,6 @@ namespace MediaService.DBModel
         /// 是否发送
         /// </summary>
         public bool IsSend { get; set; }
-        public bool IsDelete { get; set; }
 
         public DateTime Created_at { get; set; }
 

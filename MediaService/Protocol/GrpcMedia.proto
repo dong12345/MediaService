@@ -231,9 +231,8 @@ message ExpressStruct{
   string expressCompany=13;//快递公司
   bool isExamine=14;//是否审核
   bool isSend=15;//是否发送
-  bool isDelete=16;
-  string created_at=17;
-  string updated_at=18;
+  string created_at=16;
+  string updated_at=17;
 }
 
 message ExpressList{

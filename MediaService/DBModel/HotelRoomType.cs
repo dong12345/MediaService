@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,7 +14,11 @@ namespace MediaService.DBModel
     {
         [Key]
         public Guid HptelRoomTypeId { get; set; }
+
         public string HotelId { get; set; }
+
+        [ForeignKey("HotelId")]
+        public virtual Hotel Hotel { get; set; }
         public string TypeName { get; set; }
         public string TypeNameEn { get; set; }
         public string BedType { get; set; }
@@ -24,5 +29,12 @@ namespace MediaService.DBModel
         public bool IsBreakfast { get; set; }
         public bool IsNet { get; set; }
         public bool IsUsed { get; set; }
+
+        public ICollection<HotelBookRecord> HotelBookRecords { get; set; }
+
+        public HotelRoomType()
+        {
+            HotelBookRecords = new HashSet<HotelBookRecord>();
+        }
     }
 }

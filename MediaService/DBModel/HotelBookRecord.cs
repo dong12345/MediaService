@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -30,6 +31,9 @@ namespace MediaService.DBModel
         ///酒店房间类型Id
         /// </summary>
         public string HotelRoomTypeId { get; set; }
+
+        [ForeignKey("HotelRoomTypeId")]
+        public HotelRoomType HotelRoomType { get; set; }
         /// <summary>
         ///预订时间
         /// </summary>

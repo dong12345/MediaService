@@ -33,5 +33,12 @@ namespace MediaService.DBModel
         public string Remark { get; set; }
         public string RemarkEn { get; set; }
         public int Sort { get; set; }
+
+        public ICollection<HotelRoomType> HotelRoomTypes { get; set; }
+
+        public Hotel()
+        {
+            HotelRoomTypes = new HashSet<HotelRoomType>();
+        }
     }
 }

@@ -97,7 +97,6 @@ namespace MediaService.Service
                         modified_model.PavilionNumber = formPublic.PavilionNumber;
                         modified_model.SnecLogoWebsite = formPublic.SnecLogoWebsite;
                         modified_model.Telephone = formPublic.Telephone;
-                        modified_model.Updated_at = DateTime.Now;
                         modified_model.Website = formPublic.Website;
                         #endregion
                         count = await _context.SaveChangesAsync();
@@ -1334,17 +1333,25 @@ namespace MediaService.Service
                     }
                     else
                     {
-                        _context.Hotel.Remove(model);
-                        count = await _context.SaveChangesAsync();
-                        if (count > 0)
+                        if (model.HotelRoomTypes.Count > 0)
                         {
-                            msg = "删除成功";
-                            isSuccess = true;
+                            msg = "当前实例存在引用，无法删除";
                         }
                         else
                         {
-                            msg = "删除失败";
+                            _context.Hotel.Remove(model);
+                            count = await _context.SaveChangesAsync();
+                            if (count > 0)
+                            {
+                                msg = "删除成功";
+                                isSuccess = true;
+                            }
+                            else
+                            {
+                                msg = "删除失败";
+                            }
                         }
+
                     }
                     return GetModifyReply(isSuccess, msg, count);
                 }
@@ -1529,17 +1536,25 @@ namespace MediaService.Service
                     }
                     else
                     {
-                        _context.HotelRoomType.Remove(model);
-                        count = await _context.SaveChangesAsync();
-                        if (count > 0)
+                        if (model.HotelBookRecords.Count > 0)
                         {
-                            msg = "删除成功";
-                            isSuccess = true;
+                            msg = "当前实例存在引用，无法删除";
                         }
                         else
                         {
-                            msg = "删除失败";
+                            _context.HotelRoomType.Remove(model);
+                            count = await _context.SaveChangesAsync();
+                            if (count > 0)
+                            {
+                                msg = "删除成功";
+                                isSuccess = true;
+                            }
+                            else
+                            {
+                                msg = "删除失败";
+                            }
                         }
+                        
                     }
                     return GetModifyReply(isSuccess, msg, count);
                 }
@@ -1786,7 +1801,7 @@ namespace MediaService.Service
                 using (_context = new MyContext(_options.Options))
                 {
                     var list = await _context.HotelBookRecord
-                        .Where(x => x.MemberId==memberId).ToListAsync();
+                        .Where(x => x.MemberId == memberId).ToListAsync();
                     return list;
                 }
             }
@@ -1878,13 +1893,13 @@ namespace MediaService.Service
                 using (_context = new MyContext(_options.Options))
                 {
                     var list = await _context.HotelBookRecord
-                       .Where(x => (searchModel.HotelId==x.HotelId)
-                       && (searchModel.HotelRoomTypeId==x.HotelRoomTypeId)
-                       && (searchModel.IsChecked==x.IsChecked)
-                       && (searchModel.IsCanceled==x.IsCanceled)
-                       && (string.IsNullOrEmpty(searchModel.Begin_date) || x.BookTime>=Convert.ToDateTime(searchModel.Begin_date))
+                       .Where(x => (searchModel.HotelId == x.HotelId)
+                       && (searchModel.HotelRoomTypeId == x.HotelRoomTypeId)
+                       && (searchModel.IsChecked == x.IsChecked)
+                       && (searchModel.IsCanceled == x.IsCanceled)
+                       && (string.IsNullOrEmpty(searchModel.Begin_date) || x.BookTime >= Convert.ToDateTime(searchModel.Begin_date))
                        && (string.IsNullOrEmpty(searchModel.End_date) || x.BookTime <= Convert.ToDateTime(searchModel.End_date))
-                       && (searchModel.IsWebsite==x.IsWebsite))
+                       && (searchModel.IsWebsite == x.IsWebsite))
                         .OrderByDescending(x => x.Created_at)
                         .Skip(((pageindex - 1) * pagesize))
                         .Take(pagesize)
