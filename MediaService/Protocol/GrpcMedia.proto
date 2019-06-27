@@ -121,7 +121,7 @@ service MediaServiceToGrpc{
   rpc getHotelById(HotelId) returns(HotelStruct){}
 
   //获得酒店信息列表
-  rpc GetHotelList(Empty) returns (HotelList){}
+  rpc getHotelList(Empty) returns (HotelList){}
 
   //========================酒店=========================
 
@@ -323,7 +323,7 @@ message HighlightsInfoList {
 
 //========================酒店=========================
  message HotelId{
-   string HotelId=1;
+   string hotelId=1;
  }
 
  message HotelStruct{
@@ -345,6 +345,8 @@ message HighlightsInfoList {
    string Remark=16;
    string RemarkEn=17;
    int32 Sort=18;
+   string Created_at=19;
+   string Updated_at=20;
  }
 
  message HotelList{
@@ -372,6 +374,8 @@ message HighlightsInfoList {
    bool IsBreakfast=10;
    bool IsNet=11;
    bool IsUsed=12;
+   string Created_at=13;
+   string Updated_at=14;
  }
 
  message HotelRoomTypeList{
@@ -384,7 +388,7 @@ message HighlightsInfoList {
  //================酒店预定记录=========================
 
  message MemberId{
-   string MemberId=1;
+   string memberId=1;
  }
 
  message HotelBookRecordStruct{

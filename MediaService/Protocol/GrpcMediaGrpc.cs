@@ -231,10 +231,10 @@ namespace GrpcMediaService {
         __Marshaller_HotelId,
         __Marshaller_HotelStruct);
 
-    static readonly grpc::Method<global::GrpcMediaService.Empty, global::GrpcMediaService.HotelList> __Method_GetHotelList = new grpc::Method<global::GrpcMediaService.Empty, global::GrpcMediaService.HotelList>(
+    static readonly grpc::Method<global::GrpcMediaService.Empty, global::GrpcMediaService.HotelList> __Method_getHotelList = new grpc::Method<global::GrpcMediaService.Empty, global::GrpcMediaService.HotelList>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetHotelList",
+        "getHotelList",
         __Marshaller_Empty,
         __Marshaller_HotelList);
 
@@ -646,7 +646,7 @@ namespace GrpcMediaService {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.HotelList> GetHotelList(global::GrpcMediaService.Empty request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.HotelList> getHotelList(global::GrpcMediaService.Empty request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2053,9 +2053,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.HotelList GetHotelList(global::GrpcMediaService.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.HotelList getHotelList(global::GrpcMediaService.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetHotelList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getHotelList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///获得酒店信息列表
@@ -2063,9 +2063,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.HotelList GetHotelList(global::GrpcMediaService.Empty request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.HotelList getHotelList(global::GrpcMediaService.Empty request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_GetHotelList, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_getHotelList, null, options, request);
       }
       /// <summary>
       ///获得酒店信息列表
@@ -2075,9 +2075,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.HotelList> GetHotelListAsync(global::GrpcMediaService.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.HotelList> getHotelListAsync(global::GrpcMediaService.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetHotelListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getHotelListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///获得酒店信息列表
@@ -2085,9 +2085,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.HotelList> GetHotelListAsync(global::GrpcMediaService.Empty request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.HotelList> getHotelListAsync(global::GrpcMediaService.Empty request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_GetHotelList, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_getHotelList, null, options, request);
       }
       /// <summary>
       ///================酒店房间类型=========================
@@ -2661,7 +2661,7 @@ namespace GrpcMediaService {
           .AddMethod(__Method_updateHotelInfo, serviceImpl.updateHotelInfo)
           .AddMethod(__Method_deleteHotelInfoById, serviceImpl.deleteHotelInfoById)
           .AddMethod(__Method_getHotelById, serviceImpl.getHotelById)
-          .AddMethod(__Method_GetHotelList, serviceImpl.GetHotelList)
+          .AddMethod(__Method_getHotelList, serviceImpl.getHotelList)
           .AddMethod(__Method_createHotelRoomTypeInfo, serviceImpl.createHotelRoomTypeInfo)
           .AddMethod(__Method_updateHotelRoomTypeInfo, serviceImpl.updateHotelRoomTypeInfo)
           .AddMethod(__Method_deleteHotelRoomTypeById, serviceImpl.deleteHotelRoomTypeById)

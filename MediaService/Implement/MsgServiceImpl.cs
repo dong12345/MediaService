@@ -147,184 +147,666 @@ namespace MediaService.Implement
         }
         #endregion
 
-
-        public override Task<ModifyReply> createExpressInfo(ExpressStruct request, ServerCallContext context)
+        #region Express(快递单)
+        public override async Task<ModifyReply> createExpressInfo(ExpressStruct request, ServerCallContext context)
         {
-            return base.createExpressInfo(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.Id = Guid.NewGuid().ToString();
+                request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<ExpressStruct, Express>(request);
+                var result = await _service.CreateExpressInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> updateExpressInfo(ExpressStruct request, ServerCallContext context)
+        public override async Task<ModifyReply> updateExpressInfo(ExpressStruct request, ServerCallContext context)
         {
-            return base.updateExpressInfo(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<ExpressStruct, Express>(request);
+                var result = await _service.UpdateExpressInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> deleteExpressInfoById(IdRequest request, ServerCallContext context)
+        public override async Task<ModifyReply> deleteExpressInfoById(IdRequest request, ServerCallContext context)
         {
-            return base.deleteExpressInfoById(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                var result = await _service.DeleteExpressInfoById(request.Id);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ExpressStruct> getExpressInfoById(IdRequest request, ServerCallContext context)
+        public override async Task<ExpressStruct> getExpressInfoById(IdRequest request, ServerCallContext context)
         {
-            return base.getExpressInfoById(request, context);
+            try
+            {
+                var model = await _service.GetExpressInfoById(request.Id);
+                var result = Mapper.Map<Express, ExpressStruct>(model);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
         }
 
-        public override Task<ExpressList> getExpressList(PaginationRequestSearch request, ServerCallContext context)
+        public override async Task<ExpressList> getExpressList(PaginationRequestSearch request, ServerCallContext context)
         {
-            return base.getExpressList(request, context);
+            try
+            {
+                ExpressList expressList = new ExpressList();
+                var search = Mapper.Map<SearchStruct, SearchModel>(request.Search);
+                var list = await _service.GetExpressList(request.Offset, request.Limit, search);
+
+                var result = Mapper.Map<List<Express>, List<ExpressStruct>>(list);
+                expressList.Listdata.AddRange(result);
+                expressList.Total = await _service.GetExpressListCount(search);
+                return expressList;
+
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
+        #endregion
+
+
+        #region CatalogueBooks(web页面会刊订购信息表)
+        public override async Task<ModifyReply> createCatalogueBooksInfo(CatalogueBooksStruct request, ServerCallContext context)
+        {
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.Id = Guid.NewGuid().ToString();
+                request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<CatalogueBooksStruct, CatalogueBooks>(request);
+                var result = await _service.CreateCatalogueBooksInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> createCatalogueBooksInfo(CatalogueBooksStruct request, ServerCallContext context)
+        public override async Task<ModifyReply> updateCatalogueBooksInfo(CatalogueBooksStruct request, ServerCallContext context)
         {
-            return base.createCatalogueBooksInfo(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<CatalogueBooksStruct, CatalogueBooks>(request);
+                var result = await _service.UpdateCatalogueBooksInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> updateCatalogueBooksInfo(CatalogueBooksStruct request, ServerCallContext context)
+        public override async Task<ModifyReply> deleteCatalogueBooksById(IdRequest request, ServerCallContext context)
         {
-            return base.updateCatalogueBooksInfo(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                var result = await _service.DeleteCatalogueBooksById(request.Id);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
+        }
+        #endregion
+
+
+
+        #region Interview(专题采访)
+        public override async Task<ModifyReply> createInterviewInfo(InterviewStruct request, ServerCallContext context)
+        {
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.Id = Guid.NewGuid().ToString();
+                request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<InterviewStruct, Interview>(request);
+                var result = await _service.CreateInterviewInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> deleteCatalogueBooksById(IdRequest request, ServerCallContext context)
+        public override async Task<ModifyReply> updateInterviewInfo(InterviewStruct request, ServerCallContext context)
         {
-            return base.deleteCatalogueBooksById(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<InterviewStruct, Interview>(request);
+                var result = await _service.UpdateInterviewInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> createInterviewInfo(InterviewStruct request, ServerCallContext context)
+        public override async Task<ModifyReply> deleteInterviewById(IdRequest request, ServerCallContext context)
         {
-            return base.createInterviewInfo(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                var result = await _service.DeleteInterviewById(request.Id);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> updateInterviewInfo(InterviewStruct request, ServerCallContext context)
+        public override async Task<InterviewStruct> getInterviewInfoById(IdRequest request, ServerCallContext context)
         {
-            return base.updateInterviewInfo(request, context);
+            try
+            {
+                var model = await _service.GetInterviewInfoById(request.Id);
+                var result = Mapper.Map<Interview, InterviewStruct>(model);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
         }
 
-        public override Task<ModifyReply> deleteInterviewById(IdRequest request, ServerCallContext context)
+        public override async Task<InterviewList> getInterviewList(PaginationRequestSearch request, ServerCallContext context)
         {
-            return base.deleteInterviewById(request, context);
+            try
+            {
+                InterviewList interviewList = new InterviewList();
+                var search = Mapper.Map<SearchStruct, SearchModel>(request.Search);
+                var list = await _service.GetInterviewList(request.Offset, request.Limit, search);
+
+                var result = Mapper.Map<List<Interview>, List<InterviewStruct>>(list);
+                interviewList.Listdata.AddRange(result);
+                interviewList.Total = await _service.GetInterviewListCount(search);
+                return interviewList;
+
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
+        #endregion
+
+
+        #region HighlightsInfo(十大亮点申请)
+        public override async Task<ModifyReply> createHighlightsInfo(HighlightsInfoStruct request, ServerCallContext context)
+        {
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.Id = Guid.NewGuid().ToString();
+                request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<HighlightsInfoStruct, HighlightsInfo>(request);
+                var result = await _service.CreateHighlightsInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<InterviewStruct> getInterviewInfoById(IdRequest request, ServerCallContext context)
+        public override async Task<ModifyReply> updateHighlightsInfo(HighlightsInfoStruct request, ServerCallContext context)
         {
-            return base.getInterviewInfoById(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<HighlightsInfoStruct, HighlightsInfo>(request);
+                var result = await _service.UpdateHighlightsInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<InterviewList> getInterviewList(PaginationRequestSearch request, ServerCallContext context)
+        public override async Task<ModifyReply> deleteHighlightsInfoById(IdRequest request, ServerCallContext context)
         {
-            return base.getInterviewList(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                var result = await _service.DeleteHighlightsInfoById(request.Id);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> createHighlightsInfo(HighlightsInfoStruct request, ServerCallContext context)
+        public override async Task<HighlightsInfoStruct> getHighlightsInfoById(IdRequest request, ServerCallContext context)
         {
-            return base.createHighlightsInfo(request, context);
+            try
+            {
+                var model = await _service.GetHighlightsInfoById(request.Id);
+                var result = Mapper.Map<HighlightsInfo, HighlightsInfoStruct>(model);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
         }
 
-        public override Task<ModifyReply> updateHighlightsInfo(HighlightsInfoStruct request, ServerCallContext context)
+        public override async Task<HighlightsInfoList> getHighlightsInfoList(PaginationRequestSearch request, ServerCallContext context)
         {
-            return base.updateHighlightsInfo(request, context);
+            try
+            {
+                HighlightsInfoList highlightsInfoList = new HighlightsInfoList();
+                var search = Mapper.Map<SearchStruct, SearchModel>(request.Search);
+                var list = await _service.GetHighlightsInfoList(request.Offset, request.Limit, search);
+
+                var result = Mapper.Map<List<HighlightsInfo>, List<HighlightsInfoStruct>>(list);
+                highlightsInfoList.Listdata.AddRange(result);
+                highlightsInfoList.Total = await _service.GetHighlightsInfoListCount(search);
+                return highlightsInfoList;
+
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
+        #endregion
+
+
+        #region Hotel(酒店)
+        public override async Task<ModifyReply> createHotelInfo(HotelStruct request, ServerCallContext context)
+        {
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.HotelId = Guid.NewGuid().ToString();
+                request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<HotelStruct, Hotel>(request);
+                var result = await _service.CreateHotelInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> deleteHighlightsInfoById(IdRequest request, ServerCallContext context)
+        public override async Task<ModifyReply> updateHotelInfo(HotelStruct request, ServerCallContext context)
         {
-            return base.deleteHighlightsInfoById(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<HotelStruct, Hotel>(request);
+                var result = await _service.UpdateHotelInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<HighlightsInfoStruct> getHighlightsInfoById(IdRequest request, ServerCallContext context)
+        public override async Task<ModifyReply> deleteHotelInfoById(HotelId request, ServerCallContext context)
         {
-            return base.getHighlightsInfoById(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                var result = await _service.DeleteHotelInfoById(request.HotelId_);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<HighlightsInfoList> getHighlightsInfoList(PaginationRequestSearch request, ServerCallContext context)
+        public override async Task<HotelStruct> getHotelById(HotelId request, ServerCallContext context)
         {
-            return base.getHighlightsInfoList(request, context);
+            try
+            {
+                var model = await _service.GetHotelById(request.HotelId_);
+                var result = Mapper.Map<Hotel, HotelStruct>(model);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
         }
 
-        public override Task<ModifyReply> createHotelInfo(HotelStruct request, ServerCallContext context)
+        public override async Task<HotelList> getHotelList(Empty request, ServerCallContext context)
         {
-            return base.createHotelInfo(request, context);
+            try
+            {
+                HotelList hotelList = new HotelList();
+                var list = await _service.GetHotelList();
+                var result = Mapper.Map<List<Hotel>, List<HotelStruct>>(list);
+                hotelList.Listdata.AddRange(result);
+                return hotelList;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
+        #endregion
+
+
+        #region HotelRoomType(酒店房间类型)
+        public override async Task<ModifyReply> createHotelRoomTypeInfo(HotelRoomTypeStruct request, ServerCallContext context)
+        {
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.HptelRoomTypeId = Guid.NewGuid().ToString();
+                request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<HotelRoomTypeStruct, HotelRoomType>(request);
+                var result = await _service.CreateHotelRoomTypeInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> updateHotelInfo(HotelStruct request, ServerCallContext context)
+        public override async Task<ModifyReply> updateHotelRoomTypeInfo(HotelRoomTypeStruct request, ServerCallContext context)
         {
-            return base.updateHotelInfo(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<HotelRoomTypeStruct, HotelRoomType>(request);
+                var result = await _service.UpdateHotelRoomTypeInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> deleteHotelInfoById(HotelId request, ServerCallContext context)
+        public override async Task<ModifyReply> deleteHotelRoomTypeById(HotelRoomTypeId request, ServerCallContext context)
         {
-            return base.deleteHotelInfoById(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                var result = await _service.DeleteHotelRoomTypeById(request.HotelRoomTypeId_);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<HotelStruct> getHotelById(HotelId request, ServerCallContext context)
+        public override async Task<HotelRoomTypeStruct> getHotelRoomTypeInfoById(HotelRoomTypeId request, ServerCallContext context)
         {
-            return base.getHotelById(request, context);
+            try
+            {
+                var model = await _service.GetHotelRoomTypeInfoById(request.HotelRoomTypeId_);
+                var result = Mapper.Map<HotelRoomType, HotelRoomTypeStruct>(model);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
         }
 
-        public override Task<HotelList> GetHotelList(Empty request, ServerCallContext context)
+        public override async Task<HotelRoomTypeList> getHolteRoomTypeListByHotelId(HotelId request, ServerCallContext context)
         {
-            return base.GetHotelList(request, context);
+            try
+            {
+                HotelRoomTypeList hotelRoomTypeList = new HotelRoomTypeList();
+                var list = await _service.GetHolteRoomTypeListByHotelId(request.HotelId_);
+                var result = Mapper.Map<List<HotelRoomType>,List<HotelRoomTypeStruct>>(list);
+                hotelRoomTypeList.Listdata.AddRange(result);
+                hotelRoomTypeList.Total = result.Count;
+                return hotelRoomTypeList;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
+        #endregion
+
+
+        #region HotelBookRecord(酒店预订记录)
+        public override async Task<ModifyReply> createHotelBookRecordInfo(HotelBookRecordStruct request, ServerCallContext context)
+        {
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.Id = Guid.NewGuid().ToString();
+                request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<HotelBookRecordStruct, HotelBookRecord>(request);
+                var result = await _service.CreateHotelBookRecordInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> createHotelRoomTypeInfo(HotelRoomTypeStruct request, ServerCallContext context)
+        public override async Task<ModifyReply> updateHotelBookRecordInfo(HotelBookRecordStruct request, ServerCallContext context)
         {
-            return base.createHotelRoomTypeInfo(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+                var model = Mapper.Map<HotelBookRecordStruct, HotelBookRecord>(request);
+                var result = await _service.UpdateHotelBookRecordInfo(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> updateHotelRoomTypeInfo(HotelRoomTypeStruct request, ServerCallContext context)
+        public override async Task<ModifyReply> deleteHotelBookRecordInfoById(IdRequest request, ServerCallContext context)
         {
-            return base.updateHotelRoomTypeInfo(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                var result = await _service.DeleteHotelBookRecordInfoById(request.Id);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
 
-        public override Task<ModifyReply> deleteHotelRoomTypeById(HotelRoomTypeId request, ServerCallContext context)
+        public override async Task<HotelBookRecordList> getHotelBookRecordByMemberId(MemberId request, ServerCallContext context)
         {
-            return base.deleteHotelRoomTypeById(request, context);
+            try
+            {
+                HotelBookRecordList hotelBookRecordList = new HotelBookRecordList();
+                var list = await _service.GetHotelBookRecordByMemberId(request.MemberId_);
+                var result = Mapper.Map<List<HotelBookRecord>, List<HotelBookRecordStruct>>(list);
+                hotelBookRecordList.Listdata.AddRange(result);
+                hotelBookRecordList.Total = result.Count;
+                return hotelBookRecordList;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
         }
 
-        public override Task<HotelRoomTypeStruct> getHotelRoomTypeInfoById(HotelRoomTypeId request, ServerCallContext context)
+        public override async Task<ModifyReply> cancelHotelBookRecordById(IdRequest request, ServerCallContext context)
         {
-            return base.getHotelRoomTypeInfoById(request, context);
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                var result = await _service.CancelHotelBookRecordById(request.Id);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
         }
 
-        public override Task<HotelRoomTypeList> getHolteRoomTypeListByHotelId(HotelId request, ServerCallContext context)
+        public override async Task<HotelBookRecordStruct> getHotelBookRecordById(IdRequest request, ServerCallContext context)
         {
-            return base.getHolteRoomTypeListByHotelId(request, context);
+            try
+            {
+                var model = await _service.GetHotelBookRecordById(request.Id);
+                var result = Mapper.Map<HotelBookRecord, HotelBookRecordStruct>(model);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
         }
 
-        public override Task<ModifyReply> createHotelBookRecordInfo(HotelBookRecordStruct request, ServerCallContext context)
+        public override async Task<HotelBookRecordList> getHotelBookRecordList(PaginationRequestSearch request, ServerCallContext context)
         {
-            return base.createHotelBookRecordInfo(request, context);
+            try
+            {
+                HotelBookRecordList hotelBookRecordList = new HotelBookRecordList();
+                var search = Mapper.Map<SearchStruct, SearchModel>(request.Search);
+                var list = await _service.GetHotelBookRecordList(request.Offset, request.Limit, search);
+
+                var result = Mapper.Map<List<HotelBookRecord>, List<HotelBookRecordStruct>>(list);
+                hotelBookRecordList.Listdata.AddRange(result);
+                hotelBookRecordList.Total = await _service.GetHotelBookRecordListCount(search);
+                return hotelBookRecordList;
+
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
         }
-
-        public override Task<ModifyReply> updateHotelBookRecordInfo(HotelBookRecordStruct request, ServerCallContext context)
-        {
-            return base.updateHotelBookRecordInfo(request, context);
-        }
-
-        public override Task<ModifyReply> deleteHotelBookRecordInfoById(IdRequest request, ServerCallContext context)
-        {
-            return base.deleteHotelBookRecordInfoById(request, context);
-        }
-
-        public override Task<HotelBookRecordList> getHotelBookRecordByMemberId(MemberId request, ServerCallContext context)
-        {
-            return base.getHotelBookRecordByMemberId(request, context);
-        }
-
-        public override Task<ModifyReply> cancelHotelBookRecordById(IdRequest request, ServerCallContext context)
-        {
-            return base.cancelHotelBookRecordById(request, context);
-        }
-
-        public override Task<HotelBookRecordStruct> getHotelBookRecordById(IdRequest request, ServerCallContext context)
-        {
-            return base.getHotelBookRecordById(request, context);
-        }
-
-        public override Task<HotelBookRecordList> getHotelBookRecordList(PaginationRequestSearch request, ServerCallContext context)
-        {
-            return base.getHotelBookRecordList(request, context);
-        }
+        #endregion
 
 
-      
+
+
+
 
     }
 }

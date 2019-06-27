@@ -620,7 +620,6 @@ namespace MediaService.Service
                         model.Name = cb.Name;
                         model.Tel = cb.Tel;
                         model.Type = cb.Type;
-                        model.Updated_at = DateTime.Now;
 
                         count = await _context.SaveChangesAsync();
                         if (count > 0)
@@ -792,7 +791,6 @@ namespace MediaService.Service
                         model.Name = interview.Name;
                         model.NameEn = interview.NameEn;
                         model.Photo = interview.Photo;
-                        model.Updated_at = DateTime.Now;
                         model.CompanyName = interview.CompanyName;
                         model.CompanyNameEn = interview.CompanyNameEn;
 
@@ -1039,7 +1037,6 @@ namespace MediaService.Service
                         model.Mobile = highlightsInfo.Mobile;
                         model.ShowWay = highlightsInfo.ShowWay;
                         model.Tel = highlightsInfo.Tel;
-                        model.Updated_at = DateTime.Now;
                         model.YJIntroduction = highlightsInfo.YJIntroduction;
                         model.YJname = highlightsInfo.YJname;
                         model.YJnameEn = highlightsInfo.YJnameEn;
@@ -1594,13 +1591,15 @@ namespace MediaService.Service
         /// 根据HotelId获得酒店房间集合
         /// </summary>
         /// <returns></returns>
-        public async Task<List<HotelRoomType>> GetHolteRoomTypeListByHotelId()
+        public async Task<List<HotelRoomType>> GetHolteRoomTypeListByHotelId(string hotelId)
         {
             try
             {
                 using (_context = new MyContext(_options.Options))
                 {
-                    var list = await _context.HotelRoomType.ToListAsync();
+                    var list = await _context.HotelRoomType
+                        .Where(x=>x.HotelId==hotelId)
+                        .ToListAsync();
                     return list;
                 }
             }
@@ -1726,7 +1725,6 @@ namespace MediaService.Service
                         model.PayType = hotelBookRecord.PayType;
                         model.PriceCount = hotelBookRecord.PriceCount;
                         model.Remark = hotelBookRecord.Remark;
-                        model.Updated_at = DateTime.Now;
 
                         count = await _context.SaveChangesAsync();
                         if (count > 0)
@@ -1794,7 +1792,7 @@ namespace MediaService.Service
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<List<HotelBookRecord>> GetHotelBookRecordListByMemberId(string memberId)
+        public async Task<List<HotelBookRecord>> GetHotelBookRecordByMemberId(string memberId)
         {
             try
             {
@@ -1832,6 +1830,7 @@ namespace MediaService.Service
                     else
                     {
                         model.IsCanceled = 1;
+                        model.Updated_at= DateTime.UtcNow.ToUniversalTime();
 
                         count = await _context.SaveChangesAsync();
                         if (count > 0)
