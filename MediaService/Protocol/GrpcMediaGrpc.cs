@@ -21,6 +21,7 @@ namespace GrpcMediaService {
     static readonly grpc::Marshaller<global::GrpcMediaService.ExpressStruct> __Marshaller_ExpressStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExpressStruct.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExpressList> __Marshaller_ExpressList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExpressList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.CatalogueBooksStruct> __Marshaller_CatalogueBooksStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.CatalogueBooksStruct.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::GrpcMediaService.CatalogueBooksList> __Marshaller_CatalogueBooksList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.CatalogueBooksList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.InterviewStruct> __Marshaller_InterviewStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.InterviewStruct.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.InterviewList> __Marshaller_InterviewList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.InterviewList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.HighlightsInfoStruct> __Marshaller_HighlightsInfoStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.HighlightsInfoStruct.Parser.ParseFrom);
@@ -132,6 +133,20 @@ namespace GrpcMediaService {
         "deleteCatalogueBooksById",
         __Marshaller_IdRequest,
         __Marshaller_ModifyReply);
+
+    static readonly grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.CatalogueBooksStruct> __Method_getCatalogueBooksById = new grpc::Method<global::GrpcMediaService.IdRequest, global::GrpcMediaService.CatalogueBooksStruct>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "getCatalogueBooksById",
+        __Marshaller_IdRequest,
+        __Marshaller_CatalogueBooksStruct);
+
+    static readonly grpc::Method<global::GrpcMediaService.PaginationRequestSearch, global::GrpcMediaService.CatalogueBooksList> __Method_getCatalogueBooksList = new grpc::Method<global::GrpcMediaService.PaginationRequestSearch, global::GrpcMediaService.CatalogueBooksList>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "getCatalogueBooksList",
+        __Marshaller_PaginationRequestSearch,
+        __Marshaller_CatalogueBooksList);
 
     static readonly grpc::Method<global::GrpcMediaService.InterviewStruct, global::GrpcMediaService.ModifyReply> __Method_createInterviewInfo = new grpc::Method<global::GrpcMediaService.InterviewStruct, global::GrpcMediaService.ModifyReply>(
         grpc::MethodType.Unary,
@@ -481,6 +496,28 @@ namespace GrpcMediaService {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> deleteCatalogueBooksById(global::GrpcMediaService.IdRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///根据Id获得会刊订购信息
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.CatalogueBooksStruct> getCatalogueBooksById(global::GrpcMediaService.IdRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///根据条件查询会刊订购信息列表(带分页)
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.CatalogueBooksList> getCatalogueBooksList(global::GrpcMediaService.PaginationRequestSearch request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1424,6 +1461,94 @@ namespace GrpcMediaService {
       public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> deleteCatalogueBooksByIdAsync(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_deleteCatalogueBooksById, null, options, request);
+      }
+      /// <summary>
+      ///根据Id获得会刊订购信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.CatalogueBooksStruct getCatalogueBooksById(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getCatalogueBooksById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据Id获得会刊订购信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.CatalogueBooksStruct getCatalogueBooksById(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_getCatalogueBooksById, null, options, request);
+      }
+      /// <summary>
+      ///根据Id获得会刊订购信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.CatalogueBooksStruct> getCatalogueBooksByIdAsync(global::GrpcMediaService.IdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getCatalogueBooksByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据Id获得会刊订购信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.CatalogueBooksStruct> getCatalogueBooksByIdAsync(global::GrpcMediaService.IdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_getCatalogueBooksById, null, options, request);
+      }
+      /// <summary>
+      ///根据条件查询会刊订购信息列表(带分页)
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.CatalogueBooksList getCatalogueBooksList(global::GrpcMediaService.PaginationRequestSearch request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getCatalogueBooksList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据条件查询会刊订购信息列表(带分页)
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.CatalogueBooksList getCatalogueBooksList(global::GrpcMediaService.PaginationRequestSearch request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_getCatalogueBooksList, null, options, request);
+      }
+      /// <summary>
+      ///根据条件查询会刊订购信息列表(带分页)
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.CatalogueBooksList> getCatalogueBooksListAsync(global::GrpcMediaService.PaginationRequestSearch request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getCatalogueBooksListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据条件查询会刊订购信息列表(带分页)
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.CatalogueBooksList> getCatalogueBooksListAsync(global::GrpcMediaService.PaginationRequestSearch request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_getCatalogueBooksList, null, options, request);
       }
       /// <summary>
       ///创建专题采访信息
@@ -2647,6 +2772,8 @@ namespace GrpcMediaService {
           .AddMethod(__Method_createCatalogueBooksInfo, serviceImpl.createCatalogueBooksInfo)
           .AddMethod(__Method_updateCatalogueBooksInfo, serviceImpl.updateCatalogueBooksInfo)
           .AddMethod(__Method_deleteCatalogueBooksById, serviceImpl.deleteCatalogueBooksById)
+          .AddMethod(__Method_getCatalogueBooksById, serviceImpl.getCatalogueBooksById)
+          .AddMethod(__Method_getCatalogueBooksList, serviceImpl.getCatalogueBooksList)
           .AddMethod(__Method_createInterviewInfo, serviceImpl.createInterviewInfo)
           .AddMethod(__Method_updateInterviewInfo, serviceImpl.updateInterviewInfo)
           .AddMethod(__Method_deleteInterviewById, serviceImpl.deleteInterviewById)

@@ -84,5 +84,18 @@ namespace MediaService.Common
         /// 是否从网站页面订购
         /// </summary>
         public bool IsWebsite { get; set; }
+
+        /// <summary>
+        /// 会刊订购类型(会刊或是摘要集)
+        /// </summary>
+        public string Type { get; set; }
+        /// <summary>
+        /// 会刊订购人邮箱
+        /// </summary>
+        public string Email { get; set; }
+        /// <summary>
+        /// 会刊订购人
+        /// </summary>
+        public string Name { get; set; }
     }
 }

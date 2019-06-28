@@ -33,11 +33,11 @@ namespace MediaService.DBModel
         public DateTime Created_at { get; set; }
         public DateTime Updated_at { get; set; }
 
-        public ICollection<HotelBookRecord> HotelBookRecords { get; set; }
+        public List<HotelBookRecord> HotelBookRecords { get; set; }
 
         public HotelRoomType()
         {
-            HotelBookRecords = new HashSet<HotelBookRecord>();
+            HotelBookRecords = new List<HotelBookRecord>();
         }
     }
 }

@@ -34,7 +34,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (var _context = new MyContext(_options.Options))
+                using ( _context = new MyContext(_options.Options))
                 {
                     await _context.FormPublic.AddAsync(formPublic);
                     count = await _context.SaveChangesAsync();
@@ -572,7 +572,7 @@ namespace MediaService.Service
             {
                 using (_context = new MyContext(_options.Options))
                 {
-                    await _context.CatelogueBooks.AddAsync(cb);
+                    await _context.CatalogueBooks.AddAsync(cb);
                     count = await _context.SaveChangesAsync();
                     if (count > 0)
                     {
@@ -653,7 +653,7 @@ namespace MediaService.Service
             try
             {
                 Guid gid = new Guid(id);
-                var item = _context.CatelogueBooks
+                var item = _context.CatalogueBooks
                     .FirstOrDefault(x => x.Id == gid);
                 return item;
             }
@@ -683,7 +683,7 @@ namespace MediaService.Service
                     }
                     else
                     {
-                        _context.CatelogueBooks.Remove(model);
+                        _context.CatalogueBooks.Remove(model);
                         count = await _context.SaveChangesAsync();
                         if (count > 0)
                         {
@@ -705,6 +705,97 @@ namespace MediaService.Service
             }
         }
 
+        /// <summary>
+        /// 根据Id获得会刊订购信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public async Task<CatalogueBooks> GetCatalogueBooksById(string id)
+        {
+            try
+            {
+                using (_context = new MyContext(_options.Options))
+                {
+                    Guid gid = new Guid(id);
+                    var item = await _context.CatalogueBooks
+                            .FirstOrDefaultAsync(x => x.Id == gid);
+                    return item;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+        }
+
+        /// <summary>
+        /// 根据条件查询会刊订购信息列表(带分页)
+        /// </summary>
+        /// <param name="pageindex"></param>
+        /// <param name="pagesize"></param>
+        /// <param name="searchModel"></param>
+        /// <returns></returns>
+        public async Task<List<CatalogueBooks>> GetCatalogueBooksList(int pageindex, int pagesize, SearchModel searchModel)
+        {
+            try
+            {
+                using (_context = new MyContext(_options.Options))
+                {
+                    var list = await _context.CatalogueBooks
+                       .Where(x => (string.IsNullOrEmpty(searchModel.Type) || x.Type.Contains(searchModel.Type))
+                       && (string.IsNullOrEmpty(searchModel.Name) || x.Name.Contains(searchModel.Name))
+                       && (string.IsNullOrEmpty(searchModel.Email) || x.Email.Contains(searchModel.Email)))
+                        .OrderByDescending(x => x.Created_at)
+                        .Skip(((pageindex - 1) * pagesize))
+                        .Take(pagesize)
+                        .ToListAsync();
+
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+        }
+
+        /// <summary>
+        /// 根据条件查询会刊订购信息列表总数
+        /// </summary>
+        /// <param name="searchModel"></param>
+        /// <returns></returns>
+        public async Task<int> GetCatalogueBooksListCount(SearchModel searchModel)
+        {
+            var total = 0;
+            try
+            {
+                using (var _context = new MyContext(_options.Options))
+                {
+                    if (searchModel != null)
+                    {
+                        var list = await _context.CatalogueBooks
+                            .Where(x => (string.IsNullOrEmpty(searchModel.Type) || x.Type.Contains(searchModel.Type))
+                       && (string.IsNullOrEmpty(searchModel.Name) || x.Name.Contains(searchModel.Name))
+                       && (string.IsNullOrEmpty(searchModel.Email) || x.Email.Contains(searchModel.Email)))
+                        .ToListAsync();
+                        total = list.Count();
+                    }
+                    else
+                    {
+                        var list = await _context.CatalogueBooks.ToListAsync();
+                        total = list.Count;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+            return total;
+        }
         #endregion
 
 

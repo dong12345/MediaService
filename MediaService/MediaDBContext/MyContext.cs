@@ -10,7 +10,7 @@ namespace MediaService.MediaDBContext
 
         }
 
-        public DbSet<CatalogueBooks> CatelogueBooks { get; set; }
+        public DbSet<CatalogueBooks> CatalogueBooks { get; set; }
 
         public DbSet<Express> Express { get; set; }
 

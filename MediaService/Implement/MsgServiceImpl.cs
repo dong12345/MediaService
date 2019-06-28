@@ -298,6 +298,42 @@ namespace MediaService.Implement
             }
             return modifyReply;
         }
+
+        public override async Task<CatalogueBooksStruct> getCatalogueBooksById(IdRequest request, ServerCallContext context)
+        {
+            try
+            {
+                var model = await _service.GetCatalogueBooksById(request.Id);
+                var result = Mapper.Map<CatalogueBooks, CatalogueBooksStruct>(model);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
+
+        public override async Task<CatalogueBooksList> getCatalogueBooksList(PaginationRequestSearch request, ServerCallContext context)
+        {
+            try
+            {
+                CatalogueBooksList catalogueBooksList = new CatalogueBooksList();
+                var search = Mapper.Map<SearchStruct, SearchModel>(request.Search);
+                var list = await _service.GetCatalogueBooksList(request.Offset, request.Limit, search);
+
+                var result = Mapper.Map<List<CatalogueBooks>, List<CatalogueBooksStruct>>(list);
+                catalogueBooksList.Listdata.AddRange(result);
+                catalogueBooksList.Total = await _service.GetCatalogueBooksListCount(search);
+                return catalogueBooksList;
+
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
         #endregion
 
 
