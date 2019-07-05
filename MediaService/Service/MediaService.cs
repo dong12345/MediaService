@@ -34,7 +34,7 @@ namespace MediaService.Service
         {
             try
             {
-                using ( _context = new MyContext(_options.Options))
+                using (_context = new MyContext(_options.Options))
                 {
                     await _context.FormPublic.AddAsync(formPublic);
                     count = await _context.SaveChangesAsync();
@@ -742,16 +742,30 @@ namespace MediaService.Service
             {
                 using (_context = new MyContext(_options.Options))
                 {
-                    var list = await _context.CatalogueBooks
-                       .Where(x => (string.IsNullOrEmpty(searchModel.Type) || x.Type.Contains(searchModel.Type))
-                       && (string.IsNullOrEmpty(searchModel.Name) || x.Name.Contains(searchModel.Name))
-                       && (string.IsNullOrEmpty(searchModel.Email) || x.Email.Contains(searchModel.Email)))
-                        .OrderByDescending(x => x.Created_at)
-                        .Skip(((pageindex - 1) * pagesize))
-                        .Take(pagesize)
-                        .ToListAsync();
+                    if (searchModel == null)
+                    {
+                       var  list = await _context.CatalogueBooks
+                            .OrderByDescending(x => x.Created_at)
+                            .Skip(((pageindex - 1) * pagesize))
+                            .Take(pagesize)
+                            .ToListAsync();
+                        return list;
 
-                    return list;
+                    }
+                    else
+                    {
+                        var list = await _context.CatalogueBooks
+                                    .Where(x => (string.IsNullOrEmpty(searchModel.Type) || x.Type.Contains(searchModel.Type))
+                                     && (string.IsNullOrEmpty(searchModel.Name) || x.Name.Contains(searchModel.Name))
+                                     && (string.IsNullOrEmpty(searchModel.Email) || x.Email.Contains(searchModel.Email)))
+                                     .OrderByDescending(x => x.Created_at)
+                                     .Skip(((pageindex - 1) * pagesize))
+                                     .Take(pagesize)
+                                     .ToListAsync();
+                        return list;
+                    }
+
+
                 }
             }
             catch (Exception ex)
@@ -1642,7 +1656,7 @@ namespace MediaService.Service
                                 msg = "删除失败";
                             }
                         }
-                        
+
                     }
                     return GetModifyReply(isSuccess, msg, count);
                 }
@@ -1689,7 +1703,7 @@ namespace MediaService.Service
                 using (_context = new MyContext(_options.Options))
                 {
                     var list = await _context.HotelRoomType
-                        .Where(x=>x.HotelId.ToString()==hotelId)
+                        .Where(x => x.HotelId.ToString() == hotelId)
                         .ToListAsync();
                     return list;
                 }
@@ -1921,7 +1935,7 @@ namespace MediaService.Service
                     else
                     {
                         model.IsCanceled = 1;
-                        model.Updated_at= DateTime.UtcNow.ToUniversalTime();
+                        model.Updated_at = DateTime.UtcNow.ToUniversalTime();
 
                         count = await _context.SaveChangesAsync();
                         if (count > 0)
@@ -2055,7 +2069,7 @@ namespace MediaService.Service
         /// <returns></returns>
         private ModifyReplyModel GetModifyReply(bool success, string msg, int modified_count)
         {
-            return new ModifyReplyModel() { success = success, modified_count = modified_count, msg = msg };
+            return new ModifyReplyModel() { success = success, modifiedcount = modified_count, msg = msg };
         }
     }
 }

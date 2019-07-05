@@ -27,6 +27,13 @@ services:
     networks:
       - network2
 
+  testapi:
+    image: ${DOCKER_REGISTRY-}testapi
+    build:
+      context: .
+      dockerfile: ../TestAPI/Dockerfile
+    networks:
+      - network2
 volumes:
     media-data-volume:
        external: true
@@ -34,3 +41,4 @@ volumes:
 networks:
   network2:
     external: true
+
