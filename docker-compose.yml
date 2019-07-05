@@ -31,7 +31,7 @@ services:
     image: ${DOCKER_REGISTRY-}testapi
     build:
       context: .
-      dockerfile: ../TestAPI/Dockerfile
+      dockerfile: TestAPI/Dockerfile
     networks:
       - network2
 volumes:

@@ -1,0 +1,497 @@
+﻿syntax = "proto3";
+
+package GrpcMediaService;
+
+//Version_MediaServiceToGrpc_0.1
+// tag<gRPC>
+// host<media.api>
+// port<40001> 
+
+service MediaServiceToGrpc{
+
+  //======================会刊===========================
+
+  //创建会刊信息
+  rpc createFormPublicInfo(FormPublicStruct) returns (ModifyReply){}
+
+  //修改会刊信息
+  rpc updateFormPublicInfo(FormPublicStruct) returns(ModifyReply){}
+
+  //根据Id删除会刊信息
+  rpc deleteFormPublicInfoById(IdRequest) returns (ModifyReply){}
+
+  //获得会刊信息列表
+  rpc getFormPublicInfoList(Empty) returns (FormPublicList){}
+
+  //根据Id获得会刊信息
+  rpc getFormPublicInfoById(IdRequest) returns (FormPublicStruct){}
+
+  //根据条件查询会刊信息列表(带分页)
+  rpc getFormPublicList(PaginationRequestSearch) returns (FormPublicList) {}
+
+
+  //======================会刊===========================
+
+
+  //=======================快递单========================
+
+  //创建快递单记录
+  rpc createExpressInfo(ExpressStruct) returns (ModifyReply){}
+
+  //修改快递单记录
+  rpc updateExpressInfo(ExpressStruct) returns (ModifyReply){}
+
+  //根据Id删除快递单记录
+  rpc deleteExpressInfoById(IdRequest) returns (ModifyReply){}
+
+  //根据Id获得快递单信息
+  rpc getExpressInfoById(IdRequest) returns (ExpressStruct){}
+
+  //根据条件查询快递单信息列表(带分页)
+  rpc getExpressList (PaginationRequestSearch) returns (ExpressList) {}
+
+  //=======================快递单========================
+
+
+  //====================web页面会刊订购信息表============
+
+  //创建会刊订购信息
+  rpc createCatalogueBooksInfo(CatalogueBooksStruct) returns (ModifyReply){}
+
+  //修改会刊订购信息
+  rpc updateCatalogueBooksInfo(CatalogueBooksStruct) returns (ModifyReply){}
+
+  //根据Id删除会刊订购信息
+  rpc deleteCatalogueBooksById(IdRequest) returns (ModifyReply){}
+
+  //根据Id获得会刊订购信息
+  rpc getCatalogueBooksById(IdRequest) returns (CatalogueBooksStruct){}
+
+  //根据条件查询会刊订购信息列表(带分页)
+  rpc getCatalogueBooksList(PaginationRequestSearch) returns (CatalogueBooksList) {}
+
+  //====================web页面会刊订购信息表============
+
+
+  //====================专题采访=========================
+
+  //创建专题采访信息
+  rpc createInterviewInfo(InterviewStruct) returns (ModifyReply){}
+
+  //修改专题采访信息
+  rpc updateInterviewInfo(InterviewStruct) returns (ModifyReply){}
+
+  //根据Id删除专题采访信息
+  rpc deleteInterviewById(IdRequest) returns (ModifyReply){}
+
+  //根据Id获得专题采访信息
+  rpc getInterviewInfoById(IdRequest) returns(InterviewStruct){}
+
+  //根据条件查询专题采访信息列表(带分页)
+  rpc getInterviewList (PaginationRequestSearch) returns (InterviewList) {}
+
+  //====================专题采访=========================
+
+
+  //================十大亮点申请=========================
+
+  //创建十大亮点信息
+  rpc createHighlightsInfo(HighlightsInfoStruct) returns (ModifyReply){}
+
+  //修改十大亮点信息
+  rpc updateHighlightsInfo(HighlightsInfoStruct) returns (ModifyReply){}
+
+  //根据Id删除十大亮点信息
+  rpc deleteHighlightsInfoById(IdRequest) returns (ModifyReply){}
+
+  //根据Id获得十大亮点信息
+  rpc getHighlightsInfoById(IdRequest) returns (HighlightsInfoStruct){}
+
+  //根据条件查询十大亮点信息列表(带分页)
+  rpc getHighlightsInfoList(PaginationRequestSearch) returns (HighlightsInfoList) {}
+
+  //================十大亮点申请=========================
+
+
+  //========================酒店=========================
+  //创建酒店信息
+  rpc createHotelInfo(HotelStruct) returns(ModifyReply){}
+
+  //修改酒店信息
+  rpc updateHotelInfo(HotelStruct) returns(ModifyReply){}
+
+  //根据HotelId删除酒店信息
+  rpc deleteHotelInfoById(HotelId) returns(ModifyReply){}
+
+  //根据HotelId获得酒店信息
+  rpc getHotelById(HotelId) returns(HotelStruct){}
+
+  //获得酒店信息列表
+  rpc getHotelList(Empty) returns (HotelList){}
+
+  //========================酒店=========================
+
+
+
+  //================酒店房间类型=========================
+  //创建酒店房间类型
+  rpc createHotelRoomTypeInfo(HotelRoomTypeStruct) returns(ModifyReply){}
+
+  //修改酒店房间类型信息
+  rpc updateHotelRoomTypeInfo(HotelRoomTypeStruct) returns(ModifyReply){}
+
+  //根据HptelRoomTypeId删除酒店房间类型
+  rpc deleteHotelRoomTypeById(HotelRoomTypeId) returns(ModifyReply){}
+
+  //根据HotelRoomTypeId获得酒店房间类型信息
+  rpc getHotelRoomTypeInfoById(HotelRoomTypeId) returns(HotelRoomTypeStruct){}
+
+  //根据HotelId获得酒店房间集合
+  rpc getHolteRoomTypeListByHotelId(HotelId) returns(HotelRoomTypeList){}
+
+  //================酒店房间类型=========================
+
+  //================酒店预定记录=========================
+
+  //创建酒店预订信息
+  rpc createHotelBookRecordInfo(HotelBookRecordStruct) returns(ModifyReply){}
+
+  //修改酒店预订信息
+  rpc updateHotelBookRecordInfo(HotelBookRecordStruct) returns(ModifyReply){}
+
+  //根据Id删除酒店预订记录
+  rpc deleteHotelBookRecordInfoById(IdRequest) returns(ModifyReply){}
+
+  //根据MemberId获得酒店预订记录
+  rpc getHotelBookRecordByMemberId(MemberId) returns(HotelBookRecordList){}
+
+  //根据Id取消酒店预订
+  rpc cancelHotelBookRecordById(IdRequest) returns(ModifyReply){}
+
+  //根据Id获得酒店预订记录
+  rpc getHotelBookRecordById(IdRequest) returns(HotelBookRecordStruct){}
+
+  //根据条件查询酒店预订记录列表(带分页)
+  rpc getHotelBookRecordList (PaginationRequestSearch) returns (HotelBookRecordList) {}
+  //================酒店预定记录=========================
+}
+
+//======================会刊===========================
+message FormPublicStruct{
+	string id=1;
+	string companyId=2;
+	string companyNameCn=3;
+	string companyNameEn=4;
+	string address=5;
+	string addressEn=6;
+	string telephone=7;
+	string fax=8;
+	string email=9;
+	string website=10;
+	string pavilionNumber=11;//展馆号
+	string boothNumber=12;//展位号
+	string option=13;
+	string description=14;
+	string descriptionEn=15;
+	string snecLogoWebsite=16;
+	string logo=17;
+	string updated_at=18;
+	string created_at=19;
+	string ownerId=20;//客户经理Id
+	string ownerName=21;//客户经理名字
+	bool isPay=22;//是否付款
+	bool isHaveLogo=23;//是否有logo
+	string contractNumber=24;
+
+}
+
+message FormPublicList {
+  repeated FormPublicStruct listdata = 1;
+  int32 total = 2;
+}
+
+message PaginationRequestSearch {
+  int32 id = 1;
+  int32 offset = 2;
+  int32 limit = 3;
+  SearchStruct search = 4;
+}
+
+
+//======================会刊===========================
+
+//=======================快递单========================
+message ExpressStruct{
+  string id=1;
+  string companyId=2;
+  string expressNum=3;//快递单号
+  string sentDate=4;//寄件日期
+  string senderId=5;//寄件人Id	
+  string sender=6;//寄件人
+  string recipientUnit=7;//收件单位
+  string address=8;//收件地址
+  string recipient=9;//收件人
+  string tel=10;
+  string expressContent=11;//快递内容
+  string price=12;
+  string expressCompany=13;//快递公司
+  bool isExamine=14;//是否审核
+  bool isSend=15;//是否发送
+  string created_at=16;
+  string updated_at=17;
+}
+
+message ExpressList{
+  repeated ExpressStruct listdata = 1;
+  int32 total = 2;
+}
+//=======================快递单========================
+
+
+//====================web页面会刊订购信息表============
+message CatalogueBooksStruct{
+  string id=1;
+  string name=2;
+  int32 country=3;
+  string address=4;
+  string tel=5;
+  string email=6;
+  int32 count=7;//订购会刊数量
+  string des=8;//备注
+  string type=9;//订购类型(会刊或是摘要集)
+  string created_at=10;
+  string updated_at=11;
+}
+
+message CatalogueBooksList {
+  repeated CatalogueBooksStruct listdata = 1;
+  int32 total = 2;
+}
+//====================web页面会刊订购信息表============
+
+
+//====================专题采访=========================
+message InterviewStruct{
+  string id=1;
+  string name=2;
+  string nameEn=3;
+  string jobTitle=4;
+  string jobTitleEn=5;
+  string photo=6;
+  string introduction=7;
+  string interviewTime=8;//可接受采访时间段
+  string mediaName=9;
+  string memberId=10;
+  string companyName=11;
+  string companyNameEn=12;
+  string ownerId=13;
+  string ownerName=14;
+  string created_at=15;
+  string updated_at=16;
+}
+
+message InterviewList{
+  repeated InterviewStruct listdata = 1;
+  int32 total = 2;
+}
+//====================专题采访=========================
+
+//================十大亮点申请=========================
+message HighlightsInfoStruct{
+  string Id=1;
+  string LDnameCn=2;//亮点中文名
+  string LDnameEn=3;
+  string LDdescribeCn=4;
+  string LDdescribeEn=5;
+  string LDimage=6;
+  string LDlogo=7;
+  string YJname=8;//演讲人名称
+  string YJnameEn=9;
+  string YJPosition=10;
+  string YJPositionEn=11;
+  string YJIntroduction=12;
+  string YJPhoto=13;
+  string ShowWay=14;
+  string Contract=15;//联系人
+  string ContractCompany=16;
+  string ContractCompanyEn=17;
+  string Tel=18;
+  string Mobile=19;
+  string Email=20;
+  string MemberId=21;//会员Id
+  string OwnerId=22;//客户经理Id
+  string OwnerName=23;//客户经理名字
+  string Created_at=24;
+  string Updated_at=25;
+}
+
+message HighlightsInfoList {
+  repeated HighlightsInfoStruct listdata = 1;
+  int32 total = 2;
+}
+//================十大亮点申请=========================
+
+
+//========================酒店=========================
+ message HotelId{
+   string hotelId=1;
+ }
+
+ message HotelStruct{
+   string HotelId=1;
+   string HotelCode=2;//酒店编号
+   string HotelName=3;
+   string HotelNameEn=4;
+   string HotelAddress=5;
+   string HotelAddressEn=6;
+   int32 Country=7;
+   string KeyWord=8;
+   string HotelEmail=9;
+   string HotelTel=10;
+   int32 HotelLevel=11;
+   string HotelIntroduction=12;
+   string HotelIntroductionEn=13;
+   string BankInfo=14;
+   string BankInfoEn=15;
+   string Remark=16;
+   string RemarkEn=17;
+   int32 Sort=18;
+   string Created_at=19;
+   string Updated_at=20;
+ }
+
+ message HotelList{
+   repeated HotelStruct listdata = 1;
+   int32 total = 2;
+ }
+ //========================酒店=========================
+
+
+ //================酒店房间类型=========================
+ message HotelRoomTypeId{
+   string HotelRoomTypeId=1;
+ }
+
+ message HotelRoomTypeStruct{
+   string HptelRoomTypeId=1;
+   string HotelId=2;
+   string TypeName=3;
+   string TypeNameEn=4;
+   string BedType=5;
+   string BedTypeEn=6;
+   int32 MaxCount=7;
+   string Price=8;
+   string Tax=9;
+   bool IsBreakfast=10;
+   bool IsNet=11;
+   bool IsUsed=12;
+   string Created_at=13;
+   string Updated_at=14;
+ }
+
+ message HotelRoomTypeList{
+   repeated HotelRoomTypeStruct listdata = 1;
+   int32 total = 2;
+ }
+
+ //================酒店房间类型=========================
+
+ //================酒店预定记录=========================
+
+ message MemberId{
+   string memberId=1;
+ }
+
+ message HotelBookRecordStruct{
+   string Id=1;
+   string MemberId=2;//会员Id
+   string MemberCompany=3;//会员公司中文名
+   string MemberCompanyEn=4;
+   string HotelId=5;//酒店Id
+   string HotelRoomTypeId=6;//酒店房间类型Id
+   string BookTime=7;//预订时间
+   string CheckInTime=8;//入住时间
+   string CheckOutTime=9;//	离开时间
+   int32 IsCanceled=10;//是否取消预约 0=>未取消；1=>取消
+   int32 IsChecked=11;//是否确认 0=>未确认；1=>待确认；2=>最终确认
+   string PriceCount=12;//预订酒店价格
+   string Remark=13;//入住人要求
+   int32 Days=14;//入住天数
+   string ArriveFlight=15;//到达航班
+   string LeaveFlight=16;//	离开航班
+   string IsSmoke=17;//是否吸烟 0=>不吸烟；1=>吸烟
+   string LinkManFirstName=18;//入住人FirstName
+   string LinkManLastName=19;//入住人LastName
+   string LinkManTel=20;//入住人电话
+   string LinkManEmail=21;//入住人邮箱
+   string LinkManTitle=22;//入住人称谓
+   int32 LinkManCountryId=23;//入住人国家Id
+   string LinkManCity=24;//入住人城市
+   string LinkManFax=25;//入住人传真
+   string LinkManIdCardType=26;//入住人证件类型
+   string LinkManIdCardNumber=27;//入住人证件号码
+   string LinkManCompany=28;//入住人公司
+   string LinkManMobile=29;//入住人手机
+   string LinkManBirth=30;//入住人出生日期
+   string OtherName=31;//同住人姓名
+   string OtherTitle=32;//同住人称谓
+   string OtherEmail=33;//同住人邮箱
+   string OtherMobile=34;//同住人手机
+   string OtherCompany=35;//同住人公司
+   string CardPerson=36;//持卡人姓名
+   string CardType=37;//卡类型
+   string CardNumber=38;//卡号码
+   string CardDate=39;//卡有效期
+   string Payer=40;//付款方：自己支付还是主办方支付
+   string PayType=41;//	付款方式
+   string LinkManEmail2=42;
+   string Created_at=43;
+   string Updated_at=44;
+   bool IsWebsite=45;//是否从网站页面订购
+ }
+
+ message HotelBookRecordList{
+   repeated HotelBookRecordStruct listdata = 1;
+   int32 total = 2;
+ }
+ //================酒店预定记录=========================
+
+//=======================通用==========================
+message Empty{
+
+}
+message IdRequest {
+  string id = 1;
+}
+
+message ModifyReply {
+  bool success = 1;
+  int32 modified_count = 2;
+  string msg = 3;
+}
+
+message SearchStruct{
+  string companyName=1;//公司名
+  string contractNumber=2;//合同号
+  string pavilionNumber=3;//展馆号code
+  string boothNumber=4;//展位号
+  string ownerId=5;//客户经理Id
+  bool isPay=6;//是否付款
+  bool isHaveLogo=7;//是否有logo
+  string begin_date=8;//开始日期
+  string end_date=9;//结束日期
+  string expressNum=10;//快递单号
+  string sender=11;//寄件人
+  string recipient=12;//收件人
+  string recipientUnit=13;//收件单位
+  string hotelId=14;//酒店Id
+  string hotelRoomTypeId=15;//酒店房间类型Id
+  int32 isCanceled=16;//是否取消预约 0=>未取消；1=>取消
+  int32 isChecked=17;//是否确认 0=>未确认；1=>待确认；2=>最终确认
+  bool isWebsite=18;////是否从网站页面订购
+  string type=19;//会刊订购类型(会刊或是摘要集)
+  string email=20;//会刊订购人邮箱
+  string name=21;//会刊订购人
+}
+//=======================通用==========================
+
