@@ -1689,7 +1689,7 @@ namespace MediaService.Service
                 using (_context = new MyContext(_options.Options))
                 {
                     var list = await _context.HotelRoomType
-                        .Where(x=>x.HotelId==hotelId)
+                        .Where(x=>x.HotelId.ToString()==hotelId)
                         .ToListAsync();
                     return list;
                 }
@@ -1983,8 +1983,8 @@ namespace MediaService.Service
                 using (_context = new MyContext(_options.Options))
                 {
                     var list = await _context.HotelBookRecord
-                       .Where(x => (searchModel.HotelId == x.HotelId)
-                       && (searchModel.HotelRoomTypeId == x.HotelRoomTypeId)
+                       .Where(x => (searchModel.HotelId == x.HotelId.ToString())
+                       && (searchModel.HotelRoomTypeId == x.HotelRoomTypeId.ToString())
                        && (searchModel.IsChecked == x.IsChecked)
                        && (searchModel.IsCanceled == x.IsCanceled)
                        && (string.IsNullOrEmpty(searchModel.Begin_date) || x.BookTime >= Convert.ToDateTime(searchModel.Begin_date))
@@ -2020,8 +2020,8 @@ namespace MediaService.Service
                     if (searchModel != null)
                     {
                         var list = await _context.HotelBookRecord
-                             .Where(x => (searchModel.HotelId == x.HotelId)
-                       && (searchModel.HotelRoomTypeId == x.HotelRoomTypeId)
+                             .Where(x => (searchModel.HotelId == x.HotelId.ToString())
+                       && (searchModel.HotelRoomTypeId == x.HotelRoomTypeId.ToString())
                        && (searchModel.IsChecked == x.IsChecked)
                        && (searchModel.IsCanceled == x.IsCanceled)
                        && (string.IsNullOrEmpty(searchModel.Begin_date) || x.BookTime >= Convert.ToDateTime(searchModel.Begin_date))

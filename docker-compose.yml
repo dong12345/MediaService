@@ -21,14 +21,14 @@ services:
       context: .
       dockerfile: MediaService/Dockerfile
     depends_on:
-      - meida.data
+      - media.data
     links:
-      - meida.data
+      - media.data
     networks:
       - network2
 
 volumes:
-    meida-data-volume:
+    media-data-volume:
        external: true
 
 networks:

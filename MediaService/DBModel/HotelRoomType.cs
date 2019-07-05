@@ -15,7 +15,7 @@ namespace MediaService.DBModel
         [Key]
         public Guid HptelRoomTypeId { get; set; }
 
-        public string HotelId { get; set; }
+        public Guid HotelId { get; set; }
 
         [ForeignKey("HotelId")]
         public virtual Hotel Hotel { get; set; }
