@@ -32,8 +32,8 @@ namespace MediaService.DBModel
         public string DescriptionEn { get; set; }
         public string SnecLogoWebsite { get; set; }
         public string Logo { get; set; }
-        public DateTime Updated_at { get; set; }
-        public DateTime Created_at { get; set; }
+        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
         /// <summary>
         /// 客户经理Id
         /// </summary>

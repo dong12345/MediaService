@@ -219,21 +219,34 @@ namespace MediaService.Service
             {
                 using (_context = new MyContext(_options.Options))
                 {
-                    var list = await _context.FormPublic
-                        .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.CompanyNameCn.Contains(searchModel.CompanyName) || x.CompanyNameEn.Contains(searchModel.CompanyName))
+
+                    if (searchModel == null)
+                    {
+                        var list = await _context.FormPublic
+                                .OrderByDescending(x => x.CreatedAt)
+                                .Skip(((pageindex - 1) * pagesize))
+                                .Take(pagesize)
+                                .ToListAsync();
+                        return list;
+                    }
+                    else
+                    {
+                        var list = await _context.FormPublic
+                                     .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.CompanyNameCn.Contains(searchModel.CompanyName) || x.CompanyNameEn.Contains(searchModel.CompanyName))
                                     && (string.IsNullOrEmpty(searchModel.ContractNumber) || x.ContractNumber.Contains(searchModel.ContractNumber))
                                     && (string.IsNullOrEmpty(searchModel.PavilionNumber) || x.PavilionNumber.Contains(searchModel.PavilionNumber))
                                     && (string.IsNullOrEmpty(searchModel.BoothNumber) || x.BoothNumber.Contains(searchModel.BoothNumber))
                                     && (searchModel.IsPay == x.IsPay)
                                     && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId == searchModel.OwnerId)
-                                    && (string.IsNullOrEmpty(searchModel.Begin_date) || x.Created_at >= Convert.ToDateTime(searchModel.Begin_date))
-                                    && (string.IsNullOrEmpty(searchModel.End_date) || x.Created_at <= Convert.ToDateTime(searchModel.Begin_date)))
-                        .OrderByDescending(x => x.Created_at)
-                        .Skip(((pageindex - 1) * pagesize))
-                        .Take(pagesize)
-                        .ToListAsync();
+                                    && (string.IsNullOrEmpty(searchModel.Begin_date) || x.CreatedAt >= Convert.ToDateTime(searchModel.Begin_date))
+                                    && (string.IsNullOrEmpty(searchModel.End_date) || x.CreatedAt <= Convert.ToDateTime(searchModel.Begin_date)))
+                                   .OrderByDescending(x => x.CreatedAt)
+                                   .Skip(((pageindex - 1) * pagesize))
+                                   .Take(pagesize)
+                                   .ToListAsync();
+                        return list;
+                    }
 
-                    return list;
                 }
             }
             catch (Exception ex)
@@ -265,8 +278,8 @@ namespace MediaService.Service
                                     && (string.IsNullOrEmpty(searchModel.BoothNumber) || x.BoothNumber.Contains(searchModel.BoothNumber))
                                     && (searchModel.IsPay == x.IsPay)
                                     && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId == searchModel.OwnerId)
-                                    && (string.IsNullOrEmpty(searchModel.Begin_date) || x.Created_at >= Convert.ToDateTime(searchModel.Begin_date))
-                                    && (string.IsNullOrEmpty(searchModel.End_date) || x.Created_at <= Convert.ToDateTime(searchModel.Begin_date)))
+                                    && (string.IsNullOrEmpty(searchModel.Begin_date) || x.CreatedAt >= Convert.ToDateTime(searchModel.Begin_date))
+                                    && (string.IsNullOrEmpty(searchModel.End_date) || x.CreatedAt <= Convert.ToDateTime(searchModel.Begin_date)))
                             .Count();
                     }
                     else
@@ -496,19 +509,33 @@ namespace MediaService.Service
             {
                 using (_context = new MyContext(_options.Options))
                 {
-                    var list = await _context.Express
-                       .Where(x => (string.IsNullOrEmpty(searchModel.ExpressNum) || x.ExpressNum.Contains(searchModel.ExpressNum))
-                        && (string.IsNullOrEmpty(searchModel.Sender) || x.Sender.Contains(searchModel.Sender))
-                        && (string.IsNullOrEmpty(searchModel.Begin_date) || x.SentDate >= Convert.ToDateTime(searchModel.Begin_date))
-                        && (string.IsNullOrEmpty(searchModel.End_date) || x.SentDate <= Convert.ToDateTime(searchModel.End_date))
-                        && (string.IsNullOrEmpty(searchModel.Recipient) || x.Recipient.Contains(searchModel.Recipient))
-                        && (string.IsNullOrEmpty(searchModel.RecipientUnit) || x.RecipientUnit.Contains(searchModel.RecipientUnit)))
-                        .OrderByDescending(x => x.Created_at)
-                        .Skip(((pageindex - 1) * pagesize))
-                        .Take(pagesize)
-                        .ToListAsync();
+                    if (searchModel == null)
+                    {
+                        var list = await _context.Express
+                                 .OrderByDescending(x => x.CreatedAt)
+                                 .Skip(((pageindex - 1) * pagesize))
+                                 .Take(pagesize)
+                                 .ToListAsync();
 
-                    return list;
+                        return list;
+                    }
+                    else
+                    {
+                        var list = await _context.Express
+                                .Where(x => (string.IsNullOrEmpty(searchModel.ExpressNum) || x.ExpressNum.Contains(searchModel.ExpressNum))
+                                 && (string.IsNullOrEmpty(searchModel.Sender) || x.Sender.Contains(searchModel.Sender))
+                                 && (string.IsNullOrEmpty(searchModel.Begin_date) || x.SentDate >= Convert.ToDateTime(searchModel.Begin_date))
+                                 && (string.IsNullOrEmpty(searchModel.End_date) || x.SentDate <= Convert.ToDateTime(searchModel.End_date))
+                                 && (string.IsNullOrEmpty(searchModel.Recipient) || x.Recipient.Contains(searchModel.Recipient))
+                                 && (string.IsNullOrEmpty(searchModel.RecipientUnit) || x.RecipientUnit.Contains(searchModel.RecipientUnit)))
+                                 .OrderByDescending(x => x.CreatedAt)
+                                 .Skip(((pageindex - 1) * pagesize))
+                                 .Take(pagesize)
+                                 .ToListAsync();
+
+                        return list;
+                    }
+
                 }
             }
             catch (Exception ex)
@@ -744,11 +771,11 @@ namespace MediaService.Service
                 {
                     if (searchModel == null)
                     {
-                       var  list = await _context.CatalogueBooks
-                            .OrderByDescending(x => x.Created_at)
-                            .Skip(((pageindex - 1) * pagesize))
-                            .Take(pagesize)
-                            .ToListAsync();
+                        var list = await _context.CatalogueBooks
+                             .OrderByDescending(x => x.CreatedAt)
+                             .Skip(((pageindex - 1) * pagesize))
+                             .Take(pagesize)
+                             .ToListAsync();
                         return list;
 
                     }
@@ -758,7 +785,7 @@ namespace MediaService.Service
                                     .Where(x => (string.IsNullOrEmpty(searchModel.Type) || x.Type.Contains(searchModel.Type))
                                      && (string.IsNullOrEmpty(searchModel.Name) || x.Name.Contains(searchModel.Name))
                                      && (string.IsNullOrEmpty(searchModel.Email) || x.Email.Contains(searchModel.Email)))
-                                     .OrderByDescending(x => x.Created_at)
+                                     .OrderByDescending(x => x.CreatedAt)
                                      .Skip(((pageindex - 1) * pagesize))
                                      .Take(pagesize)
                                      .ToListAsync();
@@ -999,15 +1026,29 @@ namespace MediaService.Service
             {
                 using (_context = new MyContext(_options.Options))
                 {
-                    var list = await _context.Interview
-                         .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.CompanyName.Contains(searchModel.CompanyName) || x.CompanyNameEn.Contains(searchModel.CompanyName))
-                                && x.OwnerId == searchModel.OwnerId)
-                        .OrderByDescending(x => x.Created_at)
-                        .Skip(((pageindex - 1) * pagesize))
-                        .Take(pagesize)
-                        .ToListAsync();
+                    if (searchModel == null)
+                    {
+                        var list = await _context.Interview
+                                .OrderByDescending(x => x.CreatedAt)
+                                .Skip(((pageindex - 1) * pagesize))
+                                .Take(pagesize)
+                                .ToListAsync();
+                        return list;
+                    }
+                    else
+                    {
+                        var list = await _context.Interview
+                                 .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.CompanyName.Contains(searchModel.CompanyName) || x.CompanyNameEn.Contains(searchModel.CompanyName))
+                                        && (string.IsNullOrEmpty(searchModel.OwnerId) ||  x.OwnerId == searchModel.OwnerId))
+                                .OrderByDescending(x => x.CreatedAt)
+                                .Skip(((pageindex - 1) * pagesize))
+                                .Take(pagesize)
+                                .ToListAsync();
+                        return list;
+                    }
 
-                    return list;
+
+
                 }
             }
             catch (Exception ex)
@@ -1033,7 +1074,7 @@ namespace MediaService.Service
                     {
                         var list = await _context.Interview
                         .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.CompanyName.Contains(searchModel.CompanyName) || x.CompanyNameEn.Contains(searchModel.CompanyName))
-                         && x.OwnerId == searchModel.OwnerId)
+                         && (x.OwnerId == searchModel.OwnerId))
                         .ToListAsync();
                         total = list.Count();
                     }
@@ -1247,15 +1288,29 @@ namespace MediaService.Service
             {
                 using (_context = new MyContext(_options.Options))
                 {
-                    var list = await _context.HighlightsInfo
-                        .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.ContractCompany.Contains(searchModel.CompanyName) || x.ContractCompanyEn.Contains(searchModel.CompanyName))
-                         && x.OwnerId == searchModel.OwnerId)
-                        .OrderByDescending(x => x.Created_at)
-                        .Skip(((pageindex - 1) * pagesize))
-                        .Take(pagesize)
-                        .ToListAsync();
+                    if (searchModel == null)
+                    {
+                        var list = await _context.HighlightsInfo
+                                 .OrderByDescending(x => x.CreatedAt)
+                                 .Skip(((pageindex - 1) * pagesize))
+                                 .Take(pagesize)
+                                 .ToListAsync();
 
-                    return list;
+                        return list;
+                    }
+                    else
+                    {
+                        var list = await _context.HighlightsInfo
+                                .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.ContractCompany.Contains(searchModel.CompanyName) || x.ContractCompanyEn.Contains(searchModel.CompanyName))
+                                 && (x.OwnerId == searchModel.OwnerId))
+                                .OrderByDescending(x => x.CreatedAt)
+                                .Skip(((pageindex - 1) * pagesize))
+                                .Take(pagesize)
+                                .ToListAsync();
+
+                        return list;
+                    }
+                  
                 }
             }
             catch (Exception ex)
@@ -1282,7 +1337,7 @@ namespace MediaService.Service
                     {
                         var list = await _context.HighlightsInfo
                           .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.ContractCompany.Contains(searchModel.CompanyName) || x.ContractCompanyEn.Contains(searchModel.CompanyName))
-                         && x.OwnerId == searchModel.OwnerId)
+                         && (x.OwnerId == searchModel.OwnerId))
                         .ToListAsync();
                         total = list.Count();
                     }
@@ -1935,7 +1990,7 @@ namespace MediaService.Service
                     else
                     {
                         model.IsCanceled = 1;
-                        model.Updated_at = DateTime.UtcNow.ToUniversalTime();
+                        model.UpdatedAt = DateTime.UtcNow.ToUniversalTime();
 
                         count = await _context.SaveChangesAsync();
                         if (count > 0)
@@ -1996,20 +2051,34 @@ namespace MediaService.Service
             {
                 using (_context = new MyContext(_options.Options))
                 {
-                    var list = await _context.HotelBookRecord
-                       .Where(x => (searchModel.HotelId == x.HotelId.ToString())
-                       && (searchModel.HotelRoomTypeId == x.HotelRoomTypeId.ToString())
-                       && (searchModel.IsChecked == x.IsChecked)
-                       && (searchModel.IsCanceled == x.IsCanceled)
-                       && (string.IsNullOrEmpty(searchModel.Begin_date) || x.BookTime >= Convert.ToDateTime(searchModel.Begin_date))
-                       && (string.IsNullOrEmpty(searchModel.End_date) || x.BookTime <= Convert.ToDateTime(searchModel.End_date))
-                       && (searchModel.IsWebsite == x.IsWebsite))
-                        .OrderByDescending(x => x.Created_at)
-                        .Skip(((pageindex - 1) * pagesize))
-                        .Take(pagesize)
-                        .ToListAsync();
+                    if (searchModel == null)
+                    {
+                        var list = await _context.HotelBookRecord
+                                 .OrderByDescending(x => x.CreatedAt)
+                                 .Skip(((pageindex - 1) * pagesize))
+                                 .Take(pagesize)
+                                 .ToListAsync();
 
-                    return list;
+                        return list;
+                    }
+                    else
+                    {
+                        var list = await _context.HotelBookRecord
+                                .Where(x => (searchModel.HotelId == x.HotelId.ToString())
+                                 && (searchModel.HotelRoomTypeId == x.HotelRoomTypeId.ToString())
+                                 && (searchModel.IsChecked == x.IsChecked)
+                                 && (searchModel.IsCanceled == x.IsCanceled)
+                                 && (string.IsNullOrEmpty(searchModel.Begin_date) || x.BookTime >= Convert.ToDateTime(searchModel.Begin_date))
+                                 && (string.IsNullOrEmpty(searchModel.End_date) || x.BookTime <= Convert.ToDateTime(searchModel.End_date))
+                                 && (searchModel.IsWebsite == x.IsWebsite))
+                                 .OrderByDescending(x => x.CreatedAt)
+                                 .Skip(((pageindex - 1) * pagesize))
+                                 .Take(pagesize)
+                                 .ToListAsync();
+
+                        return list;
+                    }
+                
                 }
             }
             catch (Exception ex)

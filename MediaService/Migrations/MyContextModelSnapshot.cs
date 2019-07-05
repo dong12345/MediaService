@@ -30,7 +30,7 @@ namespace MediaService.Migrations
 
                     b.Property<int>("Country");
 
-                    b.Property<DateTime>("Created_at");
+                    b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("Des");
 
@@ -42,7 +42,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("Type");
 
-                    b.Property<DateTime>("Updated_at");
+                    b.Property<DateTime>("UpdatedAt");
 
                     b.HasKey("Id");
 
@@ -58,7 +58,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("CompanyId");
 
-                    b.Property<DateTime>("Created_at");
+                    b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("ExpressCompany");
 
@@ -84,7 +84,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("Tel");
 
-                    b.Property<DateTime>("Updated_at");
+                    b.Property<DateTime>("UpdatedAt");
 
                     b.HasKey("Id");
 
@@ -110,7 +110,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("ContractNumber");
 
-                    b.Property<DateTime>("Created_at");
+                    b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("Description");
 
@@ -138,7 +138,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("Telephone");
 
-                    b.Property<DateTime>("Updated_at");
+                    b.Property<DateTime>("UpdatedAt");
 
                     b.Property<string>("Website");
 
@@ -158,7 +158,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("ContractCompanyEn");
 
-                    b.Property<DateTime>("Created_at");
+                    b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("Email");
 
@@ -186,7 +186,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("Tel");
 
-                    b.Property<DateTime>("Updated_at");
+                    b.Property<DateTime>("UpdatedAt");
 
                     b.Property<string>("YJIntroduction");
 
@@ -216,7 +216,7 @@ namespace MediaService.Migrations
 
                     b.Property<int>("Country");
 
-                    b.Property<DateTime>("Created_at");
+                    b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("HotelAddress");
 
@@ -246,7 +246,7 @@ namespace MediaService.Migrations
 
                     b.Property<int>("Sort");
 
-                    b.Property<DateTime>("Updated_at");
+                    b.Property<DateTime>("UpdatedAt");
 
                     b.HasKey("HotelId");
 
@@ -274,7 +274,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("CheckOutTime");
 
-                    b.Property<DateTime>("Created_at");
+                    b.Property<DateTime>("CreatedAt");
 
                     b.Property<int>("Days");
 
@@ -344,7 +344,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("Remark");
 
-                    b.Property<DateTime>("Updated_at");
+                    b.Property<DateTime>("UpdatedAt");
 
                     b.HasKey("Id");
 
@@ -362,7 +362,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("BedTypeEn");
 
-                    b.Property<DateTime>("Created_at");
+                    b.Property<DateTime>("CreatedAt");
 
                     b.Property<Guid>("HotelId");
 
@@ -382,7 +382,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("TypeNameEn");
 
-                    b.Property<DateTime>("Updated_at");
+                    b.Property<DateTime>("UpdatedAt");
 
                     b.HasKey("HptelRoomTypeId");
 
@@ -400,7 +400,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("CompanyNameEn");
 
-                    b.Property<DateTime>("Created_at");
+                    b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("InterviewTime");
 
@@ -424,7 +424,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("Photo");
 
-                    b.Property<DateTime>("Updated_at");
+                    b.Property<DateTime>("UpdatedAt");
 
                     b.HasKey("Id");
 

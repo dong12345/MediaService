@@ -31,8 +31,8 @@ namespace MediaService.DBModel
         /// 订购类型(会刊或是摘要集)
         /// </summary>
         public string Type { get; set; }
-        public DateTime Created_at { get; set; }
-        public DateTime Updated_at { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 
 }

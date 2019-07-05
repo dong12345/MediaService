@@ -176,8 +176,8 @@ namespace MediaService.DBModel
         public string PayType { get; set; }
         public string LinkManEmail2 { get; set; }
 
-        public DateTime Created_at { get; set; }
-        public DateTime Updated_at { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
         /// <summary>
         /// 是否从网站页面订购

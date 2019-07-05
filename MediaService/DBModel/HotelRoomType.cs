@@ -30,8 +30,8 @@ namespace MediaService.DBModel
         public bool IsNet { get; set; }
         public bool IsUsed { get; set; }
 
-        public DateTime Created_at { get; set; }
-        public DateTime Updated_at { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
         public List<HotelBookRecord> HotelBookRecords { get; set; }
 

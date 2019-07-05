@@ -34,8 +34,8 @@ namespace MediaService.DBModel
         public string RemarkEn { get; set; }
         public int Sort { get; set; }
 
-        public DateTime Created_at { get; set; }
-        public DateTime Updated_at { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public List<HotelRoomType> HotelRoomTypes { get; set; }
 
         public Hotel()
