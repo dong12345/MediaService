@@ -100,15 +100,8 @@ namespace MediaService.Service
                         modified_model.Website = formPublic.Website;
                         #endregion
                         count = await _context.SaveChangesAsync();
-                        if (count > 0)
-                        {
-                            isSuccess = true;
-                            msg = "修改成功";
-                        }
-                        else
-                        {
-                            msg = "修改失败";
-                        }
+                        isSuccess = true;
+                        msg = "修改成功";
                     }
                     return GetModifyReply(isSuccess, msg, count);
                 }
@@ -390,15 +383,8 @@ namespace MediaService.Service
                         model.Tel = express.Tel;
 
                         count = await _context.SaveChangesAsync();
-                        if (count > 0)
-                        {
-                            isSuccess = true;
-                            msg = "修改成功";
-                        }
-                        else
-                        {
-                            msg = "修改失败";
-                        }
+                        isSuccess = true;
+                        msg = "修改成功";
                     }
                     return GetModifyReply(isSuccess, msg, count);
                 }
@@ -649,15 +635,8 @@ namespace MediaService.Service
                         model.Type = cb.Type;
 
                         count = await _context.SaveChangesAsync();
-                        if (count > 0)
-                        {
-                            isSuccess = true;
-                            msg = "修改成功";
-                        }
-                        else
-                        {
-                            msg = "修改失败";
-                        }
+                        isSuccess = true;
+                        msg = "修改成功";
                     }
                     return GetModifyReply(isSuccess, msg, count);
                 }
@@ -927,15 +906,8 @@ namespace MediaService.Service
                         model.CompanyNameEn = interview.CompanyNameEn;
 
                         count = await _context.SaveChangesAsync();
-                        if (count > 0)
-                        {
-                            isSuccess = true;
-                            msg = "修改成功";
-                        }
-                        else
-                        {
-                            msg = "修改失败";
-                        }
+                        isSuccess = true;
+                        msg = "修改成功";
                     }
                     return GetModifyReply(isSuccess, msg, count);
                 }
@@ -1039,7 +1011,7 @@ namespace MediaService.Service
                     {
                         var list = await _context.Interview
                                  .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.CompanyName.Contains(searchModel.CompanyName) || x.CompanyNameEn.Contains(searchModel.CompanyName))
-                                        && (string.IsNullOrEmpty(searchModel.OwnerId) ||  x.OwnerId == searchModel.OwnerId))
+                                        && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId == searchModel.OwnerId))
                                 .OrderByDescending(x => x.CreatedAt)
                                 .Skip(((pageindex - 1) * pagesize))
                                 .Take(pagesize)
@@ -1191,15 +1163,9 @@ namespace MediaService.Service
                         model.YJPositionEn = highlightsInfo.YJPositionEn;
 
                         count = await _context.SaveChangesAsync();
-                        if (count > 0)
-                        {
-                            isSuccess = true;
-                            msg = "修改成功";
-                        }
-                        else
-                        {
-                            msg = "修改失败";
-                        }
+                        isSuccess = true;
+                        msg = "修改成功";
+
                     }
                     return GetModifyReply(isSuccess, msg, count);
                 }
@@ -1310,7 +1276,7 @@ namespace MediaService.Service
 
                         return list;
                     }
-                  
+
                 }
             }
             catch (Exception ex)
@@ -1452,15 +1418,8 @@ namespace MediaService.Service
                         model.Sort = hotel.Sort;
 
                         count = await _context.SaveChangesAsync();
-                        if (count > 0)
-                        {
-                            isSuccess = true;
-                            msg = "修改成功";
-                        }
-                        else
-                        {
-                            msg = "修改失败";
-                        }
+                        isSuccess = true;
+                        msg = "修改成功";
                     }
                     return GetModifyReply(isSuccess, msg, count);
                 }
@@ -1655,15 +1614,8 @@ namespace MediaService.Service
                         model.TypeNameEn = hotelRoomType.TypeNameEn;
 
                         count = await _context.SaveChangesAsync();
-                        if (count > 0)
-                        {
-                            isSuccess = true;
-                            msg = "修改成功";
-                        }
-                        else
-                        {
-                            msg = "修改失败";
-                        }
+                        isSuccess = true;
+                        msg = "修改成功";
                     }
                     return GetModifyReply(isSuccess, msg, count);
                 }
@@ -1887,15 +1839,8 @@ namespace MediaService.Service
                         model.Remark = hotelBookRecord.Remark;
 
                         count = await _context.SaveChangesAsync();
-                        if (count > 0)
-                        {
-                            isSuccess = true;
-                            msg = "修改成功";
-                        }
-                        else
-                        {
-                            msg = "修改失败";
-                        }
+                        isSuccess = true;
+                        msg = "修改成功";
                     }
                     return GetModifyReply(isSuccess, msg, count);
                 }
@@ -1993,15 +1938,8 @@ namespace MediaService.Service
                         model.UpdatedAt = DateTime.UtcNow.ToUniversalTime();
 
                         count = await _context.SaveChangesAsync();
-                        if (count > 0)
-                        {
-                            isSuccess = true;
-                            msg = "修改成功";
-                        }
-                        else
-                        {
-                            msg = "修改失败";
-                        }
+                        isSuccess = true;
+                        msg = "修改成功";
                     }
                     return GetModifyReply(isSuccess, msg, count);
                 }
@@ -2078,7 +2016,7 @@ namespace MediaService.Service
 
                         return list;
                     }
-                
+
                 }
             }
             catch (Exception ex)
