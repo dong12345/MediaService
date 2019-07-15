@@ -258,9 +258,6 @@ namespace GrpcMediaService {
 
   }
   #region Messages
-  /// <summary>
-  ///======================会刊===========================
-  /// </summary>
   public sealed partial class FormPublicStruct : pb::IMessage<FormPublicStruct> {
     private static readonly pb::MessageParser<FormPublicStruct> _parser = new pb::MessageParser<FormPublicStruct>(() => new FormPublicStruct());
     private pb::UnknownFieldSet _unknownFields;
@@ -1420,9 +1417,6 @@ namespace GrpcMediaService {
 
   }
 
-  /// <summary>
-  ///=======================快递单========================
-  /// </summary>
   public sealed partial class ExpressStruct : pb::IMessage<ExpressStruct> {
     private static readonly pb::MessageParser<ExpressStruct> _parser = new pb::MessageParser<ExpressStruct>(() => new ExpressStruct());
     private pb::UnknownFieldSet _unknownFields;
@@ -1527,7 +1521,7 @@ namespace GrpcMediaService {
     public const int SenderIdFieldNumber = 5;
     private string senderId_ = "";
     /// <summary>
-    ///寄件人Id	
+    ///寄件人Id
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SenderId {
@@ -6463,7 +6457,7 @@ namespace GrpcMediaService {
     public const int CheckOutTimeFieldNumber = 9;
     private string checkOutTime_ = "";
     /// <summary>
-    ///	离开时间
+    ///离开时间
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CheckOutTime {
@@ -6477,7 +6471,7 @@ namespace GrpcMediaService {
     public const int IsCanceledFieldNumber = 10;
     private int isCanceled_;
     /// <summary>
-    ///是否取消预约 0=>未取消；1=>取消
+    ///是否取消预约 0=>未取消;1=>取消
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int IsCanceled {
@@ -6491,7 +6485,7 @@ namespace GrpcMediaService {
     public const int IsCheckedFieldNumber = 11;
     private int isChecked_;
     /// <summary>
-    ///是否确认 0=>未确认；1=>待确认；2=>最终确认
+    ///是否确认 0=>未确认;1=>待确认;2=>最终确认
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int IsChecked {
@@ -6561,7 +6555,7 @@ namespace GrpcMediaService {
     public const int LeaveFlightFieldNumber = 16;
     private string leaveFlight_ = "";
     /// <summary>
-    ///	离开航班
+    ///离开航班
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LeaveFlight {
@@ -6575,7 +6569,7 @@ namespace GrpcMediaService {
     public const int IsSmokeFieldNumber = 17;
     private string isSmoke_ = "";
     /// <summary>
-    ///是否吸烟 0=>不吸烟；1=>吸烟
+    ///是否吸烟 0=>不吸烟;1=>吸烟
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string IsSmoke {
@@ -6911,7 +6905,7 @@ namespace GrpcMediaService {
     public const int PayTypeFieldNumber = 41;
     private string payType_ = "";
     /// <summary>
-    ///	付款方式
+    ///付款方式
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PayType {
@@ -7905,9 +7899,6 @@ namespace GrpcMediaService {
 
   }
 
-  /// <summary>
-  ///=======================通用==========================
-  /// </summary>
   public sealed partial class Empty : pb::IMessage<Empty> {
     private static readonly pb::MessageParser<Empty> _parser = new pb::MessageParser<Empty>(() => new Empty());
     private pb::UnknownFieldSet _unknownFields;
@@ -8591,7 +8582,7 @@ namespace GrpcMediaService {
     public const int IsCanceledFieldNumber = 16;
     private int isCanceled_;
     /// <summary>
-    ///是否取消预约 0=>未取消；1=>取消
+    ///是否取消预约 0=>未取消;1=>取消
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int IsCanceled {
@@ -8605,7 +8596,7 @@ namespace GrpcMediaService {
     public const int IsCheckedFieldNumber = 17;
     private int isChecked_;
     /// <summary>
-    ///是否确认 0=>未确认；1=>待确认；2=>最终确认
+    ///是否确认 0=>未确认;1=>待确认;2=>最终确认
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int IsChecked {
@@ -8619,7 +8610,7 @@ namespace GrpcMediaService {
     public const int IsWebsiteFieldNumber = 18;
     private bool isWebsite_;
     /// <summary>
-    /////是否从网站页面订购
+    ///是否从网站页面订购
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool IsWebsite {
