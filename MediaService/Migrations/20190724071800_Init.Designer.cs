@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MediaService.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20190705091707_init")]
-    partial class init
+    [Migration("20190724071800_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -357,7 +357,7 @@ namespace MediaService.Migrations
 
             modelBuilder.Entity("MediaService.DBModel.HotelRoomType", b =>
                 {
-                    b.Property<Guid>("HptelRoomTypeId")
+                    b.Property<Guid>("HotelRoomTypeId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("BedType");
@@ -386,7 +386,7 @@ namespace MediaService.Migrations
 
                     b.Property<DateTime>("UpdatedAt");
 
-                    b.HasKey("HptelRoomTypeId");
+                    b.HasKey("HotelRoomTypeId");
 
                     b.HasIndex("HotelId");
 

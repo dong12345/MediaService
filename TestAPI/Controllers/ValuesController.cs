@@ -270,7 +270,7 @@ namespace TestAPI.Controllers
 
         [Route("deleteHotelInfoById")]
         [HttpPost]
-        public IActionResult deleteHotelInfoById(HotelId idRequest)
+        public IActionResult deleteHotelInfoById(HotelIdRequest idRequest)
         {
             var result = EGClient.deleteHotelInfoById(idRequest);
             return Ok(result);
@@ -278,7 +278,7 @@ namespace TestAPI.Controllers
 
         [Route("getHotelById")]
         [HttpPost]
-        public IActionResult getHotelById(HotelId idRequest)
+        public IActionResult getHotelById(HotelIdRequest idRequest)
         {
             var result = EGClient.getHotelById(idRequest);
             return Ok(result);
@@ -316,7 +316,7 @@ namespace TestAPI.Controllers
 
         [Route("deleteHotelRoomTypeById")]
         [HttpPost]
-        public IActionResult deleteHotelRoomTypeById(HotelRoomTypeId hotelRoomTypeId)
+        public IActionResult deleteHotelRoomTypeById(HotelRoomTypeIdRequest hotelRoomTypeId)
         {
             var result = EGClient.deleteHotelRoomTypeById(hotelRoomTypeId);
             return Ok(result);
@@ -324,7 +324,7 @@ namespace TestAPI.Controllers
 
         [Route("getHotelRoomTypeInfoById")]
         [HttpPost]
-        public IActionResult getHotelRoomTypeInfoById(HotelRoomTypeId hotelRoomTypeId)
+        public IActionResult getHotelRoomTypeInfoById(HotelRoomTypeIdRequest hotelRoomTypeId)
         {
             var result = EGClient.getHotelRoomTypeInfoById(hotelRoomTypeId);
             return Ok(result);
@@ -332,7 +332,7 @@ namespace TestAPI.Controllers
 
         [Route("getHolteRoomTypeListByHotelId")]
         [HttpPost]
-        public IActionResult getHolteRoomTypeListByHotelId(HotelId hotelId)
+        public IActionResult getHolteRoomTypeListByHotelId(HotelIdRequest hotelId)
         {
             var result = EGClient.getHolteRoomTypeListByHotelId(hotelId);
             return Ok(result);
@@ -372,7 +372,7 @@ namespace TestAPI.Controllers
 
         [Route("getHotelBookRecordByMemberId")]
         [HttpPost]
-        public IActionResult getHotelBookRecordByMemberId(MemberId memberId)
+        public IActionResult getHotelBookRecordByMemberId(MemberIdRequest memberId)
         {
             var result = EGClient.getHotelBookRecordByMemberId(memberId);
             return Ok(result);

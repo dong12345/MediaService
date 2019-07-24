@@ -355,7 +355,7 @@ namespace MediaService.Migrations
 
             modelBuilder.Entity("MediaService.DBModel.HotelRoomType", b =>
                 {
-                    b.Property<Guid>("HptelRoomTypeId")
+                    b.Property<Guid>("HotelRoomTypeId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("BedType");
@@ -384,7 +384,7 @@ namespace MediaService.Migrations
 
                     b.Property<DateTime>("UpdatedAt");
 
-                    b.HasKey("HptelRoomTypeId");
+                    b.HasKey("HotelRoomTypeId");
 
                     b.HasIndex("HotelId");
 

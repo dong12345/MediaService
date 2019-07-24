@@ -46,6 +46,7 @@ namespace MediaService.Service
                     else
                     {
                         msg = "创建失败";
+                        isSuccess = false;
                     }
 
                     return GetModifyReply(isSuccess, msg, count);
@@ -74,6 +75,8 @@ namespace MediaService.Service
                     if (modified_model == null)
                     {
                         msg = "当前实例不存在";
+                        count = 0;
+                        isSuccess = false;
                     }
                     else
                     {
@@ -128,6 +131,8 @@ namespace MediaService.Service
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
+                        count = 0;
+                        isSuccess = false;
                     }
                     else
                     {
@@ -141,6 +146,7 @@ namespace MediaService.Service
                         else
                         {
                             msg = "删除失败";
+                            isSuccess = false;
                         }
                     }
                     return GetModifyReply(isSuccess, msg, count);
@@ -339,6 +345,7 @@ namespace MediaService.Service
                     else
                     {
                         msg = "创建失败";
+                        isSuccess = false;
                     }
                     return GetModifyReply(isSuccess, msg, count);
                 }
@@ -366,6 +373,8 @@ namespace MediaService.Service
                     if (model == null)
                     {
                         msg = "当前实例不存在";
+                        isSuccess = false;
+                        count = 0;
                     }
                     else
                     {
@@ -433,6 +442,8 @@ namespace MediaService.Service
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
+                        isSuccess = false;
+                        count = 0;
                     }
                     else
                     {
@@ -446,6 +457,7 @@ namespace MediaService.Service
                         else
                         {
                             msg = "删除失败";
+                            isSuccess = false;
                         }
                     }
                     return GetModifyReply(isSuccess, msg, count);
@@ -594,6 +606,7 @@ namespace MediaService.Service
                     }
                     else
                     {
+                        isSuccess = false;
                         msg = "创建失败";
                     }
                     return GetModifyReply(isSuccess, msg, count);
@@ -622,6 +635,8 @@ namespace MediaService.Service
                     if (model == null)
                     {
                         msg = "当前实例不存在";
+                        isSuccess = false;
+                        count = 0;
                     }
                     else
                     {
@@ -686,6 +701,8 @@ namespace MediaService.Service
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
+                        isSuccess = false;
+                        count = 0;
                     }
                     else
                     {
@@ -699,6 +716,7 @@ namespace MediaService.Service
                         else
                         {
                             msg = "删除失败";
+                            isSuccess = false;
                         }
                     }
                     return GetModifyReply(isSuccess, msg, count);
@@ -841,6 +859,7 @@ namespace MediaService.Service
                     }
                     else
                     {
+                        isSuccess = false;
                         msg = "创建失败";
                     }
                     return GetModifyReply(isSuccess, msg, count);
@@ -891,6 +910,8 @@ namespace MediaService.Service
                     if (model == null)
                     {
                         msg = "当前实例不存在";
+                        isSuccess = false;
+                        count = 0;
                     }
                     else
                     {
@@ -934,6 +955,8 @@ namespace MediaService.Service
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
+                        isSuccess = false;
+                        count = 0;
                     }
                     else
                     {
@@ -947,6 +970,7 @@ namespace MediaService.Service
                         else
                         {
                             msg = "删除失败";
+                            isSuccess = false;
                         }
                     }
                     return GetModifyReply(isSuccess, msg, count);
@@ -1089,6 +1113,7 @@ namespace MediaService.Service
                     }
                     else
                     {
+                        isSuccess = false;
                         msg = "创建失败";
                     }
                     return GetModifyReply(isSuccess, msg, count);
@@ -1138,7 +1163,9 @@ namespace MediaService.Service
                     var model = GetHighlightsInfoByIdInside(idString);
                     if (model == null)
                     {
+                        isSuccess = false;
                         msg = "当前实例不存在";
+                        count = 0;
                     }
                     else
                     {
@@ -1192,6 +1219,8 @@ namespace MediaService.Service
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
+                        isSuccess = false;
+                        count = 0;
                     }
                     else
                     {
@@ -1205,6 +1234,7 @@ namespace MediaService.Service
                         else
                         {
                             msg = "删除失败";
+                            isSuccess = false;
                         }
                     }
                     return GetModifyReply(isSuccess, msg, count);
@@ -1346,6 +1376,7 @@ namespace MediaService.Service
                     }
                     else
                     {
+                        isSuccess = false;
                         msg = "创建失败";
                     }
                     return GetModifyReply(isSuccess, msg, count);
@@ -1395,7 +1426,9 @@ namespace MediaService.Service
                     var model = GetHotelInfoByIdInside(idString);
                     if (model == null)
                     {
+                        isSuccess = false;
                         msg = "当前实例不存在";
+                        count = 0;
                     }
                     else
                     {
@@ -1446,12 +1479,16 @@ namespace MediaService.Service
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
+                        isSuccess = false;
+                        count = 0;
                     }
                     else
                     {
                         if (model.HotelRoomTypes.Count > 0)
                         {
                             msg = "当前实例存在引用，无法删除";
+                            isSuccess = false;
+                            count = 0;
                         }
                         else
                         {
@@ -1465,6 +1502,7 @@ namespace MediaService.Service
                             else
                             {
                                 msg = "删除失败";
+                                isSuccess = false;
                             }
                         }
 
@@ -1549,6 +1587,7 @@ namespace MediaService.Service
                     }
                     else
                     {
+                        isSuccess = false;
                         msg = "创建失败";
                     }
                     return GetModifyReply(isSuccess, msg, count);
@@ -1572,7 +1611,7 @@ namespace MediaService.Service
             {
                 Guid gid = new Guid(id);
                 var item = _context.HotelRoomType
-                    .FirstOrDefault(x => x.HptelRoomTypeId == gid);
+                    .FirstOrDefault(x => x.HotelRoomTypeId == gid);
                 return item;
             }
             catch (Exception ex)
@@ -1594,11 +1633,13 @@ namespace MediaService.Service
             {
                 using (_context = new MyContext(_options.Options))
                 {
-                    string idString = hotelRoomType.HptelRoomTypeId.ToString();
+                    string idString = hotelRoomType.HotelRoomTypeId.ToString();
                     var model = GetHotelRoomTypeInfoByIdInside(idString);
                     if (model == null)
                     {
+                        isSuccess = false;
                         msg = "当前实例不存在";
+                        count = 0;
                     }
                     else
                     {
@@ -1642,12 +1683,16 @@ namespace MediaService.Service
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
+                        isSuccess = false;
+                        count = 0;
                     }
                     else
                     {
                         if (model.HotelBookRecords.Count > 0)
                         {
                             msg = "当前实例存在引用，无法删除";
+                            isSuccess = false;
+                            count = 0;
                         }
                         else
                         {
@@ -1661,6 +1706,7 @@ namespace MediaService.Service
                             else
                             {
                                 msg = "删除失败";
+                                isSuccess = false;
                             }
                         }
 
@@ -1688,7 +1734,7 @@ namespace MediaService.Service
                 {
                     Guid gid = new Guid(id);
                     var item = await _context.HotelRoomType
-                            .FirstOrDefaultAsync(x => x.HptelRoomTypeId == gid);
+                            .FirstOrDefaultAsync(x => x.HotelRoomTypeId == gid);
                     return item;
                 }
             }
@@ -1746,6 +1792,7 @@ namespace MediaService.Service
                     }
                     else
                     {
+                        isSuccess = false;
                         msg = "创建失败";
                     }
                     return GetModifyReply(isSuccess, msg, count);
@@ -1795,7 +1842,9 @@ namespace MediaService.Service
                     var model = GetHotelBookRecordByIdInside(idString);
                     if (model == null)
                     {
+                        isSuccess = false;
                         msg = "当前实例不存在";
+                        count = 0;
                     }
                     else
                     {
@@ -1867,6 +1916,8 @@ namespace MediaService.Service
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
+                        isSuccess = false;
+                        count = 0;
                     }
                     else
                     {
@@ -1880,6 +1931,7 @@ namespace MediaService.Service
                         else
                         {
                             msg = "删除失败";
+                            isSuccess = false;
                         }
                     }
                     return GetModifyReply(isSuccess, msg, count);
@@ -1931,6 +1983,8 @@ namespace MediaService.Service
                     if (model == null)
                     {
                         msg = "当前实例不存在";
+                        count = 0;
+                        isSuccess = false;
                     }
                     else
                     {

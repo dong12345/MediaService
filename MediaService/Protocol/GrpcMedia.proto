@@ -120,10 +120,10 @@ service MediaServiceToGrpc{
   rpc updateHotelInfo(HotelStruct) returns(ModifyReply){}
 
   //根据HotelId删除酒店信息
-  rpc deleteHotelInfoById(HotelId) returns(ModifyReply){}
+  rpc deleteHotelInfoById(HotelIdRequest) returns(ModifyReply){}
 
   //根据HotelId获得酒店信息
-  rpc getHotelById(HotelId) returns(HotelStruct){}
+  rpc getHotelById(HotelIdRequest) returns(HotelStruct){}
 
   //获得酒店信息列表
   rpc getHotelList(Empty) returns (HotelList){}
@@ -139,14 +139,14 @@ service MediaServiceToGrpc{
   //修改酒店房间类型信息
   rpc updateHotelRoomTypeInfo(HotelRoomTypeStruct) returns(ModifyReply){}
 
-  //根据HptelRoomTypeId删除酒店房间类型
-  rpc deleteHotelRoomTypeById(HotelRoomTypeId) returns(ModifyReply){}
+  //根据HotelRoomTypeId删除酒店房间类型
+  rpc deleteHotelRoomTypeById(HotelRoomTypeIdRequest) returns(ModifyReply){}
 
   //根据HotelRoomTypeId获得酒店房间类型信息
-  rpc getHotelRoomTypeInfoById(HotelRoomTypeId) returns(HotelRoomTypeStruct){}
+  rpc getHotelRoomTypeInfoById(HotelRoomTypeIdRequest) returns(HotelRoomTypeStruct){}
 
   //根据HotelId获得酒店房间集合
-  rpc getHolteRoomTypeListByHotelId(HotelId) returns(HotelRoomTypeList){}
+  rpc getHolteRoomTypeListByHotelId(HotelIdRequest) returns(HotelRoomTypeList){}
 
   //================酒店房间类型=========================
 
@@ -162,7 +162,7 @@ service MediaServiceToGrpc{
   rpc deleteHotelBookRecordInfoById(IdRequest) returns(ModifyReply){}
 
   //根据MemberId获得酒店预订记录
-  rpc getHotelBookRecordByMemberId(MemberId) returns(HotelBookRecordList){}
+  rpc getHotelBookRecordByMemberId(MemberIdRequest) returns(HotelBookRecordList){}
 
   //根据Id取消酒店预订
   rpc cancelHotelBookRecordById(IdRequest) returns(ModifyReply){}
@@ -361,7 +361,7 @@ message HighlightsInfoList {
 
 
 //========================酒店=========================
- message HotelId{
+ message HotelIdRequest{
    string hotelId=1;
  }
 
@@ -397,12 +397,12 @@ message HighlightsInfoList {
 
 
  //================酒店房间类型=========================
- message HotelRoomTypeId{
-   string HotelRoomTypeId=1;
+ message HotelRoomTypeIdRequest{
+   string hotelRoomTypeId=1;
  }
 
  message HotelRoomTypeStruct{
-   string HptelRoomTypeId=1;
+   string HotelRoomTypeId=1;
    string HotelId=2;
    string TypeName=3;
    string TypeNameEn=4;
@@ -427,7 +427,7 @@ message HighlightsInfoList {
 
  //================酒店预定记录=========================
 
- message MemberId{
+ message MemberIdRequest{
    string memberId=1;
  }
 

@@ -13,7 +13,7 @@ namespace MediaService.DBModel
     public class HotelRoomType
     {
         [Key]
-        public Guid HptelRoomTypeId { get; set; }
+        public Guid HotelRoomTypeId { get; set; }
 
         public Guid HotelId { get; set; }
 

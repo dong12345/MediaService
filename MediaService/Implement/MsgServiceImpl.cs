@@ -569,12 +569,12 @@ namespace MediaService.Implement
             return modifyReply;
         }
 
-        public override async Task<ModifyReply> deleteHotelInfoById(HotelId request, ServerCallContext context)
+        public override async Task<ModifyReply> deleteHotelInfoById(HotelIdRequest request, ServerCallContext context)
         {
             ModifyReply modifyReply = new ModifyReply();
             try
             {
-                var result = await _service.DeleteHotelInfoById(request.HotelId_);
+                var result = await _service.DeleteHotelInfoById(request.HotelId);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
             }
             catch (Exception ex)
@@ -585,11 +585,11 @@ namespace MediaService.Implement
             return modifyReply;
         }
 
-        public override async Task<HotelStruct> getHotelById(HotelId request, ServerCallContext context)
+        public override async Task<HotelStruct> getHotelById(HotelIdRequest request, ServerCallContext context)
         {
             try
             {
-                var model = await _service.GetHotelById(request.HotelId_);
+                var model = await _service.GetHotelById(request.HotelId);
                 var result = Mapper.Map<Hotel, HotelStruct>(model);
                 return result;
             }
@@ -608,6 +608,7 @@ namespace MediaService.Implement
                 var list = await _service.GetHotelList();
                 var result = Mapper.Map<List<Hotel>, List<HotelStruct>>(list);
                 hotelList.Listdata.AddRange(result);
+                hotelList.Total = result.Count;
                 return hotelList;
             }
             catch (Exception ex)
@@ -625,7 +626,7 @@ namespace MediaService.Implement
             ModifyReply modifyReply = new ModifyReply();
             try
             {
-                request.HptelRoomTypeId = Guid.NewGuid().ToString();
+                request.HotelRoomTypeId = Guid.NewGuid().ToString();
                 request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
                 request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
 
@@ -660,12 +661,12 @@ namespace MediaService.Implement
             return modifyReply;
         }
 
-        public override async Task<ModifyReply> deleteHotelRoomTypeById(HotelRoomTypeId request, ServerCallContext context)
+        public override async Task<ModifyReply> deleteHotelRoomTypeById(HotelRoomTypeIdRequest request, ServerCallContext context)
         {
             ModifyReply modifyReply = new ModifyReply();
             try
             {
-                var result = await _service.DeleteHotelRoomTypeById(request.HotelRoomTypeId_);
+                var result = await _service.DeleteHotelRoomTypeById(request.HotelRoomTypeId);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
             }
             catch (Exception ex)
@@ -676,11 +677,11 @@ namespace MediaService.Implement
             return modifyReply;
         }
 
-        public override async Task<HotelRoomTypeStruct> getHotelRoomTypeInfoById(HotelRoomTypeId request, ServerCallContext context)
+        public override async Task<HotelRoomTypeStruct> getHotelRoomTypeInfoById(HotelRoomTypeIdRequest request, ServerCallContext context)
         {
             try
             {
-                var model = await _service.GetHotelRoomTypeInfoById(request.HotelRoomTypeId_);
+                var model = await _service.GetHotelRoomTypeInfoById(request.HotelRoomTypeId);
                 var result = Mapper.Map<HotelRoomType, HotelRoomTypeStruct>(model);
                 return result;
             }
@@ -691,12 +692,12 @@ namespace MediaService.Implement
             }
         }
 
-        public override async Task<HotelRoomTypeList> getHolteRoomTypeListByHotelId(HotelId request, ServerCallContext context)
+        public override async Task<HotelRoomTypeList> getHolteRoomTypeListByHotelId(HotelIdRequest request, ServerCallContext context)
         {
             try
             {
                 HotelRoomTypeList hotelRoomTypeList = new HotelRoomTypeList();
-                var list = await _service.GetHolteRoomTypeListByHotelId(request.HotelId_);
+                var list = await _service.GetHolteRoomTypeListByHotelId(request.HotelId);
                 var result = Mapper.Map<List<HotelRoomType>,List<HotelRoomTypeStruct>>(list);
                 hotelRoomTypeList.Listdata.AddRange(result);
                 hotelRoomTypeList.Total = result.Count;
@@ -768,12 +769,12 @@ namespace MediaService.Implement
             return modifyReply;
         }
 
-        public override async Task<HotelBookRecordList> getHotelBookRecordByMemberId(MemberId request, ServerCallContext context)
+        public override async Task<HotelBookRecordList> getHotelBookRecordByMemberId(MemberIdRequest request, ServerCallContext context)
         {
             try
             {
                 HotelBookRecordList hotelBookRecordList = new HotelBookRecordList();
-                var list = await _service.GetHotelBookRecordByMemberId(request.MemberId_);
+                var list = await _service.GetHotelBookRecordByMemberId(request.MemberId);
                 var result = Mapper.Map<List<HotelBookRecord>, List<HotelBookRecordStruct>>(list);
                 hotelBookRecordList.Listdata.AddRange(result);
                 hotelBookRecordList.Total = result.Count;

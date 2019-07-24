@@ -77,154 +77,155 @@ namespace GrpcMediaService {
             "IAEoCRIRCglPd25lck5hbWUYFyABKAkSEgoKQ3JlYXRlZF9hdBgYIAEoCRIS",
             "CgpVcGRhdGVkX2F0GBkgASgJIl0KEkhpZ2hsaWdodHNJbmZvTGlzdBI4Cghs",
             "aXN0ZGF0YRgBIAMoCzImLkdycGNNZWRpYVNlcnZpY2UuSGlnaGxpZ2h0c0lu",
-            "Zm9TdHJ1Y3QSDQoFdG90YWwYAiABKAUiGgoHSG90ZWxJZBIPCgdob3RlbElk",
-            "GAEgASgJIpkDCgtIb3RlbFN0cnVjdBIPCgdIb3RlbElkGAEgASgJEhEKCUhv",
-            "dGVsQ29kZRgCIAEoCRIRCglIb3RlbE5hbWUYAyABKAkSEwoLSG90ZWxOYW1l",
-            "RW4YBCABKAkSFAoMSG90ZWxBZGRyZXNzGAUgASgJEhYKDkhvdGVsQWRkcmVz",
-            "c0VuGAYgASgJEg8KB0NvdW50cnkYByABKAUSDwoHS2V5V29yZBgIIAEoCRIS",
-            "CgpIb3RlbEVtYWlsGAkgASgJEhAKCEhvdGVsVGVsGAogASgJEhIKCkhvdGVs",
-            "TGV2ZWwYCyABKAUSGQoRSG90ZWxJbnRyb2R1Y3Rpb24YDCABKAkSGwoTSG90",
-            "ZWxJbnRyb2R1Y3Rpb25FbhgNIAEoCRIQCghCYW5rSW5mbxgOIAEoCRISCgpC",
-            "YW5rSW5mb0VuGA8gASgJEg4KBlJlbWFyaxgQIAEoCRIQCghSZW1hcmtFbhgR",
-            "IAEoCRIMCgRTb3J0GBIgASgFEhIKCkNyZWF0ZWRfYXQYEyABKAkSEgoKVXBk",
-            "YXRlZF9hdBgUIAEoCSJLCglIb3RlbExpc3QSLwoIbGlzdGRhdGEYASADKAsy",
-            "HS5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsU3RydWN0Eg0KBXRvdGFsGAIgASgF",
-            "IioKD0hvdGVsUm9vbVR5cGVJZBIXCg9Ib3RlbFJvb21UeXBlSWQYASABKAki",
-            "kwIKE0hvdGVsUm9vbVR5cGVTdHJ1Y3QSFwoPSHB0ZWxSb29tVHlwZUlkGAEg",
-            "ASgJEg8KB0hvdGVsSWQYAiABKAkSEAoIVHlwZU5hbWUYAyABKAkSEgoKVHlw",
-            "ZU5hbWVFbhgEIAEoCRIPCgdCZWRUeXBlGAUgASgJEhEKCUJlZFR5cGVFbhgG",
-            "IAEoCRIQCghNYXhDb3VudBgHIAEoBRINCgVQcmljZRgIIAEoCRILCgNUYXgY",
-            "CSABKAkSEwoLSXNCcmVha2Zhc3QYCiABKAgSDQoFSXNOZXQYCyABKAgSDgoG",
-            "SXNVc2VkGAwgASgIEhIKCkNyZWF0ZWRfYXQYDSABKAkSEgoKVXBkYXRlZF9h",
-            "dBgOIAEoCSJbChFIb3RlbFJvb21UeXBlTGlzdBI3CghsaXN0ZGF0YRgBIAMo",
-            "CzIlLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxSb29tVHlwZVN0cnVjdBINCgV0",
-            "b3RhbBgCIAEoBSIcCghNZW1iZXJJZBIQCghtZW1iZXJJZBgBIAEoCSK4BwoV",
-            "SG90ZWxCb29rUmVjb3JkU3RydWN0EgoKAklkGAEgASgJEhAKCE1lbWJlcklk",
-            "GAIgASgJEhUKDU1lbWJlckNvbXBhbnkYAyABKAkSFwoPTWVtYmVyQ29tcGFu",
-            "eUVuGAQgASgJEg8KB0hvdGVsSWQYBSABKAkSFwoPSG90ZWxSb29tVHlwZUlk",
-            "GAYgASgJEhAKCEJvb2tUaW1lGAcgASgJEhMKC0NoZWNrSW5UaW1lGAggASgJ",
-            "EhQKDENoZWNrT3V0VGltZRgJIAEoCRISCgpJc0NhbmNlbGVkGAogASgFEhEK",
-            "CUlzQ2hlY2tlZBgLIAEoBRISCgpQcmljZUNvdW50GAwgASgJEg4KBlJlbWFy",
-            "axgNIAEoCRIMCgREYXlzGA4gASgFEhQKDEFycml2ZUZsaWdodBgPIAEoCRIT",
-            "CgtMZWF2ZUZsaWdodBgQIAEoCRIPCgdJc1Ntb2tlGBEgASgJEhgKEExpbmtN",
-            "YW5GaXJzdE5hbWUYEiABKAkSFwoPTGlua01hbkxhc3ROYW1lGBMgASgJEhIK",
-            "CkxpbmtNYW5UZWwYFCABKAkSFAoMTGlua01hbkVtYWlsGBUgASgJEhQKDExp",
-            "bmtNYW5UaXRsZRgWIAEoCRIYChBMaW5rTWFuQ291bnRyeUlkGBcgASgFEhMK",
-            "C0xpbmtNYW5DaXR5GBggASgJEhIKCkxpbmtNYW5GYXgYGSABKAkSGQoRTGlu",
-            "a01hbklkQ2FyZFR5cGUYGiABKAkSGwoTTGlua01hbklkQ2FyZE51bWJlchgb",
-            "IAEoCRIWCg5MaW5rTWFuQ29tcGFueRgcIAEoCRIVCg1MaW5rTWFuTW9iaWxl",
-            "GB0gASgJEhQKDExpbmtNYW5CaXJ0aBgeIAEoCRIRCglPdGhlck5hbWUYHyAB",
-            "KAkSEgoKT3RoZXJUaXRsZRggIAEoCRISCgpPdGhlckVtYWlsGCEgASgJEhMK",
-            "C090aGVyTW9iaWxlGCIgASgJEhQKDE90aGVyQ29tcGFueRgjIAEoCRISCgpD",
-            "YXJkUGVyc29uGCQgASgJEhAKCENhcmRUeXBlGCUgASgJEhIKCkNhcmROdW1i",
-            "ZXIYJiABKAkSEAoIQ2FyZERhdGUYJyABKAkSDQoFUGF5ZXIYKCABKAkSDwoH",
-            "UGF5VHlwZRgpIAEoCRIVCg1MaW5rTWFuRW1haWwyGCogASgJEhIKCkNyZWF0",
-            "ZWRfYXQYKyABKAkSEgoKVXBkYXRlZF9hdBgsIAEoCRIRCglJc1dlYnNpdGUY",
-            "LSABKAgiXwoTSG90ZWxCb29rUmVjb3JkTGlzdBI5CghsaXN0ZGF0YRgBIAMo",
-            "CzInLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxCb29rUmVjb3JkU3RydWN0Eg0K",
-            "BXRvdGFsGAIgASgFIgcKBUVtcHR5IhcKCUlkUmVxdWVzdBIKCgJpZBgBIAEo",
-            "CSJDCgtNb2RpZnlSZXBseRIPCgdzdWNjZXNzGAEgASgIEhYKDm1vZGlmaWVk",
-            "X2NvdW50GAIgASgFEgsKA21zZxgDIAEoCSKfAwoMU2VhcmNoU3RydWN0EhMK",
-            "C2NvbXBhbnlOYW1lGAEgASgJEhYKDmNvbnRyYWN0TnVtYmVyGAIgASgJEhYK",
-            "DnBhdmlsaW9uTnVtYmVyGAMgASgJEhMKC2Jvb3RoTnVtYmVyGAQgASgJEg8K",
-            "B293bmVySWQYBSABKAkSDQoFaXNQYXkYBiABKAgSEgoKaXNIYXZlTG9nbxgH",
-            "IAEoCBISCgpiZWdpbl9kYXRlGAggASgJEhAKCGVuZF9kYXRlGAkgASgJEhIK",
-            "CmV4cHJlc3NOdW0YCiABKAkSDgoGc2VuZGVyGAsgASgJEhEKCXJlY2lwaWVu",
-            "dBgMIAEoCRIVCg1yZWNpcGllbnRVbml0GA0gASgJEg8KB2hvdGVsSWQYDiAB",
-            "KAkSFwoPaG90ZWxSb29tVHlwZUlkGA8gASgJEhIKCmlzQ2FuY2VsZWQYECAB",
-            "KAUSEQoJaXNDaGVja2VkGBEgASgFEhEKCWlzV2Vic2l0ZRgSIAEoCBIMCgR0",
-            "eXBlGBMgASgJEg0KBWVtYWlsGBQgASgJEgwKBG5hbWUYFSABKAky0B8KEk1l",
-            "ZGlhU2VydmljZVRvR3JwYxJbChRjcmVhdGVGb3JtUHVibGljSW5mbxIiLkdy",
-            "cGNNZWRpYVNlcnZpY2UuRm9ybVB1YmxpY1N0cnVjdBodLkdycGNNZWRpYVNl",
-            "cnZpY2UuTW9kaWZ5UmVwbHkiABJbChR1cGRhdGVGb3JtUHVibGljSW5mbxIi",
-            "LkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1YmxpY1N0cnVjdBodLkdycGNNZWRp",
-            "YVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJYChhkZWxldGVGb3JtUHVibGljSW5m",
-            "b0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBodLkdycGNNZWRp",
-            "YVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJUChVnZXRGb3JtUHVibGljSW5mb0xp",
-            "c3QSFy5HcnBjTWVkaWFTZXJ2aWNlLkVtcHR5GiAuR3JwY01lZGlhU2Vydmlj",
-            "ZS5Gb3JtUHVibGljTGlzdCIAEloKFWdldEZvcm1QdWJsaWNJbmZvQnlJZBIb",
-            "LkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1ZXN0GiIuR3JwY01lZGlhU2Vydmlj",
-            "ZS5Gb3JtUHVibGljU3RydWN0IgASYgoRZ2V0Rm9ybVB1YmxpY0xpc3QSKS5H",
-            "cnBjTWVkaWFTZXJ2aWNlLlBhZ2luYXRpb25SZXF1ZXN0U2VhcmNoGiAuR3Jw",
-            "Y01lZGlhU2VydmljZS5Gb3JtUHVibGljTGlzdCIAElUKEWNyZWF0ZUV4cHJl",
-            "c3NJbmZvEh8uR3JwY01lZGlhU2VydmljZS5FeHByZXNzU3RydWN0Gh0uR3Jw",
-            "Y01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElUKEXVwZGF0ZUV4cHJlc3NJ",
-            "bmZvEh8uR3JwY01lZGlhU2VydmljZS5FeHByZXNzU3RydWN0Gh0uR3JwY01l",
-            "ZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElUKFWRlbGV0ZUV4cHJlc3NJbmZv",
-            "QnlJZBIbLkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1ZXN0Gh0uR3JwY01lZGlh",
-            "U2VydmljZS5Nb2RpZnlSZXBseSIAElQKEmdldEV4cHJlc3NJbmZvQnlJZBIb",
-            "LkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1ZXN0Gh8uR3JwY01lZGlhU2Vydmlj",
-            "ZS5FeHByZXNzU3RydWN0IgASXAoOZ2V0RXhwcmVzc0xpc3QSKS5HcnBjTWVk",
-            "aWFTZXJ2aWNlLlBhZ2luYXRpb25SZXF1ZXN0U2VhcmNoGh0uR3JwY01lZGlh",
-            "U2VydmljZS5FeHByZXNzTGlzdCIAEmMKGGNyZWF0ZUNhdGFsb2d1ZUJvb2tz",
-            "SW5mbxImLkdycGNNZWRpYVNlcnZpY2UuQ2F0YWxvZ3VlQm9va3NTdHJ1Y3Qa",
-            "HS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASYwoYdXBkYXRlQ2F0",
-            "YWxvZ3VlQm9va3NJbmZvEiYuR3JwY01lZGlhU2VydmljZS5DYXRhbG9ndWVC",
-            "b29rc1N0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJY",
-            "ChhkZWxldGVDYXRhbG9ndWVCb29rc0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNl",
-            "LklkUmVxdWVzdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJe",
-            "ChVnZXRDYXRhbG9ndWVCb29rc0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklk",
-            "UmVxdWVzdBomLkdycGNNZWRpYVNlcnZpY2UuQ2F0YWxvZ3VlQm9va3NTdHJ1",
-            "Y3QiABJqChVnZXRDYXRhbG9ndWVCb29rc0xpc3QSKS5HcnBjTWVkaWFTZXJ2",
-            "aWNlLlBhZ2luYXRpb25SZXF1ZXN0U2VhcmNoGiQuR3JwY01lZGlhU2Vydmlj",
-            "ZS5DYXRhbG9ndWVCb29rc0xpc3QiABJZChNjcmVhdGVJbnRlcnZpZXdJbmZv",
-            "EiEuR3JwY01lZGlhU2VydmljZS5JbnRlcnZpZXdTdHJ1Y3QaHS5HcnBjTWVk",
-            "aWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASWQoTdXBkYXRlSW50ZXJ2aWV3SW5m",
-            "bxIhLkdycGNNZWRpYVNlcnZpY2UuSW50ZXJ2aWV3U3RydWN0Gh0uR3JwY01l",
-            "ZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElMKE2RlbGV0ZUludGVydmlld0J5",
+            "Zm9TdHJ1Y3QSDQoFdG90YWwYAiABKAUiIQoOSG90ZWxJZFJlcXVlc3QSDwoH",
+            "aG90ZWxJZBgBIAEoCSKZAwoLSG90ZWxTdHJ1Y3QSDwoHSG90ZWxJZBgBIAEo",
+            "CRIRCglIb3RlbENvZGUYAiABKAkSEQoJSG90ZWxOYW1lGAMgASgJEhMKC0hv",
+            "dGVsTmFtZUVuGAQgASgJEhQKDEhvdGVsQWRkcmVzcxgFIAEoCRIWCg5Ib3Rl",
+            "bEFkZHJlc3NFbhgGIAEoCRIPCgdDb3VudHJ5GAcgASgFEg8KB0tleVdvcmQY",
+            "CCABKAkSEgoKSG90ZWxFbWFpbBgJIAEoCRIQCghIb3RlbFRlbBgKIAEoCRIS",
+            "CgpIb3RlbExldmVsGAsgASgFEhkKEUhvdGVsSW50cm9kdWN0aW9uGAwgASgJ",
+            "EhsKE0hvdGVsSW50cm9kdWN0aW9uRW4YDSABKAkSEAoIQmFua0luZm8YDiAB",
+            "KAkSEgoKQmFua0luZm9FbhgPIAEoCRIOCgZSZW1hcmsYECABKAkSEAoIUmVt",
+            "YXJrRW4YESABKAkSDAoEU29ydBgSIAEoBRISCgpDcmVhdGVkX2F0GBMgASgJ",
+            "EhIKClVwZGF0ZWRfYXQYFCABKAkiSwoJSG90ZWxMaXN0Ei8KCGxpc3RkYXRh",
+            "GAEgAygLMh0uR3JwY01lZGlhU2VydmljZS5Ib3RlbFN0cnVjdBINCgV0b3Rh",
+            "bBgCIAEoBSIxChZIb3RlbFJvb21UeXBlSWRSZXF1ZXN0EhcKD2hvdGVsUm9v",
+            "bVR5cGVJZBgBIAEoCSKTAgoTSG90ZWxSb29tVHlwZVN0cnVjdBIXCg9Ib3Rl",
+            "bFJvb21UeXBlSWQYASABKAkSDwoHSG90ZWxJZBgCIAEoCRIQCghUeXBlTmFt",
+            "ZRgDIAEoCRISCgpUeXBlTmFtZUVuGAQgASgJEg8KB0JlZFR5cGUYBSABKAkS",
+            "EQoJQmVkVHlwZUVuGAYgASgJEhAKCE1heENvdW50GAcgASgFEg0KBVByaWNl",
+            "GAggASgJEgsKA1RheBgJIAEoCRITCgtJc0JyZWFrZmFzdBgKIAEoCBINCgVJ",
+            "c05ldBgLIAEoCBIOCgZJc1VzZWQYDCABKAgSEgoKQ3JlYXRlZF9hdBgNIAEo",
+            "CRISCgpVcGRhdGVkX2F0GA4gASgJIlsKEUhvdGVsUm9vbVR5cGVMaXN0EjcK",
+            "CGxpc3RkYXRhGAEgAygLMiUuR3JwY01lZGlhU2VydmljZS5Ib3RlbFJvb21U",
+            "eXBlU3RydWN0Eg0KBXRvdGFsGAIgASgFIiMKD01lbWJlcklkUmVxdWVzdBIQ",
+            "CghtZW1iZXJJZBgBIAEoCSK4BwoVSG90ZWxCb29rUmVjb3JkU3RydWN0EgoK",
+            "AklkGAEgASgJEhAKCE1lbWJlcklkGAIgASgJEhUKDU1lbWJlckNvbXBhbnkY",
+            "AyABKAkSFwoPTWVtYmVyQ29tcGFueUVuGAQgASgJEg8KB0hvdGVsSWQYBSAB",
+            "KAkSFwoPSG90ZWxSb29tVHlwZUlkGAYgASgJEhAKCEJvb2tUaW1lGAcgASgJ",
+            "EhMKC0NoZWNrSW5UaW1lGAggASgJEhQKDENoZWNrT3V0VGltZRgJIAEoCRIS",
+            "CgpJc0NhbmNlbGVkGAogASgFEhEKCUlzQ2hlY2tlZBgLIAEoBRISCgpQcmlj",
+            "ZUNvdW50GAwgASgJEg4KBlJlbWFyaxgNIAEoCRIMCgREYXlzGA4gASgFEhQK",
+            "DEFycml2ZUZsaWdodBgPIAEoCRITCgtMZWF2ZUZsaWdodBgQIAEoCRIPCgdJ",
+            "c1Ntb2tlGBEgASgJEhgKEExpbmtNYW5GaXJzdE5hbWUYEiABKAkSFwoPTGlu",
+            "a01hbkxhc3ROYW1lGBMgASgJEhIKCkxpbmtNYW5UZWwYFCABKAkSFAoMTGlu",
+            "a01hbkVtYWlsGBUgASgJEhQKDExpbmtNYW5UaXRsZRgWIAEoCRIYChBMaW5r",
+            "TWFuQ291bnRyeUlkGBcgASgFEhMKC0xpbmtNYW5DaXR5GBggASgJEhIKCkxp",
+            "bmtNYW5GYXgYGSABKAkSGQoRTGlua01hbklkQ2FyZFR5cGUYGiABKAkSGwoT",
+            "TGlua01hbklkQ2FyZE51bWJlchgbIAEoCRIWCg5MaW5rTWFuQ29tcGFueRgc",
+            "IAEoCRIVCg1MaW5rTWFuTW9iaWxlGB0gASgJEhQKDExpbmtNYW5CaXJ0aBge",
+            "IAEoCRIRCglPdGhlck5hbWUYHyABKAkSEgoKT3RoZXJUaXRsZRggIAEoCRIS",
+            "CgpPdGhlckVtYWlsGCEgASgJEhMKC090aGVyTW9iaWxlGCIgASgJEhQKDE90",
+            "aGVyQ29tcGFueRgjIAEoCRISCgpDYXJkUGVyc29uGCQgASgJEhAKCENhcmRU",
+            "eXBlGCUgASgJEhIKCkNhcmROdW1iZXIYJiABKAkSEAoIQ2FyZERhdGUYJyAB",
+            "KAkSDQoFUGF5ZXIYKCABKAkSDwoHUGF5VHlwZRgpIAEoCRIVCg1MaW5rTWFu",
+            "RW1haWwyGCogASgJEhIKCkNyZWF0ZWRfYXQYKyABKAkSEgoKVXBkYXRlZF9h",
+            "dBgsIAEoCRIRCglJc1dlYnNpdGUYLSABKAgiXwoTSG90ZWxCb29rUmVjb3Jk",
+            "TGlzdBI5CghsaXN0ZGF0YRgBIAMoCzInLkdycGNNZWRpYVNlcnZpY2UuSG90",
+            "ZWxCb29rUmVjb3JkU3RydWN0Eg0KBXRvdGFsGAIgASgFIgcKBUVtcHR5IhcK",
+            "CUlkUmVxdWVzdBIKCgJpZBgBIAEoCSJDCgtNb2RpZnlSZXBseRIPCgdzdWNj",
+            "ZXNzGAEgASgIEhYKDm1vZGlmaWVkX2NvdW50GAIgASgFEgsKA21zZxgDIAEo",
+            "CSKfAwoMU2VhcmNoU3RydWN0EhMKC2NvbXBhbnlOYW1lGAEgASgJEhYKDmNv",
+            "bnRyYWN0TnVtYmVyGAIgASgJEhYKDnBhdmlsaW9uTnVtYmVyGAMgASgJEhMK",
+            "C2Jvb3RoTnVtYmVyGAQgASgJEg8KB293bmVySWQYBSABKAkSDQoFaXNQYXkY",
+            "BiABKAgSEgoKaXNIYXZlTG9nbxgHIAEoCBISCgpiZWdpbl9kYXRlGAggASgJ",
+            "EhAKCGVuZF9kYXRlGAkgASgJEhIKCmV4cHJlc3NOdW0YCiABKAkSDgoGc2Vu",
+            "ZGVyGAsgASgJEhEKCXJlY2lwaWVudBgMIAEoCRIVCg1yZWNpcGllbnRVbml0",
+            "GA0gASgJEg8KB2hvdGVsSWQYDiABKAkSFwoPaG90ZWxSb29tVHlwZUlkGA8g",
+            "ASgJEhIKCmlzQ2FuY2VsZWQYECABKAUSEQoJaXNDaGVja2VkGBEgASgFEhEK",
+            "CWlzV2Vic2l0ZRgSIAEoCBIMCgR0eXBlGBMgASgJEg0KBWVtYWlsGBQgASgJ",
+            "EgwKBG5hbWUYFSABKAky+h8KEk1lZGlhU2VydmljZVRvR3JwYxJbChRjcmVh",
+            "dGVGb3JtUHVibGljSW5mbxIiLkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1Ymxp",
+            "Y1N0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJbChR1",
+            "cGRhdGVGb3JtUHVibGljSW5mbxIiLkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1",
+            "YmxpY1N0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJY",
+            "ChhkZWxldGVGb3JtUHVibGljSW5mb0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNl",
+            "LklkUmVxdWVzdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJU",
+            "ChVnZXRGb3JtUHVibGljSW5mb0xpc3QSFy5HcnBjTWVkaWFTZXJ2aWNlLkVt",
+            "cHR5GiAuR3JwY01lZGlhU2VydmljZS5Gb3JtUHVibGljTGlzdCIAEloKFWdl",
+            "dEZvcm1QdWJsaWNJbmZvQnlJZBIbLkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1",
+            "ZXN0GiIuR3JwY01lZGlhU2VydmljZS5Gb3JtUHVibGljU3RydWN0IgASYgoR",
+            "Z2V0Rm9ybVB1YmxpY0xpc3QSKS5HcnBjTWVkaWFTZXJ2aWNlLlBhZ2luYXRp",
+            "b25SZXF1ZXN0U2VhcmNoGiAuR3JwY01lZGlhU2VydmljZS5Gb3JtUHVibGlj",
+            "TGlzdCIAElUKEWNyZWF0ZUV4cHJlc3NJbmZvEh8uR3JwY01lZGlhU2Vydmlj",
+            "ZS5FeHByZXNzU3RydWN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBs",
+            "eSIAElUKEXVwZGF0ZUV4cHJlc3NJbmZvEh8uR3JwY01lZGlhU2VydmljZS5F",
+            "eHByZXNzU3RydWN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIA",
+            "ElUKFWRlbGV0ZUV4cHJlc3NJbmZvQnlJZBIbLkdycGNNZWRpYVNlcnZpY2Uu",
+            "SWRSZXF1ZXN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElQK",
+            "EmdldEV4cHJlc3NJbmZvQnlJZBIbLkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1",
+            "ZXN0Gh8uR3JwY01lZGlhU2VydmljZS5FeHByZXNzU3RydWN0IgASXAoOZ2V0",
+            "RXhwcmVzc0xpc3QSKS5HcnBjTWVkaWFTZXJ2aWNlLlBhZ2luYXRpb25SZXF1",
+            "ZXN0U2VhcmNoGh0uR3JwY01lZGlhU2VydmljZS5FeHByZXNzTGlzdCIAEmMK",
+            "GGNyZWF0ZUNhdGFsb2d1ZUJvb2tzSW5mbxImLkdycGNNZWRpYVNlcnZpY2Uu",
+            "Q2F0YWxvZ3VlQm9va3NTdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlm",
+            "eVJlcGx5IgASYwoYdXBkYXRlQ2F0YWxvZ3VlQm9va3NJbmZvEiYuR3JwY01l",
+            "ZGlhU2VydmljZS5DYXRhbG9ndWVCb29rc1N0cnVjdBodLkdycGNNZWRpYVNl",
+            "cnZpY2UuTW9kaWZ5UmVwbHkiABJYChhkZWxldGVDYXRhbG9ndWVCb29rc0J5",
             "SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBodLkdycGNNZWRpYVNl",
-            "cnZpY2UuTW9kaWZ5UmVwbHkiABJYChRnZXRJbnRlcnZpZXdJbmZvQnlJZBIb",
-            "LkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1ZXN0GiEuR3JwY01lZGlhU2Vydmlj",
-            "ZS5JbnRlcnZpZXdTdHJ1Y3QiABJgChBnZXRJbnRlcnZpZXdMaXN0EikuR3Jw",
-            "Y01lZGlhU2VydmljZS5QYWdpbmF0aW9uUmVxdWVzdFNlYXJjaBofLkdycGNN",
-            "ZWRpYVNlcnZpY2UuSW50ZXJ2aWV3TGlzdCIAEl8KFGNyZWF0ZUhpZ2hsaWdo",
-            "dHNJbmZvEiYuR3JwY01lZGlhU2VydmljZS5IaWdobGlnaHRzSW5mb1N0cnVj",
-            "dBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJfChR1cGRhdGVI",
-            "aWdobGlnaHRzSW5mbxImLkdycGNNZWRpYVNlcnZpY2UuSGlnaGxpZ2h0c0lu",
-            "Zm9TdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASWAoY",
-            "ZGVsZXRlSGlnaGxpZ2h0c0luZm9CeUlkEhsuR3JwY01lZGlhU2VydmljZS5J",
-            "ZFJlcXVlc3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASXgoV",
-            "Z2V0SGlnaGxpZ2h0c0luZm9CeUlkEhsuR3JwY01lZGlhU2VydmljZS5JZFJl",
-            "cXVlc3QaJi5HcnBjTWVkaWFTZXJ2aWNlLkhpZ2hsaWdodHNJbmZvU3RydWN0",
-            "IgASagoVZ2V0SGlnaGxpZ2h0c0luZm9MaXN0EikuR3JwY01lZGlhU2Vydmlj",
-            "ZS5QYWdpbmF0aW9uUmVxdWVzdFNlYXJjaBokLkdycGNNZWRpYVNlcnZpY2Uu",
-            "SGlnaGxpZ2h0c0luZm9MaXN0IgASUQoPY3JlYXRlSG90ZWxJbmZvEh0uR3Jw",
-            "Y01lZGlhU2VydmljZS5Ib3RlbFN0cnVjdBodLkdycGNNZWRpYVNlcnZpY2Uu",
-            "TW9kaWZ5UmVwbHkiABJRCg91cGRhdGVIb3RlbEluZm8SHS5HcnBjTWVkaWFT",
-            "ZXJ2aWNlLkhvdGVsU3RydWN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlS",
-            "ZXBseSIAElEKE2RlbGV0ZUhvdGVsSW5mb0J5SWQSGS5HcnBjTWVkaWFTZXJ2",
-            "aWNlLkhvdGVsSWQaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgAS",
-            "SgoMZ2V0SG90ZWxCeUlkEhkuR3JwY01lZGlhU2VydmljZS5Ib3RlbElkGh0u",
-            "R3JwY01lZGlhU2VydmljZS5Ib3RlbFN0cnVjdCIAEkYKDGdldEhvdGVsTGlz",
-            "dBIXLkdycGNNZWRpYVNlcnZpY2UuRW1wdHkaGy5HcnBjTWVkaWFTZXJ2aWNl",
-            "LkhvdGVsTGlzdCIAEmEKF2NyZWF0ZUhvdGVsUm9vbVR5cGVJbmZvEiUuR3Jw",
-            "Y01lZGlhU2VydmljZS5Ib3RlbFJvb21UeXBlU3RydWN0Gh0uR3JwY01lZGlh",
-            "U2VydmljZS5Nb2RpZnlSZXBseSIAEmEKF3VwZGF0ZUhvdGVsUm9vbVR5cGVJ",
-            "bmZvEiUuR3JwY01lZGlhU2VydmljZS5Ib3RlbFJvb21UeXBlU3RydWN0Gh0u",
-            "R3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAEl0KF2RlbGV0ZUhvdGVs",
-            "Um9vbVR5cGVCeUlkEiEuR3JwY01lZGlhU2VydmljZS5Ib3RlbFJvb21UeXBl",
-            "SWQaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASZgoYZ2V0SG90",
-            "ZWxSb29tVHlwZUluZm9CeUlkEiEuR3JwY01lZGlhU2VydmljZS5Ib3RlbFJv",
-            "b21UeXBlSWQaJS5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsUm9vbVR5cGVTdHJ1",
-            "Y3QiABJhCh1nZXRIb2x0ZVJvb21UeXBlTGlzdEJ5SG90ZWxJZBIZLkdycGNN",
-            "ZWRpYVNlcnZpY2UuSG90ZWxJZBojLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxS",
-            "b29tVHlwZUxpc3QiABJlChljcmVhdGVIb3RlbEJvb2tSZWNvcmRJbmZvEicu",
-            "R3JwY01lZGlhU2VydmljZS5Ib3RlbEJvb2tSZWNvcmRTdHJ1Y3QaHS5HcnBj",
-            "TWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASZQoZdXBkYXRlSG90ZWxCb29r",
-            "UmVjb3JkSW5mbxInLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxCb29rUmVjb3Jk",
-            "U3RydWN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAEl0KHWRl",
-            "bGV0ZUhvdGVsQm9va1JlY29yZEluZm9CeUlkEhsuR3JwY01lZGlhU2Vydmlj",
-            "ZS5JZFJlcXVlc3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgAS",
-            "YwocZ2V0SG90ZWxCb29rUmVjb3JkQnlNZW1iZXJJZBIaLkdycGNNZWRpYVNl",
-            "cnZpY2UuTWVtYmVySWQaJS5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsQm9va1Jl",
-            "Y29yZExpc3QiABJZChljYW5jZWxIb3RlbEJvb2tSZWNvcmRCeUlkEhsuR3Jw",
-            "Y01lZGlhU2VydmljZS5JZFJlcXVlc3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1v",
-            "ZGlmeVJlcGx5IgASYAoWZ2V0SG90ZWxCb29rUmVjb3JkQnlJZBIbLkdycGNN",
-            "ZWRpYVNlcnZpY2UuSWRSZXF1ZXN0GicuR3JwY01lZGlhU2VydmljZS5Ib3Rl",
-            "bEJvb2tSZWNvcmRTdHJ1Y3QiABJsChZnZXRIb3RlbEJvb2tSZWNvcmRMaXN0",
-            "EikuR3JwY01lZGlhU2VydmljZS5QYWdpbmF0aW9uUmVxdWVzdFNlYXJjaBol",
-            "LkdycGNNZWRpYVNlcnZpY2UuSG90ZWxCb29rUmVjb3JkTGlzdCIAYgZwcm90",
-            "bzM="));
+            "cnZpY2UuTW9kaWZ5UmVwbHkiABJeChVnZXRDYXRhbG9ndWVCb29rc0J5SWQS",
+            "Gy5HcnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBomLkdycGNNZWRpYVNlcnZp",
+            "Y2UuQ2F0YWxvZ3VlQm9va3NTdHJ1Y3QiABJqChVnZXRDYXRhbG9ndWVCb29r",
+            "c0xpc3QSKS5HcnBjTWVkaWFTZXJ2aWNlLlBhZ2luYXRpb25SZXF1ZXN0U2Vh",
+            "cmNoGiQuR3JwY01lZGlhU2VydmljZS5DYXRhbG9ndWVCb29rc0xpc3QiABJZ",
+            "ChNjcmVhdGVJbnRlcnZpZXdJbmZvEiEuR3JwY01lZGlhU2VydmljZS5JbnRl",
+            "cnZpZXdTdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgAS",
+            "WQoTdXBkYXRlSW50ZXJ2aWV3SW5mbxIhLkdycGNNZWRpYVNlcnZpY2UuSW50",
+            "ZXJ2aWV3U3RydWN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIA",
+            "ElMKE2RlbGV0ZUludGVydmlld0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklk",
+            "UmVxdWVzdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJYChRn",
+            "ZXRJbnRlcnZpZXdJbmZvQnlJZBIbLkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1",
+            "ZXN0GiEuR3JwY01lZGlhU2VydmljZS5JbnRlcnZpZXdTdHJ1Y3QiABJgChBn",
+            "ZXRJbnRlcnZpZXdMaXN0EikuR3JwY01lZGlhU2VydmljZS5QYWdpbmF0aW9u",
+            "UmVxdWVzdFNlYXJjaBofLkdycGNNZWRpYVNlcnZpY2UuSW50ZXJ2aWV3TGlz",
+            "dCIAEl8KFGNyZWF0ZUhpZ2hsaWdodHNJbmZvEiYuR3JwY01lZGlhU2Vydmlj",
+            "ZS5IaWdobGlnaHRzSW5mb1N0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9k",
+            "aWZ5UmVwbHkiABJfChR1cGRhdGVIaWdobGlnaHRzSW5mbxImLkdycGNNZWRp",
+            "YVNlcnZpY2UuSGlnaGxpZ2h0c0luZm9TdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2",
+            "aWNlLk1vZGlmeVJlcGx5IgASWAoYZGVsZXRlSGlnaGxpZ2h0c0luZm9CeUlk",
+            "EhsuR3JwY01lZGlhU2VydmljZS5JZFJlcXVlc3QaHS5HcnBjTWVkaWFTZXJ2",
+            "aWNlLk1vZGlmeVJlcGx5IgASXgoVZ2V0SGlnaGxpZ2h0c0luZm9CeUlkEhsu",
+            "R3JwY01lZGlhU2VydmljZS5JZFJlcXVlc3QaJi5HcnBjTWVkaWFTZXJ2aWNl",
+            "LkhpZ2hsaWdodHNJbmZvU3RydWN0IgASagoVZ2V0SGlnaGxpZ2h0c0luZm9M",
+            "aXN0EikuR3JwY01lZGlhU2VydmljZS5QYWdpbmF0aW9uUmVxdWVzdFNlYXJj",
+            "aBokLkdycGNNZWRpYVNlcnZpY2UuSGlnaGxpZ2h0c0luZm9MaXN0IgASUQoP",
+            "Y3JlYXRlSG90ZWxJbmZvEh0uR3JwY01lZGlhU2VydmljZS5Ib3RlbFN0cnVj",
+            "dBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJRCg91cGRhdGVI",
+            "b3RlbEluZm8SHS5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsU3RydWN0Gh0uR3Jw",
+            "Y01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElgKE2RlbGV0ZUhvdGVsSW5m",
+            "b0J5SWQSIC5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsSWRSZXF1ZXN0Gh0uR3Jw",
+            "Y01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElEKDGdldEhvdGVsQnlJZBIg",
+            "LkdycGNNZWRpYVNlcnZpY2UuSG90ZWxJZFJlcXVlc3QaHS5HcnBjTWVkaWFT",
+            "ZXJ2aWNlLkhvdGVsU3RydWN0IgASRgoMZ2V0SG90ZWxMaXN0EhcuR3JwY01l",
+            "ZGlhU2VydmljZS5FbXB0eRobLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxMaXN0",
+            "IgASYQoXY3JlYXRlSG90ZWxSb29tVHlwZUluZm8SJS5HcnBjTWVkaWFTZXJ2",
+            "aWNlLkhvdGVsUm9vbVR5cGVTdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1v",
+            "ZGlmeVJlcGx5IgASYQoXdXBkYXRlSG90ZWxSb29tVHlwZUluZm8SJS5HcnBj",
+            "TWVkaWFTZXJ2aWNlLkhvdGVsUm9vbVR5cGVTdHJ1Y3QaHS5HcnBjTWVkaWFT",
+            "ZXJ2aWNlLk1vZGlmeVJlcGx5IgASZAoXZGVsZXRlSG90ZWxSb29tVHlwZUJ5",
+            "SWQSKC5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsUm9vbVR5cGVJZFJlcXVlc3Qa",
+            "HS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASbQoYZ2V0SG90ZWxS",
+            "b29tVHlwZUluZm9CeUlkEiguR3JwY01lZGlhU2VydmljZS5Ib3RlbFJvb21U",
+            "eXBlSWRSZXF1ZXN0GiUuR3JwY01lZGlhU2VydmljZS5Ib3RlbFJvb21UeXBl",
+            "U3RydWN0IgASaAodZ2V0SG9sdGVSb29tVHlwZUxpc3RCeUhvdGVsSWQSIC5H",
+            "cnBjTWVkaWFTZXJ2aWNlLkhvdGVsSWRSZXF1ZXN0GiMuR3JwY01lZGlhU2Vy",
+            "dmljZS5Ib3RlbFJvb21UeXBlTGlzdCIAEmUKGWNyZWF0ZUhvdGVsQm9va1Jl",
+            "Y29yZEluZm8SJy5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsQm9va1JlY29yZFN0",
+            "cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJlChl1cGRh",
+            "dGVIb3RlbEJvb2tSZWNvcmRJbmZvEicuR3JwY01lZGlhU2VydmljZS5Ib3Rl",
+            "bEJvb2tSZWNvcmRTdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJl",
+            "cGx5IgASXQodZGVsZXRlSG90ZWxCb29rUmVjb3JkSW5mb0J5SWQSGy5HcnBj",
+            "TWVkaWFTZXJ2aWNlLklkUmVxdWVzdBodLkdycGNNZWRpYVNlcnZpY2UuTW9k",
+            "aWZ5UmVwbHkiABJqChxnZXRIb3RlbEJvb2tSZWNvcmRCeU1lbWJlcklkEiEu",
+            "R3JwY01lZGlhU2VydmljZS5NZW1iZXJJZFJlcXVlc3QaJS5HcnBjTWVkaWFT",
+            "ZXJ2aWNlLkhvdGVsQm9va1JlY29yZExpc3QiABJZChljYW5jZWxIb3RlbEJv",
+            "b2tSZWNvcmRCeUlkEhsuR3JwY01lZGlhU2VydmljZS5JZFJlcXVlc3QaHS5H",
+            "cnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASYAoWZ2V0SG90ZWxCb29r",
+            "UmVjb3JkQnlJZBIbLkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1ZXN0GicuR3Jw",
+            "Y01lZGlhU2VydmljZS5Ib3RlbEJvb2tSZWNvcmRTdHJ1Y3QiABJsChZnZXRI",
+            "b3RlbEJvb2tSZWNvcmRMaXN0EikuR3JwY01lZGlhU2VydmljZS5QYWdpbmF0",
+            "aW9uUmVxdWVzdFNlYXJjaBolLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxCb29r",
+            "UmVjb3JkTGlzdCIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -239,13 +240,13 @@ namespace GrpcMediaService {
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.InterviewList), global::GrpcMediaService.InterviewList.Parser, new[]{ "Listdata", "Total" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HighlightsInfoStruct), global::GrpcMediaService.HighlightsInfoStruct.Parser, new[]{ "Id", "LDnameCn", "LDnameEn", "LDdescribeCn", "LDdescribeEn", "LDimage", "LDlogo", "YJname", "YJnameEn", "YJPosition", "YJPositionEn", "YJIntroduction", "YJPhoto", "ShowWay", "Contract", "ContractCompany", "ContractCompanyEn", "Tel", "Mobile", "Email", "MemberId", "OwnerId", "OwnerName", "CreatedAt", "UpdatedAt" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HighlightsInfoList), global::GrpcMediaService.HighlightsInfoList.Parser, new[]{ "Listdata", "Total" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelId), global::GrpcMediaService.HotelId.Parser, new[]{ "HotelId_" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelIdRequest), global::GrpcMediaService.HotelIdRequest.Parser, new[]{ "HotelId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelStruct), global::GrpcMediaService.HotelStruct.Parser, new[]{ "HotelId", "HotelCode", "HotelName", "HotelNameEn", "HotelAddress", "HotelAddressEn", "Country", "KeyWord", "HotelEmail", "HotelTel", "HotelLevel", "HotelIntroduction", "HotelIntroductionEn", "BankInfo", "BankInfoEn", "Remark", "RemarkEn", "Sort", "CreatedAt", "UpdatedAt" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelList), global::GrpcMediaService.HotelList.Parser, new[]{ "Listdata", "Total" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelRoomTypeId), global::GrpcMediaService.HotelRoomTypeId.Parser, new[]{ "HotelRoomTypeId_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelRoomTypeStruct), global::GrpcMediaService.HotelRoomTypeStruct.Parser, new[]{ "HptelRoomTypeId", "HotelId", "TypeName", "TypeNameEn", "BedType", "BedTypeEn", "MaxCount", "Price", "Tax", "IsBreakfast", "IsNet", "IsUsed", "CreatedAt", "UpdatedAt" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelRoomTypeIdRequest), global::GrpcMediaService.HotelRoomTypeIdRequest.Parser, new[]{ "HotelRoomTypeId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelRoomTypeStruct), global::GrpcMediaService.HotelRoomTypeStruct.Parser, new[]{ "HotelRoomTypeId", "HotelId", "TypeName", "TypeNameEn", "BedType", "BedTypeEn", "MaxCount", "Price", "Tax", "IsBreakfast", "IsNet", "IsUsed", "CreatedAt", "UpdatedAt" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelRoomTypeList), global::GrpcMediaService.HotelRoomTypeList.Parser, new[]{ "Listdata", "Total" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.MemberId), global::GrpcMediaService.MemberId.Parser, new[]{ "MemberId_" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.MemberIdRequest), global::GrpcMediaService.MemberIdRequest.Parser, new[]{ "MemberId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelBookRecordStruct), global::GrpcMediaService.HotelBookRecordStruct.Parser, new[]{ "Id", "MemberId", "MemberCompany", "MemberCompanyEn", "HotelId", "HotelRoomTypeId", "BookTime", "CheckInTime", "CheckOutTime", "IsCanceled", "IsChecked", "PriceCount", "Remark", "Days", "ArriveFlight", "LeaveFlight", "IsSmoke", "LinkManFirstName", "LinkManLastName", "LinkManTel", "LinkManEmail", "LinkManTitle", "LinkManCountryId", "LinkManCity", "LinkManFax", "LinkManIdCardType", "LinkManIdCardNumber", "LinkManCompany", "LinkManMobile", "LinkManBirth", "OtherName", "OtherTitle", "OtherEmail", "OtherMobile", "OtherCompany", "CardPerson", "CardType", "CardNumber", "CardDate", "Payer", "PayType", "LinkManEmail2", "CreatedAt", "UpdatedAt", "IsWebsite" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelBookRecordList), global::GrpcMediaService.HotelBookRecordList.Parser, new[]{ "Listdata", "Total" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.Empty), global::GrpcMediaService.Empty.Parser, null, null, null, null),
@@ -4424,11 +4425,11 @@ namespace GrpcMediaService {
   /// <summary>
   ///========================酒店=========================
   /// </summary>
-  public sealed partial class HotelId : pb::IMessage<HotelId> {
-    private static readonly pb::MessageParser<HotelId> _parser = new pb::MessageParser<HotelId>(() => new HotelId());
+  public sealed partial class HotelIdRequest : pb::IMessage<HotelIdRequest> {
+    private static readonly pb::MessageParser<HotelIdRequest> _parser = new pb::MessageParser<HotelIdRequest>(() => new HotelIdRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<HotelId> Parser { get { return _parser; } }
+    public static pb::MessageParser<HotelIdRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -4441,28 +4442,28 @@ namespace GrpcMediaService {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public HotelId() {
+    public HotelIdRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public HotelId(HotelId other) : this() {
+    public HotelIdRequest(HotelIdRequest other) : this() {
       hotelId_ = other.hotelId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public HotelId Clone() {
-      return new HotelId(this);
+    public HotelIdRequest Clone() {
+      return new HotelIdRequest(this);
     }
 
     /// <summary>Field number for the "hotelId" field.</summary>
-    public const int HotelId_FieldNumber = 1;
+    public const int HotelIdFieldNumber = 1;
     private string hotelId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string HotelId_ {
+    public string HotelId {
       get { return hotelId_; }
       set {
         hotelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -4471,25 +4472,25 @@ namespace GrpcMediaService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as HotelId);
+      return Equals(other as HotelIdRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(HotelId other) {
+    public bool Equals(HotelIdRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (HotelId_ != other.HotelId_) return false;
+      if (HotelId != other.HotelId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (HotelId_.Length != 0) hash ^= HotelId_.GetHashCode();
+      if (HotelId.Length != 0) hash ^= HotelId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4503,9 +4504,9 @@ namespace GrpcMediaService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (HotelId_.Length != 0) {
+      if (HotelId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(HotelId_);
+        output.WriteString(HotelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4515,8 +4516,8 @@ namespace GrpcMediaService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (HotelId_.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(HotelId_);
+      if (HotelId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HotelId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4525,12 +4526,12 @@ namespace GrpcMediaService {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(HotelId other) {
+    public void MergeFrom(HotelIdRequest other) {
       if (other == null) {
         return;
       }
-      if (other.HotelId_.Length != 0) {
-        HotelId_ = other.HotelId_;
+      if (other.HotelId.Length != 0) {
+        HotelId = other.HotelId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4544,7 +4545,7 @@ namespace GrpcMediaService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            HotelId_ = input.ReadString();
+            HotelId = input.ReadString();
             break;
           }
         }
@@ -5369,11 +5370,11 @@ namespace GrpcMediaService {
   /// <summary>
   ///================酒店房间类型=========================
   /// </summary>
-  public sealed partial class HotelRoomTypeId : pb::IMessage<HotelRoomTypeId> {
-    private static readonly pb::MessageParser<HotelRoomTypeId> _parser = new pb::MessageParser<HotelRoomTypeId>(() => new HotelRoomTypeId());
+  public sealed partial class HotelRoomTypeIdRequest : pb::IMessage<HotelRoomTypeIdRequest> {
+    private static readonly pb::MessageParser<HotelRoomTypeIdRequest> _parser = new pb::MessageParser<HotelRoomTypeIdRequest>(() => new HotelRoomTypeIdRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<HotelRoomTypeId> Parser { get { return _parser; } }
+    public static pb::MessageParser<HotelRoomTypeIdRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -5386,28 +5387,28 @@ namespace GrpcMediaService {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public HotelRoomTypeId() {
+    public HotelRoomTypeIdRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public HotelRoomTypeId(HotelRoomTypeId other) : this() {
+    public HotelRoomTypeIdRequest(HotelRoomTypeIdRequest other) : this() {
       hotelRoomTypeId_ = other.hotelRoomTypeId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public HotelRoomTypeId Clone() {
-      return new HotelRoomTypeId(this);
+    public HotelRoomTypeIdRequest Clone() {
+      return new HotelRoomTypeIdRequest(this);
     }
 
-    /// <summary>Field number for the "HotelRoomTypeId" field.</summary>
-    public const int HotelRoomTypeId_FieldNumber = 1;
+    /// <summary>Field number for the "hotelRoomTypeId" field.</summary>
+    public const int HotelRoomTypeIdFieldNumber = 1;
     private string hotelRoomTypeId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string HotelRoomTypeId_ {
+    public string HotelRoomTypeId {
       get { return hotelRoomTypeId_; }
       set {
         hotelRoomTypeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -5416,25 +5417,25 @@ namespace GrpcMediaService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as HotelRoomTypeId);
+      return Equals(other as HotelRoomTypeIdRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(HotelRoomTypeId other) {
+    public bool Equals(HotelRoomTypeIdRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (HotelRoomTypeId_ != other.HotelRoomTypeId_) return false;
+      if (HotelRoomTypeId != other.HotelRoomTypeId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (HotelRoomTypeId_.Length != 0) hash ^= HotelRoomTypeId_.GetHashCode();
+      if (HotelRoomTypeId.Length != 0) hash ^= HotelRoomTypeId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5448,9 +5449,9 @@ namespace GrpcMediaService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (HotelRoomTypeId_.Length != 0) {
+      if (HotelRoomTypeId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(HotelRoomTypeId_);
+        output.WriteString(HotelRoomTypeId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5460,8 +5461,8 @@ namespace GrpcMediaService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (HotelRoomTypeId_.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(HotelRoomTypeId_);
+      if (HotelRoomTypeId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HotelRoomTypeId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5470,12 +5471,12 @@ namespace GrpcMediaService {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(HotelRoomTypeId other) {
+    public void MergeFrom(HotelRoomTypeIdRequest other) {
       if (other == null) {
         return;
       }
-      if (other.HotelRoomTypeId_.Length != 0) {
-        HotelRoomTypeId_ = other.HotelRoomTypeId_;
+      if (other.HotelRoomTypeId.Length != 0) {
+        HotelRoomTypeId = other.HotelRoomTypeId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5489,7 +5490,7 @@ namespace GrpcMediaService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            HotelRoomTypeId_ = input.ReadString();
+            HotelRoomTypeId = input.ReadString();
             break;
           }
         }
@@ -5523,7 +5524,7 @@ namespace GrpcMediaService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public HotelRoomTypeStruct(HotelRoomTypeStruct other) : this() {
-      hptelRoomTypeId_ = other.hptelRoomTypeId_;
+      hotelRoomTypeId_ = other.hotelRoomTypeId_;
       hotelId_ = other.hotelId_;
       typeName_ = other.typeName_;
       typeNameEn_ = other.typeNameEn_;
@@ -5545,14 +5546,14 @@ namespace GrpcMediaService {
       return new HotelRoomTypeStruct(this);
     }
 
-    /// <summary>Field number for the "HptelRoomTypeId" field.</summary>
-    public const int HptelRoomTypeIdFieldNumber = 1;
-    private string hptelRoomTypeId_ = "";
+    /// <summary>Field number for the "HotelRoomTypeId" field.</summary>
+    public const int HotelRoomTypeIdFieldNumber = 1;
+    private string hotelRoomTypeId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string HptelRoomTypeId {
-      get { return hptelRoomTypeId_; }
+    public string HotelRoomTypeId {
+      get { return hotelRoomTypeId_; }
       set {
-        hptelRoomTypeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        hotelRoomTypeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -5712,7 +5713,7 @@ namespace GrpcMediaService {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (HptelRoomTypeId != other.HptelRoomTypeId) return false;
+      if (HotelRoomTypeId != other.HotelRoomTypeId) return false;
       if (HotelId != other.HotelId) return false;
       if (TypeName != other.TypeName) return false;
       if (TypeNameEn != other.TypeNameEn) return false;
@@ -5732,7 +5733,7 @@ namespace GrpcMediaService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (HptelRoomTypeId.Length != 0) hash ^= HptelRoomTypeId.GetHashCode();
+      if (HotelRoomTypeId.Length != 0) hash ^= HotelRoomTypeId.GetHashCode();
       if (HotelId.Length != 0) hash ^= HotelId.GetHashCode();
       if (TypeName.Length != 0) hash ^= TypeName.GetHashCode();
       if (TypeNameEn.Length != 0) hash ^= TypeNameEn.GetHashCode();
@@ -5759,9 +5760,9 @@ namespace GrpcMediaService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (HptelRoomTypeId.Length != 0) {
+      if (HotelRoomTypeId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(HptelRoomTypeId);
+        output.WriteString(HotelRoomTypeId);
       }
       if (HotelId.Length != 0) {
         output.WriteRawTag(18);
@@ -5823,8 +5824,8 @@ namespace GrpcMediaService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (HptelRoomTypeId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(HptelRoomTypeId);
+      if (HotelRoomTypeId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HotelRoomTypeId);
       }
       if (HotelId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(HotelId);
@@ -5876,8 +5877,8 @@ namespace GrpcMediaService {
       if (other == null) {
         return;
       }
-      if (other.HptelRoomTypeId.Length != 0) {
-        HptelRoomTypeId = other.HptelRoomTypeId;
+      if (other.HotelRoomTypeId.Length != 0) {
+        HotelRoomTypeId = other.HotelRoomTypeId;
       }
       if (other.HotelId.Length != 0) {
         HotelId = other.HotelId;
@@ -5930,7 +5931,7 @@ namespace GrpcMediaService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            HptelRoomTypeId = input.ReadString();
+            HotelRoomTypeId = input.ReadString();
             break;
           }
           case 18: {
@@ -6140,11 +6141,11 @@ namespace GrpcMediaService {
 
   }
 
-  public sealed partial class MemberId : pb::IMessage<MemberId> {
-    private static readonly pb::MessageParser<MemberId> _parser = new pb::MessageParser<MemberId>(() => new MemberId());
+  public sealed partial class MemberIdRequest : pb::IMessage<MemberIdRequest> {
+    private static readonly pb::MessageParser<MemberIdRequest> _parser = new pb::MessageParser<MemberIdRequest>(() => new MemberIdRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<MemberId> Parser { get { return _parser; } }
+    public static pb::MessageParser<MemberIdRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -6157,28 +6158,28 @@ namespace GrpcMediaService {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public MemberId() {
+    public MemberIdRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public MemberId(MemberId other) : this() {
+    public MemberIdRequest(MemberIdRequest other) : this() {
       memberId_ = other.memberId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public MemberId Clone() {
-      return new MemberId(this);
+    public MemberIdRequest Clone() {
+      return new MemberIdRequest(this);
     }
 
     /// <summary>Field number for the "memberId" field.</summary>
-    public const int MemberId_FieldNumber = 1;
+    public const int MemberIdFieldNumber = 1;
     private string memberId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string MemberId_ {
+    public string MemberId {
       get { return memberId_; }
       set {
         memberId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -6187,25 +6188,25 @@ namespace GrpcMediaService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as MemberId);
+      return Equals(other as MemberIdRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(MemberId other) {
+    public bool Equals(MemberIdRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MemberId_ != other.MemberId_) return false;
+      if (MemberId != other.MemberId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (MemberId_.Length != 0) hash ^= MemberId_.GetHashCode();
+      if (MemberId.Length != 0) hash ^= MemberId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6219,9 +6220,9 @@ namespace GrpcMediaService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (MemberId_.Length != 0) {
+      if (MemberId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(MemberId_);
+        output.WriteString(MemberId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -6231,8 +6232,8 @@ namespace GrpcMediaService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (MemberId_.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(MemberId_);
+      if (MemberId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MemberId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6241,12 +6242,12 @@ namespace GrpcMediaService {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(MemberId other) {
+    public void MergeFrom(MemberIdRequest other) {
       if (other == null) {
         return;
       }
-      if (other.MemberId_.Length != 0) {
-        MemberId_ = other.MemberId_;
+      if (other.MemberId.Length != 0) {
+        MemberId = other.MemberId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6260,7 +6261,7 @@ namespace GrpcMediaService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            MemberId_ = input.ReadString();
+            MemberId = input.ReadString();
             break;
           }
         }

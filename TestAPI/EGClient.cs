@@ -210,13 +210,13 @@ namespace TestAPI
         }
 
 
-        public static ModifyReply deleteHotelInfoById(HotelId idRequest)
+        public static ModifyReply deleteHotelInfoById(HotelIdRequest idRequest)
         {
             return _client.deleteHotelInfoById(idRequest);
         }
 
 
-        public static HotelStruct getHotelById(HotelId idRequest)
+        public static HotelStruct getHotelById(HotelIdRequest idRequest)
         {
             return _client.getHotelById(idRequest);
         }
@@ -243,19 +243,19 @@ namespace TestAPI
         }
 
 
-        public static ModifyReply deleteHotelRoomTypeById(HotelRoomTypeId hotelRoomTypeId)
+        public static ModifyReply deleteHotelRoomTypeById(HotelRoomTypeIdRequest hotelRoomTypeId)
         {
             return _client.deleteHotelRoomTypeById(hotelRoomTypeId);
         }
 
 
-        public static HotelRoomTypeStruct getHotelRoomTypeInfoById(HotelRoomTypeId hotelRoomTypeId)
+        public static HotelRoomTypeStruct getHotelRoomTypeInfoById(HotelRoomTypeIdRequest hotelRoomTypeId)
         {
             return _client.getHotelRoomTypeInfoById(hotelRoomTypeId);
         }
 
 
-        public static HotelRoomTypeList getHolteRoomTypeListByHotelId(HotelId hotelId)
+        public static HotelRoomTypeList getHolteRoomTypeListByHotelId(HotelIdRequest hotelId)
         {
             return _client.getHolteRoomTypeListByHotelId(hotelId);
         }
@@ -282,7 +282,7 @@ namespace TestAPI
         }
 
 
-        public static HotelBookRecordList getHotelBookRecordByMemberId(MemberId memberId)
+        public static HotelBookRecordList getHotelBookRecordByMemberId(MemberIdRequest memberId)
         {
             return _client.getHotelBookRecordByMemberId(memberId);
         }
