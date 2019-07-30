@@ -334,7 +334,7 @@ namespace TestAPI.Controllers
         [HttpPost]
         public IActionResult getHolteRoomTypeListByHotelId(HotelIdRequest hotelId)
         {
-            var result = EGClient.getHolteRoomTypeListByHotelId(hotelId);
+            var result = EGClient.getHotelRoomTypeListByHotelId(hotelId);
             return Ok(result);
         }
 

@@ -255,9 +255,9 @@ namespace TestAPI
         }
 
 
-        public static HotelRoomTypeList getHolteRoomTypeListByHotelId(HotelIdRequest hotelId)
+        public static HotelRoomTypeList getHotelRoomTypeListByHotelId(HotelIdRequest hotelId)
         {
-            return _client.getHolteRoomTypeListByHotelId(hotelId);
+            return _client.getHotelRoomTypeListByHotelId(hotelId);
         }
 
         #endregion

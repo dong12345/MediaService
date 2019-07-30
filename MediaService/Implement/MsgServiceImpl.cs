@@ -692,7 +692,7 @@ namespace MediaService.Implement
             }
         }
 
-        public override async Task<HotelRoomTypeList> getHolteRoomTypeListByHotelId(HotelIdRequest request, ServerCallContext context)
+        public override async Task<HotelRoomTypeList> getHotelRoomTypeListByHotelId(HotelIdRequest request, ServerCallContext context)
         {
             try
             {
