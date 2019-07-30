@@ -146,7 +146,7 @@ service MediaServiceToGrpc{
   rpc getHotelRoomTypeInfoById(HotelRoomTypeIdRequest) returns(HotelRoomTypeStruct){}
 
   //根据HotelId获得酒店房间集合
-  rpc getHolteRoomTypeListByHotelId(HotelIdRequest) returns(HotelRoomTypeList){}
+  rpc getHotelRoomTypeListByHotelId(HotelIdRequest) returns(HotelRoomTypeList){}
 
   //================酒店房间类型=========================
 

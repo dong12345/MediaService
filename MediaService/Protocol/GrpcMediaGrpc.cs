@@ -281,10 +281,10 @@ namespace GrpcMediaService {
         __Marshaller_HotelRoomTypeIdRequest,
         __Marshaller_HotelRoomTypeStruct);
 
-    static readonly grpc::Method<global::GrpcMediaService.HotelIdRequest, global::GrpcMediaService.HotelRoomTypeList> __Method_getHolteRoomTypeListByHotelId = new grpc::Method<global::GrpcMediaService.HotelIdRequest, global::GrpcMediaService.HotelRoomTypeList>(
+    static readonly grpc::Method<global::GrpcMediaService.HotelIdRequest, global::GrpcMediaService.HotelRoomTypeList> __Method_getHotelRoomTypeListByHotelId = new grpc::Method<global::GrpcMediaService.HotelIdRequest, global::GrpcMediaService.HotelRoomTypeList>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "getHolteRoomTypeListByHotelId",
+        "getHotelRoomTypeListByHotelId",
         __Marshaller_HotelIdRequest,
         __Marshaller_HotelRoomTypeList);
 
@@ -739,7 +739,7 @@ namespace GrpcMediaService {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.HotelRoomTypeList> getHolteRoomTypeListByHotelId(global::GrpcMediaService.HotelIdRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.HotelRoomTypeList> getHotelRoomTypeListByHotelId(global::GrpcMediaService.HotelIdRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2402,9 +2402,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.HotelRoomTypeList getHolteRoomTypeListByHotelId(global::GrpcMediaService.HotelIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.HotelRoomTypeList getHotelRoomTypeListByHotelId(global::GrpcMediaService.HotelIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return getHolteRoomTypeListByHotelId(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getHotelRoomTypeListByHotelId(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据HotelId获得酒店房间集合
@@ -2412,9 +2412,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.HotelRoomTypeList getHolteRoomTypeListByHotelId(global::GrpcMediaService.HotelIdRequest request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.HotelRoomTypeList getHotelRoomTypeListByHotelId(global::GrpcMediaService.HotelIdRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_getHolteRoomTypeListByHotelId, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_getHotelRoomTypeListByHotelId, null, options, request);
       }
       /// <summary>
       ///根据HotelId获得酒店房间集合
@@ -2424,9 +2424,9 @@ namespace GrpcMediaService {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.HotelRoomTypeList> getHolteRoomTypeListByHotelIdAsync(global::GrpcMediaService.HotelIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.HotelRoomTypeList> getHotelRoomTypeListByHotelIdAsync(global::GrpcMediaService.HotelIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return getHolteRoomTypeListByHotelIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getHotelRoomTypeListByHotelIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///根据HotelId获得酒店房间集合
@@ -2434,9 +2434,9 @@ namespace GrpcMediaService {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.HotelRoomTypeList> getHolteRoomTypeListByHotelIdAsync(global::GrpcMediaService.HotelIdRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.HotelRoomTypeList> getHotelRoomTypeListByHotelIdAsync(global::GrpcMediaService.HotelIdRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_getHolteRoomTypeListByHotelId, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_getHotelRoomTypeListByHotelId, null, options, request);
       }
       /// <summary>
       ///创建酒店预订信息
@@ -2793,7 +2793,7 @@ namespace GrpcMediaService {
           .AddMethod(__Method_updateHotelRoomTypeInfo, serviceImpl.updateHotelRoomTypeInfo)
           .AddMethod(__Method_deleteHotelRoomTypeById, serviceImpl.deleteHotelRoomTypeById)
           .AddMethod(__Method_getHotelRoomTypeInfoById, serviceImpl.getHotelRoomTypeInfoById)
-          .AddMethod(__Method_getHolteRoomTypeListByHotelId, serviceImpl.getHolteRoomTypeListByHotelId)
+          .AddMethod(__Method_getHotelRoomTypeListByHotelId, serviceImpl.getHotelRoomTypeListByHotelId)
           .AddMethod(__Method_createHotelBookRecordInfo, serviceImpl.createHotelBookRecordInfo)
           .AddMethod(__Method_updateHotelBookRecordInfo, serviceImpl.updateHotelBookRecordInfo)
           .AddMethod(__Method_deleteHotelBookRecordInfoById, serviceImpl.deleteHotelBookRecordInfoById)
