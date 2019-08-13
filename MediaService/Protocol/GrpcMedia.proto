@@ -28,6 +28,12 @@ service MediaServiceToGrpc{
   //根据条件查询会刊信息列表(带分页)
   rpc getFormPublicList(PaginationRequestSearch) returns (FormPublicList) {}
 
+  //根据展商合同Id获得会刊信息
+  rpc getFormPublicInfoByExbContractId(ExbContractIdRequest) returns(FormPublicStruct){}
+
+  //根据展商合同Id判断新增或修改会刊信息
+  rpc operateFormPublicInfoByExbContractId(FormPublicStruct) returns (ModifyReply){}
+
 
   //======================会刊===========================
 
@@ -208,8 +214,12 @@ message FormPublicStruct{
 	//是否有logo
 	bool isHaveLogo=23;
 	string contractNumber=24;
-	string ExbContractId=25;
+	string exbContractId=25;
 
+}
+
+message ExbContractIdRequest{
+	string exbContractId=1;
 }
 
 message FormPublicList {

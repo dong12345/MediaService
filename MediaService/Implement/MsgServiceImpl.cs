@@ -145,6 +145,39 @@ namespace MediaService.Implement
                 throw ex;
             }
         }
+
+        public override async Task<FormPublicStruct> getFormPublicInfoByExbContractId(ExbContractIdRequest request, ServerCallContext context)
+        {
+            try
+            {
+                var model = await _service.GetFormPublicInfoByExbContractId(request.ExbContractId);
+                var result = Mapper.Map<FormPublic, FormPublicStruct>(model);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
+
+        public override async Task<ModifyReply> operateFormPublicInfoByExbContractId(FormPublicStruct request, ServerCallContext context)
+        {
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                var model = Mapper.Map<FormPublicStruct, FormPublic>(request);
+                var result = await _service.OperateFormPublicInfoByExbContractId(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
+        }
+
         #endregion
 
         #region Express(快递单)

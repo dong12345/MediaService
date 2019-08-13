@@ -18,6 +18,7 @@ namespace GrpcMediaService {
     static readonly grpc::Marshaller<global::GrpcMediaService.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.Empty.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.FormPublicList> __Marshaller_FormPublicList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.FormPublicList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.PaginationRequestSearch> __Marshaller_PaginationRequestSearch = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.PaginationRequestSearch.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::GrpcMediaService.ExbContractIdRequest> __Marshaller_ExbContractIdRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExbContractIdRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExpressStruct> __Marshaller_ExpressStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExpressStruct.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExpressList> __Marshaller_ExpressList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExpressList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.CatalogueBooksStruct> __Marshaller_CatalogueBooksStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.CatalogueBooksStruct.Parser.ParseFrom);
@@ -77,6 +78,20 @@ namespace GrpcMediaService {
         "getFormPublicList",
         __Marshaller_PaginationRequestSearch,
         __Marshaller_FormPublicList);
+
+    static readonly grpc::Method<global::GrpcMediaService.ExbContractIdRequest, global::GrpcMediaService.FormPublicStruct> __Method_getFormPublicInfoByExbContractId = new grpc::Method<global::GrpcMediaService.ExbContractIdRequest, global::GrpcMediaService.FormPublicStruct>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "getFormPublicInfoByExbContractId",
+        __Marshaller_ExbContractIdRequest,
+        __Marshaller_FormPublicStruct);
+
+    static readonly grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply> __Method_operateFormPublicInfoByExbContractId = new grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "operateFormPublicInfoByExbContractId",
+        __Marshaller_FormPublicStruct,
+        __Marshaller_ModifyReply);
 
     static readonly grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply> __Method_createExpressInfo = new grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply>(
         grpc::MethodType.Unary,
@@ -408,6 +423,28 @@ namespace GrpcMediaService {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.FormPublicList> getFormPublicList(global::GrpcMediaService.PaginationRequestSearch request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///根据展商合同Id获得会刊信息
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.FormPublicStruct> getFormPublicInfoByExbContractId(global::GrpcMediaService.ExbContractIdRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///根据展商合同Id判断新增或修改会刊信息
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> operateFormPublicInfoByExbContractId(global::GrpcMediaService.FormPublicStruct request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1109,6 +1146,94 @@ namespace GrpcMediaService {
       public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicList> getFormPublicListAsync(global::GrpcMediaService.PaginationRequestSearch request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_getFormPublicList, null, options, request);
+      }
+      /// <summary>
+      ///根据展商合同Id获得会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.FormPublicStruct getFormPublicInfoByExbContractId(global::GrpcMediaService.ExbContractIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getFormPublicInfoByExbContractId(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据展商合同Id获得会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.FormPublicStruct getFormPublicInfoByExbContractId(global::GrpcMediaService.ExbContractIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_getFormPublicInfoByExbContractId, null, options, request);
+      }
+      /// <summary>
+      ///根据展商合同Id获得会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicStruct> getFormPublicInfoByExbContractIdAsync(global::GrpcMediaService.ExbContractIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getFormPublicInfoByExbContractIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据展商合同Id获得会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicStruct> getFormPublicInfoByExbContractIdAsync(global::GrpcMediaService.ExbContractIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_getFormPublicInfoByExbContractId, null, options, request);
+      }
+      /// <summary>
+      ///根据展商合同Id判断新增或修改会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.ModifyReply operateFormPublicInfoByExbContractId(global::GrpcMediaService.FormPublicStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return operateFormPublicInfoByExbContractId(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据展商合同Id判断新增或修改会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.ModifyReply operateFormPublicInfoByExbContractId(global::GrpcMediaService.FormPublicStruct request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_operateFormPublicInfoByExbContractId, null, options, request);
+      }
+      /// <summary>
+      ///根据展商合同Id判断新增或修改会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> operateFormPublicInfoByExbContractIdAsync(global::GrpcMediaService.FormPublicStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return operateFormPublicInfoByExbContractIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据展商合同Id判断新增或修改会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> operateFormPublicInfoByExbContractIdAsync(global::GrpcMediaService.FormPublicStruct request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_operateFormPublicInfoByExbContractId, null, options, request);
       }
       /// <summary>
       ///创建快递单记录
@@ -2764,6 +2889,8 @@ namespace GrpcMediaService {
           .AddMethod(__Method_getFormPublicInfoList, serviceImpl.getFormPublicInfoList)
           .AddMethod(__Method_getFormPublicInfoById, serviceImpl.getFormPublicInfoById)
           .AddMethod(__Method_getFormPublicList, serviceImpl.getFormPublicList)
+          .AddMethod(__Method_getFormPublicInfoByExbContractId, serviceImpl.getFormPublicInfoByExbContractId)
+          .AddMethod(__Method_operateFormPublicInfoByExbContractId, serviceImpl.operateFormPublicInfoByExbContractId)
           .AddMethod(__Method_createExpressInfo, serviceImpl.createExpressInfo)
           .AddMethod(__Method_updateExpressInfo, serviceImpl.updateExpressInfo)
           .AddMethod(__Method_deleteExpressInfoById, serviceImpl.deleteExpressInfoById)

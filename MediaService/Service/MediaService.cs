@@ -298,6 +298,100 @@ namespace MediaService.Service
         }
 
         /// <summary>
+        /// 根据展商合同Id获得会刊信息
+        /// </summary>
+        /// <param name="exbContractId"></param>
+        /// <returns></returns>
+        public async Task<FormPublic> GetFormPublicInfoByExbContractId(string exbContractId)
+        {
+            try
+            {
+                using (_context = new MyContext(_options.Options))
+                {
+                    var item = await _context.FormPublic
+                            .FirstOrDefaultAsync(x => x.ExbContractId == exbContractId);
+                    return item;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+        }
+
+        /// <summary>
+        /// 根据展商合同Id判断新增或修改会刊信息
+        /// </summary>
+        /// <param name="formPublic"></param>
+        /// <returns></returns>
+        public async Task<ModifyReplyModel> OperateFormPublicInfoByExbContractId(FormPublic formPublic)
+        {
+            try
+            {
+                using (_context = new MyContext(_options.Options))
+                {
+                    var contactId = formPublic.ExbContractId;
+                    //根据展商合同Id查询对应会刊是否存在;若存在,修改;否则,新增;
+                    var model = await GetFormPublicInfoByExbContractId(contactId);
+                    if (model != null)
+                    {
+                        //修改
+                        #region 修改
+                        model.Address = formPublic.Address;
+                        model.AddressEn = formPublic.AddressEn;
+                        model.BoothNumber = formPublic.BoothNumber;
+                        model.CompanyId = formPublic.CompanyId;
+                        model.CompanyNameCn = formPublic.CompanyNameCn;
+                        model.CompanyNameEn = formPublic.CompanyNameEn;
+                        model.Description = formPublic.Description;
+                        model.DescriptionEn = formPublic.DescriptionEn;
+                        model.Email = formPublic.Email;
+                        model.Fax = formPublic.Fax;
+                        model.IsHaveLogo = formPublic.IsHaveLogo;
+                        model.IsPay = formPublic.IsPay;
+                        model.Option = formPublic.Option;
+                        model.Logo = formPublic.Logo;
+                        model.OwnerId = formPublic.OwnerId;
+                        model.OwnerName = formPublic.OwnerName;
+                        model.PavilionNumber = formPublic.PavilionNumber;
+                        model.SnecLogoWebsite = formPublic.SnecLogoWebsite;
+                        model.Telephone = formPublic.Telephone;
+                        model.Website = formPublic.Website;
+                        #endregion
+                        count = await _context.SaveChangesAsync();
+                        isSuccess = true;
+                        msg = "修改成功";
+                      
+                    }
+                    else
+                    {
+                        //新增
+                        await _context.FormPublic.AddAsync(formPublic);
+                        count = await _context.SaveChangesAsync();
+                        if (count > 0)
+                        {
+                            msg = "创建成功";
+                            isSuccess = true;
+                        }
+                        else
+                        {
+                            msg = "创建失败";
+                            isSuccess = false;
+                        }
+
+                    }
+                    return GetModifyReply(isSuccess, msg, count);
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+        }
+
+        /// <summary>
         /// 根据Id获取会刊信息(内部调用)
         /// </summary>
         /// <param name="id"></param>
