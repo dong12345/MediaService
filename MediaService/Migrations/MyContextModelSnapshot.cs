@@ -118,6 +118,8 @@ namespace MediaService.Migrations
 
                     b.Property<string>("Email");
 
+                    b.Property<string>("ExbContractId");
+
                     b.Property<string>("Fax");
 
                     b.Property<bool>("IsHaveLogo");

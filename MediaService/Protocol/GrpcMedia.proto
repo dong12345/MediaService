@@ -208,6 +208,7 @@ message FormPublicStruct{
 	//是否有logo
 	bool isHaveLogo=23;
 	string contractNumber=24;
+	string ExbContractId=25;
 
 }
 

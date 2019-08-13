@@ -52,5 +52,7 @@ namespace MediaService.DBModel
         public bool IsHaveLogo { get; set; }
 
         public string ContractNumber { get; set; }
+
+        public string ExbContractId { get; set; }
     }
 }
