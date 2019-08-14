@@ -119,6 +119,7 @@ service MediaServiceToGrpc{
 
 
   //========================酒店=========================
+
   //创建酒店信息
   rpc createHotelInfo(HotelStruct) returns(ModifyReply){}
 
@@ -139,6 +140,7 @@ service MediaServiceToGrpc{
 
 
   //================酒店房间类型=========================
+
   //创建酒店房间类型
   rpc createHotelRoomTypeInfo(HotelRoomTypeStruct) returns(ModifyReply){}
 
@@ -278,6 +280,7 @@ message ExpressList{
 
 
 //====================web页面会刊订购信息表============
+
 message CatalogueBooksStruct{
   string id=1;
   string name=2;
@@ -303,6 +306,7 @@ message CatalogueBooksList {
 
 
 //====================专题采访=========================
+
 message InterviewStruct{
   string id=1;
   string name=2;
@@ -330,6 +334,7 @@ message InterviewList{
 //====================专题采访=========================
 
 //================十大亮点申请=========================
+
 message HighlightsInfoStruct{
   string Id=1;
   //亮点中文名
@@ -372,6 +377,7 @@ message HighlightsInfoList {
 
 
 //========================酒店=========================
+
  message HotelIdRequest{
    string hotelId=1;
  }
@@ -408,6 +414,7 @@ message HighlightsInfoList {
 
 
  //================酒店房间类型=========================
+
  message HotelRoomTypeIdRequest{
    string hotelRoomTypeId=1;
  }

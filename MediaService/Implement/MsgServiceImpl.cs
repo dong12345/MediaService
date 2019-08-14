@@ -151,7 +151,16 @@ namespace MediaService.Implement
             try
             {
                 var model = await _service.GetFormPublicInfoByExbContractId(request.ExbContractId);
-                var result = Mapper.Map<FormPublic, FormPublicStruct>(model);
+                FormPublicStruct result = null;
+                if (model != null)
+                {
+                    result = Mapper.Map<FormPublic, FormPublicStruct>(model);
+                }
+                else
+                {
+                    result = new FormPublicStruct();
+                }
+               
                 return result;
             }
             catch (Exception ex)
