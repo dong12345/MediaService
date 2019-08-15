@@ -154,6 +154,24 @@ namespace TestAPI.Controllers
             var result = EGClient.getCatalogueBooksById(idRequest);
             return Ok(result);
         }
+
+
+        [Route("getFormPublicInfoByExbContractId")]
+        [HttpPost]
+        public IActionResult getFormPublicInfoByExbContractId(ExbContractIdRequest idRequest)
+        {
+            var result = EGClient.getFormPublicInfoByExbContractId(idRequest);
+            return Ok(result);
+        }
+
+
+        [Route("operateFormPublicInfoByExbContractId")]
+        [HttpPost]
+        public IActionResult operateFormPublicInfoByExbContractId(FormPublicStruct formPublicStruct)
+        {
+            var result = EGClient.operateFormPublicInfoByExbContractId(formPublicStruct);
+            return Ok(result);
+        }
         #endregion
 
 

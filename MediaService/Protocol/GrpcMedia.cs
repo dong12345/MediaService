@@ -2341,9 +2341,6 @@ namespace GrpcMediaService {
 
   }
 
-  /// <summary>
-  ///====================web页面会刊订购信息表============
-  /// </summary>
   public sealed partial class CatalogueBooksStruct : pb::IMessage<CatalogueBooksStruct> {
     private static readonly pb::MessageParser<CatalogueBooksStruct> _parser = new pb::MessageParser<CatalogueBooksStruct>(() => new CatalogueBooksStruct());
     private pb::UnknownFieldSet _unknownFields;
@@ -2911,9 +2908,6 @@ namespace GrpcMediaService {
 
   }
 
-  /// <summary>
-  ///====================专题采访=========================
-  /// </summary>
   public sealed partial class InterviewStruct : pb::IMessage<InterviewStruct> {
     private static readonly pb::MessageParser<InterviewStruct> _parser = new pb::MessageParser<InterviewStruct>(() => new InterviewStruct());
     private pb::UnknownFieldSet _unknownFields;
@@ -3615,9 +3609,6 @@ namespace GrpcMediaService {
 
   }
 
-  /// <summary>
-  ///================十大亮点申请=========================
-  /// </summary>
   public sealed partial class HighlightsInfoStruct : pb::IMessage<HighlightsInfoStruct> {
     private static readonly pb::MessageParser<HighlightsInfoStruct> _parser = new pb::MessageParser<HighlightsInfoStruct>(() => new HighlightsInfoStruct());
     private pb::UnknownFieldSet _unknownFields;
@@ -4586,9 +4577,6 @@ namespace GrpcMediaService {
 
   }
 
-  /// <summary>
-  ///========================酒店=========================
-  /// </summary>
   public sealed partial class HotelIdRequest : pb::IMessage<HotelIdRequest> {
     private static readonly pb::MessageParser<HotelIdRequest> _parser = new pb::MessageParser<HotelIdRequest>(() => new HotelIdRequest());
     private pb::UnknownFieldSet _unknownFields;
@@ -5531,9 +5519,6 @@ namespace GrpcMediaService {
 
   }
 
-  /// <summary>
-  ///================酒店房间类型=========================
-  /// </summary>
   public sealed partial class HotelRoomTypeIdRequest : pb::IMessage<HotelRoomTypeIdRequest> {
     private static readonly pb::MessageParser<HotelRoomTypeIdRequest> _parser = new pb::MessageParser<HotelRoomTypeIdRequest>(() => new HotelRoomTypeIdRequest());
     private pb::UnknownFieldSet _unknownFields;

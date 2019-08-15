@@ -3,7 +3,7 @@
 package GrpcMediaService;
 //Version_MediaServiceToGrpc_0.1
 // tag<gRPC>
-// host<media.api>
+// host<mediaservice.api>
 // port<40001> 
 
 service MediaServiceToGrpc{

@@ -51,6 +51,18 @@ namespace TestAPI
         {
             return _client.getFormPublicList(search);
         }
+
+
+        public static FormPublicStruct getFormPublicInfoByExbContractId(ExbContractIdRequest exbContractIdRequest)
+        {
+            return _client.getFormPublicInfoByExbContractId(exbContractIdRequest);
+        }
+
+        public static ModifyReply operateFormPublicInfoByExbContractId(FormPublicStruct formPublicStruct)
+        {
+            return _client.operateFormPublicInfoByExbContractId(formPublicStruct);
+        }
+
         #endregion
 
 

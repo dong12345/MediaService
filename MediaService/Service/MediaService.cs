@@ -306,10 +306,10 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     var item = await _context.FormPublic
-                            .FirstOrDefaultAsync(x => x.ExbContractId == exbContractId);
+                            .FirstOrDefaultAsync(x => x.ExbContractId==exbContractId);
                     return item;
                 }
             }
@@ -331,9 +331,10 @@ namespace MediaService.Service
             {
                 using (_context = new MyContext(_options.Options))
                 {
-                    var contactId = formPublic.ExbContractId;
+                    var contractId = formPublic.ExbContractId;
                     //根据展商合同Id查询对应会刊是否存在;若存在,修改;否则,新增;
-                    var model = await GetFormPublicInfoByExbContractId(contactId);
+                    //var model = await GetFormPublicInfoByExbContractId(contactId);
+                    var model = GetFormPublicInfoByContractIdInside(contractId);
                     if (model != null)
                     {
                         //修改
@@ -412,6 +413,28 @@ namespace MediaService.Service
             }
 
         }
+
+        /// <summary>
+        /// 根据合同Id获取会刊信息(内部调用)
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public FormPublic GetFormPublicInfoByContractIdInside(string contractId)
+        {
+            try
+            {
+                var item = _context.FormPublic
+                    .FirstOrDefault(x => x.ExbContractId==contractId);
+                return item;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+
+        }
+
 
 
         #endregion

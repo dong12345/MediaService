@@ -670,7 +670,6 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
-      ///========================酒店=========================
       ///创建酒店信息
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -726,7 +725,6 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
-      ///================酒店房间类型=========================
       ///创建酒店房间类型
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -2116,7 +2114,6 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_getHighlightsInfoList, null, options, request);
       }
       /// <summary>
-      ///========================酒店=========================
       ///创建酒店信息
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2129,7 +2126,6 @@ namespace GrpcMediaService {
         return createHotelInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///========================酒店=========================
       ///创建酒店信息
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2140,7 +2136,6 @@ namespace GrpcMediaService {
         return CallInvoker.BlockingUnaryCall(__Method_createHotelInfo, null, options, request);
       }
       /// <summary>
-      ///========================酒店=========================
       ///创建酒店信息
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2153,7 +2148,6 @@ namespace GrpcMediaService {
         return createHotelInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///========================酒店=========================
       ///创建酒店信息
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2340,7 +2334,6 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_getHotelList, null, options, request);
       }
       /// <summary>
-      ///================酒店房间类型=========================
       ///创建酒店房间类型
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2353,7 +2346,6 @@ namespace GrpcMediaService {
         return createHotelRoomTypeInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///================酒店房间类型=========================
       ///创建酒店房间类型
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2364,7 +2356,6 @@ namespace GrpcMediaService {
         return CallInvoker.BlockingUnaryCall(__Method_createHotelRoomTypeInfo, null, options, request);
       }
       /// <summary>
-      ///================酒店房间类型=========================
       ///创建酒店房间类型
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2377,7 +2368,6 @@ namespace GrpcMediaService {
         return createHotelRoomTypeInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///================酒店房间类型=========================
       ///创建酒店房间类型
       /// </summary>
       /// <param name="request">The request to send to the server.</param>

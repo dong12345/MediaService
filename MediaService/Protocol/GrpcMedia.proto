@@ -34,7 +34,6 @@ service MediaServiceToGrpc{
   //根据展商合同Id判断新增或修改会刊信息
   rpc operateFormPublicInfoByExbContractId(FormPublicStruct) returns (ModifyReply){}
 
-
   //======================会刊===========================
 
 
@@ -180,10 +179,9 @@ service MediaServiceToGrpc{
 
   //根据条件查询酒店预订记录列表(带分页)
   rpc getHotelBookRecordList (PaginationRequestSearch) returns (HotelBookRecordList) {}
+
   //================酒店预定记录=========================
 }
-
-//======================会刊===========================
 
 message FormPublicStruct{
 	string id=1;
@@ -217,7 +215,6 @@ message FormPublicStruct{
 	bool isHaveLogo=23;
 	string contractNumber=24;
 	string exbContractId=25;
-
 }
 
 message ExbContractIdRequest{
@@ -235,11 +232,6 @@ message PaginationRequestSearch {
   int32 limit = 3;
   SearchStruct search = 4;
 }
-
-
-//======================会刊===========================
-
-//=======================快递单========================
 
 message ExpressStruct{
   string id=1;
@@ -276,10 +268,6 @@ message ExpressList{
   repeated ExpressStruct listdata = 1;
   int32 total = 2;
 }
-//=======================快递单========================
-
-
-//====================web页面会刊订购信息表============
 
 message CatalogueBooksStruct{
   string id=1;
@@ -302,10 +290,6 @@ message CatalogueBooksList {
   repeated CatalogueBooksStruct listdata = 1;
   int32 total = 2;
 }
-//====================web页面会刊订购信息表============
-
-
-//====================专题采访=========================
 
 message InterviewStruct{
   string id=1;
@@ -331,9 +315,6 @@ message InterviewList{
   repeated InterviewStruct listdata = 1;
   int32 total = 2;
 }
-//====================专题采访=========================
-
-//================十大亮点申请=========================
 
 message HighlightsInfoStruct{
   string Id=1;
@@ -373,10 +354,7 @@ message HighlightsInfoList {
   repeated HighlightsInfoStruct listdata = 1;
   int32 total = 2;
 }
-//================十大亮点申请=========================
 
-
-//========================酒店=========================
 
  message HotelIdRequest{
    string hotelId=1;
@@ -410,10 +388,6 @@ message HighlightsInfoList {
    repeated HotelStruct listdata = 1;
    int32 total = 2;
  }
- //========================酒店=========================
-
-
- //================酒店房间类型=========================
 
  message HotelRoomTypeIdRequest{
    string hotelRoomTypeId=1;
@@ -440,10 +414,6 @@ message HighlightsInfoList {
    repeated HotelRoomTypeStruct listdata = 1;
    int32 total = 2;
  }
-
- //================酒店房间类型=========================
-
- //================酒店预定记录=========================
 
  message MemberIdRequest{
    string memberId=1;
@@ -541,9 +511,6 @@ message HighlightsInfoList {
    repeated HotelBookRecordStruct listdata = 1;
    int32 total = 2;
  }
- //================酒店预定记录=========================
-
-//=======================通用==========================
 
 message Empty{
 
@@ -602,5 +569,5 @@ message SearchStruct{
   //会刊订购人
   string name=21;
 }
-//=======================通用==========================
+
 
