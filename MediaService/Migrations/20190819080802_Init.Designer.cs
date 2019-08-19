@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MediaService.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20190813063943_Init")]
+    [Migration("20190819080802_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -218,7 +218,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("BankInfoEn");
 
-                    b.Property<int>("Country");
+                    b.Property<string>("Country");
 
                     b.Property<DateTime>("CreatedAt");
 

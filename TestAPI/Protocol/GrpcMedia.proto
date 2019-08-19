@@ -368,7 +368,7 @@ message HighlightsInfoList {
    string HotelNameEn=4;
    string HotelAddress=5;
    string HotelAddressEn=6;
-   int32 Country=7;
+   string Country=7;
    string KeyWord=8;
    string HotelEmail=9;
    string HotelTel=10;

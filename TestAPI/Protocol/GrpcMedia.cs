@@ -83,7 +83,7 @@ namespace GrpcMediaService {
             "dGVsU3RydWN0Eg8KB0hvdGVsSWQYASABKAkSEQoJSG90ZWxDb2RlGAIgASgJ",
             "EhEKCUhvdGVsTmFtZRgDIAEoCRITCgtIb3RlbE5hbWVFbhgEIAEoCRIUCgxI",
             "b3RlbEFkZHJlc3MYBSABKAkSFgoOSG90ZWxBZGRyZXNzRW4YBiABKAkSDwoH",
-            "Q291bnRyeRgHIAEoBRIPCgdLZXlXb3JkGAggASgJEhIKCkhvdGVsRW1haWwY",
+            "Q291bnRyeRgHIAEoCRIPCgdLZXlXb3JkGAggASgJEhIKCkhvdGVsRW1haWwY",
             "CSABKAkSEAoISG90ZWxUZWwYCiABKAkSEgoKSG90ZWxMZXZlbBgLIAEoBRIZ",
             "ChFIb3RlbEludHJvZHVjdGlvbhgMIAEoCRIbChNIb3RlbEludHJvZHVjdGlv",
             "bkVuGA0gASgJEhAKCEJhbmtJbmZvGA4gASgJEhIKCkJhbmtJbmZvRW4YDyAB",
@@ -4830,12 +4830,12 @@ namespace GrpcMediaService {
 
     /// <summary>Field number for the "Country" field.</summary>
     public const int CountryFieldNumber = 7;
-    private int country_;
+    private string country_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Country {
+    public string Country {
       get { return country_; }
       set {
-        country_ = value;
+        country_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -5027,7 +5027,7 @@ namespace GrpcMediaService {
       if (HotelNameEn.Length != 0) hash ^= HotelNameEn.GetHashCode();
       if (HotelAddress.Length != 0) hash ^= HotelAddress.GetHashCode();
       if (HotelAddressEn.Length != 0) hash ^= HotelAddressEn.GetHashCode();
-      if (Country != 0) hash ^= Country.GetHashCode();
+      if (Country.Length != 0) hash ^= Country.GetHashCode();
       if (KeyWord.Length != 0) hash ^= KeyWord.GetHashCode();
       if (HotelEmail.Length != 0) hash ^= HotelEmail.GetHashCode();
       if (HotelTel.Length != 0) hash ^= HotelTel.GetHashCode();
@@ -5078,9 +5078,9 @@ namespace GrpcMediaService {
         output.WriteRawTag(50);
         output.WriteString(HotelAddressEn);
       }
-      if (Country != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(Country);
+      if (Country.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Country);
       }
       if (KeyWord.Length != 0) {
         output.WriteRawTag(66);
@@ -5160,8 +5160,8 @@ namespace GrpcMediaService {
       if (HotelAddressEn.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(HotelAddressEn);
       }
-      if (Country != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Country);
+      if (Country.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Country);
       }
       if (KeyWord.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(KeyWord);
@@ -5231,7 +5231,7 @@ namespace GrpcMediaService {
       if (other.HotelAddressEn.Length != 0) {
         HotelAddressEn = other.HotelAddressEn;
       }
-      if (other.Country != 0) {
+      if (other.Country.Length != 0) {
         Country = other.Country;
       }
       if (other.KeyWord.Length != 0) {
@@ -5308,8 +5308,8 @@ namespace GrpcMediaService {
             HotelAddressEn = input.ReadString();
             break;
           }
-          case 56: {
-            Country = input.ReadInt32();
+          case 58: {
+            Country = input.ReadString();
             break;
           }
           case 66: {

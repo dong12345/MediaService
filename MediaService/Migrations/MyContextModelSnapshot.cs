@@ -216,7 +216,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("BankInfoEn");
 
-                    b.Property<int>("Country");
+                    b.Property<string>("Country");
 
                     b.Property<DateTime>("CreatedAt");
 

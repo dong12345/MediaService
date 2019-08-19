@@ -21,7 +21,7 @@ namespace MediaService.DBModel
         public string HotelNameEn { get; set; }
         public string HotelAddress { get; set; }
         public string HotelAddressEn { get; set; }
-        public int Country { get; set; }
+        public string Country { get; set; }
         public string KeyWord { get; set; }
         public string HotelEmail { get; set; }
         public string HotelTel { get; set; }
