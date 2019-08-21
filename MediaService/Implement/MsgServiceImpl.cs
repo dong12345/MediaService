@@ -44,18 +44,18 @@ namespace MediaService.Implement
             {
                 request.Id = Guid.NewGuid().ToString();
                 request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
-                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
 
                 var model = Mapper.Map<FormPublicStruct, FormPublic>(request);
                 var result = await _service.CreateFormPublicInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
+           
         }
 
         public override async Task<ModifyReply> updateFormPublicInfo(FormPublicStruct request, ServerCallContext context)
@@ -68,13 +68,13 @@ namespace MediaService.Implement
                 var model = Mapper.Map<FormPublicStruct, FormPublic>(request);
                 var result = await _service.UpdateFormPublicInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> deleteFormPublicInfoById(IdRequest request, ServerCallContext context)
@@ -84,13 +84,13 @@ namespace MediaService.Implement
             {
                 var result = await _service.DeleteFormPublicInfoById(request.Id);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<FormPublicList> getFormPublicInfoList(Empty request, ServerCallContext context)
@@ -179,13 +179,14 @@ namespace MediaService.Implement
                 var model = Mapper.Map<FormPublicStruct, FormPublic>(request);
                 var result = await _service.OperateFormPublicInfoByExbContractId(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
+
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         #endregion
@@ -198,18 +199,18 @@ namespace MediaService.Implement
             {
                 request.Id = Guid.NewGuid().ToString();
                 request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
-                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
 
                 var model = Mapper.Map<ExpressStruct, Express>(request);
                 var result = await _service.CreateExpressInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
+
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> updateExpressInfo(ExpressStruct request, ServerCallContext context)
@@ -222,13 +223,14 @@ namespace MediaService.Implement
                 var model = Mapper.Map<ExpressStruct, Express>(request);
                 var result = await _service.UpdateExpressInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
+
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> deleteExpressInfoById(IdRequest request, ServerCallContext context)
@@ -238,13 +240,13 @@ namespace MediaService.Implement
             {
                 var result = await _service.DeleteExpressInfoById(request.Id);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ExpressStruct> getExpressInfoById(IdRequest request, ServerCallContext context)
@@ -298,13 +300,13 @@ namespace MediaService.Implement
                 var model = Mapper.Map<CatalogueBooksStruct, CatalogueBooks>(request);
                 var result = await _service.CreateCatalogueBooksInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> updateCatalogueBooksInfo(CatalogueBooksStruct request, ServerCallContext context)
@@ -317,13 +319,13 @@ namespace MediaService.Implement
                 var model = Mapper.Map<CatalogueBooksStruct, CatalogueBooks>(request);
                 var result = await _service.UpdateCatalogueBooksInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> deleteCatalogueBooksById(IdRequest request, ServerCallContext context)
@@ -333,13 +335,13 @@ namespace MediaService.Implement
             {
                 var result = await _service.DeleteCatalogueBooksById(request.Id);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<CatalogueBooksStruct> getCatalogueBooksById(IdRequest request, ServerCallContext context)
@@ -379,7 +381,6 @@ namespace MediaService.Implement
         }
         #endregion
 
-        //111111111111
 
         #region Interview(专题采访)
         public override async Task<ModifyReply> createInterviewInfo(InterviewStruct request, ServerCallContext context)
@@ -389,18 +390,17 @@ namespace MediaService.Implement
             {
                 request.Id = Guid.NewGuid().ToString();
                 request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
-                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
 
                 var model = Mapper.Map<InterviewStruct, Interview>(request);
                 var result = await _service.CreateInterviewInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> updateInterviewInfo(InterviewStruct request, ServerCallContext context)
@@ -413,13 +413,13 @@ namespace MediaService.Implement
                 var model = Mapper.Map<InterviewStruct, Interview>(request);
                 var result = await _service.UpdateInterviewInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> deleteInterviewById(IdRequest request, ServerCallContext context)
@@ -429,13 +429,14 @@ namespace MediaService.Implement
             {
                 var result = await _service.DeleteInterviewById(request.Id);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
+
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<InterviewStruct> getInterviewInfoById(IdRequest request, ServerCallContext context)
@@ -484,18 +485,17 @@ namespace MediaService.Implement
             {
                 request.Id = Guid.NewGuid().ToString();
                 request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
-                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
 
                 var model = Mapper.Map<HighlightsInfoStruct, HighlightsInfo>(request);
                 var result = await _service.CreateHighlightsInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> updateHighlightsInfo(HighlightsInfoStruct request, ServerCallContext context)
@@ -508,13 +508,13 @@ namespace MediaService.Implement
                 var model = Mapper.Map<HighlightsInfoStruct, HighlightsInfo>(request);
                 var result = await _service.UpdateHighlightsInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> deleteHighlightsInfoById(IdRequest request, ServerCallContext context)
@@ -579,18 +579,18 @@ namespace MediaService.Implement
             {
                 request.HotelId = Guid.NewGuid().ToString();
                 request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
-                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
 
                 var model = Mapper.Map<HotelStruct, Hotel>(request);
                 var result = await _service.CreateHotelInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
+           
         }
 
         public override async Task<ModifyReply> updateHotelInfo(HotelStruct request, ServerCallContext context)
@@ -603,13 +603,13 @@ namespace MediaService.Implement
                 var model = Mapper.Map<HotelStruct, Hotel>(request);
                 var result = await _service.UpdateHotelInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> deleteHotelInfoById(HotelIdRequest request, ServerCallContext context)
@@ -619,13 +619,13 @@ namespace MediaService.Implement
             {
                 var result = await _service.DeleteHotelInfoById(request.HotelId);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<HotelStruct> getHotelById(HotelIdRequest request, ServerCallContext context)
@@ -671,18 +671,17 @@ namespace MediaService.Implement
             {
                 request.HotelRoomTypeId = Guid.NewGuid().ToString();
                 request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
-                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
 
                 var model = Mapper.Map<HotelRoomTypeStruct, HotelRoomType>(request);
                 var result = await _service.CreateHotelRoomTypeInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> updateHotelRoomTypeInfo(HotelRoomTypeStruct request, ServerCallContext context)
@@ -695,13 +694,13 @@ namespace MediaService.Implement
                 var model = Mapper.Map<HotelRoomTypeStruct, HotelRoomType>(request);
                 var result = await _service.UpdateHotelRoomTypeInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> deleteHotelRoomTypeById(HotelRoomTypeIdRequest request, ServerCallContext context)
@@ -711,13 +710,14 @@ namespace MediaService.Implement
             {
                 var result = await _service.DeleteHotelRoomTypeById(request.HotelRoomTypeId);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
+
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<HotelRoomTypeStruct> getHotelRoomTypeInfoById(HotelRoomTypeIdRequest request, ServerCallContext context)
@@ -763,18 +763,17 @@ namespace MediaService.Implement
             {
                 request.Id = Guid.NewGuid().ToString();
                 request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
-                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
 
                 var model = Mapper.Map<HotelBookRecordStruct, HotelBookRecord>(request);
                 var result = await _service.CreateHotelBookRecordInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> updateHotelBookRecordInfo(HotelBookRecordStruct request, ServerCallContext context)
@@ -787,13 +786,14 @@ namespace MediaService.Implement
                 var model = Mapper.Map<HotelBookRecordStruct, HotelBookRecord>(request);
                 var result = await _service.UpdateHotelBookRecordInfo(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
+
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-            return modifyReply;
         }
 
         public override async Task<ModifyReply> deleteHotelBookRecordInfoById(IdRequest request, ServerCallContext context)
@@ -882,11 +882,5 @@ namespace MediaService.Implement
             }
         }
         #endregion
-
-
-
-
-
-
     }
 }

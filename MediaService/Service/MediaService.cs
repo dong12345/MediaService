@@ -11,7 +11,6 @@ namespace MediaService.Service
 {
     public class MediaServices
     {
-        private MyContext _context;
         private DbContextOptionsBuilder<MyContext> _options;
         private int count = 0;
         private string msg = string.Empty;
@@ -34,7 +33,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     await _context.FormPublic.AddAsync(formPublic);
                     count = await _context.SaveChangesAsync();
@@ -68,10 +67,9 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    string idString = formPublic.Id.ToString();
-                    var modified_model = GetFormPublicInfoByIdInside(idString);
+                    var modified_model = await _context.FormPublic.FirstOrDefaultAsync(x => x.Id == formPublic.Id);
                     if (modified_model == null)
                     {
                         msg = "当前实例不存在";
@@ -125,9 +123,10 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    var model = GetFormPublicInfoByIdInside(id);
+                    var gid = new Guid(id);
+                    var model = await _context.FormPublic.FirstOrDefaultAsync(x => x.Id == gid);
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
@@ -168,7 +167,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     var list = await _context.FormPublic.ToListAsync();
                     return list;
@@ -190,7 +189,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     Guid gid = new Guid(id);
                     var item = await _context.FormPublic
@@ -216,7 +215,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
 
                     if (searchModel == null)
@@ -309,7 +308,7 @@ namespace MediaService.Service
                 using (var _context = new MyContext(_options.Options))
                 {
                     var item = await _context.FormPublic
-                            .FirstOrDefaultAsync(x => x.ExbContractId==exbContractId);
+                            .FirstOrDefaultAsync(x => x.ExbContractId == exbContractId);
                     return item;
                 }
             }
@@ -329,12 +328,11 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     var contractId = formPublic.ExbContractId;
                     //根据展商合同Id查询对应会刊是否存在;若存在,修改;否则,新增;
-                    //var model = await GetFormPublicInfoByExbContractId(contactId);
-                    var model = GetFormPublicInfoByContractIdInside(contractId);
+                    var model = await _context.FormPublic.FirstOrDefaultAsync(x => x.ExbContractId == formPublic.ExbContractId);
                     if (model != null)
                     {
                         //修改
@@ -363,7 +361,7 @@ namespace MediaService.Service
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
                         msg = "修改成功";
-                      
+
                     }
                     else
                     {
@@ -392,51 +390,6 @@ namespace MediaService.Service
             }
         }
 
-        /// <summary>
-        /// 根据Id获取会刊信息(内部调用)
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public FormPublic GetFormPublicInfoByIdInside(string id)
-        {
-            try
-            {
-                Guid gid = new Guid(id);
-                var item = _context.FormPublic
-                    .FirstOrDefault(x => x.Id == gid);
-                return item;
-            }
-            catch (Exception ex)
-            {
-                LogHelper.Error(this, ex);
-                throw new Exception("异常", ex);
-            }
-
-        }
-
-        /// <summary>
-        /// 根据合同Id获取会刊信息(内部调用)
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public FormPublic GetFormPublicInfoByContractIdInside(string contractId)
-        {
-            try
-            {
-                var item = _context.FormPublic
-                    .FirstOrDefault(x => x.ExbContractId==contractId);
-                return item;
-            }
-            catch (Exception ex)
-            {
-                LogHelper.Error(this, ex);
-                throw new Exception("异常", ex);
-            }
-
-        }
-
-
-
         #endregion
 
         #region Express(快递单)
@@ -450,7 +403,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     await _context.Express.AddAsync(express);
                     count = await _context.SaveChangesAsync();
@@ -483,10 +436,9 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    string idString = express.Id.ToString();
-                    var model = GetExpressInfoByIdInside(idString);
+                    var model = await _context.Express.FirstOrDefaultAsync(x => x.Id == express.Id);
                     if (model == null)
                     {
                         msg = "当前实例不存在";
@@ -522,27 +474,6 @@ namespace MediaService.Service
             }
         }
 
-        /// <summary>
-        /// 根据Id获取快递单信息(内部调用)
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public Express GetExpressInfoByIdInside(string id)
-        {
-            try
-            {
-                Guid gid = new Guid(id);
-                var item = _context.Express
-                    .FirstOrDefault(x => x.Id == gid);
-                return item;
-            }
-            catch (Exception ex)
-            {
-                LogHelper.Error(this, ex);
-                throw new Exception("异常", ex);
-            }
-
-        }
 
         /// <summary>
         /// 根据Id删除快递单记录
@@ -553,9 +484,10 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    var model = GetExpressInfoByIdInside(id);
+                    var gid = new Guid(id);
+                    var model = await _context.Express.FirstOrDefaultAsync(x => x.Id == gid);
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
@@ -596,7 +528,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     Guid gid = new Guid(id);
                     var item = await _context.Express
@@ -622,7 +554,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     if (searchModel == null)
                     {
@@ -712,7 +644,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     await _context.CatalogueBooks.AddAsync(cb);
                     count = await _context.SaveChangesAsync();
@@ -745,10 +677,9 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    string idString = cb.Id.ToString();
-                    var model = GetCatalogueBooksIdInside(idString);
+                    var model = await _context.CatalogueBooks.FirstOrDefaultAsync(x => x.Id == cb.Id);
                     if (model == null)
                     {
                         msg = "当前实例不存在";
@@ -780,29 +711,6 @@ namespace MediaService.Service
             }
         }
 
-
-        /// <summary>
-        /// 根据Id获取会刊订购信息(内部调用)
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public CatalogueBooks GetCatalogueBooksIdInside(string id)
-        {
-            try
-            {
-                Guid gid = new Guid(id);
-                var item = _context.CatalogueBooks
-                    .FirstOrDefault(x => x.Id == gid);
-                return item;
-            }
-            catch (Exception ex)
-            {
-                LogHelper.Error(this, ex);
-                throw new Exception("异常", ex);
-            }
-
-        }
-
         /// <summary>
         /// 根据Id删除会刊订购信息
         /// </summary>
@@ -812,9 +720,10 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    var model = GetCatalogueBooksIdInside(id);
+                    var gid = new Guid(id);
+                    var model = await _context.CatalogueBooks.FirstOrDefaultAsync(x => x.Id == gid);
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
@@ -855,7 +764,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     Guid gid = new Guid(id);
                     var item = await _context.CatalogueBooks
@@ -881,7 +790,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     if (searchModel == null)
                     {
@@ -965,7 +874,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     await _context.Interview.AddAsync(interview);
                     count = await _context.SaveChangesAsync();
@@ -989,27 +898,6 @@ namespace MediaService.Service
             }
         }
 
-        /// <summary>
-        /// 根据Id获取专题采访信息(内部调用)
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public Interview GetInterviewInfoByIdInside(string id)
-        {
-            try
-            {
-                Guid gid = new Guid(id);
-                var item = _context.Interview
-                    .FirstOrDefault(x => x.Id == gid);
-                return item;
-            }
-            catch (Exception ex)
-            {
-                LogHelper.Error(this, ex);
-                throw new Exception("异常", ex);
-            }
-
-        }
 
         /// <summary>
         /// 修改专题采访信息
@@ -1020,10 +908,9 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    string idString = interview.Id.ToString();
-                    var model = GetInterviewInfoByIdInside(idString);
+                    var model = await _context.Interview.FirstOrDefaultAsync(x => x.Id == interview.Id);
                     if (model == null)
                     {
                         msg = "当前实例不存在";
@@ -1066,9 +953,10 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    var model = GetInterviewInfoByIdInside(id);
+                    var gid = new Guid(id);
+                    var model = await _context.Interview.FirstOrDefaultAsync(x => x.Id == gid);
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
@@ -1110,7 +998,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     Guid gid = new Guid(id);
                     var item = await _context.Interview
@@ -1137,7 +1025,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     if (searchModel == null)
                     {
@@ -1219,7 +1107,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     await _context.HighlightsInfo.AddAsync(highlightsInfo);
                     count = await _context.SaveChangesAsync();
@@ -1244,28 +1132,6 @@ namespace MediaService.Service
         }
 
         /// <summary>
-        /// 根据Id获取十大亮点信息(内部调用)
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public HighlightsInfo GetHighlightsInfoByIdInside(string id)
-        {
-            try
-            {
-                Guid gid = new Guid(id);
-                var item = _context.HighlightsInfo
-                    .FirstOrDefault(x => x.Id == gid);
-                return item;
-            }
-            catch (Exception ex)
-            {
-                LogHelper.Error(this, ex);
-                throw new Exception("异常", ex);
-            }
-
-        }
-
-        /// <summary>
         /// 修改十大亮点信息
         /// </summary>
         /// <param name="highlightsInfo"></param>
@@ -1274,10 +1140,9 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    string idString = highlightsInfo.Id.ToString();
-                    var model = GetHighlightsInfoByIdInside(idString);
+                    var model = await _context.HighlightsInfo.FirstOrDefaultAsync(x => x.Id == highlightsInfo.Id);
                     if (model == null)
                     {
                         isSuccess = false;
@@ -1330,9 +1195,10 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    var model = GetHighlightsInfoByIdInside(id);
+                    var gid = new Guid(id);
+                    var model = await _context.HighlightsInfo.FirstOrDefaultAsync(x => x.Id == gid);
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
@@ -1373,7 +1239,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     Guid gid = new Guid(id);
                     var item = await _context.HighlightsInfo
@@ -1399,7 +1265,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     if (searchModel == null)
                     {
@@ -1482,10 +1348,11 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     await _context.Hotel.AddAsync(hotel);
                     count = await _context.SaveChangesAsync();
+
                     if (count > 0)
                     {
                         isSuccess = true;
@@ -1507,28 +1374,6 @@ namespace MediaService.Service
         }
 
         /// <summary>
-        /// 根据Id获取酒店信息(内部调用)
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public Hotel GetHotelInfoByIdInside(string id)
-        {
-            try
-            {
-                Guid gid = new Guid(id);
-                var item = _context.Hotel
-                    .FirstOrDefault(x => x.HotelId == gid);
-                return item;
-            }
-            catch (Exception ex)
-            {
-                LogHelper.Error(this, ex);
-                throw new Exception("异常", ex);
-            }
-
-        }
-
-        /// <summary>
         /// 修改酒店信息
         /// </summary>
         /// <param name="hotel"></param>
@@ -1537,10 +1382,9 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    string idString = hotel.HotelId.ToString();
-                    var model = GetHotelInfoByIdInside(idString);
+                    var model = await _context.Hotel.FirstOrDefaultAsync(x => x.HotelId == hotel.HotelId);
                     if (model == null)
                     {
                         isSuccess = false;
@@ -1590,9 +1434,10 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    var model = GetHotelInfoByIdInside(id);
+                    var gid = new Guid(id);
+                    var model = await _context.Hotel.FirstOrDefaultAsync(x => x.HotelId == gid);
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
@@ -1644,7 +1489,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     Guid gid = new Guid(id);
                     var item = await _context.Hotel
@@ -1667,7 +1512,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     var list = await _context.Hotel.ToListAsync();
                     return list;
@@ -1693,7 +1538,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     await _context.HotelRoomType.AddAsync(hotelRoomType);
                     count = await _context.SaveChangesAsync();
@@ -1717,27 +1562,6 @@ namespace MediaService.Service
             }
         }
 
-        /// <summary>
-        /// 根据Id获取酒店房间类型信息(内部调用)
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public HotelRoomType GetHotelRoomTypeInfoByIdInside(string id)
-        {
-            try
-            {
-                Guid gid = new Guid(id);
-                var item = _context.HotelRoomType
-                    .FirstOrDefault(x => x.HotelRoomTypeId == gid);
-                return item;
-            }
-            catch (Exception ex)
-            {
-                LogHelper.Error(this, ex);
-                throw new Exception("异常", ex);
-            }
-
-        }
 
         /// <summary>
         /// 修改酒店房间类型信息
@@ -1748,10 +1572,9 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    string idString = hotelRoomType.HotelRoomTypeId.ToString();
-                    var model = GetHotelRoomTypeInfoByIdInside(idString);
+                    var model = await _context.HotelRoomType.FirstOrDefaultAsync(x => x.HotelRoomTypeId == hotelRoomType.HotelRoomTypeId);
                     if (model == null)
                     {
                         isSuccess = false;
@@ -1794,9 +1617,10 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    var model = GetHotelRoomTypeInfoByIdInside(id);
+                    var gid = new Guid(id);
+                    var model = await _context.HotelRoomType.FirstOrDefaultAsync(x => x.HotelRoomTypeId == gid);
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
@@ -1847,7 +1671,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     Guid gid = new Guid(id);
                     var item = await _context.HotelRoomType
@@ -1870,7 +1694,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     var list = await _context.HotelRoomType
                         .Where(x => x.HotelId.ToString() == hotelId)
@@ -1898,7 +1722,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     await _context.HotelBookRecord.AddAsync(hotelBookRecord);
                     count = await _context.SaveChangesAsync();
@@ -1923,28 +1747,6 @@ namespace MediaService.Service
         }
 
         /// <summary>
-        /// 根据Id获取XXX信息(内部调用)
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public HotelBookRecord GetHotelBookRecordByIdInside(string id)
-        {
-            try
-            {
-                Guid gid = new Guid(id);
-                var item = _context.HotelBookRecord
-                    .FirstOrDefault(x => x.Id == gid);
-                return item;
-            }
-            catch (Exception ex)
-            {
-                LogHelper.Error(this, ex);
-                throw new Exception("异常", ex);
-            }
-
-        }
-
-        /// <summary>
         /// 修改酒店预订信息
         /// </summary>
         /// <param name="hotelBookRecord"></param>
@@ -1953,10 +1755,9 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    string idString = hotelBookRecord.Id.ToString();
-                    var model = GetHotelBookRecordByIdInside(idString);
+                    var model = await _context.HotelBookRecord.FirstOrDefaultAsync(x => x.Id == hotelBookRecord.Id);
                     if (model == null)
                     {
                         isSuccess = false;
@@ -2027,9 +1828,10 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    var model = GetHotelBookRecordByIdInside(id);
+                    var gid = new Guid(id);
+                    var model = await _context.HotelBookRecord.FirstOrDefaultAsync(x => x.Id == gid);
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
@@ -2070,7 +1872,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     var list = await _context.HotelBookRecord
                         .Where(x => x.MemberId == memberId).ToListAsync();
@@ -2094,9 +1896,10 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
-                    var model = GetHotelBookRecordByIdInside(id);
+                    var gid = new Guid(id);
+                    var model = await _context.HotelBookRecord.FirstOrDefaultAsync(x => x.Id == gid);
                     if (model == null)
                     {
                         msg = "当前实例不存在";
@@ -2132,7 +1935,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     Guid gid = new Guid(id);
                     var item = await _context.HotelBookRecord
@@ -2158,7 +1961,7 @@ namespace MediaService.Service
         {
             try
             {
-                using (_context = new MyContext(_options.Options))
+                using (var _context = new MyContext(_options.Options))
                 {
                     if (searchModel == null)
                     {
