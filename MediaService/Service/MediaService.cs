@@ -99,6 +99,7 @@ namespace MediaService.Service
                         modified_model.SnecLogoWebsite = formPublic.SnecLogoWebsite;
                         modified_model.Telephone = formPublic.Telephone;
                         modified_model.Website = formPublic.Website;
+                        modified_model.UpdatedAt = formPublic.UpdatedAt;
                         #endregion
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -459,6 +460,7 @@ namespace MediaService.Service
                         model.Sender = express.Sender;
                         model.SentDate = express.SentDate;
                         model.Tel = express.Tel;
+                        model.UpdatedAt = express.UpdatedAt;
 
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -696,6 +698,7 @@ namespace MediaService.Service
                         model.Name = cb.Name;
                         model.Tel = cb.Tel;
                         model.Type = cb.Type;
+                        model.UpdatedAt = cb.UpdatedAt;
 
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -929,6 +932,7 @@ namespace MediaService.Service
                         model.Photo = interview.Photo;
                         model.CompanyName = interview.CompanyName;
                         model.CompanyNameEn = interview.CompanyNameEn;
+                        model.UpdatedAt = interview.UpdatedAt;
 
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -1170,6 +1174,7 @@ namespace MediaService.Service
                         model.YJPhoto = highlightsInfo.YJPhoto;
                         model.YJPosition = highlightsInfo.YJPosition;
                         model.YJPositionEn = highlightsInfo.YJPositionEn;
+                        model.UpdatedAt = highlightsInfo.UpdatedAt;
 
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -1410,6 +1415,7 @@ namespace MediaService.Service
                         model.Remark = hotel.Remark;
                         model.RemarkEn = hotel.RemarkEn;
                         model.Sort = hotel.Sort;
+                        model.UpdatedAt = hotel.UpdatedAt;
 
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -1437,7 +1443,7 @@ namespace MediaService.Service
                 using (var _context = new MyContext(_options.Options))
                 {
                     var gid = new Guid(id);
-                    var model = await _context.Hotel.FirstOrDefaultAsync(x => x.HotelId == gid);
+                    var model = await _context.Hotel.Include(x=>x.HotelRoomTypes).FirstOrDefaultAsync(x => x.HotelId == gid);
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
@@ -1514,7 +1520,7 @@ namespace MediaService.Service
             {
                 using (var _context = new MyContext(_options.Options))
                 {
-                    var list = await _context.Hotel.ToListAsync();
+                    var list = await _context.Hotel.OrderBy(x=>x.HotelCode).ToListAsync();
                     return list;
                 }
             }
@@ -1593,6 +1599,7 @@ namespace MediaService.Service
                         model.Tax = hotelRoomType.Tax;
                         model.TypeName = hotelRoomType.TypeName;
                         model.TypeNameEn = hotelRoomType.TypeNameEn;
+                        model.UpdatedAt = hotelRoomType.UpdatedAt;
 
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -1620,7 +1627,7 @@ namespace MediaService.Service
                 using (var _context = new MyContext(_options.Options))
                 {
                     var gid = new Guid(id);
-                    var model = await _context.HotelRoomType.FirstOrDefaultAsync(x => x.HotelRoomTypeId == gid);
+                    var model = await _context.HotelRoomType.Include(x=>x.HotelBookRecords).FirstOrDefaultAsync(x => x.HotelRoomTypeId == gid);
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
@@ -1631,7 +1638,7 @@ namespace MediaService.Service
                     {
                         if (model.HotelBookRecords.Count > 0)
                         {
-                            msg = "当前实例存在引用，无法删除";
+                            msg = "当前实例存在引用,无法删除";
                             isSuccess = false;
                             count = 0;
                         }
@@ -1698,6 +1705,7 @@ namespace MediaService.Service
                 {
                     var list = await _context.HotelRoomType
                         .Where(x => x.HotelId.ToString() == hotelId)
+                        .OrderByDescending(x=>x.TypeName)
                         .ToListAsync();
                     return list;
                 }
@@ -1804,6 +1812,7 @@ namespace MediaService.Service
                         model.PayType = hotelBookRecord.PayType;
                         model.PriceCount = hotelBookRecord.PriceCount;
                         model.Remark = hotelBookRecord.Remark;
+                        model.UpdatedAt = hotelBookRecord.UpdatedAt;
 
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
