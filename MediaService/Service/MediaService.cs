@@ -1917,7 +1917,7 @@ namespace MediaService.Service
                     }
                     else
                     {
-                        model.IsCanceled = 1;
+                        model.IsCanceled=true;
                         model.UpdatedAt = DateTime.UtcNow.ToUniversalTime();
 
                         count = await _context.SaveChangesAsync();

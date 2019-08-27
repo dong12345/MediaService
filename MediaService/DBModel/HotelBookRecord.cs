@@ -47,9 +47,9 @@ namespace MediaService.DBModel
         /// </summary>
         public string CheckOutTime { get; set; }
         /// <summary>
-        ///是否取消预约 0=>未取消；1=>取消
+        ///是否取消预约
         /// </summary>
-        public int IsCanceled { get; set; }
+        public bool IsCanceled { get; set; }
         /// <summary>
         ///是否确认 0=>未确认；1=>待确认；2=>最终确认
         /// </summary>
@@ -75,9 +75,9 @@ namespace MediaService.DBModel
         /// </summary>
         public string LeaveFlight { get; set; }
         /// <summary>
-        ///是否吸烟 0=>不吸烟；1=>吸烟
+        ///是否吸烟
         /// </summary>
-        public string IsSmoke { get; set; }
+        public bool IsSmoke { get; set; }
         /// <summary>
         ///入住人FirstName
         /// </summary>

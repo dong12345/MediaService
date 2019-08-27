@@ -72,9 +72,9 @@ namespace MediaService.Common
         /// </summary>
         public string HotelRoomTypeId { get; set; }
         /// <summary>
-        ///是否取消预约 0=>未取消；1=>取消
+        ///是否取消预约
         /// </summary>
-        public int IsCanceled { get; set; }
+        public bool IsCanceled { get; set; }
         /// <summary>
         ///是否确认 0=>未确认；1=>待确认；2=>最终确认
         /// </summary>

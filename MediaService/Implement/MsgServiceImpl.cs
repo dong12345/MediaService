@@ -669,7 +669,7 @@ namespace MediaService.Implement
                     }
                     hotelList.Listdata.Add(hotel);
                 }
-
+                hotelList.Total = list.Count;
                 return hotelList;
             }
             catch (Exception ex)

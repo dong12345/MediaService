@@ -284,11 +284,11 @@ namespace MediaService.Migrations
 
                     b.Property<Guid>("HotelRoomTypeId");
 
-                    b.Property<int>("IsCanceled");
+                    b.Property<bool>("IsCanceled");
 
                     b.Property<int>("IsChecked");
 
-                    b.Property<string>("IsSmoke");
+                    b.Property<bool>("IsSmoke");
 
                     b.Property<bool>("IsWebsite");
 

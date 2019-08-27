@@ -461,8 +461,8 @@ message HighlightsInfoList {
    string CheckInTime=8;
    //离开时间
    string CheckOutTime=9;
-   //是否取消预约 0=>未取消;1=>取消
-   int32 IsCanceled=10;
+   //是否取消预约
+   bool IsCanceled=10;
    //是否确认 0=>未确认;1=>待确认;2=>最终确认
    int32 IsChecked=11;
    //预订酒店价格
@@ -475,8 +475,8 @@ message HighlightsInfoList {
    string ArriveFlight=15;
    //离开航班
    string LeaveFlight=16;
-   //是否吸烟 0=>不吸烟;1=>吸烟
-   string IsSmoke=17;
+   //是否吸烟
+   bool IsSmoke=17;
    //入住人FirstName
    string LinkManFirstName=18;
    //入住人LastName
@@ -487,8 +487,8 @@ message HighlightsInfoList {
    string LinkManEmail=21;
    //入住人称谓
    string LinkManTitle=22;
-   //入住人国家Id
-   int32 LinkManCountryId=23;
+   //入住人国家
+   string LinkManCountry=23;
    //入住人城市
    string LinkManCity=24;
    //入住人传真

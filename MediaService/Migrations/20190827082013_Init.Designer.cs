@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MediaService.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20190819080802_Init")]
+    [Migration("20190827082013_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -286,11 +286,11 @@ namespace MediaService.Migrations
 
                     b.Property<Guid>("HotelRoomTypeId");
 
-                    b.Property<int>("IsCanceled");
+                    b.Property<bool>("IsCanceled");
 
                     b.Property<int>("IsChecked");
 
-                    b.Property<string>("IsSmoke");
+                    b.Property<bool>("IsSmoke");
 
                     b.Property<bool>("IsWebsite");
 
