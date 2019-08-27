@@ -1520,7 +1520,7 @@ namespace MediaService.Service
             {
                 using (var _context = new MyContext(_options.Options))
                 {
-                    var list = await _context.Hotel.OrderBy(x=>x.HotelCode).ToListAsync();
+                    var list = await _context.Hotel.Include(x=>x.HotelRoomTypes).OrderBy(x=>x.HotelCode).ToListAsync();
                     return list;
                 }
             }

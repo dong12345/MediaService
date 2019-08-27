@@ -41,7 +41,9 @@ namespace MediaService.AutoMapper
 
                 config.CreateMap<ModifyReplyModel, ModifyReply>();
                 config.CreateMap<ModifyReply, ModifyReplyModel>();
-                
+
+                config.CreateMap<Hotel, HotelVM>();
+
             });
         }
     }

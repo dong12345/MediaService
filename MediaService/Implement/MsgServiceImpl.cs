@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MediaService.Implement
 {
-    public class MsgServiceImpl: MediaServiceToGrpc.MediaServiceToGrpcBase
+    public class MsgServiceImpl : MediaServiceToGrpc.MediaServiceToGrpcBase
     {
         private string _sql = ContextConnect.ReadConnstrContent();
         private MediaServices _service;
@@ -36,7 +36,7 @@ namespace MediaService.Implement
 
         #region FormPublic(会刊)
 
-      
+
         public override async Task<ModifyReply> createFormPublicInfo(FormPublicStruct request, ServerCallContext context)
         {
             ModifyReply modifyReply = new ModifyReply();
@@ -55,7 +55,7 @@ namespace MediaService.Implement
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-           
+
         }
 
         public override async Task<ModifyReply> updateFormPublicInfo(FormPublicStruct request, ServerCallContext context)
@@ -98,12 +98,12 @@ namespace MediaService.Implement
             try
             {
                 FormPublicList list = new FormPublicList();
-                var formPublicList= await _service.GetFormPublicInfoList();
+                var formPublicList = await _service.GetFormPublicInfoList();
                 var result = Mapper.Map<List<FormPublic>, List<FormPublicStruct>>(formPublicList);
                 list.Listdata.AddRange(result);
                 return list;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 LogHelper.Error(this, ex);
                 throw ex;
@@ -131,9 +131,9 @@ namespace MediaService.Implement
             {
                 FormPublicList formPublicList = new FormPublicList();
                 var search = Mapper.Map<SearchStruct, SearchModel>(request.Search);
-                var list= await _service.GetFormPublicList(request.Offset, request.Limit, search);
+                var list = await _service.GetFormPublicList(request.Offset, request.Limit, search);
 
-                var result=Mapper.Map<List<FormPublic>,List<FormPublicStruct>> (list);
+                var result = Mapper.Map<List<FormPublic>, List<FormPublicStruct>>(list);
                 formPublicList.Listdata.AddRange(result);
                 formPublicList.Total = await _service.GetFormPublicListCount(search);
                 return formPublicList;
@@ -160,7 +160,7 @@ namespace MediaService.Implement
                 {
                     result = new FormPublicStruct();
                 }
-               
+
                 return result;
             }
             catch (Exception ex)
@@ -590,7 +590,7 @@ namespace MediaService.Implement
                 LogHelper.Error(this, ex);
                 throw ex;
             }
-           
+
         }
 
         public override async Task<ModifyReply> updateHotelInfo(HotelStruct request, ServerCallContext context)
@@ -647,11 +647,29 @@ namespace MediaService.Implement
         {
             try
             {
-                HotelList hotelList = new HotelList();
+                //HotelList hotelList = new HotelList();
+                //var list = await _service.GetHotelList();
+
+                //var result = Mapper.Map<List<Hotel>, List<HotelVM>>(list);
+
+                //hotelList.Listdata.AddRange(result);
+                //hotelList.Total = result.Count;
+                //return hotelList;
+
                 var list = await _service.GetHotelList();
-                var result = Mapper.Map<List<Hotel>, List<HotelStruct>>(list);
-                hotelList.Listdata.AddRange(result);
-                hotelList.Total = result.Count;
+                HotelList hotelList = new HotelList();
+
+                foreach (var item in list)
+                {
+                    var hotel = Mapper.Map<Hotel, HotelVM>(item);
+                    if (item.HotelRoomTypes.Count > 0)
+                    {
+                        var hotelRoomTypeList = Mapper.Map<List<HotelRoomType>, List<HotelRoomTypeStruct>>(item.HotelRoomTypes);
+                        hotel.HotelRoomTypes.AddRange(hotelRoomTypeList);
+                    }
+                    hotelList.Listdata.Add(hotel);
+                }
+
                 return hotelList;
             }
             catch (Exception ex)
@@ -741,7 +759,7 @@ namespace MediaService.Implement
             {
                 HotelRoomTypeList hotelRoomTypeList = new HotelRoomTypeList();
                 var list = await _service.GetHolteRoomTypeListByHotelId(request.HotelId);
-                var result = Mapper.Map<List<HotelRoomType>,List<HotelRoomTypeStruct>>(list);
+                var result = Mapper.Map<List<HotelRoomType>, List<HotelRoomTypeStruct>>(list);
                 hotelRoomTypeList.Listdata.AddRange(result);
                 hotelRoomTypeList.Total = result.Count;
                 return hotelRoomTypeList;

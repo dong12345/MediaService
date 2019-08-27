@@ -384,8 +384,33 @@ message HighlightsInfoList {
    string Updated_at=20;
  }
 
+ message HotelVM{
+  string HotelId=1;
+   //酒店编号
+   string HotelCode=2;
+   string HotelName=3;
+   string HotelNameEn=4;
+   string HotelAddress=5;
+   string HotelAddressEn=6;
+   string Country=7;
+   string KeyWord=8;
+   string HotelEmail=9;
+   string HotelTel=10;
+   int32 HotelLevel=11;
+   string HotelIntroduction=12;
+   string HotelIntroductionEn=13;
+   string BankInfo=14;
+   string BankInfoEn=15;
+   string Remark=16;
+   string RemarkEn=17;
+   int32 Sort=18;
+   string Created_at=19;
+   string Updated_at=20;
+   repeated HotelRoomTypeStruct HotelRoomTypes=21;
+ }
+
  message HotelList{
-   repeated HotelStruct listdata = 1;
+   repeated HotelVM listdata = 1;
    int32 total = 2;
  }
 
