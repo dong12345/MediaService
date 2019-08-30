@@ -144,7 +144,7 @@ namespace GrpcMediaService {
             "bmRfZGF0ZRgJIAEoCRISCgpleHByZXNzTnVtGAogASgJEg4KBnNlbmRlchgL",
             "IAEoCRIRCglyZWNpcGllbnQYDCABKAkSFQoNcmVjaXBpZW50VW5pdBgNIAEo",
             "CRIPCgdob3RlbElkGA4gASgJEhcKD2hvdGVsUm9vbVR5cGVJZBgPIAEoCRIS",
-            "Cgppc0NhbmNlbGVkGBAgASgFEhEKCWlzQ2hlY2tlZBgRIAEoBRIRCglpc1dl",
+            "Cgppc0NhbmNlbGVkGBAgASgIEhEKCWlzQ2hlY2tlZBgRIAEoBRIRCglpc1dl",
             "YnNpdGUYEiABKAgSDAoEdHlwZRgTIAEoCRINCgVlbWFpbBgUIAEoCRIMCgRu",
             "YW1lGBUgASgJMtkhChJNZWRpYVNlcnZpY2VUb0dycGMSWwoUY3JlYXRlRm9y",
             "bVB1YmxpY0luZm8SIi5HcnBjTWVkaWFTZXJ2aWNlLkZvcm1QdWJsaWNTdHJ1",
@@ -9426,12 +9426,12 @@ namespace GrpcMediaService {
 
     /// <summary>Field number for the "isCanceled" field.</summary>
     public const int IsCanceledFieldNumber = 16;
-    private int isCanceled_;
+    private bool isCanceled_;
     /// <summary>
-    ///是否取消预约 0=>未取消;1=>取消
+    ///是否取消预约
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int IsCanceled {
+    public bool IsCanceled {
       get { return isCanceled_; }
       set {
         isCanceled_ = value;
@@ -9563,7 +9563,7 @@ namespace GrpcMediaService {
       if (RecipientUnit.Length != 0) hash ^= RecipientUnit.GetHashCode();
       if (HotelId.Length != 0) hash ^= HotelId.GetHashCode();
       if (HotelRoomTypeId.Length != 0) hash ^= HotelRoomTypeId.GetHashCode();
-      if (IsCanceled != 0) hash ^= IsCanceled.GetHashCode();
+      if (IsCanceled != false) hash ^= IsCanceled.GetHashCode();
       if (IsChecked != 0) hash ^= IsChecked.GetHashCode();
       if (IsWebsite != false) hash ^= IsWebsite.GetHashCode();
       if (Type.Length != 0) hash ^= Type.GetHashCode();
@@ -9642,9 +9642,9 @@ namespace GrpcMediaService {
         output.WriteRawTag(122);
         output.WriteString(HotelRoomTypeId);
       }
-      if (IsCanceled != 0) {
+      if (IsCanceled != false) {
         output.WriteRawTag(128, 1);
-        output.WriteInt32(IsCanceled);
+        output.WriteBool(IsCanceled);
       }
       if (IsChecked != 0) {
         output.WriteRawTag(136, 1);
@@ -9719,8 +9719,8 @@ namespace GrpcMediaService {
       if (HotelRoomTypeId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(HotelRoomTypeId);
       }
-      if (IsCanceled != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(IsCanceled);
+      if (IsCanceled != false) {
+        size += 2 + 1;
       }
       if (IsChecked != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(IsChecked);
@@ -9793,7 +9793,7 @@ namespace GrpcMediaService {
       if (other.HotelRoomTypeId.Length != 0) {
         HotelRoomTypeId = other.HotelRoomTypeId;
       }
-      if (other.IsCanceled != 0) {
+      if (other.IsCanceled != false) {
         IsCanceled = other.IsCanceled;
       }
       if (other.IsChecked != 0) {
@@ -9883,7 +9883,7 @@ namespace GrpcMediaService {
             break;
           }
           case 128: {
-            IsCanceled = input.ReadInt32();
+            IsCanceled = input.ReadBool();
             break;
           }
           case 136: {
