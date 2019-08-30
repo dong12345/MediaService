@@ -1079,7 +1079,7 @@ namespace MediaService.Service
                     {
                         var list = await _context.Interview
                         .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.CompanyName.Contains(searchModel.CompanyName) || x.CompanyNameEn.Contains(searchModel.CompanyName))
-                         && (x.OwnerId == searchModel.OwnerId))
+                         && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId== searchModel.OwnerId))
                         .ToListAsync();
                         total = list.Count();
                     }
@@ -1286,7 +1286,7 @@ namespace MediaService.Service
                     {
                         var list = await _context.HighlightsInfo
                                 .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.ContractCompany.Contains(searchModel.CompanyName) || x.ContractCompanyEn.Contains(searchModel.CompanyName))
-                                 && (x.OwnerId == searchModel.OwnerId))
+                                 && (string.IsNullOrEmpty(searchModel.OwnerId) ||  searchModel.OwnerId== x.OwnerId))
                                 .OrderByDescending(x => x.CreatedAt)
                                 .Skip(((pageindex - 1) * pagesize))
                                 .Take(pagesize)
@@ -1321,7 +1321,7 @@ namespace MediaService.Service
                     {
                         var list = await _context.HighlightsInfo
                           .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.ContractCompany.Contains(searchModel.CompanyName) || x.ContractCompanyEn.Contains(searchModel.CompanyName))
-                         && (x.OwnerId == searchModel.OwnerId))
+                         && (string.IsNullOrEmpty(searchModel.OwnerId) || searchModel.OwnerId == x.OwnerId))
                         .ToListAsync();
                         total = list.Count();
                     }
@@ -1985,8 +1985,8 @@ namespace MediaService.Service
                     else
                     {
                         var list = await _context.HotelBookRecord
-                                .Where(x => (searchModel.HotelId == x.HotelId.ToString())
-                                 && (searchModel.HotelRoomTypeId == x.HotelRoomTypeId.ToString())
+                                .Where(x => ( string.IsNullOrEmpty(searchModel.HotelId) || searchModel.HotelId == x.HotelId.ToString())
+                                 && (string.IsNullOrEmpty(searchModel.HotelRoomTypeId) || searchModel.HotelRoomTypeId == x.HotelRoomTypeId.ToString())
                                  && (searchModel.IsChecked == x.IsChecked)
                                  && (searchModel.IsCanceled == x.IsCanceled)
                                  && (string.IsNullOrEmpty(searchModel.Begin_date) || x.BookTime >= Convert.ToDateTime(searchModel.Begin_date))
@@ -2024,8 +2024,8 @@ namespace MediaService.Service
                     if (searchModel != null)
                     {
                         var list = await _context.HotelBookRecord
-                             .Where(x => (searchModel.HotelId == x.HotelId.ToString())
-                       && (searchModel.HotelRoomTypeId == x.HotelRoomTypeId.ToString())
+                         .Where(x => (string.IsNullOrEmpty(searchModel.HotelId) || searchModel.HotelId == x.HotelId.ToString())
+                       && (string.IsNullOrEmpty(searchModel.HotelRoomTypeId) || searchModel.HotelRoomTypeId == x.HotelRoomTypeId.ToString())
                        && (searchModel.IsChecked == x.IsChecked)
                        && (searchModel.IsCanceled == x.IsCanceled)
                        && (string.IsNullOrEmpty(searchModel.Begin_date) || x.BookTime >= Convert.ToDateTime(searchModel.Begin_date))
