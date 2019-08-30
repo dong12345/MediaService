@@ -99,9 +99,9 @@ namespace MediaService.DBModel
         /// </summary>
         public string LinkManTitle { get; set; }
         /// <summary>
-        ///入住人国家Id
+        ///入住人国家
         /// </summary>
-        public int LinkManCountryId { get; set; }
+        public string LinkManCountry { get; set; }
         /// <summary>
         ///入住人城市
         /// </summary>

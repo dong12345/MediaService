@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MediaService.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20190827082013_Init")]
+    [Migration("20190827085607_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -302,7 +302,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("LinkManCompany");
 
-                    b.Property<int>("LinkManCountryId");
+                    b.Property<string>("LinkManCountry");
 
                     b.Property<string>("LinkManEmail");
 

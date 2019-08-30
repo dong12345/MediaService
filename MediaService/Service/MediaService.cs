@@ -1790,7 +1790,7 @@ namespace MediaService.Service
                         model.LinkManBirth = hotelBookRecord.LinkManBirth;
                         model.LinkManCity = hotelBookRecord.LinkManCity;
                         model.LinkManCompany = hotelBookRecord.LinkManCompany;
-                        model.LinkManCountryId = hotelBookRecord.LinkManCountryId;
+                        model.LinkManCountry = hotelBookRecord.LinkManCountry;
                         model.LinkManEmail = hotelBookRecord.LinkManEmail;
                         model.LinkManEmail2 = hotelBookRecord.LinkManEmail2;
                         model.LinkManFax = hotelBookRecord.LinkManFax;

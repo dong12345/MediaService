@@ -300,7 +300,7 @@ namespace MediaService.Migrations
 
                     b.Property<string>("LinkManCompany");
 
-                    b.Property<int>("LinkManCountryId");
+                    b.Property<string>("LinkManCountry");
 
                     b.Property<string>("LinkManEmail");
 
