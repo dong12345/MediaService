@@ -837,7 +837,7 @@ namespace MediaService.Implement
             {
                 HotelBookRecordList hotelBookRecordList = new HotelBookRecordList();
                 var list = await _service.GetHotelBookRecordByMemberId(request.MemberId);
-                var result = Mapper.Map<List<HotelBookRecord>, List<HotelBookRecordStruct>>(list);
+                var result = Mapper.Map<List<HotelBookRecord>, List<HotelBookRecordStructVM>>(list);
                 hotelBookRecordList.Listdata.AddRange(result);
                 hotelBookRecordList.Total = result.Count;
                 return hotelBookRecordList;
@@ -888,7 +888,7 @@ namespace MediaService.Implement
                 var search = Mapper.Map<SearchStruct, SearchModel>(request.Search);
                 var list = await _service.GetHotelBookRecordList(request.Offset, request.Limit, search);
 
-                var result = Mapper.Map<List<HotelBookRecord>, List<HotelBookRecordStruct>>(list);
+                var result = Mapper.Map<List<HotelBookRecord>, List<HotelBookRecordStructVM>>(list);
                 hotelBookRecordList.Listdata.AddRange(result);
                 hotelBookRecordList.Total = await _service.GetHotelBookRecordListCount(search);
                 return hotelBookRecordList;

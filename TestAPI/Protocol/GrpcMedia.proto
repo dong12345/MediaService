@@ -178,7 +178,7 @@ service MediaServiceToGrpc{
   rpc getHotelBookRecordById(IdRequest) returns(HotelBookRecordStruct){}
 
   //根据条件查询酒店预订记录列表(带分页)
-  rpc getHotelBookRecordList (PaginationRequestSearch) returns (HotelBookRecordList) {}
+  rpc getHotelBookRecordList(PaginationRequestSearch) returns (HotelBookRecordList) {}
 
   //================酒店预定记录=========================
 }
@@ -532,8 +532,99 @@ message HighlightsInfoList {
    bool IsWebsite=45;
  }
 
+  message HotelBookRecordStructVM{
+   string Id=1;
+   //会员Id
+   string MemberId=2;
+   //会员公司中文名
+   string MemberCompany=3;
+   string MemberCompanyEn=4;
+   //酒店Id
+   string HotelId=5;
+   //酒店房间类型Id
+   string HotelRoomTypeId=6;
+   //预订时间
+   string BookTime=7;
+   //入住时间
+   string CheckInTime=8;
+   //离开时间
+   string CheckOutTime=9;
+   //是否取消预约
+   bool IsCanceled=10;
+   //是否确认 0=>未确认;1=>待确认;2=>最终确认
+   int32 IsChecked=11;
+   //预订酒店价格
+   string PriceCount=12;
+   //入住人要求
+   string Remark=13;
+   //入住天数
+   int32 Days=14;
+   //到达航班
+   string ArriveFlight=15;
+   //离开航班
+   string LeaveFlight=16;
+   //是否吸烟
+   bool IsSmoke=17;
+   //入住人FirstName
+   string LinkManFirstName=18;
+   //入住人LastName
+   string LinkManLastName=19;
+   //入住人电话
+   string LinkManTel=20;
+   //入住人邮箱
+   string LinkManEmail=21;
+   //入住人称谓
+   string LinkManTitle=22;
+   //入住人国家
+   string LinkManCountry=23;
+   //入住人城市
+   string LinkManCity=24;
+   //入住人传真
+   string LinkManFax=25;
+   //入住人证件类型
+   string LinkManIdCardType=26;
+   //入住人证件号码
+   string LinkManIdCardNumber=27;
+   //入住人公司
+   string LinkManCompany=28;
+   //入住人手机
+   string LinkManMobile=29;
+   //入住人出生日期
+   string LinkManBirth=30;
+   //同住人姓名
+   string OtherName=31;
+   //同住人称谓
+   string OtherTitle=32;
+   //同住人邮箱
+   string OtherEmail=33;
+   //同住人手机
+   string OtherMobile=34;
+   //同住人公司
+   string OtherCompany=35;
+   //持卡人姓名
+   string CardPerson=36;
+   //卡类型
+   string CardType=37;
+   //卡号码
+   string CardNumber=38;
+   //卡有效期
+   string CardDate=39;
+   //付款方：自己支付还是主办方支付
+   string Payer=40;
+   //付款方式
+   string PayType=41;
+   string LinkManEmail2=42;
+   string Created_at=43;
+   string Updated_at=44;
+   //是否从网站页面订购
+   bool IsWebsite=45;
+   HotelStruct HotelItem=46;
+   HotelRoomTypeStruct HotelRoomTypeItem=47;
+ }
+
+
  message HotelBookRecordList{
-   repeated HotelBookRecordStruct listdata = 1;
+   repeated HotelBookRecordStructVM listdata = 1;
    int32 total = 2;
  }
 

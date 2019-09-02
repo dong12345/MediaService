@@ -27,13 +27,15 @@ namespace MediaService.DBModel
         ///酒店Id 
         /// </summary>
         public Guid HotelId { get; set; }
+
+        public Hotel HotelItem { get; set;}
         /// <summary>
         ///酒店房间类型Id
         /// </summary>
         public Guid HotelRoomTypeId { get; set; }
 
         [ForeignKey("HotelRoomTypeId")]
-        public HotelRoomType HotelRoomType { get; set; }
+        public HotelRoomType HotelRoomTypeItem { get; set; }
         /// <summary>
         ///预订时间
         /// </summary>

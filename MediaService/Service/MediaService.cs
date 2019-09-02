@@ -1974,7 +1974,7 @@ namespace MediaService.Service
                 {
                     if (searchModel == null)
                     {
-                        var list = await _context.HotelBookRecord
+                        var list = await _context.HotelBookRecord.Include(x=>x.HotelItem).Include(x=>x.HotelRoomTypeItem)
                                  .OrderByDescending(x => x.CreatedAt)
                                  .Skip(((pageindex - 1) * pagesize))
                                  .Take(pagesize)

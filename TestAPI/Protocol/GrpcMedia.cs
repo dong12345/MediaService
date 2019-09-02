@@ -132,117 +132,141 @@ namespace GrpcMediaService {
             "IAEoCRISCgpDYXJkTnVtYmVyGCYgASgJEhAKCENhcmREYXRlGCcgASgJEg0K",
             "BVBheWVyGCggASgJEg8KB1BheVR5cGUYKSABKAkSFQoNTGlua01hbkVtYWls",
             "MhgqIAEoCRISCgpDcmVhdGVkX2F0GCsgASgJEhIKClVwZGF0ZWRfYXQYLCAB",
-            "KAkSEQoJSXNXZWJzaXRlGC0gASgIIl8KE0hvdGVsQm9va1JlY29yZExpc3QS",
-            "OQoIbGlzdGRhdGEYASADKAsyJy5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsQm9v",
-            "a1JlY29yZFN0cnVjdBINCgV0b3RhbBgCIAEoBSIHCgVFbXB0eSIXCglJZFJl",
-            "cXVlc3QSCgoCaWQYASABKAkiQwoLTW9kaWZ5UmVwbHkSDwoHc3VjY2VzcxgB",
-            "IAEoCBIWCg5tb2RpZmllZF9jb3VudBgCIAEoBRILCgNtc2cYAyABKAkinwMK",
-            "DFNlYXJjaFN0cnVjdBITCgtjb21wYW55TmFtZRgBIAEoCRIWCg5jb250cmFj",
-            "dE51bWJlchgCIAEoCRIWCg5wYXZpbGlvbk51bWJlchgDIAEoCRITCgtib290",
-            "aE51bWJlchgEIAEoCRIPCgdvd25lcklkGAUgASgJEg0KBWlzUGF5GAYgASgI",
-            "EhIKCmlzSGF2ZUxvZ28YByABKAgSEgoKYmVnaW5fZGF0ZRgIIAEoCRIQCghl",
-            "bmRfZGF0ZRgJIAEoCRISCgpleHByZXNzTnVtGAogASgJEg4KBnNlbmRlchgL",
-            "IAEoCRIRCglyZWNpcGllbnQYDCABKAkSFQoNcmVjaXBpZW50VW5pdBgNIAEo",
-            "CRIPCgdob3RlbElkGA4gASgJEhcKD2hvdGVsUm9vbVR5cGVJZBgPIAEoCRIS",
-            "Cgppc0NhbmNlbGVkGBAgASgIEhEKCWlzQ2hlY2tlZBgRIAEoBRIRCglpc1dl",
-            "YnNpdGUYEiABKAgSDAoEdHlwZRgTIAEoCRINCgVlbWFpbBgUIAEoCRIMCgRu",
-            "YW1lGBUgASgJMtkhChJNZWRpYVNlcnZpY2VUb0dycGMSWwoUY3JlYXRlRm9y",
-            "bVB1YmxpY0luZm8SIi5HcnBjTWVkaWFTZXJ2aWNlLkZvcm1QdWJsaWNTdHJ1",
-            "Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASWwoUdXBkYXRl",
-            "Rm9ybVB1YmxpY0luZm8SIi5HcnBjTWVkaWFTZXJ2aWNlLkZvcm1QdWJsaWNT",
-            "dHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASWAoYZGVs",
-            "ZXRlRm9ybVB1YmxpY0luZm9CeUlkEhsuR3JwY01lZGlhU2VydmljZS5JZFJl",
-            "cXVlc3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASVAoVZ2V0",
-            "Rm9ybVB1YmxpY0luZm9MaXN0EhcuR3JwY01lZGlhU2VydmljZS5FbXB0eRog",
-            "LkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1YmxpY0xpc3QiABJaChVnZXRGb3Jt",
-            "UHVibGljSW5mb0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBoi",
-            "LkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1YmxpY1N0cnVjdCIAEmIKEWdldEZv",
-            "cm1QdWJsaWNMaXN0EikuR3JwY01lZGlhU2VydmljZS5QYWdpbmF0aW9uUmVx",
-            "dWVzdFNlYXJjaBogLkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1YmxpY0xpc3Qi",
-            "ABJwCiBnZXRGb3JtUHVibGljSW5mb0J5RXhiQ29udHJhY3RJZBImLkdycGNN",
-            "ZWRpYVNlcnZpY2UuRXhiQ29udHJhY3RJZFJlcXVlc3QaIi5HcnBjTWVkaWFT",
-            "ZXJ2aWNlLkZvcm1QdWJsaWNTdHJ1Y3QiABJrCiRvcGVyYXRlRm9ybVB1Ymxp",
-            "Y0luZm9CeUV4YkNvbnRyYWN0SWQSIi5HcnBjTWVkaWFTZXJ2aWNlLkZvcm1Q",
-            "dWJsaWNTdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgAS",
-            "VQoRY3JlYXRlRXhwcmVzc0luZm8SHy5HcnBjTWVkaWFTZXJ2aWNlLkV4cHJl",
-            "c3NTdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASVQoR",
-            "dXBkYXRlRXhwcmVzc0luZm8SHy5HcnBjTWVkaWFTZXJ2aWNlLkV4cHJlc3NT",
-            "dHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASVQoVZGVs",
-            "ZXRlRXhwcmVzc0luZm9CeUlkEhsuR3JwY01lZGlhU2VydmljZS5JZFJlcXVl",
-            "c3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASVAoSZ2V0RXhw",
-            "cmVzc0luZm9CeUlkEhsuR3JwY01lZGlhU2VydmljZS5JZFJlcXVlc3QaHy5H",
-            "cnBjTWVkaWFTZXJ2aWNlLkV4cHJlc3NTdHJ1Y3QiABJcCg5nZXRFeHByZXNz",
-            "TGlzdBIpLkdycGNNZWRpYVNlcnZpY2UuUGFnaW5hdGlvblJlcXVlc3RTZWFy",
-            "Y2gaHS5HcnBjTWVkaWFTZXJ2aWNlLkV4cHJlc3NMaXN0IgASYwoYY3JlYXRl",
-            "Q2F0YWxvZ3VlQm9va3NJbmZvEiYuR3JwY01lZGlhU2VydmljZS5DYXRhbG9n",
-            "dWVCb29rc1N0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHki",
-            "ABJjChh1cGRhdGVDYXRhbG9ndWVCb29rc0luZm8SJi5HcnBjTWVkaWFTZXJ2",
-            "aWNlLkNhdGFsb2d1ZUJvb2tzU3RydWN0Gh0uR3JwY01lZGlhU2VydmljZS5N",
-            "b2RpZnlSZXBseSIAElgKGGRlbGV0ZUNhdGFsb2d1ZUJvb2tzQnlJZBIbLkdy",
-            "cGNNZWRpYVNlcnZpY2UuSWRSZXF1ZXN0Gh0uR3JwY01lZGlhU2VydmljZS5N",
-            "b2RpZnlSZXBseSIAEl4KFWdldENhdGFsb2d1ZUJvb2tzQnlJZBIbLkdycGNN",
-            "ZWRpYVNlcnZpY2UuSWRSZXF1ZXN0GiYuR3JwY01lZGlhU2VydmljZS5DYXRh",
-            "bG9ndWVCb29rc1N0cnVjdCIAEmoKFWdldENhdGFsb2d1ZUJvb2tzTGlzdBIp",
-            "LkdycGNNZWRpYVNlcnZpY2UuUGFnaW5hdGlvblJlcXVlc3RTZWFyY2gaJC5H",
-            "cnBjTWVkaWFTZXJ2aWNlLkNhdGFsb2d1ZUJvb2tzTGlzdCIAElkKE2NyZWF0",
-            "ZUludGVydmlld0luZm8SIS5HcnBjTWVkaWFTZXJ2aWNlLkludGVydmlld1N0",
-            "cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJZChN1cGRh",
-            "dGVJbnRlcnZpZXdJbmZvEiEuR3JwY01lZGlhU2VydmljZS5JbnRlcnZpZXdT",
-            "dHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASUwoTZGVs",
-            "ZXRlSW50ZXJ2aWV3QnlJZBIbLkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1ZXN0",
-            "Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElgKFGdldEludGVy",
-            "dmlld0luZm9CeUlkEhsuR3JwY01lZGlhU2VydmljZS5JZFJlcXVlc3QaIS5H",
-            "cnBjTWVkaWFTZXJ2aWNlLkludGVydmlld1N0cnVjdCIAEmAKEGdldEludGVy",
-            "dmlld0xpc3QSKS5HcnBjTWVkaWFTZXJ2aWNlLlBhZ2luYXRpb25SZXF1ZXN0",
-            "U2VhcmNoGh8uR3JwY01lZGlhU2VydmljZS5JbnRlcnZpZXdMaXN0IgASXwoU",
-            "Y3JlYXRlSGlnaGxpZ2h0c0luZm8SJi5HcnBjTWVkaWFTZXJ2aWNlLkhpZ2hs",
+            "KAkSEQoJSXNXZWJzaXRlGC0gASgIIqwIChdIb3RlbEJvb2tSZWNvcmRTdHJ1",
+            "Y3RWTRIKCgJJZBgBIAEoCRIQCghNZW1iZXJJZBgCIAEoCRIVCg1NZW1iZXJD",
+            "b21wYW55GAMgASgJEhcKD01lbWJlckNvbXBhbnlFbhgEIAEoCRIPCgdIb3Rl",
+            "bElkGAUgASgJEhcKD0hvdGVsUm9vbVR5cGVJZBgGIAEoCRIQCghCb29rVGlt",
+            "ZRgHIAEoCRITCgtDaGVja0luVGltZRgIIAEoCRIUCgxDaGVja091dFRpbWUY",
+            "CSABKAkSEgoKSXNDYW5jZWxlZBgKIAEoCBIRCglJc0NoZWNrZWQYCyABKAUS",
+            "EgoKUHJpY2VDb3VudBgMIAEoCRIOCgZSZW1hcmsYDSABKAkSDAoERGF5cxgO",
+            "IAEoBRIUCgxBcnJpdmVGbGlnaHQYDyABKAkSEwoLTGVhdmVGbGlnaHQYECAB",
+            "KAkSDwoHSXNTbW9rZRgRIAEoCBIYChBMaW5rTWFuRmlyc3ROYW1lGBIgASgJ",
+            "EhcKD0xpbmtNYW5MYXN0TmFtZRgTIAEoCRISCgpMaW5rTWFuVGVsGBQgASgJ",
+            "EhQKDExpbmtNYW5FbWFpbBgVIAEoCRIUCgxMaW5rTWFuVGl0bGUYFiABKAkS",
+            "FgoOTGlua01hbkNvdW50cnkYFyABKAkSEwoLTGlua01hbkNpdHkYGCABKAkS",
+            "EgoKTGlua01hbkZheBgZIAEoCRIZChFMaW5rTWFuSWRDYXJkVHlwZRgaIAEo",
+            "CRIbChNMaW5rTWFuSWRDYXJkTnVtYmVyGBsgASgJEhYKDkxpbmtNYW5Db21w",
+            "YW55GBwgASgJEhUKDUxpbmtNYW5Nb2JpbGUYHSABKAkSFAoMTGlua01hbkJp",
+            "cnRoGB4gASgJEhEKCU90aGVyTmFtZRgfIAEoCRISCgpPdGhlclRpdGxlGCAg",
+            "ASgJEhIKCk90aGVyRW1haWwYISABKAkSEwoLT3RoZXJNb2JpbGUYIiABKAkS",
+            "FAoMT3RoZXJDb21wYW55GCMgASgJEhIKCkNhcmRQZXJzb24YJCABKAkSEAoI",
+            "Q2FyZFR5cGUYJSABKAkSEgoKQ2FyZE51bWJlchgmIAEoCRIQCghDYXJkRGF0",
+            "ZRgnIAEoCRINCgVQYXllchgoIAEoCRIPCgdQYXlUeXBlGCkgASgJEhUKDUxp",
+            "bmtNYW5FbWFpbDIYKiABKAkSEgoKQ3JlYXRlZF9hdBgrIAEoCRISCgpVcGRh",
+            "dGVkX2F0GCwgASgJEhEKCUlzV2Vic2l0ZRgtIAEoCBIwCglIb3RlbEl0ZW0Y",
+            "LiABKAsyHS5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsU3RydWN0EkAKEUhvdGVs",
+            "Um9vbVR5cGVJdGVtGC8gASgLMiUuR3JwY01lZGlhU2VydmljZS5Ib3RlbFJv",
+            "b21UeXBlU3RydWN0ImEKE0hvdGVsQm9va1JlY29yZExpc3QSOwoIbGlzdGRh",
+            "dGEYASADKAsyKS5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsQm9va1JlY29yZFN0",
+            "cnVjdFZNEg0KBXRvdGFsGAIgASgFIgcKBUVtcHR5IhcKCUlkUmVxdWVzdBIK",
+            "CgJpZBgBIAEoCSJDCgtNb2RpZnlSZXBseRIPCgdzdWNjZXNzGAEgASgIEhYK",
+            "Dm1vZGlmaWVkX2NvdW50GAIgASgFEgsKA21zZxgDIAEoCSKfAwoMU2VhcmNo",
+            "U3RydWN0EhMKC2NvbXBhbnlOYW1lGAEgASgJEhYKDmNvbnRyYWN0TnVtYmVy",
+            "GAIgASgJEhYKDnBhdmlsaW9uTnVtYmVyGAMgASgJEhMKC2Jvb3RoTnVtYmVy",
+            "GAQgASgJEg8KB293bmVySWQYBSABKAkSDQoFaXNQYXkYBiABKAgSEgoKaXNI",
+            "YXZlTG9nbxgHIAEoCBISCgpiZWdpbl9kYXRlGAggASgJEhAKCGVuZF9kYXRl",
+            "GAkgASgJEhIKCmV4cHJlc3NOdW0YCiABKAkSDgoGc2VuZGVyGAsgASgJEhEK",
+            "CXJlY2lwaWVudBgMIAEoCRIVCg1yZWNpcGllbnRVbml0GA0gASgJEg8KB2hv",
+            "dGVsSWQYDiABKAkSFwoPaG90ZWxSb29tVHlwZUlkGA8gASgJEhIKCmlzQ2Fu",
+            "Y2VsZWQYECABKAgSEQoJaXNDaGVja2VkGBEgASgFEhEKCWlzV2Vic2l0ZRgS",
+            "IAEoCBIMCgR0eXBlGBMgASgJEg0KBWVtYWlsGBQgASgJEgwKBG5hbWUYFSAB",
+            "KAky2SEKEk1lZGlhU2VydmljZVRvR3JwYxJbChRjcmVhdGVGb3JtUHVibGlj",
+            "SW5mbxIiLkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1YmxpY1N0cnVjdBodLkdy",
+            "cGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJbChR1cGRhdGVGb3JtUHVi",
+            "bGljSW5mbxIiLkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1YmxpY1N0cnVjdBod",
+            "LkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJYChhkZWxldGVGb3Jt",
+            "UHVibGljSW5mb0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBod",
+            "LkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJUChVnZXRGb3JtUHVi",
+            "bGljSW5mb0xpc3QSFy5HcnBjTWVkaWFTZXJ2aWNlLkVtcHR5GiAuR3JwY01l",
+            "ZGlhU2VydmljZS5Gb3JtUHVibGljTGlzdCIAEloKFWdldEZvcm1QdWJsaWNJ",
+            "bmZvQnlJZBIbLkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1ZXN0GiIuR3JwY01l",
+            "ZGlhU2VydmljZS5Gb3JtUHVibGljU3RydWN0IgASYgoRZ2V0Rm9ybVB1Ymxp",
+            "Y0xpc3QSKS5HcnBjTWVkaWFTZXJ2aWNlLlBhZ2luYXRpb25SZXF1ZXN0U2Vh",
+            "cmNoGiAuR3JwY01lZGlhU2VydmljZS5Gb3JtUHVibGljTGlzdCIAEnAKIGdl",
+            "dEZvcm1QdWJsaWNJbmZvQnlFeGJDb250cmFjdElkEiYuR3JwY01lZGlhU2Vy",
+            "dmljZS5FeGJDb250cmFjdElkUmVxdWVzdBoiLkdycGNNZWRpYVNlcnZpY2Uu",
+            "Rm9ybVB1YmxpY1N0cnVjdCIAEmsKJG9wZXJhdGVGb3JtUHVibGljSW5mb0J5",
+            "RXhiQ29udHJhY3RJZBIiLkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1YmxpY1N0",
+            "cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJVChFjcmVh",
+            "dGVFeHByZXNzSW5mbxIfLkdycGNNZWRpYVNlcnZpY2UuRXhwcmVzc1N0cnVj",
+            "dBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJVChF1cGRhdGVF",
+            "eHByZXNzSW5mbxIfLkdycGNNZWRpYVNlcnZpY2UuRXhwcmVzc1N0cnVjdBod",
+            "LkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJVChVkZWxldGVFeHBy",
+            "ZXNzSW5mb0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBodLkdy",
+            "cGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJUChJnZXRFeHByZXNzSW5m",
+            "b0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBofLkdycGNNZWRp",
+            "YVNlcnZpY2UuRXhwcmVzc1N0cnVjdCIAElwKDmdldEV4cHJlc3NMaXN0Eiku",
+            "R3JwY01lZGlhU2VydmljZS5QYWdpbmF0aW9uUmVxdWVzdFNlYXJjaBodLkdy",
+            "cGNNZWRpYVNlcnZpY2UuRXhwcmVzc0xpc3QiABJjChhjcmVhdGVDYXRhbG9n",
+            "dWVCb29rc0luZm8SJi5HcnBjTWVkaWFTZXJ2aWNlLkNhdGFsb2d1ZUJvb2tz",
+            "U3RydWN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAEmMKGHVw",
+            "ZGF0ZUNhdGFsb2d1ZUJvb2tzSW5mbxImLkdycGNNZWRpYVNlcnZpY2UuQ2F0",
+            "YWxvZ3VlQm9va3NTdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJl",
+            "cGx5IgASWAoYZGVsZXRlQ2F0YWxvZ3VlQm9va3NCeUlkEhsuR3JwY01lZGlh",
+            "U2VydmljZS5JZFJlcXVlc3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJl",
+            "cGx5IgASXgoVZ2V0Q2F0YWxvZ3VlQm9va3NCeUlkEhsuR3JwY01lZGlhU2Vy",
+            "dmljZS5JZFJlcXVlc3QaJi5HcnBjTWVkaWFTZXJ2aWNlLkNhdGFsb2d1ZUJv",
+            "b2tzU3RydWN0IgASagoVZ2V0Q2F0YWxvZ3VlQm9va3NMaXN0EikuR3JwY01l",
+            "ZGlhU2VydmljZS5QYWdpbmF0aW9uUmVxdWVzdFNlYXJjaBokLkdycGNNZWRp",
+            "YVNlcnZpY2UuQ2F0YWxvZ3VlQm9va3NMaXN0IgASWQoTY3JlYXRlSW50ZXJ2",
+            "aWV3SW5mbxIhLkdycGNNZWRpYVNlcnZpY2UuSW50ZXJ2aWV3U3RydWN0Gh0u",
+            "R3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElkKE3VwZGF0ZUludGVy",
+            "dmlld0luZm8SIS5HcnBjTWVkaWFTZXJ2aWNlLkludGVydmlld1N0cnVjdBod",
+            "LkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJTChNkZWxldGVJbnRl",
+            "cnZpZXdCeUlkEhsuR3JwY01lZGlhU2VydmljZS5JZFJlcXVlc3QaHS5HcnBj",
+            "TWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASWAoUZ2V0SW50ZXJ2aWV3SW5m",
+            "b0J5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBohLkdycGNNZWRp",
+            "YVNlcnZpY2UuSW50ZXJ2aWV3U3RydWN0IgASYAoQZ2V0SW50ZXJ2aWV3TGlz",
+            "dBIpLkdycGNNZWRpYVNlcnZpY2UuUGFnaW5hdGlvblJlcXVlc3RTZWFyY2ga",
+            "Hy5HcnBjTWVkaWFTZXJ2aWNlLkludGVydmlld0xpc3QiABJfChRjcmVhdGVI",
+            "aWdobGlnaHRzSW5mbxImLkdycGNNZWRpYVNlcnZpY2UuSGlnaGxpZ2h0c0lu",
+            "Zm9TdHJ1Y3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASXwoU",
+            "dXBkYXRlSGlnaGxpZ2h0c0luZm8SJi5HcnBjTWVkaWFTZXJ2aWNlLkhpZ2hs",
             "aWdodHNJbmZvU3RydWN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBs",
-            "eSIAEl8KFHVwZGF0ZUhpZ2hsaWdodHNJbmZvEiYuR3JwY01lZGlhU2Vydmlj",
-            "ZS5IaWdobGlnaHRzSW5mb1N0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9k",
-            "aWZ5UmVwbHkiABJYChhkZWxldGVIaWdobGlnaHRzSW5mb0J5SWQSGy5HcnBj",
-            "TWVkaWFTZXJ2aWNlLklkUmVxdWVzdBodLkdycGNNZWRpYVNlcnZpY2UuTW9k",
-            "aWZ5UmVwbHkiABJeChVnZXRIaWdobGlnaHRzSW5mb0J5SWQSGy5HcnBjTWVk",
-            "aWFTZXJ2aWNlLklkUmVxdWVzdBomLkdycGNNZWRpYVNlcnZpY2UuSGlnaGxp",
-            "Z2h0c0luZm9TdHJ1Y3QiABJqChVnZXRIaWdobGlnaHRzSW5mb0xpc3QSKS5H",
-            "cnBjTWVkaWFTZXJ2aWNlLlBhZ2luYXRpb25SZXF1ZXN0U2VhcmNoGiQuR3Jw",
-            "Y01lZGlhU2VydmljZS5IaWdobGlnaHRzSW5mb0xpc3QiABJRCg9jcmVhdGVI",
-            "b3RlbEluZm8SHS5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsU3RydWN0Gh0uR3Jw",
-            "Y01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAElEKD3VwZGF0ZUhvdGVsSW5m",
-            "bxIdLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxTdHJ1Y3QaHS5HcnBjTWVkaWFT",
-            "ZXJ2aWNlLk1vZGlmeVJlcGx5IgASWAoTZGVsZXRlSG90ZWxJbmZvQnlJZBIg",
-            "LkdycGNNZWRpYVNlcnZpY2UuSG90ZWxJZFJlcXVlc3QaHS5HcnBjTWVkaWFT",
-            "ZXJ2aWNlLk1vZGlmeVJlcGx5IgASUQoMZ2V0SG90ZWxCeUlkEiAuR3JwY01l",
-            "ZGlhU2VydmljZS5Ib3RlbElkUmVxdWVzdBodLkdycGNNZWRpYVNlcnZpY2Uu",
-            "SG90ZWxTdHJ1Y3QiABJGCgxnZXRIb3RlbExpc3QSFy5HcnBjTWVkaWFTZXJ2",
-            "aWNlLkVtcHR5GhsuR3JwY01lZGlhU2VydmljZS5Ib3RlbExpc3QiABJhChdj",
-            "cmVhdGVIb3RlbFJvb21UeXBlSW5mbxIlLkdycGNNZWRpYVNlcnZpY2UuSG90",
-            "ZWxSb29tVHlwZVN0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVw",
-            "bHkiABJhChd1cGRhdGVIb3RlbFJvb21UeXBlSW5mbxIlLkdycGNNZWRpYVNl",
-            "cnZpY2UuSG90ZWxSb29tVHlwZVN0cnVjdBodLkdycGNNZWRpYVNlcnZpY2Uu",
-            "TW9kaWZ5UmVwbHkiABJkChdkZWxldGVIb3RlbFJvb21UeXBlQnlJZBIoLkdy",
-            "cGNNZWRpYVNlcnZpY2UuSG90ZWxSb29tVHlwZUlkUmVxdWVzdBodLkdycGNN",
-            "ZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJtChhnZXRIb3RlbFJvb21UeXBl",
-            "SW5mb0J5SWQSKC5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsUm9vbVR5cGVJZFJl",
-            "cXVlc3QaJS5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsUm9vbVR5cGVTdHJ1Y3Qi",
-            "ABJoCh1nZXRIb3RlbFJvb21UeXBlTGlzdEJ5SG90ZWxJZBIgLkdycGNNZWRp",
-            "YVNlcnZpY2UuSG90ZWxJZFJlcXVlc3QaIy5HcnBjTWVkaWFTZXJ2aWNlLkhv",
-            "dGVsUm9vbVR5cGVMaXN0IgASZQoZY3JlYXRlSG90ZWxCb29rUmVjb3JkSW5m",
-            "bxInLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxCb29rUmVjb3JkU3RydWN0Gh0u",
-            "R3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAEmUKGXVwZGF0ZUhvdGVs",
-            "Qm9va1JlY29yZEluZm8SJy5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsQm9va1Jl",
-            "Y29yZFN0cnVjdBodLkdycGNNZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJd",
-            "Ch1kZWxldGVIb3RlbEJvb2tSZWNvcmRJbmZvQnlJZBIbLkdycGNNZWRpYVNl",
+            "eSIAElgKGGRlbGV0ZUhpZ2hsaWdodHNJbmZvQnlJZBIbLkdycGNNZWRpYVNl",
             "cnZpY2UuSWRSZXF1ZXN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBs",
-            "eSIAEmoKHGdldEhvdGVsQm9va1JlY29yZEJ5TWVtYmVySWQSIS5HcnBjTWVk",
-            "aWFTZXJ2aWNlLk1lbWJlcklkUmVxdWVzdBolLkdycGNNZWRpYVNlcnZpY2Uu",
-            "SG90ZWxCb29rUmVjb3JkTGlzdCIAElkKGWNhbmNlbEhvdGVsQm9va1JlY29y",
-            "ZEJ5SWQSGy5HcnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBodLkdycGNNZWRp",
-            "YVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJgChZnZXRIb3RlbEJvb2tSZWNvcmRC",
-            "eUlkEhsuR3JwY01lZGlhU2VydmljZS5JZFJlcXVlc3QaJy5HcnBjTWVkaWFT",
-            "ZXJ2aWNlLkhvdGVsQm9va1JlY29yZFN0cnVjdCIAEmwKFmdldEhvdGVsQm9v",
-            "a1JlY29yZExpc3QSKS5HcnBjTWVkaWFTZXJ2aWNlLlBhZ2luYXRpb25SZXF1",
-            "ZXN0U2VhcmNoGiUuR3JwY01lZGlhU2VydmljZS5Ib3RlbEJvb2tSZWNvcmRM",
-            "aXN0IgBiBnByb3RvMw=="));
+            "eSIAEl4KFWdldEhpZ2hsaWdodHNJbmZvQnlJZBIbLkdycGNNZWRpYVNlcnZp",
+            "Y2UuSWRSZXF1ZXN0GiYuR3JwY01lZGlhU2VydmljZS5IaWdobGlnaHRzSW5m",
+            "b1N0cnVjdCIAEmoKFWdldEhpZ2hsaWdodHNJbmZvTGlzdBIpLkdycGNNZWRp",
+            "YVNlcnZpY2UuUGFnaW5hdGlvblJlcXVlc3RTZWFyY2gaJC5HcnBjTWVkaWFT",
+            "ZXJ2aWNlLkhpZ2hsaWdodHNJbmZvTGlzdCIAElEKD2NyZWF0ZUhvdGVsSW5m",
+            "bxIdLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxTdHJ1Y3QaHS5HcnBjTWVkaWFT",
+            "ZXJ2aWNlLk1vZGlmeVJlcGx5IgASUQoPdXBkYXRlSG90ZWxJbmZvEh0uR3Jw",
+            "Y01lZGlhU2VydmljZS5Ib3RlbFN0cnVjdBodLkdycGNNZWRpYVNlcnZpY2Uu",
+            "TW9kaWZ5UmVwbHkiABJYChNkZWxldGVIb3RlbEluZm9CeUlkEiAuR3JwY01l",
+            "ZGlhU2VydmljZS5Ib3RlbElkUmVxdWVzdBodLkdycGNNZWRpYVNlcnZpY2Uu",
+            "TW9kaWZ5UmVwbHkiABJRCgxnZXRIb3RlbEJ5SWQSIC5HcnBjTWVkaWFTZXJ2",
+            "aWNlLkhvdGVsSWRSZXF1ZXN0Gh0uR3JwY01lZGlhU2VydmljZS5Ib3RlbFN0",
+            "cnVjdCIAEkYKDGdldEhvdGVsTGlzdBIXLkdycGNNZWRpYVNlcnZpY2UuRW1w",
+            "dHkaGy5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsTGlzdCIAEmEKF2NyZWF0ZUhv",
+            "dGVsUm9vbVR5cGVJbmZvEiUuR3JwY01lZGlhU2VydmljZS5Ib3RlbFJvb21U",
+            "eXBlU3RydWN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAEmEK",
+            "F3VwZGF0ZUhvdGVsUm9vbVR5cGVJbmZvEiUuR3JwY01lZGlhU2VydmljZS5I",
+            "b3RlbFJvb21UeXBlU3RydWN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlS",
+            "ZXBseSIAEmQKF2RlbGV0ZUhvdGVsUm9vbVR5cGVCeUlkEiguR3JwY01lZGlh",
+            "U2VydmljZS5Ib3RlbFJvb21UeXBlSWRSZXF1ZXN0Gh0uR3JwY01lZGlhU2Vy",
+            "dmljZS5Nb2RpZnlSZXBseSIAEm0KGGdldEhvdGVsUm9vbVR5cGVJbmZvQnlJ",
+            "ZBIoLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxSb29tVHlwZUlkUmVxdWVzdBol",
+            "LkdycGNNZWRpYVNlcnZpY2UuSG90ZWxSb29tVHlwZVN0cnVjdCIAEmgKHWdl",
+            "dEhvdGVsUm9vbVR5cGVMaXN0QnlIb3RlbElkEiAuR3JwY01lZGlhU2Vydmlj",
+            "ZS5Ib3RlbElkUmVxdWVzdBojLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxSb29t",
+            "VHlwZUxpc3QiABJlChljcmVhdGVIb3RlbEJvb2tSZWNvcmRJbmZvEicuR3Jw",
+            "Y01lZGlhU2VydmljZS5Ib3RlbEJvb2tSZWNvcmRTdHJ1Y3QaHS5HcnBjTWVk",
+            "aWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASZQoZdXBkYXRlSG90ZWxCb29rUmVj",
+            "b3JkSW5mbxInLkdycGNNZWRpYVNlcnZpY2UuSG90ZWxCb29rUmVjb3JkU3Ry",
+            "dWN0Gh0uR3JwY01lZGlhU2VydmljZS5Nb2RpZnlSZXBseSIAEl0KHWRlbGV0",
+            "ZUhvdGVsQm9va1JlY29yZEluZm9CeUlkEhsuR3JwY01lZGlhU2VydmljZS5J",
+            "ZFJlcXVlc3QaHS5HcnBjTWVkaWFTZXJ2aWNlLk1vZGlmeVJlcGx5IgASagoc",
+            "Z2V0SG90ZWxCb29rUmVjb3JkQnlNZW1iZXJJZBIhLkdycGNNZWRpYVNlcnZp",
+            "Y2UuTWVtYmVySWRSZXF1ZXN0GiUuR3JwY01lZGlhU2VydmljZS5Ib3RlbEJv",
+            "b2tSZWNvcmRMaXN0IgASWQoZY2FuY2VsSG90ZWxCb29rUmVjb3JkQnlJZBIb",
+            "LkdycGNNZWRpYVNlcnZpY2UuSWRSZXF1ZXN0Gh0uR3JwY01lZGlhU2Vydmlj",
+            "ZS5Nb2RpZnlSZXBseSIAEmAKFmdldEhvdGVsQm9va1JlY29yZEJ5SWQSGy5H",
+            "cnBjTWVkaWFTZXJ2aWNlLklkUmVxdWVzdBonLkdycGNNZWRpYVNlcnZpY2Uu",
+            "SG90ZWxCb29rUmVjb3JkU3RydWN0IgASbAoWZ2V0SG90ZWxCb29rUmVjb3Jk",
+            "TGlzdBIpLkdycGNNZWRpYVNlcnZpY2UuUGFnaW5hdGlvblJlcXVlc3RTZWFy",
+            "Y2gaJS5HcnBjTWVkaWFTZXJ2aWNlLkhvdGVsQm9va1JlY29yZExpc3QiAGIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -267,6 +291,7 @@ namespace GrpcMediaService {
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelRoomTypeList), global::GrpcMediaService.HotelRoomTypeList.Parser, new[]{ "Listdata", "Total" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.MemberIdRequest), global::GrpcMediaService.MemberIdRequest.Parser, new[]{ "MemberId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelBookRecordStruct), global::GrpcMediaService.HotelBookRecordStruct.Parser, new[]{ "Id", "MemberId", "MemberCompany", "MemberCompanyEn", "HotelId", "HotelRoomTypeId", "BookTime", "CheckInTime", "CheckOutTime", "IsCanceled", "IsChecked", "PriceCount", "Remark", "Days", "ArriveFlight", "LeaveFlight", "IsSmoke", "LinkManFirstName", "LinkManLastName", "LinkManTel", "LinkManEmail", "LinkManTitle", "LinkManCountry", "LinkManCity", "LinkManFax", "LinkManIdCardType", "LinkManIdCardNumber", "LinkManCompany", "LinkManMobile", "LinkManBirth", "OtherName", "OtherTitle", "OtherEmail", "OtherMobile", "OtherCompany", "CardPerson", "CardType", "CardNumber", "CardDate", "Payer", "PayType", "LinkManEmail2", "CreatedAt", "UpdatedAt", "IsWebsite" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelBookRecordStructVM), global::GrpcMediaService.HotelBookRecordStructVM.Parser, new[]{ "Id", "MemberId", "MemberCompany", "MemberCompanyEn", "HotelId", "HotelRoomTypeId", "BookTime", "CheckInTime", "CheckOutTime", "IsCanceled", "IsChecked", "PriceCount", "Remark", "Days", "ArriveFlight", "LeaveFlight", "IsSmoke", "LinkManFirstName", "LinkManLastName", "LinkManTel", "LinkManEmail", "LinkManTitle", "LinkManCountry", "LinkManCity", "LinkManFax", "LinkManIdCardType", "LinkManIdCardNumber", "LinkManCompany", "LinkManMobile", "LinkManBirth", "OtherName", "OtherTitle", "OtherEmail", "OtherMobile", "OtherCompany", "CardPerson", "CardType", "CardNumber", "CardDate", "Payer", "PayType", "LinkManEmail2", "CreatedAt", "UpdatedAt", "IsWebsite", "HotelItem", "HotelRoomTypeItem" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.HotelBookRecordList), global::GrpcMediaService.HotelBookRecordList.Parser, new[]{ "Listdata", "Total" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.Empty), global::GrpcMediaService.Empty.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcMediaService.IdRequest), global::GrpcMediaService.IdRequest.Parser, new[]{ "Id" }, null, null, null),
@@ -8596,6 +8621,1555 @@ namespace GrpcMediaService {
 
   }
 
+  public sealed partial class HotelBookRecordStructVM : pb::IMessage<HotelBookRecordStructVM> {
+    private static readonly pb::MessageParser<HotelBookRecordStructVM> _parser = new pb::MessageParser<HotelBookRecordStructVM>(() => new HotelBookRecordStructVM());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<HotelBookRecordStructVM> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcMediaService.GrpcMediaReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HotelBookRecordStructVM() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HotelBookRecordStructVM(HotelBookRecordStructVM other) : this() {
+      id_ = other.id_;
+      memberId_ = other.memberId_;
+      memberCompany_ = other.memberCompany_;
+      memberCompanyEn_ = other.memberCompanyEn_;
+      hotelId_ = other.hotelId_;
+      hotelRoomTypeId_ = other.hotelRoomTypeId_;
+      bookTime_ = other.bookTime_;
+      checkInTime_ = other.checkInTime_;
+      checkOutTime_ = other.checkOutTime_;
+      isCanceled_ = other.isCanceled_;
+      isChecked_ = other.isChecked_;
+      priceCount_ = other.priceCount_;
+      remark_ = other.remark_;
+      days_ = other.days_;
+      arriveFlight_ = other.arriveFlight_;
+      leaveFlight_ = other.leaveFlight_;
+      isSmoke_ = other.isSmoke_;
+      linkManFirstName_ = other.linkManFirstName_;
+      linkManLastName_ = other.linkManLastName_;
+      linkManTel_ = other.linkManTel_;
+      linkManEmail_ = other.linkManEmail_;
+      linkManTitle_ = other.linkManTitle_;
+      linkManCountry_ = other.linkManCountry_;
+      linkManCity_ = other.linkManCity_;
+      linkManFax_ = other.linkManFax_;
+      linkManIdCardType_ = other.linkManIdCardType_;
+      linkManIdCardNumber_ = other.linkManIdCardNumber_;
+      linkManCompany_ = other.linkManCompany_;
+      linkManMobile_ = other.linkManMobile_;
+      linkManBirth_ = other.linkManBirth_;
+      otherName_ = other.otherName_;
+      otherTitle_ = other.otherTitle_;
+      otherEmail_ = other.otherEmail_;
+      otherMobile_ = other.otherMobile_;
+      otherCompany_ = other.otherCompany_;
+      cardPerson_ = other.cardPerson_;
+      cardType_ = other.cardType_;
+      cardNumber_ = other.cardNumber_;
+      cardDate_ = other.cardDate_;
+      payer_ = other.payer_;
+      payType_ = other.payType_;
+      linkManEmail2_ = other.linkManEmail2_;
+      createdAt_ = other.createdAt_;
+      updatedAt_ = other.updatedAt_;
+      isWebsite_ = other.isWebsite_;
+      HotelItem = other.hotelItem_ != null ? other.HotelItem.Clone() : null;
+      HotelRoomTypeItem = other.hotelRoomTypeItem_ != null ? other.HotelRoomTypeItem.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HotelBookRecordStructVM Clone() {
+      return new HotelBookRecordStructVM(this);
+    }
+
+    /// <summary>Field number for the "Id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "MemberId" field.</summary>
+    public const int MemberIdFieldNumber = 2;
+    private string memberId_ = "";
+    /// <summary>
+    ///会员Id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MemberId {
+      get { return memberId_; }
+      set {
+        memberId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "MemberCompany" field.</summary>
+    public const int MemberCompanyFieldNumber = 3;
+    private string memberCompany_ = "";
+    /// <summary>
+    ///会员公司中文名
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MemberCompany {
+      get { return memberCompany_; }
+      set {
+        memberCompany_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "MemberCompanyEn" field.</summary>
+    public const int MemberCompanyEnFieldNumber = 4;
+    private string memberCompanyEn_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MemberCompanyEn {
+      get { return memberCompanyEn_; }
+      set {
+        memberCompanyEn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "HotelId" field.</summary>
+    public const int HotelIdFieldNumber = 5;
+    private string hotelId_ = "";
+    /// <summary>
+    ///酒店Id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string HotelId {
+      get { return hotelId_; }
+      set {
+        hotelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "HotelRoomTypeId" field.</summary>
+    public const int HotelRoomTypeIdFieldNumber = 6;
+    private string hotelRoomTypeId_ = "";
+    /// <summary>
+    ///酒店房间类型Id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string HotelRoomTypeId {
+      get { return hotelRoomTypeId_; }
+      set {
+        hotelRoomTypeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "BookTime" field.</summary>
+    public const int BookTimeFieldNumber = 7;
+    private string bookTime_ = "";
+    /// <summary>
+    ///预订时间
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string BookTime {
+      get { return bookTime_; }
+      set {
+        bookTime_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "CheckInTime" field.</summary>
+    public const int CheckInTimeFieldNumber = 8;
+    private string checkInTime_ = "";
+    /// <summary>
+    ///入住时间
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CheckInTime {
+      get { return checkInTime_; }
+      set {
+        checkInTime_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "CheckOutTime" field.</summary>
+    public const int CheckOutTimeFieldNumber = 9;
+    private string checkOutTime_ = "";
+    /// <summary>
+    ///离开时间
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CheckOutTime {
+      get { return checkOutTime_; }
+      set {
+        checkOutTime_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "IsCanceled" field.</summary>
+    public const int IsCanceledFieldNumber = 10;
+    private bool isCanceled_;
+    /// <summary>
+    ///是否取消预约
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsCanceled {
+      get { return isCanceled_; }
+      set {
+        isCanceled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "IsChecked" field.</summary>
+    public const int IsCheckedFieldNumber = 11;
+    private int isChecked_;
+    /// <summary>
+    ///是否确认 0=>未确认;1=>待确认;2=>最终确认
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int IsChecked {
+      get { return isChecked_; }
+      set {
+        isChecked_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PriceCount" field.</summary>
+    public const int PriceCountFieldNumber = 12;
+    private string priceCount_ = "";
+    /// <summary>
+    ///预订酒店价格
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PriceCount {
+      get { return priceCount_; }
+      set {
+        priceCount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Remark" field.</summary>
+    public const int RemarkFieldNumber = 13;
+    private string remark_ = "";
+    /// <summary>
+    ///入住人要求
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Remark {
+      get { return remark_; }
+      set {
+        remark_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Days" field.</summary>
+    public const int DaysFieldNumber = 14;
+    private int days_;
+    /// <summary>
+    ///入住天数
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Days {
+      get { return days_; }
+      set {
+        days_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ArriveFlight" field.</summary>
+    public const int ArriveFlightFieldNumber = 15;
+    private string arriveFlight_ = "";
+    /// <summary>
+    ///到达航班
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ArriveFlight {
+      get { return arriveFlight_; }
+      set {
+        arriveFlight_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LeaveFlight" field.</summary>
+    public const int LeaveFlightFieldNumber = 16;
+    private string leaveFlight_ = "";
+    /// <summary>
+    ///离开航班
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LeaveFlight {
+      get { return leaveFlight_; }
+      set {
+        leaveFlight_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "IsSmoke" field.</summary>
+    public const int IsSmokeFieldNumber = 17;
+    private bool isSmoke_;
+    /// <summary>
+    ///是否吸烟
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsSmoke {
+      get { return isSmoke_; }
+      set {
+        isSmoke_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "LinkManFirstName" field.</summary>
+    public const int LinkManFirstNameFieldNumber = 18;
+    private string linkManFirstName_ = "";
+    /// <summary>
+    ///入住人FirstName
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManFirstName {
+      get { return linkManFirstName_; }
+      set {
+        linkManFirstName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LinkManLastName" field.</summary>
+    public const int LinkManLastNameFieldNumber = 19;
+    private string linkManLastName_ = "";
+    /// <summary>
+    ///入住人LastName
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManLastName {
+      get { return linkManLastName_; }
+      set {
+        linkManLastName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LinkManTel" field.</summary>
+    public const int LinkManTelFieldNumber = 20;
+    private string linkManTel_ = "";
+    /// <summary>
+    ///入住人电话
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManTel {
+      get { return linkManTel_; }
+      set {
+        linkManTel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LinkManEmail" field.</summary>
+    public const int LinkManEmailFieldNumber = 21;
+    private string linkManEmail_ = "";
+    /// <summary>
+    ///入住人邮箱
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManEmail {
+      get { return linkManEmail_; }
+      set {
+        linkManEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LinkManTitle" field.</summary>
+    public const int LinkManTitleFieldNumber = 22;
+    private string linkManTitle_ = "";
+    /// <summary>
+    ///入住人称谓
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManTitle {
+      get { return linkManTitle_; }
+      set {
+        linkManTitle_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LinkManCountry" field.</summary>
+    public const int LinkManCountryFieldNumber = 23;
+    private string linkManCountry_ = "";
+    /// <summary>
+    ///入住人国家
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManCountry {
+      get { return linkManCountry_; }
+      set {
+        linkManCountry_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LinkManCity" field.</summary>
+    public const int LinkManCityFieldNumber = 24;
+    private string linkManCity_ = "";
+    /// <summary>
+    ///入住人城市
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManCity {
+      get { return linkManCity_; }
+      set {
+        linkManCity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LinkManFax" field.</summary>
+    public const int LinkManFaxFieldNumber = 25;
+    private string linkManFax_ = "";
+    /// <summary>
+    ///入住人传真
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManFax {
+      get { return linkManFax_; }
+      set {
+        linkManFax_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LinkManIdCardType" field.</summary>
+    public const int LinkManIdCardTypeFieldNumber = 26;
+    private string linkManIdCardType_ = "";
+    /// <summary>
+    ///入住人证件类型
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManIdCardType {
+      get { return linkManIdCardType_; }
+      set {
+        linkManIdCardType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LinkManIdCardNumber" field.</summary>
+    public const int LinkManIdCardNumberFieldNumber = 27;
+    private string linkManIdCardNumber_ = "";
+    /// <summary>
+    ///入住人证件号码
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManIdCardNumber {
+      get { return linkManIdCardNumber_; }
+      set {
+        linkManIdCardNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LinkManCompany" field.</summary>
+    public const int LinkManCompanyFieldNumber = 28;
+    private string linkManCompany_ = "";
+    /// <summary>
+    ///入住人公司
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManCompany {
+      get { return linkManCompany_; }
+      set {
+        linkManCompany_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LinkManMobile" field.</summary>
+    public const int LinkManMobileFieldNumber = 29;
+    private string linkManMobile_ = "";
+    /// <summary>
+    ///入住人手机
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManMobile {
+      get { return linkManMobile_; }
+      set {
+        linkManMobile_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LinkManBirth" field.</summary>
+    public const int LinkManBirthFieldNumber = 30;
+    private string linkManBirth_ = "";
+    /// <summary>
+    ///入住人出生日期
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManBirth {
+      get { return linkManBirth_; }
+      set {
+        linkManBirth_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "OtherName" field.</summary>
+    public const int OtherNameFieldNumber = 31;
+    private string otherName_ = "";
+    /// <summary>
+    ///同住人姓名
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string OtherName {
+      get { return otherName_; }
+      set {
+        otherName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "OtherTitle" field.</summary>
+    public const int OtherTitleFieldNumber = 32;
+    private string otherTitle_ = "";
+    /// <summary>
+    ///同住人称谓
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string OtherTitle {
+      get { return otherTitle_; }
+      set {
+        otherTitle_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "OtherEmail" field.</summary>
+    public const int OtherEmailFieldNumber = 33;
+    private string otherEmail_ = "";
+    /// <summary>
+    ///同住人邮箱
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string OtherEmail {
+      get { return otherEmail_; }
+      set {
+        otherEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "OtherMobile" field.</summary>
+    public const int OtherMobileFieldNumber = 34;
+    private string otherMobile_ = "";
+    /// <summary>
+    ///同住人手机
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string OtherMobile {
+      get { return otherMobile_; }
+      set {
+        otherMobile_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "OtherCompany" field.</summary>
+    public const int OtherCompanyFieldNumber = 35;
+    private string otherCompany_ = "";
+    /// <summary>
+    ///同住人公司
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string OtherCompany {
+      get { return otherCompany_; }
+      set {
+        otherCompany_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "CardPerson" field.</summary>
+    public const int CardPersonFieldNumber = 36;
+    private string cardPerson_ = "";
+    /// <summary>
+    ///持卡人姓名
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CardPerson {
+      get { return cardPerson_; }
+      set {
+        cardPerson_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "CardType" field.</summary>
+    public const int CardTypeFieldNumber = 37;
+    private string cardType_ = "";
+    /// <summary>
+    ///卡类型
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CardType {
+      get { return cardType_; }
+      set {
+        cardType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "CardNumber" field.</summary>
+    public const int CardNumberFieldNumber = 38;
+    private string cardNumber_ = "";
+    /// <summary>
+    ///卡号码
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CardNumber {
+      get { return cardNumber_; }
+      set {
+        cardNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "CardDate" field.</summary>
+    public const int CardDateFieldNumber = 39;
+    private string cardDate_ = "";
+    /// <summary>
+    ///卡有效期
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CardDate {
+      get { return cardDate_; }
+      set {
+        cardDate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Payer" field.</summary>
+    public const int PayerFieldNumber = 40;
+    private string payer_ = "";
+    /// <summary>
+    ///付款方：自己支付还是主办方支付
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Payer {
+      get { return payer_; }
+      set {
+        payer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "PayType" field.</summary>
+    public const int PayTypeFieldNumber = 41;
+    private string payType_ = "";
+    /// <summary>
+    ///付款方式
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PayType {
+      get { return payType_; }
+      set {
+        payType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LinkManEmail2" field.</summary>
+    public const int LinkManEmail2FieldNumber = 42;
+    private string linkManEmail2_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LinkManEmail2 {
+      get { return linkManEmail2_; }
+      set {
+        linkManEmail2_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Created_at" field.</summary>
+    public const int CreatedAtFieldNumber = 43;
+    private string createdAt_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CreatedAt {
+      get { return createdAt_; }
+      set {
+        createdAt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Updated_at" field.</summary>
+    public const int UpdatedAtFieldNumber = 44;
+    private string updatedAt_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UpdatedAt {
+      get { return updatedAt_; }
+      set {
+        updatedAt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "IsWebsite" field.</summary>
+    public const int IsWebsiteFieldNumber = 45;
+    private bool isWebsite_;
+    /// <summary>
+    ///是否从网站页面订购
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsWebsite {
+      get { return isWebsite_; }
+      set {
+        isWebsite_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "HotelItem" field.</summary>
+    public const int HotelItemFieldNumber = 46;
+    private global::GrpcMediaService.HotelStruct hotelItem_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::GrpcMediaService.HotelStruct HotelItem {
+      get { return hotelItem_; }
+      set {
+        hotelItem_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "HotelRoomTypeItem" field.</summary>
+    public const int HotelRoomTypeItemFieldNumber = 47;
+    private global::GrpcMediaService.HotelRoomTypeStruct hotelRoomTypeItem_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::GrpcMediaService.HotelRoomTypeStruct HotelRoomTypeItem {
+      get { return hotelRoomTypeItem_; }
+      set {
+        hotelRoomTypeItem_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as HotelBookRecordStructVM);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(HotelBookRecordStructVM other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (MemberId != other.MemberId) return false;
+      if (MemberCompany != other.MemberCompany) return false;
+      if (MemberCompanyEn != other.MemberCompanyEn) return false;
+      if (HotelId != other.HotelId) return false;
+      if (HotelRoomTypeId != other.HotelRoomTypeId) return false;
+      if (BookTime != other.BookTime) return false;
+      if (CheckInTime != other.CheckInTime) return false;
+      if (CheckOutTime != other.CheckOutTime) return false;
+      if (IsCanceled != other.IsCanceled) return false;
+      if (IsChecked != other.IsChecked) return false;
+      if (PriceCount != other.PriceCount) return false;
+      if (Remark != other.Remark) return false;
+      if (Days != other.Days) return false;
+      if (ArriveFlight != other.ArriveFlight) return false;
+      if (LeaveFlight != other.LeaveFlight) return false;
+      if (IsSmoke != other.IsSmoke) return false;
+      if (LinkManFirstName != other.LinkManFirstName) return false;
+      if (LinkManLastName != other.LinkManLastName) return false;
+      if (LinkManTel != other.LinkManTel) return false;
+      if (LinkManEmail != other.LinkManEmail) return false;
+      if (LinkManTitle != other.LinkManTitle) return false;
+      if (LinkManCountry != other.LinkManCountry) return false;
+      if (LinkManCity != other.LinkManCity) return false;
+      if (LinkManFax != other.LinkManFax) return false;
+      if (LinkManIdCardType != other.LinkManIdCardType) return false;
+      if (LinkManIdCardNumber != other.LinkManIdCardNumber) return false;
+      if (LinkManCompany != other.LinkManCompany) return false;
+      if (LinkManMobile != other.LinkManMobile) return false;
+      if (LinkManBirth != other.LinkManBirth) return false;
+      if (OtherName != other.OtherName) return false;
+      if (OtherTitle != other.OtherTitle) return false;
+      if (OtherEmail != other.OtherEmail) return false;
+      if (OtherMobile != other.OtherMobile) return false;
+      if (OtherCompany != other.OtherCompany) return false;
+      if (CardPerson != other.CardPerson) return false;
+      if (CardType != other.CardType) return false;
+      if (CardNumber != other.CardNumber) return false;
+      if (CardDate != other.CardDate) return false;
+      if (Payer != other.Payer) return false;
+      if (PayType != other.PayType) return false;
+      if (LinkManEmail2 != other.LinkManEmail2) return false;
+      if (CreatedAt != other.CreatedAt) return false;
+      if (UpdatedAt != other.UpdatedAt) return false;
+      if (IsWebsite != other.IsWebsite) return false;
+      if (!object.Equals(HotelItem, other.HotelItem)) return false;
+      if (!object.Equals(HotelRoomTypeItem, other.HotelRoomTypeItem)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (MemberId.Length != 0) hash ^= MemberId.GetHashCode();
+      if (MemberCompany.Length != 0) hash ^= MemberCompany.GetHashCode();
+      if (MemberCompanyEn.Length != 0) hash ^= MemberCompanyEn.GetHashCode();
+      if (HotelId.Length != 0) hash ^= HotelId.GetHashCode();
+      if (HotelRoomTypeId.Length != 0) hash ^= HotelRoomTypeId.GetHashCode();
+      if (BookTime.Length != 0) hash ^= BookTime.GetHashCode();
+      if (CheckInTime.Length != 0) hash ^= CheckInTime.GetHashCode();
+      if (CheckOutTime.Length != 0) hash ^= CheckOutTime.GetHashCode();
+      if (IsCanceled != false) hash ^= IsCanceled.GetHashCode();
+      if (IsChecked != 0) hash ^= IsChecked.GetHashCode();
+      if (PriceCount.Length != 0) hash ^= PriceCount.GetHashCode();
+      if (Remark.Length != 0) hash ^= Remark.GetHashCode();
+      if (Days != 0) hash ^= Days.GetHashCode();
+      if (ArriveFlight.Length != 0) hash ^= ArriveFlight.GetHashCode();
+      if (LeaveFlight.Length != 0) hash ^= LeaveFlight.GetHashCode();
+      if (IsSmoke != false) hash ^= IsSmoke.GetHashCode();
+      if (LinkManFirstName.Length != 0) hash ^= LinkManFirstName.GetHashCode();
+      if (LinkManLastName.Length != 0) hash ^= LinkManLastName.GetHashCode();
+      if (LinkManTel.Length != 0) hash ^= LinkManTel.GetHashCode();
+      if (LinkManEmail.Length != 0) hash ^= LinkManEmail.GetHashCode();
+      if (LinkManTitle.Length != 0) hash ^= LinkManTitle.GetHashCode();
+      if (LinkManCountry.Length != 0) hash ^= LinkManCountry.GetHashCode();
+      if (LinkManCity.Length != 0) hash ^= LinkManCity.GetHashCode();
+      if (LinkManFax.Length != 0) hash ^= LinkManFax.GetHashCode();
+      if (LinkManIdCardType.Length != 0) hash ^= LinkManIdCardType.GetHashCode();
+      if (LinkManIdCardNumber.Length != 0) hash ^= LinkManIdCardNumber.GetHashCode();
+      if (LinkManCompany.Length != 0) hash ^= LinkManCompany.GetHashCode();
+      if (LinkManMobile.Length != 0) hash ^= LinkManMobile.GetHashCode();
+      if (LinkManBirth.Length != 0) hash ^= LinkManBirth.GetHashCode();
+      if (OtherName.Length != 0) hash ^= OtherName.GetHashCode();
+      if (OtherTitle.Length != 0) hash ^= OtherTitle.GetHashCode();
+      if (OtherEmail.Length != 0) hash ^= OtherEmail.GetHashCode();
+      if (OtherMobile.Length != 0) hash ^= OtherMobile.GetHashCode();
+      if (OtherCompany.Length != 0) hash ^= OtherCompany.GetHashCode();
+      if (CardPerson.Length != 0) hash ^= CardPerson.GetHashCode();
+      if (CardType.Length != 0) hash ^= CardType.GetHashCode();
+      if (CardNumber.Length != 0) hash ^= CardNumber.GetHashCode();
+      if (CardDate.Length != 0) hash ^= CardDate.GetHashCode();
+      if (Payer.Length != 0) hash ^= Payer.GetHashCode();
+      if (PayType.Length != 0) hash ^= PayType.GetHashCode();
+      if (LinkManEmail2.Length != 0) hash ^= LinkManEmail2.GetHashCode();
+      if (CreatedAt.Length != 0) hash ^= CreatedAt.GetHashCode();
+      if (UpdatedAt.Length != 0) hash ^= UpdatedAt.GetHashCode();
+      if (IsWebsite != false) hash ^= IsWebsite.GetHashCode();
+      if (hotelItem_ != null) hash ^= HotelItem.GetHashCode();
+      if (hotelRoomTypeItem_ != null) hash ^= HotelRoomTypeItem.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (MemberId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MemberId);
+      }
+      if (MemberCompany.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(MemberCompany);
+      }
+      if (MemberCompanyEn.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(MemberCompanyEn);
+      }
+      if (HotelId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(HotelId);
+      }
+      if (HotelRoomTypeId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(HotelRoomTypeId);
+      }
+      if (BookTime.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(BookTime);
+      }
+      if (CheckInTime.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(CheckInTime);
+      }
+      if (CheckOutTime.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(CheckOutTime);
+      }
+      if (IsCanceled != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(IsCanceled);
+      }
+      if (IsChecked != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(IsChecked);
+      }
+      if (PriceCount.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(PriceCount);
+      }
+      if (Remark.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Remark);
+      }
+      if (Days != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(Days);
+      }
+      if (ArriveFlight.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(ArriveFlight);
+      }
+      if (LeaveFlight.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(LeaveFlight);
+      }
+      if (IsSmoke != false) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(IsSmoke);
+      }
+      if (LinkManFirstName.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(LinkManFirstName);
+      }
+      if (LinkManLastName.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(LinkManLastName);
+      }
+      if (LinkManTel.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(LinkManTel);
+      }
+      if (LinkManEmail.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(LinkManEmail);
+      }
+      if (LinkManTitle.Length != 0) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(LinkManTitle);
+      }
+      if (LinkManCountry.Length != 0) {
+        output.WriteRawTag(186, 1);
+        output.WriteString(LinkManCountry);
+      }
+      if (LinkManCity.Length != 0) {
+        output.WriteRawTag(194, 1);
+        output.WriteString(LinkManCity);
+      }
+      if (LinkManFax.Length != 0) {
+        output.WriteRawTag(202, 1);
+        output.WriteString(LinkManFax);
+      }
+      if (LinkManIdCardType.Length != 0) {
+        output.WriteRawTag(210, 1);
+        output.WriteString(LinkManIdCardType);
+      }
+      if (LinkManIdCardNumber.Length != 0) {
+        output.WriteRawTag(218, 1);
+        output.WriteString(LinkManIdCardNumber);
+      }
+      if (LinkManCompany.Length != 0) {
+        output.WriteRawTag(226, 1);
+        output.WriteString(LinkManCompany);
+      }
+      if (LinkManMobile.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(LinkManMobile);
+      }
+      if (LinkManBirth.Length != 0) {
+        output.WriteRawTag(242, 1);
+        output.WriteString(LinkManBirth);
+      }
+      if (OtherName.Length != 0) {
+        output.WriteRawTag(250, 1);
+        output.WriteString(OtherName);
+      }
+      if (OtherTitle.Length != 0) {
+        output.WriteRawTag(130, 2);
+        output.WriteString(OtherTitle);
+      }
+      if (OtherEmail.Length != 0) {
+        output.WriteRawTag(138, 2);
+        output.WriteString(OtherEmail);
+      }
+      if (OtherMobile.Length != 0) {
+        output.WriteRawTag(146, 2);
+        output.WriteString(OtherMobile);
+      }
+      if (OtherCompany.Length != 0) {
+        output.WriteRawTag(154, 2);
+        output.WriteString(OtherCompany);
+      }
+      if (CardPerson.Length != 0) {
+        output.WriteRawTag(162, 2);
+        output.WriteString(CardPerson);
+      }
+      if (CardType.Length != 0) {
+        output.WriteRawTag(170, 2);
+        output.WriteString(CardType);
+      }
+      if (CardNumber.Length != 0) {
+        output.WriteRawTag(178, 2);
+        output.WriteString(CardNumber);
+      }
+      if (CardDate.Length != 0) {
+        output.WriteRawTag(186, 2);
+        output.WriteString(CardDate);
+      }
+      if (Payer.Length != 0) {
+        output.WriteRawTag(194, 2);
+        output.WriteString(Payer);
+      }
+      if (PayType.Length != 0) {
+        output.WriteRawTag(202, 2);
+        output.WriteString(PayType);
+      }
+      if (LinkManEmail2.Length != 0) {
+        output.WriteRawTag(210, 2);
+        output.WriteString(LinkManEmail2);
+      }
+      if (CreatedAt.Length != 0) {
+        output.WriteRawTag(218, 2);
+        output.WriteString(CreatedAt);
+      }
+      if (UpdatedAt.Length != 0) {
+        output.WriteRawTag(226, 2);
+        output.WriteString(UpdatedAt);
+      }
+      if (IsWebsite != false) {
+        output.WriteRawTag(232, 2);
+        output.WriteBool(IsWebsite);
+      }
+      if (hotelItem_ != null) {
+        output.WriteRawTag(242, 2);
+        output.WriteMessage(HotelItem);
+      }
+      if (hotelRoomTypeItem_ != null) {
+        output.WriteRawTag(250, 2);
+        output.WriteMessage(HotelRoomTypeItem);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (MemberId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MemberId);
+      }
+      if (MemberCompany.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MemberCompany);
+      }
+      if (MemberCompanyEn.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MemberCompanyEn);
+      }
+      if (HotelId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HotelId);
+      }
+      if (HotelRoomTypeId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HotelRoomTypeId);
+      }
+      if (BookTime.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BookTime);
+      }
+      if (CheckInTime.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CheckInTime);
+      }
+      if (CheckOutTime.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CheckOutTime);
+      }
+      if (IsCanceled != false) {
+        size += 1 + 1;
+      }
+      if (IsChecked != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(IsChecked);
+      }
+      if (PriceCount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PriceCount);
+      }
+      if (Remark.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Remark);
+      }
+      if (Days != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Days);
+      }
+      if (ArriveFlight.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ArriveFlight);
+      }
+      if (LeaveFlight.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LeaveFlight);
+      }
+      if (IsSmoke != false) {
+        size += 2 + 1;
+      }
+      if (LinkManFirstName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManFirstName);
+      }
+      if (LinkManLastName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManLastName);
+      }
+      if (LinkManTel.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManTel);
+      }
+      if (LinkManEmail.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManEmail);
+      }
+      if (LinkManTitle.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManTitle);
+      }
+      if (LinkManCountry.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManCountry);
+      }
+      if (LinkManCity.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManCity);
+      }
+      if (LinkManFax.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManFax);
+      }
+      if (LinkManIdCardType.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManIdCardType);
+      }
+      if (LinkManIdCardNumber.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManIdCardNumber);
+      }
+      if (LinkManCompany.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManCompany);
+      }
+      if (LinkManMobile.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManMobile);
+      }
+      if (LinkManBirth.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManBirth);
+      }
+      if (OtherName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(OtherName);
+      }
+      if (OtherTitle.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(OtherTitle);
+      }
+      if (OtherEmail.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(OtherEmail);
+      }
+      if (OtherMobile.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(OtherMobile);
+      }
+      if (OtherCompany.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(OtherCompany);
+      }
+      if (CardPerson.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CardPerson);
+      }
+      if (CardType.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CardType);
+      }
+      if (CardNumber.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CardNumber);
+      }
+      if (CardDate.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CardDate);
+      }
+      if (Payer.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Payer);
+      }
+      if (PayType.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PayType);
+      }
+      if (LinkManEmail2.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkManEmail2);
+      }
+      if (CreatedAt.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CreatedAt);
+      }
+      if (UpdatedAt.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(UpdatedAt);
+      }
+      if (IsWebsite != false) {
+        size += 2 + 1;
+      }
+      if (hotelItem_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(HotelItem);
+      }
+      if (hotelRoomTypeItem_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(HotelRoomTypeItem);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(HotelBookRecordStructVM other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.MemberId.Length != 0) {
+        MemberId = other.MemberId;
+      }
+      if (other.MemberCompany.Length != 0) {
+        MemberCompany = other.MemberCompany;
+      }
+      if (other.MemberCompanyEn.Length != 0) {
+        MemberCompanyEn = other.MemberCompanyEn;
+      }
+      if (other.HotelId.Length != 0) {
+        HotelId = other.HotelId;
+      }
+      if (other.HotelRoomTypeId.Length != 0) {
+        HotelRoomTypeId = other.HotelRoomTypeId;
+      }
+      if (other.BookTime.Length != 0) {
+        BookTime = other.BookTime;
+      }
+      if (other.CheckInTime.Length != 0) {
+        CheckInTime = other.CheckInTime;
+      }
+      if (other.CheckOutTime.Length != 0) {
+        CheckOutTime = other.CheckOutTime;
+      }
+      if (other.IsCanceled != false) {
+        IsCanceled = other.IsCanceled;
+      }
+      if (other.IsChecked != 0) {
+        IsChecked = other.IsChecked;
+      }
+      if (other.PriceCount.Length != 0) {
+        PriceCount = other.PriceCount;
+      }
+      if (other.Remark.Length != 0) {
+        Remark = other.Remark;
+      }
+      if (other.Days != 0) {
+        Days = other.Days;
+      }
+      if (other.ArriveFlight.Length != 0) {
+        ArriveFlight = other.ArriveFlight;
+      }
+      if (other.LeaveFlight.Length != 0) {
+        LeaveFlight = other.LeaveFlight;
+      }
+      if (other.IsSmoke != false) {
+        IsSmoke = other.IsSmoke;
+      }
+      if (other.LinkManFirstName.Length != 0) {
+        LinkManFirstName = other.LinkManFirstName;
+      }
+      if (other.LinkManLastName.Length != 0) {
+        LinkManLastName = other.LinkManLastName;
+      }
+      if (other.LinkManTel.Length != 0) {
+        LinkManTel = other.LinkManTel;
+      }
+      if (other.LinkManEmail.Length != 0) {
+        LinkManEmail = other.LinkManEmail;
+      }
+      if (other.LinkManTitle.Length != 0) {
+        LinkManTitle = other.LinkManTitle;
+      }
+      if (other.LinkManCountry.Length != 0) {
+        LinkManCountry = other.LinkManCountry;
+      }
+      if (other.LinkManCity.Length != 0) {
+        LinkManCity = other.LinkManCity;
+      }
+      if (other.LinkManFax.Length != 0) {
+        LinkManFax = other.LinkManFax;
+      }
+      if (other.LinkManIdCardType.Length != 0) {
+        LinkManIdCardType = other.LinkManIdCardType;
+      }
+      if (other.LinkManIdCardNumber.Length != 0) {
+        LinkManIdCardNumber = other.LinkManIdCardNumber;
+      }
+      if (other.LinkManCompany.Length != 0) {
+        LinkManCompany = other.LinkManCompany;
+      }
+      if (other.LinkManMobile.Length != 0) {
+        LinkManMobile = other.LinkManMobile;
+      }
+      if (other.LinkManBirth.Length != 0) {
+        LinkManBirth = other.LinkManBirth;
+      }
+      if (other.OtherName.Length != 0) {
+        OtherName = other.OtherName;
+      }
+      if (other.OtherTitle.Length != 0) {
+        OtherTitle = other.OtherTitle;
+      }
+      if (other.OtherEmail.Length != 0) {
+        OtherEmail = other.OtherEmail;
+      }
+      if (other.OtherMobile.Length != 0) {
+        OtherMobile = other.OtherMobile;
+      }
+      if (other.OtherCompany.Length != 0) {
+        OtherCompany = other.OtherCompany;
+      }
+      if (other.CardPerson.Length != 0) {
+        CardPerson = other.CardPerson;
+      }
+      if (other.CardType.Length != 0) {
+        CardType = other.CardType;
+      }
+      if (other.CardNumber.Length != 0) {
+        CardNumber = other.CardNumber;
+      }
+      if (other.CardDate.Length != 0) {
+        CardDate = other.CardDate;
+      }
+      if (other.Payer.Length != 0) {
+        Payer = other.Payer;
+      }
+      if (other.PayType.Length != 0) {
+        PayType = other.PayType;
+      }
+      if (other.LinkManEmail2.Length != 0) {
+        LinkManEmail2 = other.LinkManEmail2;
+      }
+      if (other.CreatedAt.Length != 0) {
+        CreatedAt = other.CreatedAt;
+      }
+      if (other.UpdatedAt.Length != 0) {
+        UpdatedAt = other.UpdatedAt;
+      }
+      if (other.IsWebsite != false) {
+        IsWebsite = other.IsWebsite;
+      }
+      if (other.hotelItem_ != null) {
+        if (hotelItem_ == null) {
+          hotelItem_ = new global::GrpcMediaService.HotelStruct();
+        }
+        HotelItem.MergeFrom(other.HotelItem);
+      }
+      if (other.hotelRoomTypeItem_ != null) {
+        if (hotelRoomTypeItem_ == null) {
+          hotelRoomTypeItem_ = new global::GrpcMediaService.HotelRoomTypeStruct();
+        }
+        HotelRoomTypeItem.MergeFrom(other.HotelRoomTypeItem);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            MemberId = input.ReadString();
+            break;
+          }
+          case 26: {
+            MemberCompany = input.ReadString();
+            break;
+          }
+          case 34: {
+            MemberCompanyEn = input.ReadString();
+            break;
+          }
+          case 42: {
+            HotelId = input.ReadString();
+            break;
+          }
+          case 50: {
+            HotelRoomTypeId = input.ReadString();
+            break;
+          }
+          case 58: {
+            BookTime = input.ReadString();
+            break;
+          }
+          case 66: {
+            CheckInTime = input.ReadString();
+            break;
+          }
+          case 74: {
+            CheckOutTime = input.ReadString();
+            break;
+          }
+          case 80: {
+            IsCanceled = input.ReadBool();
+            break;
+          }
+          case 88: {
+            IsChecked = input.ReadInt32();
+            break;
+          }
+          case 98: {
+            PriceCount = input.ReadString();
+            break;
+          }
+          case 106: {
+            Remark = input.ReadString();
+            break;
+          }
+          case 112: {
+            Days = input.ReadInt32();
+            break;
+          }
+          case 122: {
+            ArriveFlight = input.ReadString();
+            break;
+          }
+          case 130: {
+            LeaveFlight = input.ReadString();
+            break;
+          }
+          case 136: {
+            IsSmoke = input.ReadBool();
+            break;
+          }
+          case 146: {
+            LinkManFirstName = input.ReadString();
+            break;
+          }
+          case 154: {
+            LinkManLastName = input.ReadString();
+            break;
+          }
+          case 162: {
+            LinkManTel = input.ReadString();
+            break;
+          }
+          case 170: {
+            LinkManEmail = input.ReadString();
+            break;
+          }
+          case 178: {
+            LinkManTitle = input.ReadString();
+            break;
+          }
+          case 186: {
+            LinkManCountry = input.ReadString();
+            break;
+          }
+          case 194: {
+            LinkManCity = input.ReadString();
+            break;
+          }
+          case 202: {
+            LinkManFax = input.ReadString();
+            break;
+          }
+          case 210: {
+            LinkManIdCardType = input.ReadString();
+            break;
+          }
+          case 218: {
+            LinkManIdCardNumber = input.ReadString();
+            break;
+          }
+          case 226: {
+            LinkManCompany = input.ReadString();
+            break;
+          }
+          case 234: {
+            LinkManMobile = input.ReadString();
+            break;
+          }
+          case 242: {
+            LinkManBirth = input.ReadString();
+            break;
+          }
+          case 250: {
+            OtherName = input.ReadString();
+            break;
+          }
+          case 258: {
+            OtherTitle = input.ReadString();
+            break;
+          }
+          case 266: {
+            OtherEmail = input.ReadString();
+            break;
+          }
+          case 274: {
+            OtherMobile = input.ReadString();
+            break;
+          }
+          case 282: {
+            OtherCompany = input.ReadString();
+            break;
+          }
+          case 290: {
+            CardPerson = input.ReadString();
+            break;
+          }
+          case 298: {
+            CardType = input.ReadString();
+            break;
+          }
+          case 306: {
+            CardNumber = input.ReadString();
+            break;
+          }
+          case 314: {
+            CardDate = input.ReadString();
+            break;
+          }
+          case 322: {
+            Payer = input.ReadString();
+            break;
+          }
+          case 330: {
+            PayType = input.ReadString();
+            break;
+          }
+          case 338: {
+            LinkManEmail2 = input.ReadString();
+            break;
+          }
+          case 346: {
+            CreatedAt = input.ReadString();
+            break;
+          }
+          case 354: {
+            UpdatedAt = input.ReadString();
+            break;
+          }
+          case 360: {
+            IsWebsite = input.ReadBool();
+            break;
+          }
+          case 370: {
+            if (hotelItem_ == null) {
+              hotelItem_ = new global::GrpcMediaService.HotelStruct();
+            }
+            input.ReadMessage(hotelItem_);
+            break;
+          }
+          case 378: {
+            if (hotelRoomTypeItem_ == null) {
+              hotelRoomTypeItem_ = new global::GrpcMediaService.HotelRoomTypeStruct();
+            }
+            input.ReadMessage(hotelRoomTypeItem_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class HotelBookRecordList : pb::IMessage<HotelBookRecordList> {
     private static readonly pb::MessageParser<HotelBookRecordList> _parser = new pb::MessageParser<HotelBookRecordList>(() => new HotelBookRecordList());
     private pb::UnknownFieldSet _unknownFields;
@@ -8604,7 +10178,7 @@ namespace GrpcMediaService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcMediaService.GrpcMediaReflection.Descriptor.MessageTypes[21]; }
+      get { return global::GrpcMediaService.GrpcMediaReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8633,11 +10207,11 @@ namespace GrpcMediaService {
 
     /// <summary>Field number for the "listdata" field.</summary>
     public const int ListdataFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::GrpcMediaService.HotelBookRecordStruct> _repeated_listdata_codec
-        = pb::FieldCodec.ForMessage(10, global::GrpcMediaService.HotelBookRecordStruct.Parser);
-    private readonly pbc::RepeatedField<global::GrpcMediaService.HotelBookRecordStruct> listdata_ = new pbc::RepeatedField<global::GrpcMediaService.HotelBookRecordStruct>();
+    private static readonly pb::FieldCodec<global::GrpcMediaService.HotelBookRecordStructVM> _repeated_listdata_codec
+        = pb::FieldCodec.ForMessage(10, global::GrpcMediaService.HotelBookRecordStructVM.Parser);
+    private readonly pbc::RepeatedField<global::GrpcMediaService.HotelBookRecordStructVM> listdata_ = new pbc::RepeatedField<global::GrpcMediaService.HotelBookRecordStructVM>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::GrpcMediaService.HotelBookRecordStruct> Listdata {
+    public pbc::RepeatedField<global::GrpcMediaService.HotelBookRecordStructVM> Listdata {
       get { return listdata_; }
     }
 
@@ -8753,7 +10327,7 @@ namespace GrpcMediaService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcMediaService.GrpcMediaReflection.Descriptor.MessageTypes[22]; }
+      get { return global::GrpcMediaService.GrpcMediaReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8854,7 +10428,7 @@ namespace GrpcMediaService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcMediaService.GrpcMediaReflection.Descriptor.MessageTypes[23]; }
+      get { return global::GrpcMediaService.GrpcMediaReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8983,7 +10557,7 @@ namespace GrpcMediaService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcMediaService.GrpcMediaReflection.Descriptor.MessageTypes[24]; }
+      get { return global::GrpcMediaService.GrpcMediaReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9168,7 +10742,7 @@ namespace GrpcMediaService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcMediaService.GrpcMediaReflection.Descriptor.MessageTypes[25]; }
+      get { return global::GrpcMediaService.GrpcMediaReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
