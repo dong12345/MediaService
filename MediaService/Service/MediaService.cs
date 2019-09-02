@@ -235,7 +235,7 @@ namespace MediaService.Service
                                     && (string.IsNullOrEmpty(searchModel.ContractNumber) || x.ContractNumber.Contains(searchModel.ContractNumber))
                                     && (string.IsNullOrEmpty(searchModel.PavilionNumber) || x.PavilionNumber.Contains(searchModel.PavilionNumber))
                                     && (string.IsNullOrEmpty(searchModel.BoothNumber) || x.BoothNumber.Contains(searchModel.BoothNumber))
-                                    && (searchModel.IsPay == x.IsPay)
+                                    && (string.IsNullOrEmpty(searchModel.IsPay) || DataHelper.GetBool(searchModel.IsPay) == x.IsPay)
                                     && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId == searchModel.OwnerId)
                                     && (string.IsNullOrEmpty(searchModel.Begin_date) || x.CreatedAt >= Convert.ToDateTime(searchModel.Begin_date))
                                     && (string.IsNullOrEmpty(searchModel.End_date) || x.CreatedAt <= Convert.ToDateTime(searchModel.Begin_date)))
@@ -275,7 +275,7 @@ namespace MediaService.Service
                                     && (string.IsNullOrEmpty(searchModel.ContractNumber) || x.ContractNumber.Contains(searchModel.ContractNumber))
                                     && (string.IsNullOrEmpty(searchModel.PavilionNumber) || x.PavilionNumber.Contains(searchModel.PavilionNumber))
                                     && (string.IsNullOrEmpty(searchModel.BoothNumber) || x.BoothNumber.Contains(searchModel.BoothNumber))
-                                    && (searchModel.IsPay == x.IsPay)
+                                    && (string.IsNullOrEmpty(searchModel.IsPay) || DataHelper.GetBool(searchModel.IsPay) == x.IsPay)
                                     && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId == searchModel.OwnerId)
                                     && (string.IsNullOrEmpty(searchModel.Begin_date) || x.CreatedAt >= Convert.ToDateTime(searchModel.Begin_date))
                                     && (string.IsNullOrEmpty(searchModel.End_date) || x.CreatedAt <= Convert.ToDateTime(searchModel.Begin_date)))
@@ -1987,11 +1987,12 @@ namespace MediaService.Service
                         var list = await _context.HotelBookRecord
                                 .Where(x => ( string.IsNullOrEmpty(searchModel.HotelId) || searchModel.HotelId == x.HotelId.ToString())
                                  && (string.IsNullOrEmpty(searchModel.HotelRoomTypeId) || searchModel.HotelRoomTypeId == x.HotelRoomTypeId.ToString())
-                                 && (searchModel.IsChecked == x.IsChecked)
-                                 && (searchModel.IsCanceled == x.IsCanceled)
+                                 && (string.IsNullOrEmpty(searchModel.IsChecked) || DataHelper.GetInt32(searchModel.IsChecked) == x.IsChecked)
+                                 && (string.IsNullOrEmpty(searchModel.IsCanceled) || DataHelper.GetBool(searchModel.IsCanceled) == x.IsCanceled)
                                  && (string.IsNullOrEmpty(searchModel.Begin_date) || x.BookTime >= Convert.ToDateTime(searchModel.Begin_date))
                                  && (string.IsNullOrEmpty(searchModel.End_date) || x.BookTime <= Convert.ToDateTime(searchModel.End_date))
-                                 && (searchModel.IsWebsite == x.IsWebsite))
+                                 && (string.IsNullOrEmpty(searchModel.IsWebsite) ||DataHelper.GetBool(searchModel.IsWebsite) == x.IsWebsite))
+                                 .Include(x => x.HotelItem).Include(x => x.HotelRoomTypeItem)
                                  .OrderByDescending(x => x.CreatedAt)
                                  .Skip(((pageindex - 1) * pagesize))
                                  .Take(pagesize)
@@ -2026,11 +2027,11 @@ namespace MediaService.Service
                         var list = await _context.HotelBookRecord
                          .Where(x => (string.IsNullOrEmpty(searchModel.HotelId) || searchModel.HotelId == x.HotelId.ToString())
                        && (string.IsNullOrEmpty(searchModel.HotelRoomTypeId) || searchModel.HotelRoomTypeId == x.HotelRoomTypeId.ToString())
-                       && (searchModel.IsChecked == x.IsChecked)
-                       && (searchModel.IsCanceled == x.IsCanceled)
+                       && (string.IsNullOrEmpty(searchModel.IsChecked) || DataHelper.GetInt32(searchModel.IsChecked) == x.IsChecked)
+                       && (string.IsNullOrEmpty(searchModel.IsCanceled) || DataHelper.GetBool(searchModel.IsCanceled) == x.IsCanceled)
                        && (string.IsNullOrEmpty(searchModel.Begin_date) || x.BookTime >= Convert.ToDateTime(searchModel.Begin_date))
                        && (string.IsNullOrEmpty(searchModel.End_date) || x.BookTime <= Convert.ToDateTime(searchModel.End_date))
-                       && (searchModel.IsWebsite == x.IsWebsite))
+                       && (string.IsNullOrEmpty(searchModel.IsWebsite) || DataHelper.GetBool(searchModel.IsWebsite) == x.IsWebsite))
                         .ToListAsync();
                         total = list.Count();
                     }

@@ -164,13 +164,13 @@ namespace GrpcMediaService {
             "ZGlmaWVkX2NvdW50GAIgASgFEgsKA21zZxgDIAEoCSKfAwoMU2VhcmNoU3Ry",
             "dWN0EhMKC2NvbXBhbnlOYW1lGAEgASgJEhYKDmNvbnRyYWN0TnVtYmVyGAIg",
             "ASgJEhYKDnBhdmlsaW9uTnVtYmVyGAMgASgJEhMKC2Jvb3RoTnVtYmVyGAQg",
-            "ASgJEg8KB293bmVySWQYBSABKAkSDQoFaXNQYXkYBiABKAgSEgoKaXNIYXZl",
-            "TG9nbxgHIAEoCBISCgpiZWdpbl9kYXRlGAggASgJEhAKCGVuZF9kYXRlGAkg",
+            "ASgJEg8KB293bmVySWQYBSABKAkSDQoFaXNQYXkYBiABKAkSEgoKaXNIYXZl",
+            "TG9nbxgHIAEoCRISCgpiZWdpbl9kYXRlGAggASgJEhAKCGVuZF9kYXRlGAkg",
             "ASgJEhIKCmV4cHJlc3NOdW0YCiABKAkSDgoGc2VuZGVyGAsgASgJEhEKCXJl",
             "Y2lwaWVudBgMIAEoCRIVCg1yZWNpcGllbnRVbml0GA0gASgJEg8KB2hvdGVs",
             "SWQYDiABKAkSFwoPaG90ZWxSb29tVHlwZUlkGA8gASgJEhIKCmlzQ2FuY2Vs",
-            "ZWQYECABKAgSEQoJaXNDaGVja2VkGBEgASgFEhEKCWlzV2Vic2l0ZRgSIAEo",
-            "CBIMCgR0eXBlGBMgASgJEg0KBWVtYWlsGBQgASgJEgwKBG5hbWUYFSABKAky",
+            "ZWQYECABKAkSEQoJaXNDaGVja2VkGBEgASgJEhEKCWlzV2Vic2l0ZRgSIAEo",
+            "CRIMCgR0eXBlGBMgASgJEg0KBWVtYWlsGBQgASgJEgwKBG5hbWUYFSABKAky",
             "2SEKEk1lZGlhU2VydmljZVRvR3JwYxJbChRjcmVhdGVGb3JtUHVibGljSW5m",
             "bxIiLkdycGNNZWRpYVNlcnZpY2UuRm9ybVB1YmxpY1N0cnVjdBodLkdycGNN",
             "ZWRpYVNlcnZpY2UuTW9kaWZ5UmVwbHkiABJbChR1cGRhdGVGb3JtUHVibGlj",
@@ -10923,29 +10923,29 @@ namespace GrpcMediaService {
 
     /// <summary>Field number for the "isPay" field.</summary>
     public const int IsPayFieldNumber = 6;
-    private bool isPay_;
+    private string isPay_ = "";
     /// <summary>
     ///是否付款
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool IsPay {
+    public string IsPay {
       get { return isPay_; }
       set {
-        isPay_ = value;
+        isPay_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "isHaveLogo" field.</summary>
     public const int IsHaveLogoFieldNumber = 7;
-    private bool isHaveLogo_;
+    private string isHaveLogo_ = "";
     /// <summary>
     ///是否有logo
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool IsHaveLogo {
+    public string IsHaveLogo {
       get { return isHaveLogo_; }
       set {
-        isHaveLogo_ = value;
+        isHaveLogo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -11063,43 +11063,43 @@ namespace GrpcMediaService {
 
     /// <summary>Field number for the "isCanceled" field.</summary>
     public const int IsCanceledFieldNumber = 16;
-    private bool isCanceled_;
+    private string isCanceled_ = "";
     /// <summary>
     ///是否取消预约
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool IsCanceled {
+    public string IsCanceled {
       get { return isCanceled_; }
       set {
-        isCanceled_ = value;
+        isCanceled_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "isChecked" field.</summary>
     public const int IsCheckedFieldNumber = 17;
-    private int isChecked_;
+    private string isChecked_ = "";
     /// <summary>
     ///是否确认 0=>未确认;1=>待确认;2=>最终确认
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int IsChecked {
+    public string IsChecked {
       get { return isChecked_; }
       set {
-        isChecked_ = value;
+        isChecked_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "isWebsite" field.</summary>
     public const int IsWebsiteFieldNumber = 18;
-    private bool isWebsite_;
+    private string isWebsite_ = "";
     /// <summary>
     ///是否从网站页面订购
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool IsWebsite {
+    public string IsWebsite {
       get { return isWebsite_; }
       set {
-        isWebsite_ = value;
+        isWebsite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -11190,8 +11190,8 @@ namespace GrpcMediaService {
       if (PavilionNumber.Length != 0) hash ^= PavilionNumber.GetHashCode();
       if (BoothNumber.Length != 0) hash ^= BoothNumber.GetHashCode();
       if (OwnerId.Length != 0) hash ^= OwnerId.GetHashCode();
-      if (IsPay != false) hash ^= IsPay.GetHashCode();
-      if (IsHaveLogo != false) hash ^= IsHaveLogo.GetHashCode();
+      if (IsPay.Length != 0) hash ^= IsPay.GetHashCode();
+      if (IsHaveLogo.Length != 0) hash ^= IsHaveLogo.GetHashCode();
       if (BeginDate.Length != 0) hash ^= BeginDate.GetHashCode();
       if (EndDate.Length != 0) hash ^= EndDate.GetHashCode();
       if (ExpressNum.Length != 0) hash ^= ExpressNum.GetHashCode();
@@ -11200,9 +11200,9 @@ namespace GrpcMediaService {
       if (RecipientUnit.Length != 0) hash ^= RecipientUnit.GetHashCode();
       if (HotelId.Length != 0) hash ^= HotelId.GetHashCode();
       if (HotelRoomTypeId.Length != 0) hash ^= HotelRoomTypeId.GetHashCode();
-      if (IsCanceled != false) hash ^= IsCanceled.GetHashCode();
-      if (IsChecked != 0) hash ^= IsChecked.GetHashCode();
-      if (IsWebsite != false) hash ^= IsWebsite.GetHashCode();
+      if (IsCanceled.Length != 0) hash ^= IsCanceled.GetHashCode();
+      if (IsChecked.Length != 0) hash ^= IsChecked.GetHashCode();
+      if (IsWebsite.Length != 0) hash ^= IsWebsite.GetHashCode();
       if (Type.Length != 0) hash ^= Type.GetHashCode();
       if (Email.Length != 0) hash ^= Email.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -11239,13 +11239,13 @@ namespace GrpcMediaService {
         output.WriteRawTag(42);
         output.WriteString(OwnerId);
       }
-      if (IsPay != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsPay);
+      if (IsPay.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(IsPay);
       }
-      if (IsHaveLogo != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(IsHaveLogo);
+      if (IsHaveLogo.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(IsHaveLogo);
       }
       if (BeginDate.Length != 0) {
         output.WriteRawTag(66);
@@ -11279,17 +11279,17 @@ namespace GrpcMediaService {
         output.WriteRawTag(122);
         output.WriteString(HotelRoomTypeId);
       }
-      if (IsCanceled != false) {
-        output.WriteRawTag(128, 1);
-        output.WriteBool(IsCanceled);
+      if (IsCanceled.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(IsCanceled);
       }
-      if (IsChecked != 0) {
-        output.WriteRawTag(136, 1);
-        output.WriteInt32(IsChecked);
+      if (IsChecked.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(IsChecked);
       }
-      if (IsWebsite != false) {
-        output.WriteRawTag(144, 1);
-        output.WriteBool(IsWebsite);
+      if (IsWebsite.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(IsWebsite);
       }
       if (Type.Length != 0) {
         output.WriteRawTag(154, 1);
@@ -11326,11 +11326,11 @@ namespace GrpcMediaService {
       if (OwnerId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OwnerId);
       }
-      if (IsPay != false) {
-        size += 1 + 1;
+      if (IsPay.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IsPay);
       }
-      if (IsHaveLogo != false) {
-        size += 1 + 1;
+      if (IsHaveLogo.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IsHaveLogo);
       }
       if (BeginDate.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BeginDate);
@@ -11356,14 +11356,14 @@ namespace GrpcMediaService {
       if (HotelRoomTypeId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(HotelRoomTypeId);
       }
-      if (IsCanceled != false) {
-        size += 2 + 1;
+      if (IsCanceled.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(IsCanceled);
       }
-      if (IsChecked != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(IsChecked);
+      if (IsChecked.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(IsChecked);
       }
-      if (IsWebsite != false) {
-        size += 2 + 1;
+      if (IsWebsite.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(IsWebsite);
       }
       if (Type.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Type);
@@ -11400,10 +11400,10 @@ namespace GrpcMediaService {
       if (other.OwnerId.Length != 0) {
         OwnerId = other.OwnerId;
       }
-      if (other.IsPay != false) {
+      if (other.IsPay.Length != 0) {
         IsPay = other.IsPay;
       }
-      if (other.IsHaveLogo != false) {
+      if (other.IsHaveLogo.Length != 0) {
         IsHaveLogo = other.IsHaveLogo;
       }
       if (other.BeginDate.Length != 0) {
@@ -11430,13 +11430,13 @@ namespace GrpcMediaService {
       if (other.HotelRoomTypeId.Length != 0) {
         HotelRoomTypeId = other.HotelRoomTypeId;
       }
-      if (other.IsCanceled != false) {
+      if (other.IsCanceled.Length != 0) {
         IsCanceled = other.IsCanceled;
       }
-      if (other.IsChecked != 0) {
+      if (other.IsChecked.Length != 0) {
         IsChecked = other.IsChecked;
       }
-      if (other.IsWebsite != false) {
+      if (other.IsWebsite.Length != 0) {
         IsWebsite = other.IsWebsite;
       }
       if (other.Type.Length != 0) {
@@ -11479,12 +11479,12 @@ namespace GrpcMediaService {
             OwnerId = input.ReadString();
             break;
           }
-          case 48: {
-            IsPay = input.ReadBool();
+          case 50: {
+            IsPay = input.ReadString();
             break;
           }
-          case 56: {
-            IsHaveLogo = input.ReadBool();
+          case 58: {
+            IsHaveLogo = input.ReadString();
             break;
           }
           case 66: {
@@ -11519,16 +11519,16 @@ namespace GrpcMediaService {
             HotelRoomTypeId = input.ReadString();
             break;
           }
-          case 128: {
-            IsCanceled = input.ReadBool();
+          case 130: {
+            IsCanceled = input.ReadString();
             break;
           }
-          case 136: {
-            IsChecked = input.ReadInt32();
+          case 138: {
+            IsChecked = input.ReadString();
             break;
           }
-          case 144: {
-            IsWebsite = input.ReadBool();
+          case 146: {
+            IsWebsite = input.ReadString();
             break;
           }
           case 154: {

@@ -33,11 +33,11 @@ namespace MediaService.Common
         /// <summary>
         ///是否付款
         /// </summary>
-        public bool IsPay { get; set; }
+        public string IsPay { get; set; }
         /// <summary>
         ///是否有logo
         /// </summary>
-        public bool IsHaveLogo { get; set; }
+        public string IsHaveLogo { get; set; }
         /// <summary>
         ///开始日期
         /// </summary>
@@ -74,16 +74,16 @@ namespace MediaService.Common
         /// <summary>
         ///是否取消预约
         /// </summary>
-        public bool IsCanceled { get; set; }
+        public string IsCanceled { get; set; }
         /// <summary>
         ///是否确认 0=>未确认；1=>待确认；2=>最终确认
         /// </summary>
-        public int IsChecked { get; set; }
+        public string IsChecked { get; set; }
 
         /// <summary>
         /// 是否从网站页面订购
         /// </summary>
-        public bool IsWebsite { get; set; }
+        public string IsWebsite { get; set; }
 
         /// <summary>
         /// 会刊订购类型(会刊或是摘要集)

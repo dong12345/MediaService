@@ -657,9 +657,9 @@ message SearchStruct{
   //客户经理Id
   string ownerId=5;
   //是否付款
-  bool isPay=6;
+  string isPay=6;
   //是否有logo
-  bool isHaveLogo=7;
+  string isHaveLogo=7;
   //开始日期
   string begin_date=8;
   //结束日期
@@ -677,11 +677,11 @@ message SearchStruct{
   //酒店房间类型Id
   string hotelRoomTypeId=15;
   //是否取消预约
-  bool isCanceled=16;
+  string isCanceled=16;
   //是否确认 0=>未确认;1=>待确认;2=>最终确认
-  int32 isChecked=17;
+  string isChecked=17;
   //是否从网站页面订购
-  bool isWebsite=18;
+  string isWebsite=18;
   //会刊订购类型(会刊或是摘要集)
   string type=19;
   //会刊订购人邮箱
