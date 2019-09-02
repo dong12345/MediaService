@@ -530,6 +530,8 @@ message HighlightsInfoList {
    string Updated_at=44;
    //是否从网站页面订购
    bool IsWebsite=45;
+   //订单号
+   string OrderNumber=46;
  }
 
   message HotelBookRecordStructVM{
@@ -620,6 +622,8 @@ message HighlightsInfoList {
    bool IsWebsite=45;
    HotelStruct HotelItem=46;
    HotelRoomTypeStruct HotelRoomTypeItem=47;
+    //订单号
+   string OrderNumber=48;
  }
 
 

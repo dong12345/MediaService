@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MediaService.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20190827085607_Init")]
+    [Migration("20190902052251_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -352,6 +352,8 @@ namespace MediaService.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("HotelId");
+
                     b.HasIndex("HotelRoomTypeId");
 
                     b.ToTable("HotelBookRecord");
@@ -437,7 +439,12 @@ namespace MediaService.Migrations
 
             modelBuilder.Entity("MediaService.DBModel.HotelBookRecord", b =>
                 {
-                    b.HasOne("MediaService.DBModel.HotelRoomType", "HotelRoomType")
+                    b.HasOne("MediaService.DBModel.Hotel", "HotelItem")
+                        .WithMany()
+                        .HasForeignKey("HotelId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("MediaService.DBModel.HotelRoomType", "HotelRoomTypeItem")
                         .WithMany("HotelBookRecords")
                         .HasForeignKey("HotelRoomTypeId")
                         .OnDelete(DeleteBehavior.Cascade);

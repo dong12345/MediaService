@@ -782,6 +782,7 @@ namespace MediaService.Implement
                 request.Id = Guid.NewGuid().ToString();
                 request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
                 request.BookTime= DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+                request.OrderNumber = UniqueData.Gener(string.Empty);
 
                 var model = Mapper.Map<HotelBookRecordStruct, HotelBookRecord>(request);
                 var result = await _service.CreateHotelBookRecordInfo(model);

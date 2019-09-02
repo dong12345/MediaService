@@ -28,6 +28,7 @@ namespace MediaService.DBModel
         /// </summary>
         public Guid HotelId { get; set; }
 
+        [ForeignKey("HotelId")]
         public Hotel HotelItem { get; set;}
         /// <summary>
         ///酒店房间类型Id
@@ -185,5 +186,10 @@ namespace MediaService.DBModel
         /// 是否从网站页面订购
         /// </summary>
         public bool IsWebsite { get; set; }
+
+        /// <summary>
+        /// 订单号
+        /// </summary>
+        public string OrderNumber { get; set; }
     }
 }

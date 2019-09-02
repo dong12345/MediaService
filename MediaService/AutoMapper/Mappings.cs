@@ -36,6 +36,10 @@ namespace MediaService.AutoMapper
                 config.CreateMap<HotelRoomType, HotelRoomTypeStruct>();
                 config.CreateMap<HotelRoomTypeStruct, HotelRoomType>();
 
+
+                config.CreateMap<HotelBookRecord, HotelBookRecordStruct>();
+                config.CreateMap<HotelBookRecordStruct, HotelBookRecord>();
+
                 config.CreateMap<HotelBookRecord, HotelBookRecordStructVM>();
                 config.CreateMap<HotelBookRecordStruct, HotelBookRecordStructVM>();
 
