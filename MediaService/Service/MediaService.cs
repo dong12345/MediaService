@@ -237,6 +237,7 @@ namespace MediaService.Service
                                     && (string.IsNullOrEmpty(searchModel.BoothNumber) || x.BoothNumber.Contains(searchModel.BoothNumber))
                                     && (string.IsNullOrEmpty(searchModel.IsPay) || DataHelper.GetBool(searchModel.IsPay) == x.IsPay)
                                     && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId == searchModel.OwnerId)
+                                    && (string.IsNullOrEmpty(searchModel.IsHaveLogo) || x.IsHaveLogo==DataHelper.GetBool(searchModel.IsHaveLogo))
                                     && (string.IsNullOrEmpty(searchModel.Begin_date) || x.CreatedAt >= Convert.ToDateTime(searchModel.Begin_date))
                                     && (string.IsNullOrEmpty(searchModel.End_date) || x.CreatedAt <= Convert.ToDateTime(searchModel.Begin_date)))
                                    .OrderByDescending(x => x.CreatedAt)
@@ -358,6 +359,7 @@ namespace MediaService.Service
                         model.SnecLogoWebsite = formPublic.SnecLogoWebsite;
                         model.Telephone = formPublic.Telephone;
                         model.Website = formPublic.Website;
+                        model.UpdatedAt = DateTime.Now;
                         #endregion
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -367,6 +369,7 @@ namespace MediaService.Service
                     else
                     {
                         //新增
+                        formPublic.CreatedAt= DateTime.Now;
                         await _context.FormPublic.AddAsync(formPublic);
                         count = await _context.SaveChangesAsync();
                         if (count > 0)

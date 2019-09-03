@@ -25,7 +25,7 @@ service MediaServiceToGrpc{
   //根据Id获得会刊信息
   rpc getFormPublicInfoById(IdRequest) returns (FormPublicStruct){}
 
-  //根据条件查询会刊信息列表(带分页)
+  //根据条件(公司名,合同号,展馆号,展位号,付款状态,业务员,时间范围,有无logo)查询会刊信息列表(带分页)
   rpc getFormPublicList(PaginationRequestSearch) returns (FormPublicList) {}
 
   //根据展商合同Id获得会刊信息

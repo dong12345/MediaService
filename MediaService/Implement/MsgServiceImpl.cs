@@ -176,6 +176,7 @@ namespace MediaService.Implement
             try
             {
                 request.Id = Guid.NewGuid().ToString();
+
                 var model = Mapper.Map<FormPublicStruct, FormPublic>(request);
                 var result = await _service.OperateFormPublicInfoByExbContractId(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);

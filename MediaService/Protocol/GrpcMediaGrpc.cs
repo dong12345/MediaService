@@ -417,7 +417,7 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
-      ///根据条件查询会刊信息列表(带分页)
+      ///根据条件(公司名,合同号,展馆号,展位号,付款状态,业务员,时间范围,有无logo)查询会刊信息列表(带分页)
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1102,7 +1102,7 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_getFormPublicInfoById, null, options, request);
       }
       /// <summary>
-      ///根据条件查询会刊信息列表(带分页)
+      ///根据条件(公司名,合同号,展馆号,展位号,付款状态,业务员,时间范围,有无logo)查询会刊信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1114,7 +1114,7 @@ namespace GrpcMediaService {
         return getFormPublicList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据条件查询会刊信息列表(带分页)
+      ///根据条件(公司名,合同号,展馆号,展位号,付款状态,业务员,时间范围,有无logo)查询会刊信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1124,7 +1124,7 @@ namespace GrpcMediaService {
         return CallInvoker.BlockingUnaryCall(__Method_getFormPublicList, null, options, request);
       }
       /// <summary>
-      ///根据条件查询会刊信息列表(带分页)
+      ///根据条件(公司名,合同号,展馆号,展位号,付款状态,业务员,时间范围,有无logo)查询会刊信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1136,7 +1136,7 @@ namespace GrpcMediaService {
         return getFormPublicListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据条件查询会刊信息列表(带分页)
+      ///根据条件(公司名,合同号,展馆号,展位号,付款状态,业务员,时间范围,有无logo)查询会刊信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
