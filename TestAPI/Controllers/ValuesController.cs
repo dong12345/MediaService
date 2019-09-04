@@ -422,9 +422,18 @@ namespace TestAPI.Controllers
             return Ok(result);
         }
 
+
+        [Route("getHotelOrderList")]
+        [HttpPost]
+        public IActionResult getHotelOrderList(PaginationRequestSearch search)
+        {
+            var result = EGClient.getHotelOrderList(search);
+            return Ok(result);
+        }
+
         #endregion
 
-       
+
 
     }
 

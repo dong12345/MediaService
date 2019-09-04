@@ -180,6 +180,9 @@ service MediaServiceToGrpc{
   //根据条件查询酒店预订记录列表(带分页)
   rpc getHotelBookRecordList(PaginationRequestSearch) returns (HotelBookRecordList) {}
 
+  //根据条件查询酒店订单列表(以订单人为单位的分组查询结果,带分页)
+  rpc getHotelOrderList(PaginationRequestSearch) returns (OrderPersonList){}
+
   //================酒店预定记录=========================
 }
 
@@ -532,6 +535,8 @@ message HighlightsInfoList {
    bool IsWebsite=45;
    //订单号
    string OrderNumber=46;
+   //会员邮箱
+   string MemberEmail=47;
  }
 
   message HotelBookRecordStructVM{
@@ -624,12 +629,27 @@ message HighlightsInfoList {
    HotelRoomTypeStruct HotelRoomTypeItem=47;
     //订单号
    string OrderNumber=48;
+   //会员邮箱
+   string MemberEmail=49;
  }
 
 
  message HotelBookRecordList{
    repeated HotelBookRecordStructVM listdata = 1;
    int32 total = 2;
+ }
+
+
+ message OrderPersonStruct{
+	//订单人Id
+	string MemberId=1;
+	string MemberEmail=2;
+	string MemberCompany=3;
+ }
+
+ message OrderPersonList{
+	repeated OrderPersonStruct listdata=1;
+	int32 total=2;
  }
 
 message Empty{

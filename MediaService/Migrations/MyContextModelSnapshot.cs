@@ -136,6 +136,8 @@ namespace MediaService.Migrations
 
                     b.Property<string>("PavilionNumber");
 
+                    b.Property<string>("ProductType");
+
                     b.Property<string>("SnecLogoWebsite");
 
                     b.Property<string>("Telephone");
@@ -326,7 +328,11 @@ namespace MediaService.Migrations
 
                     b.Property<string>("MemberCompanyEn");
 
+                    b.Property<string>("MemberEmail");
+
                     b.Property<string>("MemberId");
+
+                    b.Property<string>("OrderNumber");
 
                     b.Property<string>("OtherCompany");
 

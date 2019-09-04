@@ -54,5 +54,10 @@ namespace MediaService.DBModel
         public string ContractNumber { get; set; }
 
         public string ExbContractId { get; set; }
+
+        /// <summary>
+        /// 存储勾选的展品属类信息
+        /// </summary>
+        public string ProductType { get; set; }
     }
 }

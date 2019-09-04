@@ -2,6 +2,7 @@
 using GrpcMediaService;
 using MediaService.Common;
 using MediaService.DBModel;
+using MediaService.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,6 +50,8 @@ namespace MediaService.AutoMapper
                 config.CreateMap<ModifyReply, ModifyReplyModel>();
 
                 config.CreateMap<Hotel, HotelVM>();
+
+                config.CreateMap<OrderPerson, OrderPersonStruct>();
 
             });
         }

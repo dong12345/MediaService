@@ -1,6 +1,7 @@
 ﻿using MediaService.Common;
 using MediaService.DBModel;
 using MediaService.MediaDBContext;
+using MediaService.ViewModel;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -100,6 +101,7 @@ namespace MediaService.Service
                         modified_model.Telephone = formPublic.Telephone;
                         modified_model.Website = formPublic.Website;
                         modified_model.UpdatedAt = formPublic.UpdatedAt;
+                        modified_model.ProductType = formPublic.ProductType;
                         #endregion
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -2036,6 +2038,116 @@ namespace MediaService.Service
                     else
                     {
                         var list = await _context.HotelBookRecord.ToListAsync();
+                        total = list.Count;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+            return total;
+        }
+
+        /// <summary>
+        /// 根据条件查询酒店订单列表(以订单人为单位的分组查询结果,带分页)
+        /// </summary>
+        /// <param name="pageindex"></param>
+        /// <param name="pagesize"></param>
+        /// <param name="searchModel"></param>
+        /// <returns></returns>
+        public async Task<List<OrderPerson>> GetHotelOrderList(int pageindex, int pagesize, SearchModel searchModel)
+        {
+            try
+            {
+                using (var _context = new MyContext(_options.Options))
+                {
+                    if (searchModel == null)
+                    {
+                        var list = await _context.HotelBookRecord
+                                 .OrderByDescending(x => x.CreatedAt)
+                                 .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail })
+                                 .Select(g => new OrderPerson
+                                 {
+                                     MemberId = g.Key.MemberId,
+                                     MemberCompany = g.Key.MemberCompany,
+                                     MemberEmail = g.Key.MemberEmail
+                                 }).OrderByDescending(x => x.MemberCompany)
+                                 .Skip(((pageindex - 1) * pagesize))
+                                 .Take(pagesize)
+                                 .ToListAsync();
+                        return list;
+
+                    }
+                    else
+                    {
+                        var list = await _context.HotelBookRecord
+                                 .OrderByDescending(x => x.CreatedAt)
+                                 .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail })
+                                 .Select(g => new OrderPerson
+                                 {
+                                     MemberId = g.Key.MemberId,
+                                     MemberCompany = g.Key.MemberCompany,
+                                     MemberEmail = g.Key.MemberEmail
+                                 }).OrderByDescending(x => x.MemberCompany)
+                                 .Where(x => (string.IsNullOrEmpty(searchModel.Email) || x.MemberEmail.Contains(searchModel.Email))
+                                 && (string.IsNullOrEmpty(searchModel.CompanyName) || x.MemberCompany.Contains(searchModel.CompanyName)))
+                                 .Skip(((pageindex - 1) * pagesize))
+                                 .Take(pagesize)
+                                 .ToListAsync();
+
+                        return list;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+        }
+
+        /// <summary>
+        /// 根据条件查询酒店订单列表(以订单人为单位的分组查询结果)记录总数
+        /// </summary>
+        /// <param name="searchModel"></param>
+        /// <returns></returns>
+        public async Task<int> GetHotelOrderListCount(SearchModel searchModel)
+        {
+            var total = 0;
+            try
+            {
+                using (var _context = new MyContext(_options.Options))
+                {
+                    if (searchModel != null)
+                    {
+                        var list = await _context.HotelBookRecord
+                               .OrderByDescending(x => x.CreatedAt)
+                               .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail })
+                               .Select(g => new OrderPerson
+                               {
+                                   MemberId = g.Key.MemberId,
+                                   MemberCompany = g.Key.MemberCompany,
+                                   MemberEmail = g.Key.MemberEmail
+                               })
+                               .Where(x => (string.IsNullOrEmpty(searchModel.Email) || x.MemberEmail.Contains(searchModel.Email))
+                               && (string.IsNullOrEmpty(searchModel.CompanyName) || x.MemberCompany.Contains(searchModel.CompanyName)))
+                               .ToListAsync();
+                        total = list.Count();
+                    }
+                    else
+                    {
+                        var list = await _context.HotelBookRecord
+                               .OrderByDescending(x => x.CreatedAt)
+                               .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail })
+                               .Select(g => new OrderPerson
+                               {
+                                   MemberId = g.Key.MemberId,
+                                   MemberCompany = g.Key.MemberCompany,
+                                   MemberEmail = g.Key.MemberEmail
+                               }).ToListAsync();
+
                         total = list.Count;
                     }
                 }

@@ -8,6 +8,7 @@ using MediaService.Common;
 using MediaService.DBModel;
 using MediaService.MediaDBContext;
 using MediaService.Service;
+using MediaService.ViewModel;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -895,6 +896,26 @@ namespace MediaService.Implement
                 hotelBookRecordList.Total = await _service.GetHotelBookRecordListCount(search);
                 return hotelBookRecordList;
 
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
+
+        public override async Task<OrderPersonList> getHotelOrderList(PaginationRequestSearch request, ServerCallContext context)
+        {
+            try
+            {
+                OrderPersonList orderPersonList = new OrderPersonList();
+                var search = Mapper.Map<SearchStruct, SearchModel>(request.Search);
+                var list = await _service.GetHotelOrderList(request.Offset, request.Limit, search);
+
+                var result = Mapper.Map<List<OrderPerson>, List<OrderPersonStruct>>(list);
+                orderPersonList.Listdata.AddRange(result);
+                orderPersonList.Total = await _service.GetHotelOrderListCount(search);
+                return orderPersonList;
             }
             catch (Exception ex)
             {

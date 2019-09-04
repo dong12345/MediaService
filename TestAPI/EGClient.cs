@@ -317,6 +317,11 @@ namespace TestAPI
             return _client.getHotelBookRecordList(search);
         }
 
+        public static OrderPersonList getHotelOrderList(PaginationRequestSearch search)
+        {
+            return _client.getHotelOrderList(search);
+        }
+
         #endregion
 
 

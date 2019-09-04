@@ -23,6 +23,8 @@ namespace MediaService.DBModel
         /// </summary>
         public string MemberCompany { get; set; }
         public string MemberCompanyEn { get; set; }
+
+        public string MemberEmail { get; set; }
         /// <summary>
         ///酒店Id 
         /// </summary>
