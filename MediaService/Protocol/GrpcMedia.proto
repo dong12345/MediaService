@@ -218,6 +218,8 @@ message FormPublicStruct{
 	bool isHaveLogo=23;
 	string contractNumber=24;
 	string exbContractId=25;
+	//存储勾选的展品属类信息
+	string productType=26;
 }
 
 message ExbContractIdRequest{
