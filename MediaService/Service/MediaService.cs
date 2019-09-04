@@ -362,6 +362,7 @@ namespace MediaService.Service
                         model.Telephone = formPublic.Telephone;
                         model.Website = formPublic.Website;
                         model.UpdatedAt = DateTime.Now;
+                        model.ProductType = formPublic.ProductType;
                         #endregion
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
