@@ -1778,7 +1778,6 @@ namespace MediaService.Service
                     else
                     {
                         model.ArriveFlight = hotelBookRecord.ArriveFlight;
-                        model.BookTime = hotelBookRecord.BookTime;
                         model.CardDate = hotelBookRecord.CardDate;
                         model.CardNumber = hotelBookRecord.CardNumber;
                         model.CardPerson = hotelBookRecord.CardPerson;
@@ -1786,8 +1785,6 @@ namespace MediaService.Service
                         model.CheckInTime = hotelBookRecord.CheckInTime;
                         model.CheckOutTime = hotelBookRecord.CheckOutTime;
                         model.Days = hotelBookRecord.Days;
-                        model.IsCanceled = hotelBookRecord.IsCanceled;
-                        model.IsChecked = hotelBookRecord.IsChecked;
                         model.IsSmoke = hotelBookRecord.IsSmoke;
                         model.LeaveFlight = hotelBookRecord.LeaveFlight;
                         model.LinkManBirth = hotelBookRecord.LinkManBirth;
@@ -1804,8 +1801,6 @@ namespace MediaService.Service
                         model.LinkManMobile = hotelBookRecord.LinkManMobile;
                         model.LinkManTel = hotelBookRecord.LinkManTel;
                         model.LinkManTitle = hotelBookRecord.LinkManTitle;
-                        model.MemberCompany = hotelBookRecord.MemberCompany;
-                        model.MemberCompanyEn = hotelBookRecord.MemberCompanyEn;
                         model.OtherCompany = hotelBookRecord.OtherCompany;
                         model.OtherEmail = hotelBookRecord.OtherEmail;
                         model.OtherMobile = hotelBookRecord.OtherMobile;
