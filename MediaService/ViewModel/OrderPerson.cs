@@ -13,5 +13,7 @@ namespace MediaService.ViewModel
         public string MemberEmail { get; set; }
 
         public string MemberCompany { get; set; }
+
+        public string MemberCompanyEn { get; set; }
     }
 }

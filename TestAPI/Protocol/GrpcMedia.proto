@@ -652,6 +652,7 @@ message HighlightsInfoList {
 	string MemberEmail=2;
 	string MemberCompany=3;
 	string MemberName=4;
+	string MemberCompanyEn=5;
  }
 
  message OrderPersonList{
