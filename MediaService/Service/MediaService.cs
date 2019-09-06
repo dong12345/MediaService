@@ -2068,12 +2068,14 @@ namespace MediaService.Service
                     {
                         var list = await _context.HotelBookRecord
                                  .OrderByDescending(x => x.CreatedAt)
-                                 .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail })
+                                 .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail,x.MemberName })
                                  .Select(g => new OrderPerson
                                  {
                                      MemberId = g.Key.MemberId,
                                      MemberCompany = g.Key.MemberCompany,
-                                     MemberEmail = g.Key.MemberEmail
+                                     MemberEmail = g.Key.MemberEmail,
+                                     MemberName=g.Key.MemberName
+                                     
                                  }).OrderByDescending(x => x.MemberCompany)
                                  .Skip(((pageindex - 1) * pagesize))
                                  .Take(pagesize)
@@ -2085,12 +2087,13 @@ namespace MediaService.Service
                     {
                         var list = await _context.HotelBookRecord
                                  .OrderByDescending(x => x.CreatedAt)
-                                 .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail })
+                                 .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail, x.MemberName })
                                  .Select(g => new OrderPerson
                                  {
                                      MemberId = g.Key.MemberId,
                                      MemberCompany = g.Key.MemberCompany,
-                                     MemberEmail = g.Key.MemberEmail
+                                     MemberEmail = g.Key.MemberEmail,
+                                     MemberName = g.Key.MemberName
                                  }).OrderByDescending(x => x.MemberCompany)
                                  .Where(x => (string.IsNullOrEmpty(searchModel.Email) || x.MemberEmail.Contains(searchModel.Email))
                                  && (string.IsNullOrEmpty(searchModel.CompanyName) || x.MemberCompany.Contains(searchModel.CompanyName)))
@@ -2125,12 +2128,13 @@ namespace MediaService.Service
                     {
                         var list = await _context.HotelBookRecord
                                .OrderByDescending(x => x.CreatedAt)
-                               .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail })
+                               .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail, x.MemberName })
                                .Select(g => new OrderPerson
                                {
                                    MemberId = g.Key.MemberId,
                                    MemberCompany = g.Key.MemberCompany,
-                                   MemberEmail = g.Key.MemberEmail
+                                   MemberEmail = g.Key.MemberEmail,
+                                   MemberName = g.Key.MemberName
                                })
                                .Where(x => (string.IsNullOrEmpty(searchModel.Email) || x.MemberEmail.Contains(searchModel.Email))
                                && (string.IsNullOrEmpty(searchModel.CompanyName) || x.MemberCompany.Contains(searchModel.CompanyName)))
@@ -2141,12 +2145,13 @@ namespace MediaService.Service
                     {
                         var list = await _context.HotelBookRecord
                                .OrderByDescending(x => x.CreatedAt)
-                               .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail })
+                               .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail, x.MemberName })
                                .Select(g => new OrderPerson
                                {
                                    MemberId = g.Key.MemberId,
                                    MemberCompany = g.Key.MemberCompany,
-                                   MemberEmail = g.Key.MemberEmail
+                                   MemberEmail = g.Key.MemberEmail,
+                                   MemberName = g.Key.MemberName
                                }).ToListAsync();
 
                         total = list.Count;

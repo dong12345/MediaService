@@ -18,6 +18,11 @@ namespace MediaService.DBModel
         /// 会员Id
         /// </summary>
         public string MemberId { get; set; }
+
+        /// <summary>
+        /// 会员名称
+        /// </summary>
+        public string MemberName { get; set; }
         /// <summary>
         /// 会员公司中文名
         /// </summary>

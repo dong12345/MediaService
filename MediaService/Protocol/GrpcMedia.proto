@@ -539,6 +539,8 @@ message HighlightsInfoList {
    string OrderNumber=46;
    //会员邮箱
    string MemberEmail=47;
+   //会员姓名
+   string MemberName=48;
  }
 
   message HotelBookRecordStructVM{
@@ -633,6 +635,8 @@ message HighlightsInfoList {
    string OrderNumber=48;
    //会员邮箱
    string MemberEmail=49;
+   //会员姓名
+   string MemberName=50;
  }
 
 
@@ -647,6 +651,7 @@ message HighlightsInfoList {
 	string MemberId=1;
 	string MemberEmail=2;
 	string MemberCompany=3;
+	string MemberName=4;
  }
 
  message OrderPersonList{
