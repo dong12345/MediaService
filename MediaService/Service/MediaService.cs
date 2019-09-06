@@ -1992,7 +1992,8 @@ namespace MediaService.Service
                                  && (string.IsNullOrEmpty(searchModel.IsCanceled) || DataHelper.GetBool(searchModel.IsCanceled) == x.IsCanceled)
                                  && (string.IsNullOrEmpty(searchModel.Begin_date) || x.BookTime >= Convert.ToDateTime(searchModel.Begin_date))
                                  && (string.IsNullOrEmpty(searchModel.End_date) || x.BookTime <= Convert.ToDateTime(searchModel.End_date))
-                                 && (string.IsNullOrEmpty(searchModel.IsWebsite) ||DataHelper.GetBool(searchModel.IsWebsite) == x.IsWebsite))
+                                 && (string.IsNullOrEmpty(searchModel.IsWebsite) ||DataHelper.GetBool(searchModel.IsWebsite) == x.IsWebsite)
+                                 && (string.IsNullOrEmpty(searchModel.MemberId) || x.MemberId==searchModel.MemberId))
                                  .Include(x => x.HotelItem).Include(x => x.HotelRoomTypeItem)
                                  .OrderByDescending(x => x.CreatedAt)
                                  .Skip(((pageindex - 1) * pagesize))
@@ -2032,7 +2033,8 @@ namespace MediaService.Service
                        && (string.IsNullOrEmpty(searchModel.IsCanceled) || DataHelper.GetBool(searchModel.IsCanceled) == x.IsCanceled)
                        && (string.IsNullOrEmpty(searchModel.Begin_date) || x.BookTime >= Convert.ToDateTime(searchModel.Begin_date))
                        && (string.IsNullOrEmpty(searchModel.End_date) || x.BookTime <= Convert.ToDateTime(searchModel.End_date))
-                       && (string.IsNullOrEmpty(searchModel.IsWebsite) || DataHelper.GetBool(searchModel.IsWebsite) == x.IsWebsite))
+                       && (string.IsNullOrEmpty(searchModel.IsWebsite) || DataHelper.GetBool(searchModel.IsWebsite) == x.IsWebsite)
+                       && (string.IsNullOrEmpty(searchModel.MemberId) || x.MemberId == searchModel.MemberId))
                         .ToListAsync();
                         total = list.Count();
                     }

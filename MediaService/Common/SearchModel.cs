@@ -97,5 +97,10 @@ namespace MediaService.Common
         /// 会刊订购人
         /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// 会员Id
+        /// </summary>
+        public string MemberId { get; set; }
     }
 }

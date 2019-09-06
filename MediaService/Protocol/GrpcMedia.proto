@@ -715,6 +715,8 @@ message SearchStruct{
   string email=20;
   //会刊订购人
   string name=21;
+  //会员Id
+  string memberId=22;
 }
 
 
