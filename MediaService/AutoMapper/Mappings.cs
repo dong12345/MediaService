@@ -53,6 +53,8 @@ namespace MediaService.AutoMapper
 
                 config.CreateMap<OrderPerson, OrderPersonStruct>();
 
+                config.CreateMap<UpdateIsCheckedStruct, UpdateIsCheckedModel>();
+
             });
         }
     }

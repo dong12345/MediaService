@@ -322,6 +322,11 @@ namespace TestAPI
             return _client.getHotelOrderList(search);
         }
 
+        public static ModifyReply updateIsChecked(UpdateIsCheckedStruct model)
+        {
+            return _client.updateIsChecked(model);
+        }
+
         #endregion
 
 

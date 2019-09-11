@@ -37,6 +37,7 @@ namespace GrpcMediaService {
     static readonly grpc::Marshaller<global::GrpcMediaService.MemberIdRequest> __Marshaller_MemberIdRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.MemberIdRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.HotelBookRecordList> __Marshaller_HotelBookRecordList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.HotelBookRecordList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.OrderPersonList> __Marshaller_OrderPersonList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.OrderPersonList.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::GrpcMediaService.UpdateIsCheckedStruct> __Marshaller_UpdateIsCheckedStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.UpdateIsCheckedStruct.Parser.ParseFrom);
 
     static readonly grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply> __Method_createFormPublicInfo = new grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply>(
         grpc::MethodType.Unary,
@@ -359,6 +360,13 @@ namespace GrpcMediaService {
         "getHotelOrderList",
         __Marshaller_PaginationRequestSearch,
         __Marshaller_OrderPersonList);
+
+    static readonly grpc::Method<global::GrpcMediaService.UpdateIsCheckedStruct, global::GrpcMediaService.ModifyReply> __Method_updateIsChecked = new grpc::Method<global::GrpcMediaService.UpdateIsCheckedStruct, global::GrpcMediaService.ModifyReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "updateIsChecked",
+        __Marshaller_UpdateIsCheckedStruct,
+        __Marshaller_ModifyReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -871,6 +879,17 @@ namespace GrpcMediaService {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.OrderPersonList> getHotelOrderList(global::GrpcMediaService.PaginationRequestSearch request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///根据Id更新HotelBookRecord对象中的IsChecked字段
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> updateIsChecked(global::GrpcMediaService.UpdateIsCheckedStruct request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2924,6 +2943,50 @@ namespace GrpcMediaService {
       {
         return CallInvoker.AsyncUnaryCall(__Method_getHotelOrderList, null, options, request);
       }
+      /// <summary>
+      ///根据Id更新HotelBookRecord对象中的IsChecked字段
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.ModifyReply updateIsChecked(global::GrpcMediaService.UpdateIsCheckedStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return updateIsChecked(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据Id更新HotelBookRecord对象中的IsChecked字段
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.ModifyReply updateIsChecked(global::GrpcMediaService.UpdateIsCheckedStruct request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_updateIsChecked, null, options, request);
+      }
+      /// <summary>
+      ///根据Id更新HotelBookRecord对象中的IsChecked字段
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> updateIsCheckedAsync(global::GrpcMediaService.UpdateIsCheckedStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return updateIsCheckedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据Id更新HotelBookRecord对象中的IsChecked字段
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> updateIsCheckedAsync(global::GrpcMediaService.UpdateIsCheckedStruct request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_updateIsChecked, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override MediaServiceToGrpcClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -2981,7 +3044,8 @@ namespace GrpcMediaService {
           .AddMethod(__Method_cancelHotelBookRecordById, serviceImpl.cancelHotelBookRecordById)
           .AddMethod(__Method_getHotelBookRecordById, serviceImpl.getHotelBookRecordById)
           .AddMethod(__Method_getHotelBookRecordList, serviceImpl.getHotelBookRecordList)
-          .AddMethod(__Method_getHotelOrderList, serviceImpl.getHotelOrderList).Build();
+          .AddMethod(__Method_getHotelOrderList, serviceImpl.getHotelOrderList)
+          .AddMethod(__Method_updateIsChecked, serviceImpl.updateIsChecked).Build();
     }
 
   }

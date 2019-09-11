@@ -239,7 +239,7 @@ namespace MediaService.Service
                                     && (string.IsNullOrEmpty(searchModel.BoothNumber) || x.BoothNumber.Contains(searchModel.BoothNumber))
                                     && (string.IsNullOrEmpty(searchModel.IsPay) || DataHelper.GetBool(searchModel.IsPay) == x.IsPay)
                                     && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId == searchModel.OwnerId)
-                                    && (string.IsNullOrEmpty(searchModel.IsHaveLogo) || x.IsHaveLogo==DataHelper.GetBool(searchModel.IsHaveLogo))
+                                    && (string.IsNullOrEmpty(searchModel.IsHaveLogo) || x.IsHaveLogo == DataHelper.GetBool(searchModel.IsHaveLogo))
                                     && (string.IsNullOrEmpty(searchModel.Begin_date) || x.CreatedAt >= Convert.ToDateTime(searchModel.Begin_date))
                                     && (string.IsNullOrEmpty(searchModel.End_date) || x.CreatedAt <= Convert.ToDateTime(searchModel.Begin_date)))
                                    .OrderByDescending(x => x.CreatedAt)
@@ -372,7 +372,7 @@ namespace MediaService.Service
                     else
                     {
                         //新增
-                        formPublic.CreatedAt= DateTime.Now;
+                        formPublic.CreatedAt = DateTime.Now;
                         await _context.FormPublic.AddAsync(formPublic);
                         count = await _context.SaveChangesAsync();
                         if (count > 0)
@@ -1085,7 +1085,7 @@ namespace MediaService.Service
                     {
                         var list = await _context.Interview
                         .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.CompanyName.Contains(searchModel.CompanyName) || x.CompanyNameEn.Contains(searchModel.CompanyName))
-                         && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId== searchModel.OwnerId))
+                         && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId == searchModel.OwnerId))
                         .ToListAsync();
                         total = list.Count();
                     }
@@ -1292,7 +1292,7 @@ namespace MediaService.Service
                     {
                         var list = await _context.HighlightsInfo
                                 .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.ContractCompany.Contains(searchModel.CompanyName) || x.ContractCompanyEn.Contains(searchModel.CompanyName))
-                                 && (string.IsNullOrEmpty(searchModel.OwnerId) ||  searchModel.OwnerId== x.OwnerId))
+                                 && (string.IsNullOrEmpty(searchModel.OwnerId) || searchModel.OwnerId == x.OwnerId))
                                 .OrderByDescending(x => x.CreatedAt)
                                 .Skip(((pageindex - 1) * pagesize))
                                 .Take(pagesize)
@@ -1449,7 +1449,7 @@ namespace MediaService.Service
                 using (var _context = new MyContext(_options.Options))
                 {
                     var gid = new Guid(id);
-                    var model = await _context.Hotel.Include(x=>x.HotelRoomTypes).FirstOrDefaultAsync(x => x.HotelId == gid);
+                    var model = await _context.Hotel.Include(x => x.HotelRoomTypes).FirstOrDefaultAsync(x => x.HotelId == gid);
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
@@ -1526,7 +1526,7 @@ namespace MediaService.Service
             {
                 using (var _context = new MyContext(_options.Options))
                 {
-                    var list = await _context.Hotel.Include(x=>x.HotelRoomTypes).OrderBy(x=>x.HotelCode).ToListAsync();
+                    var list = await _context.Hotel.Include(x => x.HotelRoomTypes).OrderBy(x => x.HotelCode).ToListAsync();
                     return list;
                 }
             }
@@ -1633,7 +1633,7 @@ namespace MediaService.Service
                 using (var _context = new MyContext(_options.Options))
                 {
                     var gid = new Guid(id);
-                    var model = await _context.HotelRoomType.Include(x=>x.HotelBookRecords).FirstOrDefaultAsync(x => x.HotelRoomTypeId == gid);
+                    var model = await _context.HotelRoomType.Include(x => x.HotelBookRecords).FirstOrDefaultAsync(x => x.HotelRoomTypeId == gid);
                     if (model == null)
                     {
                         msg = "数据库中没有id为" + id + "的实例可以删除！";
@@ -1711,7 +1711,7 @@ namespace MediaService.Service
                 {
                     var list = await _context.HotelRoomType
                         .Where(x => x.HotelId.ToString() == hotelId)
-                        .OrderByDescending(x=>x.TypeName)
+                        .OrderByDescending(x => x.TypeName)
                         .ToListAsync();
                     return list;
                 }
@@ -1918,7 +1918,7 @@ namespace MediaService.Service
                     }
                     else
                     {
-                        model.IsCanceled=true;
+                        model.IsCanceled = true;
                         model.UpdatedAt = DateTime.UtcNow.ToUniversalTime();
 
                         count = await _context.SaveChangesAsync();
@@ -1986,14 +1986,14 @@ namespace MediaService.Service
                     else
                     {
                         var list = await _context.HotelBookRecord
-                                .Where(x => ( string.IsNullOrEmpty(searchModel.HotelId) || searchModel.HotelId == x.HotelId.ToString())
+                                .Where(x => (string.IsNullOrEmpty(searchModel.HotelId) || searchModel.HotelId == x.HotelId.ToString())
                                  && (string.IsNullOrEmpty(searchModel.HotelRoomTypeId) || searchModel.HotelRoomTypeId == x.HotelRoomTypeId.ToString())
                                  && (string.IsNullOrEmpty(searchModel.IsChecked) || DataHelper.GetInt32(searchModel.IsChecked) == x.IsChecked)
                                  && (string.IsNullOrEmpty(searchModel.IsCanceled) || DataHelper.GetBool(searchModel.IsCanceled) == x.IsCanceled)
                                  && (string.IsNullOrEmpty(searchModel.Begin_date) || x.BookTime >= Convert.ToDateTime(searchModel.Begin_date))
                                  && (string.IsNullOrEmpty(searchModel.End_date) || x.BookTime <= Convert.ToDateTime(searchModel.End_date))
-                                 && (string.IsNullOrEmpty(searchModel.IsWebsite) ||DataHelper.GetBool(searchModel.IsWebsite) == x.IsWebsite)
-                                 && (string.IsNullOrEmpty(searchModel.MemberId) || x.MemberId==searchModel.MemberId))
+                                 && (string.IsNullOrEmpty(searchModel.IsWebsite) || DataHelper.GetBool(searchModel.IsWebsite) == x.IsWebsite)
+                                 && (string.IsNullOrEmpty(searchModel.MemberId) || x.MemberId == searchModel.MemberId))
                                  .Include(x => x.HotelItem).Include(x => x.HotelRoomTypeItem)
                                  .OrderByDescending(x => x.CreatedAt)
                                  .Skip(((pageindex - 1) * pagesize))
@@ -2070,15 +2070,15 @@ namespace MediaService.Service
                     {
                         var list = await _context.HotelBookRecord
                                  .OrderByDescending(x => x.CreatedAt)
-                                 .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail,x.MemberName,x.MemberCompanyEn })
+                                 .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail, x.MemberName, x.MemberCompanyEn })
                                  .Select(g => new OrderPerson
                                  {
                                      MemberId = g.Key.MemberId,
                                      MemberCompany = g.Key.MemberCompany,
                                      MemberEmail = g.Key.MemberEmail,
-                                     MemberName=g.Key.MemberName,
-                                     MemberCompanyEn=g.Key.MemberCompanyEn
-                                     
+                                     MemberName = g.Key.MemberName,
+                                     MemberCompanyEn = g.Key.MemberCompanyEn
+
                                  }).OrderByDescending(x => x.MemberCompany)
                                  .Skip(((pageindex - 1) * pagesize))
                                  .Take(pagesize)
@@ -2149,7 +2149,7 @@ namespace MediaService.Service
                     {
                         var list = await _context.HotelBookRecord
                                .OrderByDescending(x => x.CreatedAt)
-                               .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail, x.MemberName,x.MemberCompanyEn })
+                               .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail, x.MemberName, x.MemberCompanyEn })
                                .Select(g => new OrderPerson
                                {
                                    MemberId = g.Key.MemberId,
@@ -2169,6 +2169,43 @@ namespace MediaService.Service
                 throw new Exception("异常", ex);
             }
             return total;
+        }
+
+        /// <summary>
+        /// 更新HotelBookRecord表中IsChecked字段
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<ModifyReplyModel> UpdateIsChecked(UpdateIsCheckedModel model)
+        {
+            try
+            {
+                using (var _context = new MyContext(_options.Options))
+                {
+                    var modified_model = await _context.HotelBookRecord.FirstOrDefaultAsync(x => x.Id == model.Id);
+                    if (modified_model == null)
+                    {
+                        msg = "当前实例不存在";
+                        count = 0;
+                        isSuccess = false;
+                    }
+                    else
+                    {
+                        #region 修改
+                        modified_model.IsChecked = DataHelper.GetInt32(model.IsChecked);
+                        #endregion
+                        count = await _context.SaveChangesAsync();
+                        isSuccess = true;
+                        msg = "修改成功";
+                    }
+                    return GetModifyReply(isSuccess, msg, count);
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                return GetModifyReply(isSuccess, ex.Message, count);
+            }
         }
 
         #endregion

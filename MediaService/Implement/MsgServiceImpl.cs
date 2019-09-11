@@ -783,7 +783,7 @@ namespace MediaService.Implement
             {
                 request.Id = Guid.NewGuid().ToString();
                 request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
-                request.BookTime= DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
+                request.BookTime = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
                 request.OrderNumber = UniqueData.Gener(string.Empty);
 
                 var model = Mapper.Map<HotelBookRecordStruct, HotelBookRecord>(request);
@@ -922,6 +922,23 @@ namespace MediaService.Implement
                 LogHelper.Error(this, ex);
                 throw ex;
             }
+        }
+
+
+        public override async Task<ModifyReply> updateIsChecked(UpdateIsCheckedStruct request, ServerCallContext context)
+        {
+            ModifyReply modifyReply = new ModifyReply();
+            try {
+                var model = Mapper.Map<UpdateIsCheckedStruct, UpdateIsCheckedModel>(request);
+                var result = await _service.UpdateIsChecked(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+            return modifyReply;
         }
         #endregion
     }

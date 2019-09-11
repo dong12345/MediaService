@@ -431,6 +431,14 @@ namespace TestAPI.Controllers
             return Ok(result);
         }
 
+        [Route("updateIsChecked")]
+        [HttpPost]
+        public IActionResult updateIsChecked(UpdateIsCheckedStruct model)
+        {
+            var result = EGClient.updateIsChecked(model);
+            return Ok(result);
+        }
+
         #endregion
 
 

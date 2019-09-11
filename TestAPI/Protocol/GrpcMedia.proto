@@ -183,6 +183,8 @@ service MediaServiceToGrpc{
   //根据条件查询酒店订单列表(以订单人为单位的分组查询结果,带分页)
   rpc getHotelOrderList(PaginationRequestSearch) returns (OrderPersonList){}
 
+  //根据Id更新HotelBookRecord对象中的IsChecked字段
+  rpc updateIsChecked(UpdateIsCheckedStruct) returns(ModifyReply){}
   //================酒店预定记录=========================
 }
 
@@ -658,6 +660,12 @@ message HighlightsInfoList {
  message OrderPersonList{
 	repeated OrderPersonStruct listdata=1;
 	int32 total=2;
+ }
+
+ message UpdateIsCheckedStruct{
+	//HotelBookRecord表中主键Id
+	string id=1;
+	string isChecked=2;
  }
 
 message Empty{
