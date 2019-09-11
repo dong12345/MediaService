@@ -8,6 +8,6 @@ namespace MediaService.ViewModel
     public class UpdateIsCheckedModel
     {
         public Guid Id { get; set; }
-        public string IsChecked { get; set; }
+        public int IsChecked { get; set; }
     }
 }

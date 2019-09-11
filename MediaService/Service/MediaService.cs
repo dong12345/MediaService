@@ -2192,7 +2192,7 @@ namespace MediaService.Service
                     else
                     {
                         #region 修改
-                        modified_model.IsChecked = DataHelper.GetInt32(model.IsChecked);
+                        modified_model.IsChecked = model.IsChecked;
                         #endregion
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;

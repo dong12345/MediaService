@@ -665,7 +665,7 @@ message HighlightsInfoList {
  message UpdateIsCheckedStruct{
 	//HotelBookRecord表中主键Id
 	string id=1;
-	string isChecked=2;
+	int32 isChecked=2;
  }
 
 message Empty{

@@ -167,7 +167,7 @@ namespace GrpcMediaService {
             "FwoPTWVtYmVyQ29tcGFueUVuGAUgASgJIlcKD09yZGVyUGVyc29uTGlzdBI1",
             "CghsaXN0ZGF0YRgBIAMoCzIjLkdycGNNZWRpYVNlcnZpY2UuT3JkZXJQZXJz",
             "b25TdHJ1Y3QSDQoFdG90YWwYAiABKAUiNgoVVXBkYXRlSXNDaGVja2VkU3Ry",
-            "dWN0EgoKAmlkGAEgASgJEhEKCWlzQ2hlY2tlZBgCIAEoCSIHCgVFbXB0eSIX",
+            "dWN0EgoKAmlkGAEgASgJEhEKCWlzQ2hlY2tlZBgCIAEoBSIHCgVFbXB0eSIX",
             "CglJZFJlcXVlc3QSCgoCaWQYASABKAkiQwoLTW9kaWZ5UmVwbHkSDwoHc3Vj",
             "Y2VzcxgBIAEoCBIWCg5tb2RpZmllZF9jb3VudBgCIAEoBRILCgNtc2cYAyAB",
             "KAkisQMKDFNlYXJjaFN0cnVjdBITCgtjb21wYW55TmFtZRgBIAEoCRIWCg5j",
@@ -10997,12 +10997,12 @@ namespace GrpcMediaService {
 
     /// <summary>Field number for the "isChecked" field.</summary>
     public const int IsCheckedFieldNumber = 2;
-    private string isChecked_ = "";
+    private int isChecked_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string IsChecked {
+    public int IsChecked {
       get { return isChecked_; }
       set {
-        isChecked_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        isChecked_ = value;
       }
     }
 
@@ -11028,7 +11028,7 @@ namespace GrpcMediaService {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (IsChecked.Length != 0) hash ^= IsChecked.GetHashCode();
+      if (IsChecked != 0) hash ^= IsChecked.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -11046,9 +11046,9 @@ namespace GrpcMediaService {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (IsChecked.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(IsChecked);
+      if (IsChecked != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(IsChecked);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -11061,8 +11061,8 @@ namespace GrpcMediaService {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (IsChecked.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(IsChecked);
+      if (IsChecked != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(IsChecked);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -11078,7 +11078,7 @@ namespace GrpcMediaService {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.IsChecked.Length != 0) {
+      if (other.IsChecked != 0) {
         IsChecked = other.IsChecked;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -11096,8 +11096,8 @@ namespace GrpcMediaService {
             Id = input.ReadString();
             break;
           }
-          case 18: {
-            IsChecked = input.ReadString();
+          case 16: {
+            IsChecked = input.ReadInt32();
             break;
           }
         }
