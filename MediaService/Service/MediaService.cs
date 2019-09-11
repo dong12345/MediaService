@@ -2100,7 +2100,7 @@ namespace MediaService.Service
                                      MemberCompanyEn = g.Key.MemberCompanyEn
                                  }).OrderByDescending(x => x.MemberCompany)
                                  .Where(x => (string.IsNullOrEmpty(searchModel.Email) || x.MemberEmail.Contains(searchModel.Email))
-                                 && (string.IsNullOrEmpty(searchModel.CompanyName) || x.MemberCompany.Contains(searchModel.CompanyName)))
+                                 && (string.IsNullOrEmpty(searchModel.CompanyName) || x.MemberCompany.Contains(searchModel.CompanyName) || x.MemberCompanyEn.Contains(searchModel.CompanyName)))
                                  .Skip(((pageindex - 1) * pagesize))
                                  .Take(pagesize)
                                  .ToListAsync();
@@ -2131,15 +2131,15 @@ namespace MediaService.Service
                     if (searchModel != null)
                     {
                         var list = await _context.HotelBookRecord
-                               .OrderByDescending(x => x.CreatedAt)
-                               .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail, x.MemberName })
+                               .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail, x.MemberName, x.MemberCompanyEn })
                                .Select(g => new OrderPerson
                                {
                                    MemberId = g.Key.MemberId,
                                    MemberCompany = g.Key.MemberCompany,
                                    MemberEmail = g.Key.MemberEmail,
-                                   MemberName = g.Key.MemberName
-                               })
+                                   MemberName = g.Key.MemberName,
+                                   MemberCompanyEn = g.Key.MemberCompanyEn
+                               }).OrderByDescending(x => x.MemberCompany)
                                .Where(x => (string.IsNullOrEmpty(searchModel.Email) || x.MemberEmail.Contains(searchModel.Email))
                                && (string.IsNullOrEmpty(searchModel.CompanyName) || x.MemberCompany.Contains(searchModel.CompanyName) || x.MemberCompanyEn.Contains(searchModel.CompanyName)))
                                .ToListAsync();
@@ -2148,7 +2148,6 @@ namespace MediaService.Service
                     else
                     {
                         var list = await _context.HotelBookRecord
-                               .OrderByDescending(x => x.CreatedAt)
                                .GroupBy(x => new { x.MemberId, x.MemberCompany, x.MemberEmail, x.MemberName, x.MemberCompanyEn })
                                .Select(g => new OrderPerson
                                {
