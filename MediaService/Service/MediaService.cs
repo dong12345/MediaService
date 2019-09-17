@@ -1884,7 +1884,7 @@ namespace MediaService.Service
             {
                 using (var _context = new MyContext(_options.Options))
                 {
-                    var list = await _context.HotelBookRecord
+                    var list = await _context.HotelBookRecord.Include(x => x.HotelItem).Include(x => x.HotelRoomTypeItem)
                         .Where(x => x.MemberId == memberId).ToListAsync();
                     return list;
                 }
