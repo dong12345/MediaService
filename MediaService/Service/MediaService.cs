@@ -939,6 +939,8 @@ namespace MediaService.Service
                         model.CompanyName = interview.CompanyName;
                         model.CompanyNameEn = interview.CompanyNameEn;
                         model.UpdatedAt = interview.UpdatedAt;
+                        model.Year = interview.Year;
+                        model.Website = interview.Website;
 
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -1050,7 +1052,9 @@ namespace MediaService.Service
                     {
                         var list = await _context.Interview
                                  .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.CompanyName.Contains(searchModel.CompanyName) || x.CompanyNameEn.Contains(searchModel.CompanyName))
-                                        && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId == searchModel.OwnerId))
+                                        && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId == searchModel.OwnerId)
+                                        && (string.IsNullOrEmpty(searchModel.Year) || x.Year==searchModel.Year)
+                                        && (string.IsNullOrEmpty(searchModel.Website) || x.Website==searchModel.Website))
                                 .OrderByDescending(x => x.CreatedAt)
                                 .Skip(((pageindex - 1) * pagesize))
                                 .Take(pagesize)
@@ -1085,7 +1089,9 @@ namespace MediaService.Service
                     {
                         var list = await _context.Interview
                         .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.CompanyName.Contains(searchModel.CompanyName) || x.CompanyNameEn.Contains(searchModel.CompanyName))
-                         && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId == searchModel.OwnerId))
+                        && (string.IsNullOrEmpty(searchModel.OwnerId) || x.OwnerId == searchModel.OwnerId)
+                        && (string.IsNullOrEmpty(searchModel.Year) || x.Year == searchModel.Year)
+                        && (string.IsNullOrEmpty(searchModel.Website) || x.Website == searchModel.Website))
                         .ToListAsync();
                         total = list.Count();
                     }
@@ -1181,6 +1187,8 @@ namespace MediaService.Service
                         model.YJPosition = highlightsInfo.YJPosition;
                         model.YJPositionEn = highlightsInfo.YJPositionEn;
                         model.UpdatedAt = highlightsInfo.UpdatedAt;
+                        model.Year = highlightsInfo.Year;
+                        model.Website = highlightsInfo.Website;
 
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -1292,7 +1300,9 @@ namespace MediaService.Service
                     {
                         var list = await _context.HighlightsInfo
                                 .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.ContractCompany.Contains(searchModel.CompanyName) || x.ContractCompanyEn.Contains(searchModel.CompanyName))
-                                 && (string.IsNullOrEmpty(searchModel.OwnerId) || searchModel.OwnerId == x.OwnerId))
+                                 && (string.IsNullOrEmpty(searchModel.OwnerId) || searchModel.OwnerId == x.OwnerId)
+                                 && (string.IsNullOrEmpty(searchModel.Year) || x.Year == searchModel.Year)
+                                 && (string.IsNullOrEmpty(searchModel.Website) || x.Website == searchModel.Website))
                                 .OrderByDescending(x => x.CreatedAt)
                                 .Skip(((pageindex - 1) * pagesize))
                                 .Take(pagesize)
@@ -1327,7 +1337,9 @@ namespace MediaService.Service
                     {
                         var list = await _context.HighlightsInfo
                           .Where(x => (string.IsNullOrEmpty(searchModel.CompanyName) || x.ContractCompany.Contains(searchModel.CompanyName) || x.ContractCompanyEn.Contains(searchModel.CompanyName))
-                         && (string.IsNullOrEmpty(searchModel.OwnerId) || searchModel.OwnerId == x.OwnerId))
+                          && (string.IsNullOrEmpty(searchModel.OwnerId) || searchModel.OwnerId == x.OwnerId)
+                          && (string.IsNullOrEmpty(searchModel.Year) || x.Year == searchModel.Year)
+                          && (string.IsNullOrEmpty(searchModel.Website) || x.Website == searchModel.Website))
                         .ToListAsync();
                         total = list.Count();
                     }

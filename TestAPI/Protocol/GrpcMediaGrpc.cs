@@ -620,7 +620,7 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
-      ///根据条件查询专题采访信息列表(带分页)
+      ///根据条件(公司名、客户经理Id、年份、网站来源)查询专题采访信息列表(带分页)
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -675,7 +675,7 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
-      ///根据条件查询十大亮点信息列表(带分页)
+      ///根据条件(公司名、客户经理Id、年份、网站来源)查询十大亮点信息列表(带分页)
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1888,7 +1888,7 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_getInterviewInfoById, null, options, request);
       }
       /// <summary>
-      ///根据条件查询专题采访信息列表(带分页)
+      ///根据条件(公司名、客户经理Id、年份、网站来源)查询专题采访信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1900,7 +1900,7 @@ namespace GrpcMediaService {
         return getInterviewList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据条件查询专题采访信息列表(带分页)
+      ///根据条件(公司名、客户经理Id、年份、网站来源)查询专题采访信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1910,7 +1910,7 @@ namespace GrpcMediaService {
         return CallInvoker.BlockingUnaryCall(__Method_getInterviewList, null, options, request);
       }
       /// <summary>
-      ///根据条件查询专题采访信息列表(带分页)
+      ///根据条件(公司名、客户经理Id、年份、网站来源)查询专题采访信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1922,7 +1922,7 @@ namespace GrpcMediaService {
         return getInterviewListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据条件查询专题采访信息列表(带分页)
+      ///根据条件(公司名、客户经理Id、年份、网站来源)查询专题采访信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2108,7 +2108,7 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_getHighlightsInfoById, null, options, request);
       }
       /// <summary>
-      ///根据条件查询十大亮点信息列表(带分页)
+      ///根据条件(公司名、客户经理Id、年份、网站来源)查询十大亮点信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2120,7 +2120,7 @@ namespace GrpcMediaService {
         return getHighlightsInfoList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据条件查询十大亮点信息列表(带分页)
+      ///根据条件(公司名、客户经理Id、年份、网站来源)查询十大亮点信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2130,7 +2130,7 @@ namespace GrpcMediaService {
         return CallInvoker.BlockingUnaryCall(__Method_getHighlightsInfoList, null, options, request);
       }
       /// <summary>
-      ///根据条件查询十大亮点信息列表(带分页)
+      ///根据条件(公司名、客户经理Id、年份、网站来源)查询十大亮点信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2142,7 +2142,7 @@ namespace GrpcMediaService {
         return getHighlightsInfoListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据条件查询十大亮点信息列表(带分页)
+      ///根据条件(公司名、客户经理Id、年份、网站来源)查询十大亮点信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

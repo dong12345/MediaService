@@ -91,7 +91,7 @@ service MediaServiceToGrpc{
   //根据Id获得专题采访信息
   rpc getInterviewInfoById(IdRequest) returns(InterviewStruct){}
 
-  //根据条件查询专题采访信息列表(带分页)
+  //根据条件(公司名、客户经理Id、年份、网站来源)查询专题采访信息列表(带分页)
   rpc getInterviewList (PaginationRequestSearch) returns (InterviewList) {}
 
   //====================专题采访=========================
@@ -111,7 +111,7 @@ service MediaServiceToGrpc{
   //根据Id获得十大亮点信息
   rpc getHighlightsInfoById(IdRequest) returns (HighlightsInfoStruct){}
 
-  //根据条件查询十大亮点信息列表(带分页)
+  //根据条件(公司名、客户经理Id、年份、网站来源)查询十大亮点信息列表(带分页)
   rpc getHighlightsInfoList(PaginationRequestSearch) returns (HighlightsInfoList) {}
 
   //================十大亮点申请=========================
@@ -316,6 +316,8 @@ message InterviewStruct{
   string ownerName=14;
   string created_at=15;
   string updated_at=16;
+  string year=17;
+  string website=18;
 }
 
 message InterviewList{
@@ -355,6 +357,8 @@ message HighlightsInfoStruct{
   string OwnerName=23;
   string Created_at=24;
   string Updated_at=25;
+  string Year=26;
+  string Website=27;
 }
 
 message HighlightsInfoList {
@@ -726,6 +730,10 @@ message SearchStruct{
   string name=21;
   //会员Id
   string memberId=22;
+  //年份
+  string year=23;
+  //网站来源
+  string website=24;
 }
 
 
