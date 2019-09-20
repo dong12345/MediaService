@@ -35,5 +35,9 @@ namespace MediaService.DBModel
         public string OwnerName { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
+
+        public string Year { get; set;}
+
+        public string Website { get; set; }
     }
 }

@@ -316,6 +316,8 @@ message InterviewStruct{
   string ownerName=14;
   string created_at=15;
   string updated_at=16;
+  string year=17;
+  string website=18;
 }
 
 message InterviewList{
@@ -355,6 +357,8 @@ message HighlightsInfoStruct{
   string OwnerName=23;
   string Created_at=24;
   string Updated_at=25;
+  string Year=17;
+  string Website=18;
 }
 
 message HighlightsInfoList {
@@ -726,6 +730,10 @@ message SearchStruct{
   string name=21;
   //会员Id
   string memberId=22;
+  //年份
+  string year=23;
+  //网站来源
+  string website=24;
 }
 
 

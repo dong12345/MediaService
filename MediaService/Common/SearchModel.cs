@@ -76,7 +76,7 @@ namespace MediaService.Common
         /// </summary>
         public string IsCanceled { get; set; }
         /// <summary>
-        ///是否确认 0=>未确认；1=>待确认；2=>最终确认
+        ///是否确认 0=>未确认;1=>待确认;2=>最终确认
         /// </summary>
         public string IsChecked { get; set; }
 
@@ -102,5 +102,16 @@ namespace MediaService.Common
         /// 会员Id
         /// </summary>
         public string MemberId { get; set; }
+
+        /// <summary>
+        /// 年份
+        /// </summary>
+        public string Year { get; set; }
+
+
+        /// <summary>
+        /// 网站来源
+        /// </summary>
+        public string Website { get; set; }
     }
 }
