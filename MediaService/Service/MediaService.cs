@@ -102,6 +102,7 @@ namespace MediaService.Service
                         modified_model.Website = formPublic.Website;
                         modified_model.UpdatedAt = formPublic.UpdatedAt;
                         modified_model.ProductType = formPublic.ProductType;
+                        modified_model.Source = formPublic.Source;
                         #endregion
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -363,6 +364,7 @@ namespace MediaService.Service
                         model.Website = formPublic.Website;
                         model.UpdatedAt = DateTime.Now;
                         model.ProductType = formPublic.ProductType;
+                        model.Source = formPublic.Source;
                         #endregion
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
