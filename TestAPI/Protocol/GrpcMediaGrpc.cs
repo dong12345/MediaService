@@ -18,7 +18,7 @@ namespace GrpcMediaService {
     static readonly grpc::Marshaller<global::GrpcMediaService.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.Empty.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.FormPublicList> __Marshaller_FormPublicList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.FormPublicList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.PaginationRequestSearch> __Marshaller_PaginationRequestSearch = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.PaginationRequestSearch.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::GrpcMediaService.ExbContractIdRequest> __Marshaller_ExbContractIdRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExbContractIdRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::GrpcMediaService.ExbContractConditionRequest> __Marshaller_ExbContractConditionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExbContractConditionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExpressStruct> __Marshaller_ExpressStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExpressStruct.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExpressList> __Marshaller_ExpressList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExpressList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.CatalogueBooksStruct> __Marshaller_CatalogueBooksStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.CatalogueBooksStruct.Parser.ParseFrom);
@@ -81,11 +81,11 @@ namespace GrpcMediaService {
         __Marshaller_PaginationRequestSearch,
         __Marshaller_FormPublicList);
 
-    static readonly grpc::Method<global::GrpcMediaService.ExbContractIdRequest, global::GrpcMediaService.FormPublicStruct> __Method_getFormPublicInfoByExbContractId = new grpc::Method<global::GrpcMediaService.ExbContractIdRequest, global::GrpcMediaService.FormPublicStruct>(
+    static readonly grpc::Method<global::GrpcMediaService.ExbContractConditionRequest, global::GrpcMediaService.FormPublicStruct> __Method_getFormPublicInfoByCondition = new grpc::Method<global::GrpcMediaService.ExbContractConditionRequest, global::GrpcMediaService.FormPublicStruct>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "getFormPublicInfoByExbContractId",
-        __Marshaller_ExbContractIdRequest,
+        "getFormPublicInfoByCondition",
+        __Marshaller_ExbContractConditionRequest,
         __Marshaller_FormPublicStruct);
 
     static readonly grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply> __Method_operateFormPublicInfoByExbContractId = new grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply>(
@@ -444,12 +444,12 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
-      ///根据展商合同Id获得会刊信息
+      ///根据(展商合同Id、来源)获得会刊信息
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.FormPublicStruct> getFormPublicInfoByExbContractId(global::GrpcMediaService.ExbContractIdRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.FormPublicStruct> getFormPublicInfoByCondition(global::GrpcMediaService.ExbContractConditionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1184,48 +1184,48 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_getFormPublicList, null, options, request);
       }
       /// <summary>
-      ///根据展商合同Id获得会刊信息
+      ///根据(展商合同Id、来源)获得会刊信息
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.FormPublicStruct getFormPublicInfoByExbContractId(global::GrpcMediaService.ExbContractIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcMediaService.FormPublicStruct getFormPublicInfoByCondition(global::GrpcMediaService.ExbContractConditionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return getFormPublicInfoByExbContractId(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getFormPublicInfoByCondition(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据展商合同Id获得会刊信息
+      ///根据(展商合同Id、来源)获得会刊信息
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::GrpcMediaService.FormPublicStruct getFormPublicInfoByExbContractId(global::GrpcMediaService.ExbContractIdRequest request, grpc::CallOptions options)
+      public virtual global::GrpcMediaService.FormPublicStruct getFormPublicInfoByCondition(global::GrpcMediaService.ExbContractConditionRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_getFormPublicInfoByExbContractId, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_getFormPublicInfoByCondition, null, options, request);
       }
       /// <summary>
-      ///根据展商合同Id获得会刊信息
+      ///根据(展商合同Id、来源)获得会刊信息
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicStruct> getFormPublicInfoByExbContractIdAsync(global::GrpcMediaService.ExbContractIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicStruct> getFormPublicInfoByConditionAsync(global::GrpcMediaService.ExbContractConditionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return getFormPublicInfoByExbContractIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getFormPublicInfoByConditionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据展商合同Id获得会刊信息
+      ///根据(展商合同Id、来源)获得会刊信息
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicStruct> getFormPublicInfoByExbContractIdAsync(global::GrpcMediaService.ExbContractIdRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.FormPublicStruct> getFormPublicInfoByConditionAsync(global::GrpcMediaService.ExbContractConditionRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_getFormPublicInfoByExbContractId, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_getFormPublicInfoByCondition, null, options, request);
       }
       /// <summary>
       ///根据展商合同Id判断新增或修改会刊信息
@@ -3005,7 +3005,7 @@ namespace GrpcMediaService {
           .AddMethod(__Method_getFormPublicInfoList, serviceImpl.getFormPublicInfoList)
           .AddMethod(__Method_getFormPublicInfoById, serviceImpl.getFormPublicInfoById)
           .AddMethod(__Method_getFormPublicList, serviceImpl.getFormPublicList)
-          .AddMethod(__Method_getFormPublicInfoByExbContractId, serviceImpl.getFormPublicInfoByExbContractId)
+          .AddMethod(__Method_getFormPublicInfoByCondition, serviceImpl.getFormPublicInfoByCondition)
           .AddMethod(__Method_operateFormPublicInfoByExbContractId, serviceImpl.operateFormPublicInfoByExbContractId)
           .AddMethod(__Method_createExpressInfo, serviceImpl.createExpressInfo)
           .AddMethod(__Method_updateExpressInfo, serviceImpl.updateExpressInfo)

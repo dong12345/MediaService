@@ -305,14 +305,14 @@ namespace MediaService.Service
         /// </summary>
         /// <param name="exbContractId"></param>
         /// <returns></returns>
-        public async Task<FormPublic> GetFormPublicInfoByExbContractId(string exbContractId)
+        public async Task<FormPublic> getFormPublicInfoByCondition(ExbContractConditionModel where)
         {
             try
             {
                 using (var _context = new MyContext(_options.Options))
                 {
                     var item = await _context.FormPublic
-                            .FirstOrDefaultAsync(x => x.ExbContractId == exbContractId);
+                            .FirstOrDefaultAsync(x => (x.ExbContractId == where.ExbContractId && x.Source==where.Source));
                     return item;
                 }
             }

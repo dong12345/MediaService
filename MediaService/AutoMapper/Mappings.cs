@@ -54,6 +54,7 @@ namespace MediaService.AutoMapper
                 config.CreateMap<OrderPerson, OrderPersonStruct>();
 
                 config.CreateMap<UpdateIsCheckedStruct, UpdateIsCheckedModel>();
+                config.CreateMap<ExbContractConditionRequest, ExbContractConditionModel>();
 
             });
         }

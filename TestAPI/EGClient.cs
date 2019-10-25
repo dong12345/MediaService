@@ -53,9 +53,9 @@ namespace TestAPI
         }
 
 
-        public static FormPublicStruct getFormPublicInfoByExbContractId(ExbContractIdRequest exbContractIdRequest)
+        public static FormPublicStruct getFormPublicInfoByCondition(ExbContractConditionRequest exbContractConditionRequest)
         {
-            return _client.getFormPublicInfoByExbContractId(exbContractIdRequest);
+            return _client.getFormPublicInfoByCondition(exbContractConditionRequest);
         }
 
         public static ModifyReply operateFormPublicInfoByExbContractId(FormPublicStruct formPublicStruct)

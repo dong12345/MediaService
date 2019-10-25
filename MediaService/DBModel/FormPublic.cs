@@ -59,5 +59,10 @@ namespace MediaService.DBModel
         /// 存储勾选的展品属类信息
         /// </summary>
         public string ProductType { get; set; }
+
+        /// <summary>
+        /// 来源,区分光伏还是储能
+        /// </summary>
+        public string Source { get; set; }
     }
 }

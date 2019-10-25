@@ -147,11 +147,13 @@ namespace MediaService.Implement
             }
         }
 
-        public override async Task<FormPublicStruct> getFormPublicInfoByExbContractId(ExbContractIdRequest request, ServerCallContext context)
+
+        public async override Task<FormPublicStruct> getFormPublicInfoByCondition(ExbContractConditionRequest request, ServerCallContext context)
         {
             try
             {
-                var model = await _service.GetFormPublicInfoByExbContractId(request.ExbContractId);
+                var search = Mapper.Map<ExbContractConditionRequest, ExbContractConditionModel>(request);
+                var model = await _service.getFormPublicInfoByCondition(search);
                 FormPublicStruct result = null;
                 if (model != null)
                 {

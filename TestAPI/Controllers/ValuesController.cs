@@ -156,11 +156,11 @@ namespace TestAPI.Controllers
         }
 
 
-        [Route("getFormPublicInfoByExbContractId")]
+        [Route("getFormPublicInfoByCondition")]
         [HttpPost]
-        public IActionResult getFormPublicInfoByExbContractId(ExbContractIdRequest idRequest)
+        public IActionResult getFormPublicInfoByCondition(ExbContractConditionRequest exbContractConditionRequest)
         {
-            var result = EGClient.getFormPublicInfoByExbContractId(idRequest);
+            var result = EGClient.getFormPublicInfoByCondition(exbContractConditionRequest);
             return Ok(result);
         }
 
