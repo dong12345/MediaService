@@ -336,8 +336,9 @@ namespace MediaService.Service
                 using (var _context = new MyContext(_options.Options))
                 {
                     var contractId = formPublic.ExbContractId;
+                    var source = formPublic.Source;
                     //根据展商合同Id查询对应会刊是否存在;若存在,修改;否则,新增;
-                    var model = await _context.FormPublic.FirstOrDefaultAsync(x => x.ExbContractId == formPublic.ExbContractId);
+                    var model = await _context.FormPublic.FirstOrDefaultAsync(x => (x.ExbContractId == formPublic.ExbContractId && x.Source==source));
                     if (model != null)
                     {
                         //修改
