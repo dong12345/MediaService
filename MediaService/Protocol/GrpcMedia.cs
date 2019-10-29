@@ -53,7 +53,7 @@ namespace GrpcMediaService {
             "YXQYESABKAkiTwoLRXhwcmVzc0xpc3QSMQoIbGlzdGRhdGEYASADKAsyHy5H",
             "cnBjTWVkaWFTZXJ2aWNlLkV4cHJlc3NTdHJ1Y3QSDQoFdG90YWwYAiABKAUi",
             "wAEKFENhdGFsb2d1ZUJvb2tzU3RydWN0EgoKAmlkGAEgASgJEgwKBG5hbWUY",
-            "AiABKAkSDwoHY291bnRyeRgDIAEoBRIPCgdhZGRyZXNzGAQgASgJEgsKA3Rl",
+            "AiABKAkSDwoHY291bnRyeRgDIAEoCRIPCgdhZGRyZXNzGAQgASgJEgsKA3Rl",
             "bBgFIAEoCRINCgVlbWFpbBgGIAEoCRINCgVjb3VudBgHIAEoBRILCgNkZXMY",
             "CCABKAkSDAoEdHlwZRgJIAEoCRISCgpjcmVhdGVkX2F0GAogASgJEhIKCnVw",
             "ZGF0ZWRfYXQYCyABKAkiXQoSQ2F0YWxvZ3VlQm9va3NMaXN0EjgKCGxpc3Rk",
@@ -2556,12 +2556,12 @@ namespace GrpcMediaService {
 
     /// <summary>Field number for the "country" field.</summary>
     public const int CountryFieldNumber = 3;
-    private int country_;
+    private string country_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Country {
+    public string Country {
       get { return country_; }
       set {
-        country_ = value;
+        country_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2694,7 +2694,7 @@ namespace GrpcMediaService {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Country != 0) hash ^= Country.GetHashCode();
+      if (Country.Length != 0) hash ^= Country.GetHashCode();
       if (Address.Length != 0) hash ^= Address.GetHashCode();
       if (Tel.Length != 0) hash ^= Tel.GetHashCode();
       if (Email.Length != 0) hash ^= Email.GetHashCode();
@@ -2724,9 +2724,9 @@ namespace GrpcMediaService {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      if (Country != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(Country);
+      if (Country.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Country);
       }
       if (Address.Length != 0) {
         output.WriteRawTag(34);
@@ -2774,8 +2774,8 @@ namespace GrpcMediaService {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (Country != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Country);
+      if (Country.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Country);
       }
       if (Address.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
@@ -2818,7 +2818,7 @@ namespace GrpcMediaService {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.Country != 0) {
+      if (other.Country.Length != 0) {
         Country = other.Country;
       }
       if (other.Address.Length != 0) {
@@ -2864,8 +2864,8 @@ namespace GrpcMediaService {
             Name = input.ReadString();
             break;
           }
-          case 24: {
-            Country = input.ReadInt32();
+          case 26: {
+            Country = input.ReadString();
             break;
           }
           case 34: {

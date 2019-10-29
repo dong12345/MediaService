@@ -299,7 +299,6 @@ namespace MediaService.Implement
             {
                 request.Id = Guid.NewGuid().ToString();
                 request.CreatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
-                request.UpdatedAt = DateTime.UtcNow.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ");
 
                 var model = Mapper.Map<CatalogueBooksStruct, CatalogueBooks>(request);
                 var result = await _service.CreateCatalogueBooksInfo(model);
