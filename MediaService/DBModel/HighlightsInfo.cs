@@ -58,5 +58,7 @@ namespace MediaService.DBModel
         public string Year { get; set; }
 
         public string Website { get; set; }
+
+        public string ExbContractId { get; set; }
     }
 }

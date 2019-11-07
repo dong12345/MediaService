@@ -62,5 +62,12 @@ namespace MediaService.DBModel
         public DateTime CreatedAt { get; set; }
 
         public DateTime UpdatedAt { get; set; }
+
+        public string Year { get; set; }
+
+        /// <summary>
+        /// 是否是展商
+        /// </summary>
+        public bool IsExhibitor { get; set; }
     }
 }

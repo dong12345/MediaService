@@ -457,6 +457,25 @@ namespace MediaService.Implement
             }
         }
 
+        public  override async Task<InterviewStruct> getInterviewInfoByExbContractId(ExbContractIdRequest request, ServerCallContext context)
+        {
+            try
+            {
+                var model = await _service.GetInterviewInfoByExbContractId(request.ExbContractId);
+                var result = Mapper.Map<Interview, InterviewStruct>(model);
+                if (result != null)
+                {
+                    return result;
+                }
+                return new InterviewStruct();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
+
         public override async Task<InterviewList> getInterviewList(PaginationRequestSearch request, ServerCallContext context)
         {
             try
@@ -541,6 +560,25 @@ namespace MediaService.Implement
             try
             {
                 var model = await _service.GetHighlightsInfoById(request.Id);
+                var result = Mapper.Map<HighlightsInfo, HighlightsInfoStruct>(model);
+                if (result != null)
+                {
+                    return result;
+                }
+                return new HighlightsInfoStruct();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
+
+        public override async Task<HighlightsInfoStruct> getHighlightsInfoByExbContractId(ExbContractIdRequest request, ServerCallContext context)
+        {
+            try
+            {
+                var model = await _service.GetHighlightsInfoByExbContractId(request.ExbContractId);
                 var result = Mapper.Map<HighlightsInfo, HighlightsInfoStruct>(model);
                 return result;
             }

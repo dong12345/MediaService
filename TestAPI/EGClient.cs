@@ -164,6 +164,11 @@ namespace TestAPI
             return _client.getInterviewInfoById(idRequest);
         }
 
+        public static InterviewStruct getInterviewInfoByExbContractId(ExbContractIdRequest exbContractIdRequest)
+        {
+            return _client.getInterviewInfoByExbContractId(exbContractIdRequest);
+        }
+
 
         public static InterviewList getInterviewList(PaginationRequestSearch search)
         {
@@ -197,7 +202,10 @@ namespace TestAPI
             return _client.getHighlightsInfoById(idRequest);
         }
 
-
+        public static HighlightsInfoStruct getHighlightsInfoByExbContractId(ExbContractIdRequest exbContractIdRequest)
+        {
+            return _client.getHighlightsInfoByExbContractId(exbContractIdRequest);
+        }
         public static HighlightsInfoList getHighlightsInfoList(PaginationRequestSearch search)
         {
             return _client.getHighlightsInfoList(search);

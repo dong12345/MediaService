@@ -25,6 +25,7 @@ namespace GrpcMediaService {
     static readonly grpc::Marshaller<global::GrpcMediaService.CatalogueBooksList> __Marshaller_CatalogueBooksList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.CatalogueBooksList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.InterviewStruct> __Marshaller_InterviewStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.InterviewStruct.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.InterviewList> __Marshaller_InterviewList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.InterviewList.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::GrpcMediaService.ExbContractIdRequest> __Marshaller_ExbContractIdRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExbContractIdRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.HighlightsInfoStruct> __Marshaller_HighlightsInfoStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.HighlightsInfoStruct.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.HighlightsInfoList> __Marshaller_HighlightsInfoList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.HighlightsInfoList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.HotelStruct> __Marshaller_HotelStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.HotelStruct.Parser.ParseFrom);
@@ -200,6 +201,13 @@ namespace GrpcMediaService {
         __Marshaller_PaginationRequestSearch,
         __Marshaller_InterviewList);
 
+    static readonly grpc::Method<global::GrpcMediaService.ExbContractIdRequest, global::GrpcMediaService.InterviewStruct> __Method_getInterviewInfoByExbContractId = new grpc::Method<global::GrpcMediaService.ExbContractIdRequest, global::GrpcMediaService.InterviewStruct>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "getInterviewInfoByExbContractId",
+        __Marshaller_ExbContractIdRequest,
+        __Marshaller_InterviewStruct);
+
     static readonly grpc::Method<global::GrpcMediaService.HighlightsInfoStruct, global::GrpcMediaService.ModifyReply> __Method_createHighlightsInfo = new grpc::Method<global::GrpcMediaService.HighlightsInfoStruct, global::GrpcMediaService.ModifyReply>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -234,6 +242,13 @@ namespace GrpcMediaService {
         "getHighlightsInfoList",
         __Marshaller_PaginationRequestSearch,
         __Marshaller_HighlightsInfoList);
+
+    static readonly grpc::Method<global::GrpcMediaService.ExbContractIdRequest, global::GrpcMediaService.HighlightsInfoStruct> __Method_getHighlightsInfoByExbContractId = new grpc::Method<global::GrpcMediaService.ExbContractIdRequest, global::GrpcMediaService.HighlightsInfoStruct>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "getHighlightsInfoByExbContractId",
+        __Marshaller_ExbContractIdRequest,
+        __Marshaller_HighlightsInfoStruct);
 
     static readonly grpc::Method<global::GrpcMediaService.HotelStruct, global::GrpcMediaService.ModifyReply> __Method_createHotelInfo = new grpc::Method<global::GrpcMediaService.HotelStruct, global::GrpcMediaService.ModifyReply>(
         grpc::MethodType.Unary,
@@ -631,6 +646,17 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
+      ///根据ExbContractId获得专题采访信息
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.InterviewStruct> getInterviewInfoByExbContractId(global::GrpcMediaService.ExbContractIdRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       ///创建十大亮点信息
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -681,6 +707,17 @@ namespace GrpcMediaService {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.HighlightsInfoList> getHighlightsInfoList(global::GrpcMediaService.PaginationRequestSearch request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///根据ExbContractId获得十大亮点信息
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.HighlightsInfoStruct> getHighlightsInfoByExbContractId(global::GrpcMediaService.ExbContractIdRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1932,6 +1969,50 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_getInterviewList, null, options, request);
       }
       /// <summary>
+      ///根据ExbContractId获得专题采访信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.InterviewStruct getInterviewInfoByExbContractId(global::GrpcMediaService.ExbContractIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getInterviewInfoByExbContractId(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据ExbContractId获得专题采访信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.InterviewStruct getInterviewInfoByExbContractId(global::GrpcMediaService.ExbContractIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_getInterviewInfoByExbContractId, null, options, request);
+      }
+      /// <summary>
+      ///根据ExbContractId获得专题采访信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.InterviewStruct> getInterviewInfoByExbContractIdAsync(global::GrpcMediaService.ExbContractIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getInterviewInfoByExbContractIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据ExbContractId获得专题采访信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.InterviewStruct> getInterviewInfoByExbContractIdAsync(global::GrpcMediaService.ExbContractIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_getInterviewInfoByExbContractId, null, options, request);
+      }
+      /// <summary>
       ///创建十大亮点信息
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2150,6 +2231,50 @@ namespace GrpcMediaService {
       public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.HighlightsInfoList> getHighlightsInfoListAsync(global::GrpcMediaService.PaginationRequestSearch request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_getHighlightsInfoList, null, options, request);
+      }
+      /// <summary>
+      ///根据ExbContractId获得十大亮点信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.HighlightsInfoStruct getHighlightsInfoByExbContractId(global::GrpcMediaService.ExbContractIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getHighlightsInfoByExbContractId(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据ExbContractId获得十大亮点信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.HighlightsInfoStruct getHighlightsInfoByExbContractId(global::GrpcMediaService.ExbContractIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_getHighlightsInfoByExbContractId, null, options, request);
+      }
+      /// <summary>
+      ///根据ExbContractId获得十大亮点信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.HighlightsInfoStruct> getHighlightsInfoByExbContractIdAsync(global::GrpcMediaService.ExbContractIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getHighlightsInfoByExbContractIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据ExbContractId获得十大亮点信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.HighlightsInfoStruct> getHighlightsInfoByExbContractIdAsync(global::GrpcMediaService.ExbContractIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_getHighlightsInfoByExbContractId, null, options, request);
       }
       /// <summary>
       ///创建酒店信息
@@ -3022,11 +3147,13 @@ namespace GrpcMediaService {
           .AddMethod(__Method_deleteInterviewById, serviceImpl.deleteInterviewById)
           .AddMethod(__Method_getInterviewInfoById, serviceImpl.getInterviewInfoById)
           .AddMethod(__Method_getInterviewList, serviceImpl.getInterviewList)
+          .AddMethod(__Method_getInterviewInfoByExbContractId, serviceImpl.getInterviewInfoByExbContractId)
           .AddMethod(__Method_createHighlightsInfo, serviceImpl.createHighlightsInfo)
           .AddMethod(__Method_updateHighlightsInfo, serviceImpl.updateHighlightsInfo)
           .AddMethod(__Method_deleteHighlightsInfoById, serviceImpl.deleteHighlightsInfoById)
           .AddMethod(__Method_getHighlightsInfoById, serviceImpl.getHighlightsInfoById)
           .AddMethod(__Method_getHighlightsInfoList, serviceImpl.getHighlightsInfoList)
+          .AddMethod(__Method_getHighlightsInfoByExbContractId, serviceImpl.getHighlightsInfoByExbContractId)
           .AddMethod(__Method_createHotelInfo, serviceImpl.createHotelInfo)
           .AddMethod(__Method_updateHotelInfo, serviceImpl.updateHotelInfo)
           .AddMethod(__Method_deleteHotelInfoById, serviceImpl.deleteHotelInfoById)

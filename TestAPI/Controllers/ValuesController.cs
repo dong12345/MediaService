@@ -210,6 +210,14 @@ namespace TestAPI.Controllers
             return Ok(result);
         }
 
+        [Route("getInterviewInfoByExbContractId")]
+        [HttpPost]
+        public IActionResult getInterviewInfoByExbContractId(ExbContractIdRequest exbContractIdRequest)
+        {
+            var result = EGClient.getInterviewInfoByExbContractId(exbContractIdRequest);
+            return Ok(result);
+        }
+
         [Route("getInterviewList")]
         [HttpPost]
         public IActionResult getInterviewList(PaginationRequestSearch search)
@@ -253,6 +261,14 @@ namespace TestAPI.Controllers
         public IActionResult getHighlightsInfoById(IdRequest idRequest)
         {
             var result = EGClient.getHighlightsInfoById(idRequest);
+            return Ok(result);
+        }
+
+        [Route("getHighlightsInfoByExbContractId")]
+        [HttpPost]
+        public IActionResult getHighlightsInfoByExbContractId(ExbContractIdRequest exbContractIdRequest)
+        {
+            var result = EGClient.getHighlightsInfoByExbContractId(exbContractIdRequest);
             return Ok(result);
         }
 

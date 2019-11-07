@@ -94,6 +94,9 @@ service MediaServiceToGrpc{
   //根据条件(公司名、客户经理Id、年份、网站来源)查询专题采访信息列表(带分页)
   rpc getInterviewList (PaginationRequestSearch) returns (InterviewList) {}
 
+  //根据ExbContractId获得专题采访信息
+  rpc getInterviewInfoByExbContractId(ExbContractIdRequest) returns(InterviewStruct){}
+
   //====================专题采访=========================
 
 
@@ -113,6 +116,9 @@ service MediaServiceToGrpc{
 
   //根据条件(公司名、客户经理Id、年份、网站来源)查询十大亮点信息列表(带分页)
   rpc getHighlightsInfoList(PaginationRequestSearch) returns (HighlightsInfoList) {}
+
+   //根据ExbContractId获得十大亮点信息
+  rpc getHighlightsInfoByExbContractId(ExbContractIdRequest) returns (HighlightsInfoStruct){}
 
   //================十大亮点申请=========================
 
@@ -272,6 +278,9 @@ message ExpressStruct{
   bool isSend=15;
   string created_at=16;
   string updated_at=17;
+  string year=18;
+  //是否是展商
+  bool isExhibitor=19;
 }
 
 message ExpressList{
@@ -321,6 +330,7 @@ message InterviewStruct{
   string updated_at=16;
   string year=17;
   string website=18;
+  string exbContractId=19;
 }
 
 message InterviewList{
@@ -362,6 +372,7 @@ message HighlightsInfoStruct{
   string Updated_at=25;
   string Year=26;
   string Website=27;
+  string ExbContractId=28;
 }
 
 message HighlightsInfoList {
@@ -680,6 +691,10 @@ message Empty{
 }
 message IdRequest {
   string id = 1;
+}
+
+message ExbContractIdRequest{
+  string ExbContractId=1;
 }
 
 message ModifyReply {

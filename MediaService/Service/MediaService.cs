@@ -470,6 +470,8 @@ namespace MediaService.Service
                         model.SentDate = express.SentDate;
                         model.Tel = express.Tel;
                         model.UpdatedAt = express.UpdatedAt;
+                        model.Year = express.Year;
+                        model.IsExhibitor = express.IsExhibitor;
 
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -1028,6 +1030,29 @@ namespace MediaService.Service
             }
         }
 
+        /// <summary>
+        /// 根据exbContractID获得专题采访信息
+        /// </summary>
+        /// <param name="exbContractId"></param>
+        /// <returns></returns>
+        public async Task<Interview> GetInterviewInfoByExbContractId(string exbContractId)
+        {
+            try
+            {
+                using (var _context = new MyContext(_options.Options))
+                {
+                    var item = await _context.Interview
+                            .FirstOrDefaultAsync(x => x.ExbContractId == exbContractId);
+                    return item;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+        }
+
 
         /// <summary>
         /// 根据条件查询专题采访信息列表(带分页)
@@ -1276,6 +1301,28 @@ namespace MediaService.Service
             }
         }
 
+        /// <summary>
+        /// 根据exbContractId获得十大亮点信息
+        /// </summary>
+        /// <param name="exbContractId"></param>
+        /// <returns></returns>
+        public async Task<HighlightsInfo> GetHighlightsInfoByExbContractId(string exbContractId)
+        {
+            try
+            {
+                using (var _context = new MyContext(_options.Options))
+                {
+                    var item = await _context.HighlightsInfo
+                            .FirstOrDefaultAsync(x => x.ExbContractId == exbContractId);
+                    return item;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+        }
         /// <summary>
         /// 根据条件查询十大亮点信息列表(带分页)
         /// </summary>
