@@ -580,7 +580,11 @@ namespace MediaService.Implement
             {
                 var model = await _service.GetHighlightsInfoByExbContractId(request.ExbContractId);
                 var result = Mapper.Map<HighlightsInfo, HighlightsInfoStruct>(model);
-                return result;
+                if (result != null)
+                {
+                    return result;
+                }
+                return new HighlightsInfoStruct();
             }
             catch (Exception ex)
             {
