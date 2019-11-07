@@ -525,7 +525,7 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
-      ///根据条件查询快递单信息列表(带分页)
+      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位)查询快递单信息列表(带分页)
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1485,7 +1485,7 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_getExpressInfoById, null, options, request);
       }
       /// <summary>
-      ///根据条件查询快递单信息列表(带分页)
+      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位)查询快递单信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1497,7 +1497,7 @@ namespace GrpcMediaService {
         return getExpressList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据条件查询快递单信息列表(带分页)
+      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位)查询快递单信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1507,7 +1507,7 @@ namespace GrpcMediaService {
         return CallInvoker.BlockingUnaryCall(__Method_getExpressList, null, options, request);
       }
       /// <summary>
-      ///根据条件查询快递单信息列表(带分页)
+      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位)查询快递单信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1519,7 +1519,7 @@ namespace GrpcMediaService {
         return getExpressListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据条件查询快递单信息列表(带分页)
+      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位)查询快递单信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
