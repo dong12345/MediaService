@@ -331,6 +331,8 @@ message InterviewStruct{
   string year=17;
   string website=18;
   string exbContractId=19;
+  string email=20;
+  string mobile=21;
 }
 
 message InterviewList{

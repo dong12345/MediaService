@@ -41,5 +41,9 @@ namespace MediaService.DBModel
         public string Website { get; set; }
 
         public string ExbContractId { get; set; }
+
+        public string Email { get; set; }
+
+        public string Mobile { get; set; }
     }
 }

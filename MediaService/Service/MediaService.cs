@@ -946,6 +946,9 @@ namespace MediaService.Service
                         model.UpdatedAt = interview.UpdatedAt;
                         model.Year = interview.Year;
                         model.Website = interview.Website;
+                        model.ExbContractId = interview.ExbContractId;
+                        model.Email = interview.Email;
+                        model.Mobile = interview.Email;
 
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
@@ -1217,6 +1220,7 @@ namespace MediaService.Service
                         model.UpdatedAt = highlightsInfo.UpdatedAt;
                         model.Year = highlightsInfo.Year;
                         model.Website = highlightsInfo.Website;
+                        model.ExbContractId = highlightsInfo.ExbContractId;
 
                         count = await _context.SaveChangesAsync();
                         isSuccess = true;
