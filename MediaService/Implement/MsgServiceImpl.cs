@@ -457,17 +457,17 @@ namespace MediaService.Implement
             }
         }
 
-        public  override async Task<InterviewStruct> getInterviewInfoByExbContractId(ExbContractIdRequest request, ServerCallContext context)
+
+        public override async Task<InterviewList> getInterviewListByExbContractId(ExbContractIdRequest request, ServerCallContext context)
         {
             try
             {
-                var model = await _service.GetInterviewInfoByExbContractId(request.ExbContractId);
-                var result = Mapper.Map<Interview, InterviewStruct>(model);
-                if (result != null)
-                {
-                    return result;
-                }
-                return new InterviewStruct();
+                InterviewList interviewList = new InterviewList();
+                var list = await _service.GetInterviewListByExbContractId(request.ExbContractId);
+                var result = Mapper.Map<List<Interview>, List<InterviewStruct>>(list);
+                interviewList.Listdata.AddRange(result);
+                interviewList.Total = result.Count;
+                return interviewList;
             }
             catch (Exception ex)
             {
@@ -574,17 +574,17 @@ namespace MediaService.Implement
             }
         }
 
-        public override async Task<HighlightsInfoStruct> getHighlightsInfoByExbContractId(ExbContractIdRequest request, ServerCallContext context)
+      
+        public override async Task<HighlightsInfoList> getHighlightsInfoListByExbContractId(ExbContractIdRequest request, ServerCallContext context)
         {
             try
             {
-                var model = await _service.GetHighlightsInfoByExbContractId(request.ExbContractId);
-                var result = Mapper.Map<HighlightsInfo, HighlightsInfoStruct>(model);
-                if (result != null)
-                {
-                    return result;
-                }
-                return new HighlightsInfoStruct();
+                HighlightsInfoList highlightsInfoList = new HighlightsInfoList();
+                var list = await _service.GetHighlightsInfoListByExbContractId(request.ExbContractId);
+                var result = Mapper.Map<List<HighlightsInfo>, List<HighlightsInfoStruct>>(list);
+                highlightsInfoList.Listdata.AddRange(result);
+                highlightsInfoList.Total=result.Count;
+                return highlightsInfoList;
             }
             catch (Exception ex)
             {

@@ -210,11 +210,11 @@ namespace TestAPI.Controllers
             return Ok(result);
         }
 
-        [Route("getInterviewInfoByExbContractId")]
+        [Route("getInterviewListByExbContractId")]
         [HttpPost]
-        public IActionResult getInterviewInfoByExbContractId(ExbContractIdRequest exbContractIdRequest)
+        public IActionResult getInterviewListByExbContractId(ExbContractIdRequest exbContractIdRequest)
         {
-            var result = EGClient.getInterviewInfoByExbContractId(exbContractIdRequest);
+            var result = EGClient.getInterviewListByExbContractId(exbContractIdRequest);
             return Ok(result);
         }
 
@@ -264,11 +264,11 @@ namespace TestAPI.Controllers
             return Ok(result);
         }
 
-        [Route("getHighlightsInfoByExbContractId")]
+        [Route("getHighlightsInfoListByExbContractId")]
         [HttpPost]
-        public IActionResult getHighlightsInfoByExbContractId(ExbContractIdRequest exbContractIdRequest)
+        public IActionResult getHighlightsInfoListByExbContractId(ExbContractIdRequest exbContractIdRequest)
         {
-            var result = EGClient.getHighlightsInfoByExbContractId(exbContractIdRequest);
+            var result = EGClient.getHighlightsInfoListByExbContractId(exbContractIdRequest);
             return Ok(result);
         }
 

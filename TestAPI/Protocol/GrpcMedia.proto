@@ -94,8 +94,8 @@ service MediaServiceToGrpc{
   //根据条件(公司名、客户经理Id、年份、网站来源)查询专题采访信息列表(带分页)
   rpc getInterviewList (PaginationRequestSearch) returns (InterviewList) {}
 
-  //根据ExbContractId获得专题采访信息
-  rpc getInterviewInfoByExbContractId(ExbContractIdRequest) returns(InterviewStruct){}
+  //根据ExbContractId获得专题采访信息列表
+  rpc getInterviewListByExbContractId(ExbContractIdRequest) returns(InterviewList){}
 
   //====================专题采访=========================
 
@@ -117,8 +117,8 @@ service MediaServiceToGrpc{
   //根据条件(公司名、客户经理Id、年份、网站来源)查询十大亮点信息列表(带分页)
   rpc getHighlightsInfoList(PaginationRequestSearch) returns (HighlightsInfoList) {}
 
-   //根据ExbContractId获得十大亮点信息
-  rpc getHighlightsInfoByExbContractId(ExbContractIdRequest) returns (HighlightsInfoStruct){}
+   //根据ExbContractId获得十大亮点信息列表
+  rpc getHighlightsInfoListByExbContractId(ExbContractIdRequest) returns (HighlightsInfoList){}
 
   //================十大亮点申请=========================
 

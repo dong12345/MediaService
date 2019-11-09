@@ -902,6 +902,7 @@ namespace MediaService.Service
                         isSuccess = false;
                         msg = "创建失败";
                     }
+
                     return GetModifyReply(isSuccess, msg, count);
                 }
             }
@@ -1038,15 +1039,16 @@ namespace MediaService.Service
         /// </summary>
         /// <param name="exbContractId"></param>
         /// <returns></returns>
-        public async Task<Interview> GetInterviewInfoByExbContractId(string exbContractId)
+        public async Task<List<Interview>> GetInterviewListByExbContractId(string exbContractId)
         {
             try
             {
                 using (var _context = new MyContext(_options.Options))
                 {
-                    var item = await _context.Interview
-                            .FirstOrDefaultAsync(x => x.ExbContractId == exbContractId);
-                    return item;
+                    var list = await _context.Interview.Where(x => x.ExbContractId == exbContractId)
+                        .OrderByDescending(x => x.CreatedAt)
+                        .ToListAsync();
+                    return list;
                 }
             }
             catch (Exception ex)
@@ -1310,15 +1312,16 @@ namespace MediaService.Service
         /// </summary>
         /// <param name="exbContractId"></param>
         /// <returns></returns>
-        public async Task<HighlightsInfo> GetHighlightsInfoByExbContractId(string exbContractId)
+        public async Task<List<HighlightsInfo>> GetHighlightsInfoListByExbContractId(string exbContractId)
         {
             try
             {
                 using (var _context = new MyContext(_options.Options))
                 {
-                    var item = await _context.HighlightsInfo
-                            .FirstOrDefaultAsync(x => x.ExbContractId == exbContractId);
-                    return item;
+                    var list = await _context.HighlightsInfo.Where(x => x.ExbContractId == exbContractId)
+                        .OrderByDescending(x => x.CreatedAt)
+                        .ToListAsync();
+                    return list;
                 }
             }
             catch (Exception ex)
