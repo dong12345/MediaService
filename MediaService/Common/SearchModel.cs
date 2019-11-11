@@ -113,5 +113,10 @@ namespace MediaService.Common
         /// 网站来源
         /// </summary>
         public string Website { get; set; }
+
+        /// <summary>
+        /// 是否是展商
+        /// </summary>
+        public bool IsExhibitor { get; set; }
     }
 }
