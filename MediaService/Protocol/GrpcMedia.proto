@@ -51,7 +51,7 @@ service MediaServiceToGrpc{
   //根据Id获得快递单信息
   rpc getExpressInfoById(IdRequest) returns (ExpressStruct){}
 
-  //根据条件(快递单号、寄件人、寄件日期、收件人、收件单位,是否属于展商快递单)查询快递单信息列表(带分页)
+  //根据条件(快递单号、寄件人、寄件日期、收件人、收件单位、是否属于展商快递单)查询快递单信息列表(带分页)
   rpc getExpressList (PaginationRequestSearch) returns (ExpressList) {}
 
   //=======================快递单========================
