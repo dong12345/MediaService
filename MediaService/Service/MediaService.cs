@@ -584,8 +584,8 @@ namespace MediaService.Service
                         var list = await _context.Express
                                 .Where(x => (string.IsNullOrEmpty(searchModel.ExpressNum) || x.ExpressNum.Contains(searchModel.ExpressNum))
                                  && (string.IsNullOrEmpty(searchModel.Sender) || x.Sender.Contains(searchModel.Sender))
-                                 && (string.IsNullOrEmpty(searchModel.Begin_date) || x.SentDate >= Convert.ToDateTime(searchModel.Begin_date))
-                                 && (string.IsNullOrEmpty(searchModel.End_date) || x.SentDate <= Convert.ToDateTime(searchModel.End_date))
+                                 && (string.IsNullOrEmpty(searchModel.Begin_date) || Convert.ToDateTime(x.SentDate) >= Convert.ToDateTime(searchModel.Begin_date))
+                                 && (string.IsNullOrEmpty(searchModel.End_date) || Convert.ToDateTime(x.SentDate) <= Convert.ToDateTime(searchModel.End_date))
                                  && (string.IsNullOrEmpty(searchModel.Recipient) || x.Recipient.Contains(searchModel.Recipient))
                                  && (string.IsNullOrEmpty(searchModel.RecipientUnit) || x.RecipientUnit.Contains(searchModel.RecipientUnit))
                                  && (searchModel.IsExhibitor==x.IsExhibitor))
@@ -624,8 +624,8 @@ namespace MediaService.Service
                         var list = await _context.Express
                             .Where(x => (string.IsNullOrEmpty(searchModel.ExpressNum) || x.ExpressNum.Contains(searchModel.ExpressNum))
                         && (string.IsNullOrEmpty(searchModel.Sender) || x.Sender.Contains(searchModel.Sender))
-                        && (string.IsNullOrEmpty(searchModel.Begin_date) || x.SentDate >= Convert.ToDateTime(searchModel.Begin_date))
-                        && (string.IsNullOrEmpty(searchModel.End_date) || x.SentDate <= Convert.ToDateTime(searchModel.End_date))
+                        && (string.IsNullOrEmpty(searchModel.Begin_date) || Convert.ToDateTime(x.SentDate) >= Convert.ToDateTime(searchModel.Begin_date))
+                        && (string.IsNullOrEmpty(searchModel.End_date) || Convert.ToDateTime(x.SentDate) <= Convert.ToDateTime(searchModel.End_date))
                         && (string.IsNullOrEmpty(searchModel.Recipient) || x.Recipient.Contains(searchModel.Recipient))
                         && (string.IsNullOrEmpty(searchModel.RecipientUnit) || x.RecipientUnit.Contains(searchModel.RecipientUnit))
                         && (searchModel.IsExhibitor == x.IsExhibitor))

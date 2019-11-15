@@ -18,7 +18,7 @@ namespace MediaService.DBModel
         /// <summary>
         /// 寄件日期
         /// </summary>
-        public DateTime SentDate { get; set; }
+        public string SentDate { get; set; }
         /// <summary>
         /// 寄件人Id	
         /// </summary>
