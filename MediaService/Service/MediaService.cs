@@ -588,7 +588,8 @@ namespace MediaService.Service
                                  && (string.IsNullOrEmpty(searchModel.End_date) || Convert.ToDateTime(x.SentDate) <= Convert.ToDateTime(searchModel.End_date))
                                  && (string.IsNullOrEmpty(searchModel.Recipient) || x.Recipient.Contains(searchModel.Recipient))
                                  && (string.IsNullOrEmpty(searchModel.RecipientUnit) || x.RecipientUnit.Contains(searchModel.RecipientUnit))
-                                 && (searchModel.IsExhibitor==x.IsExhibitor))
+                                 && (searchModel.IsExhibitor==x.IsExhibitor)
+                                 && (searchModel.Year==x.Year))
                                  .OrderByDescending(x => x.CreatedAt)
                                  .Skip(((pageindex - 1) * pagesize))
                                  .Take(pagesize)
@@ -628,7 +629,8 @@ namespace MediaService.Service
                         && (string.IsNullOrEmpty(searchModel.End_date) || Convert.ToDateTime(x.SentDate) <= Convert.ToDateTime(searchModel.End_date))
                         && (string.IsNullOrEmpty(searchModel.Recipient) || x.Recipient.Contains(searchModel.Recipient))
                         && (string.IsNullOrEmpty(searchModel.RecipientUnit) || x.RecipientUnit.Contains(searchModel.RecipientUnit))
-                        && (searchModel.IsExhibitor == x.IsExhibitor))
+                        && (searchModel.IsExhibitor == x.IsExhibitor)
+                        && (searchModel.Year == x.Year))
                         .ToListAsync();
                         total = list.Count();
                     }
