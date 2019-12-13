@@ -211,6 +211,23 @@ namespace MediaService.Implement
                 throw ex;
             }
         }
+
+        public override async Task<BoolStruct> checkIsExistFormPublicByCondition(ExbContractConditionRequest request, ServerCallContext context)
+        {
+            BoolStruct boolStruct = new BoolStruct();
+            try
+            {
+                var search = Mapper.Map<ExbContractConditionRequest, ExbContractConditionModel>(request);
+                var boolModel= await _service.checkIsExistFormPublicByCondition(search);
+                boolStruct = Mapper.Map<BoolModel, BoolStruct>(boolModel);
+                return boolStruct;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
         #endregion
 
         #region Express(快递单)

@@ -55,6 +55,7 @@ namespace MediaService.AutoMapper
 
                 config.CreateMap<UpdateIsCheckedStruct, UpdateIsCheckedModel>();
                 config.CreateMap<ExbContractConditionRequest, ExbContractConditionModel>();
+                config.CreateMap<BoolStruct, BoolModel>();
 
             });
         }

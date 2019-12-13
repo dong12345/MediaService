@@ -180,6 +180,16 @@ namespace TestAPI.Controllers
             var result = EGClient.multiDeleteFormPublicByExbContractIdList(exbContractIdList);
             return Ok(result);
         }
+
+        [Route("checkIsExistFormPublicByCondition")]
+        [HttpPost]
+        public IActionResult checkIsExistFormPublicByCondition(ExbContractConditionRequest exbContractConditionRequest)
+        {
+            var result = EGClient.checkIsExistFormPublicByCondition(exbContractConditionRequest);
+            return Ok(result);
+        }
+
+        
         #endregion
 
 

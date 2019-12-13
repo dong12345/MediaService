@@ -20,6 +20,7 @@ namespace GrpcMediaService {
     static readonly grpc::Marshaller<global::GrpcMediaService.PaginationRequestSearch> __Marshaller_PaginationRequestSearch = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.PaginationRequestSearch.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExbContractConditionRequest> __Marshaller_ExbContractConditionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExbContractConditionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExbContractIdList> __Marshaller_ExbContractIdList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExbContractIdList.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::GrpcMediaService.BoolStruct> __Marshaller_BoolStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.BoolStruct.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExpressStruct> __Marshaller_ExpressStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExpressStruct.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExpressList> __Marshaller_ExpressList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExpressList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.CatalogueBooksStruct> __Marshaller_CatalogueBooksStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.CatalogueBooksStruct.Parser.ParseFrom);
@@ -103,6 +104,13 @@ namespace GrpcMediaService {
         "multiDeleteFormPublicByExbContractIdList",
         __Marshaller_ExbContractIdList,
         __Marshaller_ModifyReply);
+
+    static readonly grpc::Method<global::GrpcMediaService.ExbContractConditionRequest, global::GrpcMediaService.BoolStruct> __Method_checkIsExistFormPublicByCondition = new grpc::Method<global::GrpcMediaService.ExbContractConditionRequest, global::GrpcMediaService.BoolStruct>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "checkIsExistFormPublicByCondition",
+        __Marshaller_ExbContractConditionRequest,
+        __Marshaller_BoolStruct);
 
     static readonly grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply> __Method_createExpressInfo = new grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply>(
         grpc::MethodType.Unary,
@@ -495,6 +503,17 @@ namespace GrpcMediaService {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> multiDeleteFormPublicByExbContractIdList(global::GrpcMediaService.ExbContractIdList request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///根据(展商合同Id、来源)判断是否提交过会刊
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.BoolStruct> checkIsExistFormPublicByCondition(global::GrpcMediaService.ExbContractConditionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1370,6 +1389,50 @@ namespace GrpcMediaService {
       public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> multiDeleteFormPublicByExbContractIdListAsync(global::GrpcMediaService.ExbContractIdList request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_multiDeleteFormPublicByExbContractIdList, null, options, request);
+      }
+      /// <summary>
+      ///根据(展商合同Id、来源)判断是否提交过会刊
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.BoolStruct checkIsExistFormPublicByCondition(global::GrpcMediaService.ExbContractConditionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return checkIsExistFormPublicByCondition(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据(展商合同Id、来源)判断是否提交过会刊
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.BoolStruct checkIsExistFormPublicByCondition(global::GrpcMediaService.ExbContractConditionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_checkIsExistFormPublicByCondition, null, options, request);
+      }
+      /// <summary>
+      ///根据(展商合同Id、来源)判断是否提交过会刊
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.BoolStruct> checkIsExistFormPublicByConditionAsync(global::GrpcMediaService.ExbContractConditionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return checkIsExistFormPublicByConditionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据(展商合同Id、来源)判断是否提交过会刊
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.BoolStruct> checkIsExistFormPublicByConditionAsync(global::GrpcMediaService.ExbContractConditionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_checkIsExistFormPublicByCondition, null, options, request);
       }
       /// <summary>
       ///创建快递单记录
@@ -3196,6 +3259,7 @@ namespace GrpcMediaService {
           .AddMethod(__Method_getFormPublicInfoByCondition, serviceImpl.getFormPublicInfoByCondition)
           .AddMethod(__Method_operateFormPublicInfoByExbContractId, serviceImpl.operateFormPublicInfoByExbContractId)
           .AddMethod(__Method_multiDeleteFormPublicByExbContractIdList, serviceImpl.multiDeleteFormPublicByExbContractIdList)
+          .AddMethod(__Method_checkIsExistFormPublicByCondition, serviceImpl.checkIsExistFormPublicByCondition)
           .AddMethod(__Method_createExpressInfo, serviceImpl.createExpressInfo)
           .AddMethod(__Method_updateExpressInfo, serviceImpl.updateExpressInfo)
           .AddMethod(__Method_deleteExpressInfoById, serviceImpl.deleteExpressInfoById)

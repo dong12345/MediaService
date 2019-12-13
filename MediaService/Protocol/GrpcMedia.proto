@@ -37,6 +37,9 @@ service MediaServiceToGrpc{
   //根据展商合同Id列表批量删除会刊信息
   rpc multiDeleteFormPublicByExbContractIdList(ExbContractIdList) returns(ModifyReply){}
 
+  //根据(展商合同Id、来源)判断是否提交过会刊
+  rpc checkIsExistFormPublicByCondition(ExbContractConditionRequest) returns(BoolStruct){}
+
   //======================会刊===========================
 
 
@@ -704,6 +707,10 @@ message ExbContractIdRequest{
 
 message ExbContractIdList{
   repeated string listdata=1; 
+}
+
+message BoolStruct{
+  bool boolData=1;
 }
 
 

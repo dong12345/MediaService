@@ -68,8 +68,10 @@ namespace TestAPI
             return _client.multiDeleteFormPublicByExbContractIdList(exbContractIdList);
         }
 
-
-
+        public static BoolStruct checkIsExistFormPublicByCondition(ExbContractConditionRequest exbContractConditionRequest)
+        {
+            return _client.checkIsExistFormPublicByCondition(exbContractConditionRequest);
+        }
         #endregion
 
 

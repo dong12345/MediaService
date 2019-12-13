@@ -447,6 +447,30 @@ namespace MediaService.Service
             }
         }
 
+        /// <summary>
+        /// 根据(展商合同Id、来源)判断是否提交过会刊
+        /// </summary>
+        /// <param name="where"></param>
+        /// <returns></returns>
+        public async Task<BoolModel> checkIsExistFormPublicByCondition(ExbContractConditionModel where)
+        {
+            try
+            {
+                using (var _context = new MyContext(_options.Options))
+                {
+                    var b= await _context.FormPublic.AnyAsync(x => (x.ExbContractId == where.ExbContractId && x.Source == where.Source));
+                    BoolModel model = new BoolModel();
+                    model.BoolData = b;
+                    return model;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+        }
+
         #endregion
 
         #region Express(快递单)
