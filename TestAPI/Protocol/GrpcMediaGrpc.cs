@@ -19,6 +19,7 @@ namespace GrpcMediaService {
     static readonly grpc::Marshaller<global::GrpcMediaService.FormPublicList> __Marshaller_FormPublicList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.FormPublicList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.PaginationRequestSearch> __Marshaller_PaginationRequestSearch = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.PaginationRequestSearch.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExbContractConditionRequest> __Marshaller_ExbContractConditionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExbContractConditionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::GrpcMediaService.ExbContractIdList> __Marshaller_ExbContractIdList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExbContractIdList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExpressStruct> __Marshaller_ExpressStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExpressStruct.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExpressList> __Marshaller_ExpressList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExpressList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.CatalogueBooksStruct> __Marshaller_CatalogueBooksStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.CatalogueBooksStruct.Parser.ParseFrom);
@@ -94,6 +95,13 @@ namespace GrpcMediaService {
         __ServiceName,
         "operateFormPublicInfoByExbContractId",
         __Marshaller_FormPublicStruct,
+        __Marshaller_ModifyReply);
+
+    static readonly grpc::Method<global::GrpcMediaService.ExbContractIdList, global::GrpcMediaService.ModifyReply> __Method_multiDeleteFormPublicByExbContractIdList = new grpc::Method<global::GrpcMediaService.ExbContractIdList, global::GrpcMediaService.ModifyReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "multiDeleteFormPublicByExbContractIdList",
+        __Marshaller_ExbContractIdList,
         __Marshaller_ModifyReply);
 
     static readonly grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply> __Method_createExpressInfo = new grpc::Method<global::GrpcMediaService.ExpressStruct, global::GrpcMediaService.ModifyReply>(
@@ -481,6 +489,17 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
+      ///根据展商合同Id列表批量删除会刊信息
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> multiDeleteFormPublicByExbContractIdList(global::GrpcMediaService.ExbContractIdList request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       ///创建快递单记录
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -525,7 +544,7 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
-      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位,是否属于展商快递单)查询快递单信息列表(带分页)
+      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位、是否属于展商快递单)查询快递单信息列表(带分页)
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1309,6 +1328,50 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_operateFormPublicInfoByExbContractId, null, options, request);
       }
       /// <summary>
+      ///根据展商合同Id列表批量删除会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.ModifyReply multiDeleteFormPublicByExbContractIdList(global::GrpcMediaService.ExbContractIdList request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return multiDeleteFormPublicByExbContractIdList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据展商合同Id列表批量删除会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.ModifyReply multiDeleteFormPublicByExbContractIdList(global::GrpcMediaService.ExbContractIdList request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_multiDeleteFormPublicByExbContractIdList, null, options, request);
+      }
+      /// <summary>
+      ///根据展商合同Id列表批量删除会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> multiDeleteFormPublicByExbContractIdListAsync(global::GrpcMediaService.ExbContractIdList request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return multiDeleteFormPublicByExbContractIdListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据展商合同Id列表批量删除会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> multiDeleteFormPublicByExbContractIdListAsync(global::GrpcMediaService.ExbContractIdList request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_multiDeleteFormPublicByExbContractIdList, null, options, request);
+      }
+      /// <summary>
       ///创建快递单记录
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1485,7 +1548,7 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_getExpressInfoById, null, options, request);
       }
       /// <summary>
-      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位,是否属于展商快递单)查询快递单信息列表(带分页)
+      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位、是否属于展商快递单)查询快递单信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1497,7 +1560,7 @@ namespace GrpcMediaService {
         return getExpressList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位,是否属于展商快递单)查询快递单信息列表(带分页)
+      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位、是否属于展商快递单)查询快递单信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1507,7 +1570,7 @@ namespace GrpcMediaService {
         return CallInvoker.BlockingUnaryCall(__Method_getExpressList, null, options, request);
       }
       /// <summary>
-      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位,是否属于展商快递单)查询快递单信息列表(带分页)
+      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位、是否属于展商快递单)查询快递单信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1519,7 +1582,7 @@ namespace GrpcMediaService {
         return getExpressListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位,是否属于展商快递单)查询快递单信息列表(带分页)
+      ///根据条件(快递单号、寄件人、寄件日期、收件人、收件单位、是否属于展商快递单)查询快递单信息列表(带分页)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3132,6 +3195,7 @@ namespace GrpcMediaService {
           .AddMethod(__Method_getFormPublicList, serviceImpl.getFormPublicList)
           .AddMethod(__Method_getFormPublicInfoByCondition, serviceImpl.getFormPublicInfoByCondition)
           .AddMethod(__Method_operateFormPublicInfoByExbContractId, serviceImpl.operateFormPublicInfoByExbContractId)
+          .AddMethod(__Method_multiDeleteFormPublicByExbContractIdList, serviceImpl.multiDeleteFormPublicByExbContractIdList)
           .AddMethod(__Method_createExpressInfo, serviceImpl.createExpressInfo)
           .AddMethod(__Method_updateExpressInfo, serviceImpl.updateExpressInfo)
           .AddMethod(__Method_deleteExpressInfoById, serviceImpl.deleteExpressInfoById)

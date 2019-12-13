@@ -63,6 +63,13 @@ namespace TestAPI
             return _client.operateFormPublicInfoByExbContractId(formPublicStruct);
         }
 
+        public static ModifyReply multiDeleteFormPublicByExbContractIdList(ExbContractIdList exbContractIdList)
+        {
+            return _client.multiDeleteFormPublicByExbContractIdList(exbContractIdList);
+        }
+
+
+
         #endregion
 
 

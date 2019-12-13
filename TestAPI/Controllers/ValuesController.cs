@@ -172,6 +172,14 @@ namespace TestAPI.Controllers
             var result = EGClient.operateFormPublicInfoByExbContractId(formPublicStruct);
             return Ok(result);
         }
+
+        [Route("multiDeleteFormPublicByExbContractIdList")]
+        [HttpPost]
+        public IActionResult multiDeleteFormPublicByExbContractIdList(ExbContractIdList exbContractIdList)
+        {
+            var result = EGClient.multiDeleteFormPublicByExbContractIdList(exbContractIdList);
+            return Ok(result);
+        }
         #endregion
 
 

@@ -193,6 +193,24 @@ namespace MediaService.Implement
             }
         }
 
+        public override async Task<ModifyReply> multiDeleteFormPublicByExbContractIdList(ExbContractIdList request, ServerCallContext context)
+        {
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                List<string> idList = new List<string>();
+                idList.AddRange(request.Listdata);
+                var result = await _service.MultiDeleteFormPublicByExbContractIdList(idList);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
+
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
         #endregion
 
         #region Express(快递单)

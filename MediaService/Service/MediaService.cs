@@ -400,6 +400,53 @@ namespace MediaService.Service
             }
         }
 
+        /// <summary>
+        /// 根据展商合同Id列表批量删除会刊信息
+        /// </summary>
+        /// <param name="exbContractIdList"></param>
+        /// <returns></returns>
+        public async Task<ModifyReplyModel> MultiDeleteFormPublicByExbContractIdList(List<string> exbContractIdList)
+        {
+            try
+            {
+                using (var _context = new MyContext(_options.Options))
+                {
+                    List<FormPublic> list = new List<FormPublic>();
+                    foreach (var exbContractId in exbContractIdList)
+                    {
+                        var model = await _context.FormPublic.FirstOrDefaultAsync(x => x.ExbContractId == exbContractId);
+                        list.Add(model);
+                    }
+                    if (list.Count > 0)
+                    {
+                        _context.FormPublic.RemoveRange(list.ToArray());
+                        count = await _context.SaveChangesAsync();
+                        if (count > 0)
+                        {
+                            msg = "删除成功";
+                            isSuccess = true;
+                        }
+                        else
+                        {
+                            msg = "删除失败";
+                            isSuccess = false;
+                        }
+                    }
+                    else
+                    {
+                        msg = "数据库中未找到任何与之匹配的合同id";
+                    }
+                    return GetModifyReply(isSuccess, msg, count);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+        }
+
         #endregion
 
         #region Express(快递单)

@@ -34,6 +34,9 @@ service MediaServiceToGrpc{
   //根据展商合同Id判断新增或修改会刊信息
   rpc operateFormPublicInfoByExbContractId(FormPublicStruct) returns (ModifyReply){}
 
+  //根据展商合同Id列表批量删除会刊信息
+  rpc multiDeleteFormPublicByExbContractIdList(ExbContractIdList) returns(ModifyReply){}
+
   //======================会刊===========================
 
 
@@ -51,7 +54,7 @@ service MediaServiceToGrpc{
   //根据Id获得快递单信息
   rpc getExpressInfoById(IdRequest) returns (ExpressStruct){}
 
-  //根据条件(快递单号、寄件人、寄件日期、收件人、收件单位,是否属于展商快递单)查询快递单信息列表(带分页)
+  //根据条件(快递单号、寄件人、寄件日期、收件人、收件单位、是否属于展商快递单)查询快递单信息列表(带分页)
   rpc getExpressList (PaginationRequestSearch) returns (ExpressList) {}
 
   //=======================快递单========================
@@ -698,6 +701,11 @@ message IdRequest {
 message ExbContractIdRequest{
   string ExbContractId=1;
 }
+
+message ExbContractIdList{
+  repeated string listdata=1; 
+}
+
 
 message ModifyReply {
   bool success = 1;
