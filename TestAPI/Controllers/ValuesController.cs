@@ -62,6 +62,57 @@ namespace TestAPI.Controllers
             var result = EGClient.getFormPublicList(search);
             return Ok(result);
         }
+
+
+        [Route("getFormPublicInfoByCondition")]
+        [HttpPost]
+        public IActionResult getFormPublicInfoByCondition(ExbContractConditionRequest exbContractConditionRequest)
+        {
+            var result = EGClient.getFormPublicInfoByCondition(exbContractConditionRequest);
+            return Ok(result);
+        }
+
+
+        [Route("operateFormPublicInfoByExbContractId")]
+        [HttpPost]
+        public IActionResult operateFormPublicInfoByExbContractId(FormPublicStruct formPublicStruct)
+        {
+            var result = EGClient.operateFormPublicInfoByExbContractId(formPublicStruct);
+            return Ok(result);
+        }
+
+        [Route("operateFormPublicInfoByExbContractCondition")]
+        [HttpPost]
+        public IActionResult operateFormPublicInfoByExbContractCondition(FormPublicStruct formPublicStruct)
+        {
+            var result = EGClient.operateFormPublicInfoByExbContractCondition(formPublicStruct);
+            return Ok(result);
+        }
+
+        [Route("multiDeleteFormPublicByExbContractIdList")]
+        [HttpPost]
+        public IActionResult multiDeleteFormPublicByExbContractIdList(ExbContractIdList exbContractIdList)
+        {
+            var result = EGClient.multiDeleteFormPublicByExbContractIdList(exbContractIdList);
+            return Ok(result);
+        }
+
+
+        [Route("multiDeleteFormPublicByExbContractConditionList")]
+        [HttpPost]
+        public IActionResult multiDeleteFormPublicByExbContractConditionList(ExbContractConditionList list)
+        {
+            var result = EGClient.multiDeleteFormPublicByExbContractConditionList(list);
+            return Ok(result);
+        }
+
+        [Route("checkIsExistFormPublicByCondition")]
+        [HttpPost]
+        public IActionResult checkIsExistFormPublicByCondition(ExbContractConditionRequest exbContractConditionRequest)
+        {
+            var result = EGClient.checkIsExistFormPublicByCondition(exbContractConditionRequest);
+            return Ok(result);
+        }
         #endregion
 
 
@@ -152,40 +203,6 @@ namespace TestAPI.Controllers
         public IActionResult getCatalogueBooksById(IdRequest idRequest)
         {
             var result = EGClient.getCatalogueBooksById(idRequest);
-            return Ok(result);
-        }
-
-
-        [Route("getFormPublicInfoByCondition")]
-        [HttpPost]
-        public IActionResult getFormPublicInfoByCondition(ExbContractConditionRequest exbContractConditionRequest)
-        {
-            var result = EGClient.getFormPublicInfoByCondition(exbContractConditionRequest);
-            return Ok(result);
-        }
-
-
-        [Route("operateFormPublicInfoByExbContractId")]
-        [HttpPost]
-        public IActionResult operateFormPublicInfoByExbContractId(FormPublicStruct formPublicStruct)
-        {
-            var result = EGClient.operateFormPublicInfoByExbContractId(formPublicStruct);
-            return Ok(result);
-        }
-
-        [Route("multiDeleteFormPublicByExbContractIdList")]
-        [HttpPost]
-        public IActionResult multiDeleteFormPublicByExbContractIdList(ExbContractIdList exbContractIdList)
-        {
-            var result = EGClient.multiDeleteFormPublicByExbContractIdList(exbContractIdList);
-            return Ok(result);
-        }
-
-        [Route("checkIsExistFormPublicByCondition")]
-        [HttpPost]
-        public IActionResult checkIsExistFormPublicByCondition(ExbContractConditionRequest exbContractConditionRequest)
-        {
-            var result = EGClient.checkIsExistFormPublicByCondition(exbContractConditionRequest);
             return Ok(result);
         }
 

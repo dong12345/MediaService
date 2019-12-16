@@ -63,9 +63,19 @@ namespace TestAPI
             return _client.operateFormPublicInfoByExbContractId(formPublicStruct);
         }
 
+        public static ModifyReply operateFormPublicInfoByExbContractCondition(FormPublicStruct formPublicStruct)
+        {
+            return _client.operateFormPublicInfoByExbContractCondition(formPublicStruct);
+        }
+
         public static ModifyReply multiDeleteFormPublicByExbContractIdList(ExbContractIdList exbContractIdList)
         {
             return _client.multiDeleteFormPublicByExbContractIdList(exbContractIdList);
+        }
+
+        public static ModifyReply multiDeleteFormPublicByExbContractConditionList(ExbContractConditionList list)
+        {
+            return _client.multiDeleteFormPublicByExbContractConditionList(list);
         }
 
         public static BoolStruct checkIsExistFormPublicByCondition(ExbContractConditionRequest exbContractConditionRequest)

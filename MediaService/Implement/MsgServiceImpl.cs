@@ -11,7 +11,6 @@ using MediaService.Service;
 using MediaService.ViewModel;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace MediaService.Implement
 {
     public class MsgServiceImpl : MediaServiceToGrpc.MediaServiceToGrpcBase
@@ -179,9 +178,30 @@ namespace MediaService.Implement
             try
             {
                 request.Id = Guid.NewGuid().ToString();
-
                 var model = Mapper.Map<FormPublicStruct, FormPublic>(request);
                 var result = await _service.OperateFormPublicInfoByExbContractId(model);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
+
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
+
+        public override async Task<ModifyReply> operateFormPublicInfoByExbContractCondition(FormPublicStruct request, ServerCallContext context)
+        {
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                if (string.IsNullOrEmpty(request.Id))
+                {
+                    request.Id = Guid.NewGuid().ToString();
+                }
+                var model = Mapper.Map<FormPublicStruct, FormPublic>(request);
+                var result = await _service.OperateFormPublicInfoByExbContractCondition(model);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
                 return modifyReply;
 
@@ -201,6 +221,29 @@ namespace MediaService.Implement
                 List<string> idList = new List<string>();
                 idList.AddRange(request.Listdata);
                 var result = await _service.MultiDeleteFormPublicByExbContractIdList(idList);
+                modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
+                return modifyReply;
+
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw ex;
+            }
+        }
+
+        public override async Task<ModifyReply> multiDeleteFormPublicByExbContractConditionList(ExbContractConditionList request, ServerCallContext context)
+        {
+            ModifyReply modifyReply = new ModifyReply();
+            try
+            {
+                List<ExbContractConditionModel> list = new List<ExbContractConditionModel>();
+                foreach (var item in request.Listdata)
+                {
+                    var model = Mapper.Map<ExbContractConditionRequest, ExbContractConditionModel>(item);
+                    list.Add(model);
+                }
+                var result = await _service.MultiDeleteFormPublicByExbContractConditionList(list);
                 modifyReply = Mapper.Map<ModifyReplyModel, ModifyReply>(result);
                 return modifyReply;
 

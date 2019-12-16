@@ -9,6 +9,6 @@ namespace MediaService.ViewModel
     {
         public string ExbContractId { get; set; }
 
-        public string Source { get; set; }
+        public string SubmitPage { get; set; }
     }
 }

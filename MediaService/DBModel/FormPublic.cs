@@ -64,5 +64,10 @@ namespace MediaService.DBModel
         /// 来源,区分光伏还是储能
         /// </summary>
         public string Source { get; set; }
+
+        /// <summary>
+        /// 提交的页面，区分是光伏页面的提交还是储能页面的提交
+        /// </summary>
+        public string SubmitPage { get; set; }
     }
 }

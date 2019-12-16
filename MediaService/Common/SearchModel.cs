@@ -118,5 +118,10 @@ namespace MediaService.Common
         /// 是否是展商
         /// </summary>
         public bool IsExhibitor { get; set; }
+
+        /// <summary>
+        /// 提交的页面，区分是光伏页面的提交还是储能页面的提交
+        /// </summary>
+        public string SubmitPage { get; set; }
     }
 }

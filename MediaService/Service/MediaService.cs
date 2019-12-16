@@ -302,7 +302,7 @@ namespace MediaService.Service
         }
 
         /// <summary>
-        /// 根据展商合同Id获得会刊信息
+        /// 根据(展商合同Id、提交的页面(SNEC或IESH))获得会刊信息
         /// </summary>
         /// <param name="exbContractId"></param>
         /// <returns></returns>
@@ -313,7 +313,7 @@ namespace MediaService.Service
                 using (var _context = new MyContext(_options.Options))
                 {
                     var item = await _context.FormPublic
-                            .FirstOrDefaultAsync(x => (x.ExbContractId == where.ExbContractId && x.Source==where.Source));
+                            .FirstOrDefaultAsync(x => (x.ExbContractId == where.ExbContractId  && x.SubmitPage==where.SubmitPage));
                     return item;
                 }
             }
@@ -338,7 +338,83 @@ namespace MediaService.Service
                     var contractId = formPublic.ExbContractId;
                     var source = formPublic.Source;
                     //根据展商合同Id查询对应会刊是否存在;若存在,修改;否则,新增;
-                    var model = await _context.FormPublic.FirstOrDefaultAsync(x => (x.ExbContractId == formPublic.ExbContractId && x.Source==source));
+                    var model = await _context.FormPublic.FirstOrDefaultAsync(x => (x.ExbContractId == formPublic.ExbContractId && x.Source == source));
+                    if (model != null)
+                    {
+                        //修改
+                        #region 修改
+                        model.Address = formPublic.Address;
+                        model.AddressEn = formPublic.AddressEn;
+                        model.BoothNumber = formPublic.BoothNumber;
+                        model.CompanyId = formPublic.CompanyId;
+                        model.CompanyNameCn = formPublic.CompanyNameCn;
+                        model.CompanyNameEn = formPublic.CompanyNameEn;
+                        model.Description = formPublic.Description;
+                        model.DescriptionEn = formPublic.DescriptionEn;
+                        model.Email = formPublic.Email;
+                        model.Fax = formPublic.Fax;
+                        model.IsHaveLogo = formPublic.IsHaveLogo;
+                        model.IsPay = formPublic.IsPay;
+                        model.Option = formPublic.Option;
+                        model.Logo = formPublic.Logo;
+                        model.OwnerId = formPublic.OwnerId;
+                        model.OwnerName = formPublic.OwnerName;
+                        model.PavilionNumber = formPublic.PavilionNumber;
+                        model.SnecLogoWebsite = formPublic.SnecLogoWebsite;
+                        model.Telephone = formPublic.Telephone;
+                        model.Website = formPublic.Website;
+                        model.UpdatedAt = DateTime.Now;
+                        model.ProductType = formPublic.ProductType;
+                        model.Source = formPublic.Source;
+                        #endregion
+                        count = await _context.SaveChangesAsync();
+                        isSuccess = true;
+                        msg = "修改成功";
+
+                    }
+                    else
+                    {
+                        //新增
+                        formPublic.CreatedAt = DateTime.Now;
+                        await _context.FormPublic.AddAsync(formPublic);
+                        count = await _context.SaveChangesAsync();
+                        if (count > 0)
+                        {
+                            msg = "创建成功";
+                            isSuccess = true;
+                        }
+                        else
+                        {
+                            msg = "创建失败";
+                            isSuccess = false;
+                        }
+
+                    }
+                    return GetModifyReply(isSuccess, msg, count);
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+        }
+
+        /// <summary>
+        /// 根据(展商合同Id、提交的页面(SNEC或IESH))判断新增或修改会刊信息
+        /// </summary>
+        /// <param name="formPublic"></param>
+        /// <returns></returns>
+        public async Task<ModifyReplyModel> OperateFormPublicInfoByExbContractCondition(FormPublic formPublic)
+        {
+            try
+            {
+                using (var _context = new MyContext(_options.Options))
+                {
+                    var contractId = formPublic.ExbContractId;
+                    var submitPage = formPublic.SubmitPage;
+                    //根据展商合同Id和submitPage查询对应会刊是否存在;若存在,修改;否则,新增;
+                    var model = await _context.FormPublic.FirstOrDefaultAsync(x => (x.ExbContractId == formPublic.ExbContractId && x.SubmitPage == submitPage));
                     if (model != null)
                     {
                         //修改
@@ -448,7 +524,54 @@ namespace MediaService.Service
         }
 
         /// <summary>
-        /// 根据(展商合同Id、来源)判断是否提交过会刊
+        /// 根据(展商合同Id、提交的页面(SNEC或IESH)列表批量删除会刊信息
+        /// </summary>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        public async Task<ModifyReplyModel> MultiDeleteFormPublicByExbContractConditionList(List<ExbContractConditionModel> list)
+        {
+            try
+            {
+                using (var _context = new MyContext(_options.Options))
+                {
+                    List<FormPublic> _list = new List<FormPublic>();
+                    foreach (var item in list)
+                    {
+                        var model = await _context.FormPublic.FirstOrDefaultAsync(x => x.ExbContractId == item.ExbContractId && x.SubmitPage==item.SubmitPage);
+                        _list.Add(model);
+                    }
+                    if (_list.Count > 0)
+                    {
+                        _context.FormPublic.RemoveRange(_list.ToArray());
+                        count = await _context.SaveChangesAsync();
+                        if (count > 0)
+                        {
+                            msg = "删除成功";
+                            isSuccess = true;
+                        }
+                        else
+                        {
+                            msg = "删除失败";
+                            isSuccess = false;
+                        }
+                    }
+                    else
+                    {
+                        msg = "数据库中未找到任何与之匹配的数据";
+                    }
+                    return GetModifyReply(isSuccess, msg, count);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(this, ex);
+                throw new Exception("异常", ex);
+            }
+        }
+
+        /// <summary>
+        /// 根据(展商合同Id、提交的页面(SNEC或IESH))判断是否提交过会刊
         /// </summary>
         /// <param name="where"></param>
         /// <returns></returns>
@@ -458,7 +581,7 @@ namespace MediaService.Service
             {
                 using (var _context = new MyContext(_options.Options))
                 {
-                    var b= await _context.FormPublic.AnyAsync(x => (x.ExbContractId == where.ExbContractId && x.Source == where.Source));
+                    var b= await _context.FormPublic.AnyAsync(x => (x.ExbContractId == where.ExbContractId && x.SubmitPage == where.SubmitPage));
                     BoolModel model = new BoolModel();
                     model.BoolData = b;
                     return model;

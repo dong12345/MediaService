@@ -20,6 +20,7 @@ namespace GrpcMediaService {
     static readonly grpc::Marshaller<global::GrpcMediaService.PaginationRequestSearch> __Marshaller_PaginationRequestSearch = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.PaginationRequestSearch.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExbContractConditionRequest> __Marshaller_ExbContractConditionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExbContractConditionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExbContractIdList> __Marshaller_ExbContractIdList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExbContractIdList.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::GrpcMediaService.ExbContractConditionList> __Marshaller_ExbContractConditionList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExbContractConditionList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.BoolStruct> __Marshaller_BoolStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.BoolStruct.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExpressStruct> __Marshaller_ExpressStruct = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExpressStruct.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcMediaService.ExpressList> __Marshaller_ExpressList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcMediaService.ExpressList.Parser.ParseFrom);
@@ -98,11 +99,25 @@ namespace GrpcMediaService {
         __Marshaller_FormPublicStruct,
         __Marshaller_ModifyReply);
 
+    static readonly grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply> __Method_operateFormPublicInfoByExbContractCondition = new grpc::Method<global::GrpcMediaService.FormPublicStruct, global::GrpcMediaService.ModifyReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "operateFormPublicInfoByExbContractCondition",
+        __Marshaller_FormPublicStruct,
+        __Marshaller_ModifyReply);
+
     static readonly grpc::Method<global::GrpcMediaService.ExbContractIdList, global::GrpcMediaService.ModifyReply> __Method_multiDeleteFormPublicByExbContractIdList = new grpc::Method<global::GrpcMediaService.ExbContractIdList, global::GrpcMediaService.ModifyReply>(
         grpc::MethodType.Unary,
         __ServiceName,
         "multiDeleteFormPublicByExbContractIdList",
         __Marshaller_ExbContractIdList,
+        __Marshaller_ModifyReply);
+
+    static readonly grpc::Method<global::GrpcMediaService.ExbContractConditionList, global::GrpcMediaService.ModifyReply> __Method_multiDeleteFormPublicByExbContractConditionList = new grpc::Method<global::GrpcMediaService.ExbContractConditionList, global::GrpcMediaService.ModifyReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "multiDeleteFormPublicByExbContractConditionList",
+        __Marshaller_ExbContractConditionList,
         __Marshaller_ModifyReply);
 
     static readonly grpc::Method<global::GrpcMediaService.ExbContractConditionRequest, global::GrpcMediaService.BoolStruct> __Method_checkIsExistFormPublicByCondition = new grpc::Method<global::GrpcMediaService.ExbContractConditionRequest, global::GrpcMediaService.BoolStruct>(
@@ -475,7 +490,7 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
-      ///根据(展商合同Id、来源)获得会刊信息
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))获得会刊信息
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -486,7 +501,7 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
-      ///根据展商合同Id判断新增或修改会刊信息
+      ///根据展商合同Id判断新增或修改会刊信息	(已废除)
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -497,7 +512,18 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
-      ///根据展商合同Id列表批量删除会刊信息
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))判断新增或修改会刊信息
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> operateFormPublicInfoByExbContractCondition(global::GrpcMediaService.FormPublicStruct request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///根据展商合同Id列表批量删除会刊信息		(已废除)
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -508,7 +534,18 @@ namespace GrpcMediaService {
       }
 
       /// <summary>
-      ///根据(展商合同Id、来源)判断是否提交过会刊
+      ///根据(展商合同Id、提交的页面(SNEC或IESH)列表批量删除会刊信息
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::GrpcMediaService.ModifyReply> multiDeleteFormPublicByExbContractConditionList(global::GrpcMediaService.ExbContractConditionList request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))判断是否提交过会刊
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1259,7 +1296,7 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_getFormPublicList, null, options, request);
       }
       /// <summary>
-      ///根据(展商合同Id、来源)获得会刊信息
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))获得会刊信息
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1271,7 +1308,7 @@ namespace GrpcMediaService {
         return getFormPublicInfoByCondition(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据(展商合同Id、来源)获得会刊信息
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))获得会刊信息
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1281,7 +1318,7 @@ namespace GrpcMediaService {
         return CallInvoker.BlockingUnaryCall(__Method_getFormPublicInfoByCondition, null, options, request);
       }
       /// <summary>
-      ///根据(展商合同Id、来源)获得会刊信息
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))获得会刊信息
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1293,7 +1330,7 @@ namespace GrpcMediaService {
         return getFormPublicInfoByConditionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据(展商合同Id、来源)获得会刊信息
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))获得会刊信息
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1303,7 +1340,7 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_getFormPublicInfoByCondition, null, options, request);
       }
       /// <summary>
-      ///根据展商合同Id判断新增或修改会刊信息
+      ///根据展商合同Id判断新增或修改会刊信息	(已废除)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1315,7 +1352,7 @@ namespace GrpcMediaService {
         return operateFormPublicInfoByExbContractId(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据展商合同Id判断新增或修改会刊信息
+      ///根据展商合同Id判断新增或修改会刊信息	(已废除)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1325,7 +1362,7 @@ namespace GrpcMediaService {
         return CallInvoker.BlockingUnaryCall(__Method_operateFormPublicInfoByExbContractId, null, options, request);
       }
       /// <summary>
-      ///根据展商合同Id判断新增或修改会刊信息
+      ///根据展商合同Id判断新增或修改会刊信息	(已废除)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1337,7 +1374,7 @@ namespace GrpcMediaService {
         return operateFormPublicInfoByExbContractIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据展商合同Id判断新增或修改会刊信息
+      ///根据展商合同Id判断新增或修改会刊信息	(已废除)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1347,7 +1384,51 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_operateFormPublicInfoByExbContractId, null, options, request);
       }
       /// <summary>
-      ///根据展商合同Id列表批量删除会刊信息
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))判断新增或修改会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.ModifyReply operateFormPublicInfoByExbContractCondition(global::GrpcMediaService.FormPublicStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return operateFormPublicInfoByExbContractCondition(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))判断新增或修改会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.ModifyReply operateFormPublicInfoByExbContractCondition(global::GrpcMediaService.FormPublicStruct request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_operateFormPublicInfoByExbContractCondition, null, options, request);
+      }
+      /// <summary>
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))判断新增或修改会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> operateFormPublicInfoByExbContractConditionAsync(global::GrpcMediaService.FormPublicStruct request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return operateFormPublicInfoByExbContractConditionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))判断新增或修改会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> operateFormPublicInfoByExbContractConditionAsync(global::GrpcMediaService.FormPublicStruct request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_operateFormPublicInfoByExbContractCondition, null, options, request);
+      }
+      /// <summary>
+      ///根据展商合同Id列表批量删除会刊信息		(已废除)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1359,7 +1440,7 @@ namespace GrpcMediaService {
         return multiDeleteFormPublicByExbContractIdList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据展商合同Id列表批量删除会刊信息
+      ///根据展商合同Id列表批量删除会刊信息		(已废除)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1369,7 +1450,7 @@ namespace GrpcMediaService {
         return CallInvoker.BlockingUnaryCall(__Method_multiDeleteFormPublicByExbContractIdList, null, options, request);
       }
       /// <summary>
-      ///根据展商合同Id列表批量删除会刊信息
+      ///根据展商合同Id列表批量删除会刊信息		(已废除)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1381,7 +1462,7 @@ namespace GrpcMediaService {
         return multiDeleteFormPublicByExbContractIdListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据展商合同Id列表批量删除会刊信息
+      ///根据展商合同Id列表批量删除会刊信息		(已废除)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1391,7 +1472,51 @@ namespace GrpcMediaService {
         return CallInvoker.AsyncUnaryCall(__Method_multiDeleteFormPublicByExbContractIdList, null, options, request);
       }
       /// <summary>
-      ///根据(展商合同Id、来源)判断是否提交过会刊
+      ///根据(展商合同Id、提交的页面(SNEC或IESH)列表批量删除会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.ModifyReply multiDeleteFormPublicByExbContractConditionList(global::GrpcMediaService.ExbContractConditionList request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return multiDeleteFormPublicByExbContractConditionList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据(展商合同Id、提交的页面(SNEC或IESH)列表批量删除会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::GrpcMediaService.ModifyReply multiDeleteFormPublicByExbContractConditionList(global::GrpcMediaService.ExbContractConditionList request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_multiDeleteFormPublicByExbContractConditionList, null, options, request);
+      }
+      /// <summary>
+      ///根据(展商合同Id、提交的页面(SNEC或IESH)列表批量删除会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> multiDeleteFormPublicByExbContractConditionListAsync(global::GrpcMediaService.ExbContractConditionList request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return multiDeleteFormPublicByExbContractConditionListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///根据(展商合同Id、提交的页面(SNEC或IESH)列表批量删除会刊信息
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::GrpcMediaService.ModifyReply> multiDeleteFormPublicByExbContractConditionListAsync(global::GrpcMediaService.ExbContractConditionList request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_multiDeleteFormPublicByExbContractConditionList, null, options, request);
+      }
+      /// <summary>
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))判断是否提交过会刊
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1403,7 +1528,7 @@ namespace GrpcMediaService {
         return checkIsExistFormPublicByCondition(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据(展商合同Id、来源)判断是否提交过会刊
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))判断是否提交过会刊
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1413,7 +1538,7 @@ namespace GrpcMediaService {
         return CallInvoker.BlockingUnaryCall(__Method_checkIsExistFormPublicByCondition, null, options, request);
       }
       /// <summary>
-      ///根据(展商合同Id、来源)判断是否提交过会刊
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))判断是否提交过会刊
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1425,7 +1550,7 @@ namespace GrpcMediaService {
         return checkIsExistFormPublicByConditionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///根据(展商合同Id、来源)判断是否提交过会刊
+      ///根据(展商合同Id、提交的页面(SNEC或IESH))判断是否提交过会刊
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3258,7 +3383,9 @@ namespace GrpcMediaService {
           .AddMethod(__Method_getFormPublicList, serviceImpl.getFormPublicList)
           .AddMethod(__Method_getFormPublicInfoByCondition, serviceImpl.getFormPublicInfoByCondition)
           .AddMethod(__Method_operateFormPublicInfoByExbContractId, serviceImpl.operateFormPublicInfoByExbContractId)
+          .AddMethod(__Method_operateFormPublicInfoByExbContractCondition, serviceImpl.operateFormPublicInfoByExbContractCondition)
           .AddMethod(__Method_multiDeleteFormPublicByExbContractIdList, serviceImpl.multiDeleteFormPublicByExbContractIdList)
+          .AddMethod(__Method_multiDeleteFormPublicByExbContractConditionList, serviceImpl.multiDeleteFormPublicByExbContractConditionList)
           .AddMethod(__Method_checkIsExistFormPublicByCondition, serviceImpl.checkIsExistFormPublicByCondition)
           .AddMethod(__Method_createExpressInfo, serviceImpl.createExpressInfo)
           .AddMethod(__Method_updateExpressInfo, serviceImpl.updateExpressInfo)
